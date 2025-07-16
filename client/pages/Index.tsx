@@ -115,68 +115,6 @@ export default function Index() {
           </div>
         </section>
 
-        {/* What Separates Us Section */}
-        <section className="py-16 md:py-24 bg-black/40 backdrop-blur-sm">
-          <div className="max-w-6xl mx-auto px-4 md:px-6">
-            <div className="text-center mb-8 md:mb-12">
-              <div className="text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4">
-                What Separates Us
-              </div>
-              <h2 className="text-3xl md:text-4xl font-light text-white mb-6 tracking-tight">
-                Heard of ChatGPT? Here's what actually works.
-              </h2>
-            </div>
-
-            <div className="grid gap-6 md:gap-8 max-w-4xl mx-auto mb-8">
-              {/* Real Talk */}
-              <div className="bg-black/40 backdrop-blur-xl border border-yellow-400/30 rounded-2xl p-4 md:p-6 text-center">
-                <h3 className="text-xl font-semibold text-yellow-400 mb-3">
-                  "I've Heard of ChatGPT… but What Do I Do With It?"
-                </h3>
-                <p className="text-gray-300 font-light leading-relaxed">
-                  Other platforms throw you in and say "Good luck."
-                  <br />
-                  <strong className="text-white">
-                    SAINTSAL™ walks with you like a real assistant.
-                  </strong>
-                  Just talk like a friend — no prompts, no learning curve.
-                </p>
-              </div>
-
-              {/* HACP Magic */}
-              <div className="bg-black/40 backdrop-blur-xl border border-blue-400/30 rounded-2xl p-4 md:p-6 text-center">
-                <h3 className="text-xl font-semibold text-blue-400 mb-3">
-                  The Secret Sauce: HACP™
-                </h3>
-                <p className="text-gray-300 font-light leading-relaxed mb-4">
-                  SaintSal learns what YOU need to build — a business, a resume,
-                  a family schedule, or an empire — and actually{" "}
-                  <strong className="text-yellow-400">GETS IT DONE.</strong>
-                </p>
-                <div className="text-sm text-gray-400">
-                  🎤 Voice • 📱 Mobile • 🌐 Chrome Extension • ⚡ Real Action
-                </div>
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="text-center">
-              <button
-                onClick={() => (window.location.href = "/why")}
-                className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-8 py-3 rounded-xl text-lg shadow-xl transition-all duration-300 hover:scale-105 mr-4"
-              >
-                See Full Comparison
-              </button>
-              <button
-                onClick={() => (window.location.href = "/signup")}
-                className="bg-white/10 border border-white/30 text-white hover:bg-white/20 backdrop-blur-sm px-8 py-3 rounded-xl text-lg transition-all duration-300"
-              >
-                Get Started Now
-              </button>
-            </div>
-          </div>
-        </section>
-
         {/* Elite Technology Section */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-6 text-center">
