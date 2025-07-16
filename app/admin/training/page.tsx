@@ -1,8 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import WorkspaceLayout from "@/components/WorkspaceLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SectionCard } from "@/components/training/SectionCard";
+import { TrainingSearch } from "@/components/training/TrainingSearch";
+import { AICoach } from "@/components/training/AICoach";
 import { trainingData } from "@/lib/training/data";
 import {
   GraduationCap,
@@ -11,9 +16,17 @@ import {
   Award,
   Download,
   Send,
+  BarChart3,
+  TrendingUp,
+  UserCheck,
 } from "lucide-react";
 
 export default function AdminTrainingPage() {
+  const [aiCoachEnabled, setAICoachEnabled] = useState(false);
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [showAnalytics, setShowAnalytics] = useState(false);
+
   const handleVideoComplete = (videoId: string) => {
     console.log(`Video completed: ${videoId}`);
     // Here you could trigger Slack notification or email
@@ -27,6 +40,17 @@ export default function AdminTrainingPage() {
   const handleNotifyCompletion = () => {
     console.log("Sending completion notification");
     // Trigger Slack alert + email when training completed
+  };
+
+  const handleSearchResult = (sectionId: string, videoId?: string) => {
+    setSelectedSection(sectionId);
+    setSelectedVideo(videoId || null);
+
+    // Scroll to the section
+    const element = document.getElementById(`section-${sectionId}`);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   const totalVideos = trainingData.reduce(
