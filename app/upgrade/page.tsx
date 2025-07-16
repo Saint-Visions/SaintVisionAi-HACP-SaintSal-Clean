@@ -10,21 +10,48 @@ export default function UpgradePage() {
       className="min-h-screen relative parallax parallax-bg"
       style={{
         fontFamily:
-          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+          "Gotham, 'Gotham Medium', 'Gotham Bold', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
         backgroundImage:
-          "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Ff67beb60174e484092cc99d8a2e9517d?format=webp&width=800)",
+          "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fff0733af4a2e4a0b8c3ec5843ef9720e)",
         backgroundSize: "120%",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Enhanced Divine Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/50 z-1" />
+      {/* Atmospheric Divine Layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 via-gray-900/60 to-gray-900/70 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-800/40 z-1" />
 
-      {/* Floating Gold Particles */}
-      <div className="absolute inset-0 gold-particles z-2" />
+      {/* 3D Golden Particles */}
+      <div className="absolute inset-0 z-2">
+        <div
+          className="absolute top-1/5 left-1/6 w-2 h-2 bg-yellow-400/60 rounded-full animate-pulse"
+          style={{
+            boxShadow:
+              "0 0 20px rgba(251, 191, 36, 0.4), 0 0 40px rgba(251, 191, 36, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.3)",
+            filter: "blur(0.5px)",
+          }}
+        />
+        <div
+          className="absolute top-1/3 right-1/5 w-1 h-1 bg-yellow-300/80 rounded-full animate-pulse"
+          style={{
+            boxShadow:
+              "0 0 15px rgba(253, 224, 71, 0.5), 0 0 30px rgba(253, 224, 71, 0.3)",
+            filter: "blur(0.3px)",
+            animationDelay: "1.5s",
+          }}
+        />
+        <div
+          className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-amber-400/70 rounded-full animate-pulse"
+          style={{
+            boxShadow:
+              "0 0 18px rgba(245, 158, 11, 0.4), 0 0 35px rgba(245, 158, 11, 0.2)",
+            filter: "blur(0.4px)",
+            animationDelay: "3s",
+          }}
+        />
+      </div>
 
       <div className="relative z-10 py-24">
         <div className="max-w-5xl mx-auto px-6">
