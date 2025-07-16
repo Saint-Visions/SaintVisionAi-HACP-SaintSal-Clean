@@ -47,7 +47,7 @@ export default function Why() {
               </p>
             </div>
 
-            <div className="grid gap-12 max-w-5xl mx-auto">
+            <div className="grid gap-6 md:gap-12 max-w-5xl mx-auto">
               {/* Real Talk Section */}
               <div className="bg-black/60 backdrop-blur-xl border border-yellow-400/30 rounded-2xl p-8">
                 <h3 className="text-2xl font-semibold text-yellow-400 mb-4">
