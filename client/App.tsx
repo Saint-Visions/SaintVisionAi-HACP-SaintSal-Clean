@@ -44,6 +44,7 @@ const App = () => (
         <Route path="/terms" element={<Terms />} />
         <Route path="/help" element={<Help />} />
         <Route path="/setup" element={<Setup />} />
+        <Route path="/why" element={<Why />} />
         <Route path="/chrome-install" element={<ChromeInstall />} />
         <Route path="/checkout-success" element={<CheckoutSuccess />} />
 
