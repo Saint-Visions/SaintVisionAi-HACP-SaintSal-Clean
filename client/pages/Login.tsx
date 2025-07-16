@@ -638,12 +638,15 @@ export default function Login() {
 
           {/* Prestigious Footer */}
           <div className="text-center space-y-2">
-            <p className="text-yellow-400/90 text-sm font-bold tracking-wider flex items-center justify-center gap-2">
-              <Star className="w-4 h-4" />
-              Elite AI Sanctuary
-              <Star className="w-4 h-4" />
+            <p className="text-gray-300 text-sm font-bold tracking-wider flex items-center justify-center gap-2">
+              <Star className="w-4 h-4 text-yellow-400" />
+              <span>
+                Elite AI Sanctuary by SAINTSAL
+                <span className="text-yellow-400">™</span>
+              </span>
+              <Star className="w-4 h-4 text-yellow-400" />
             </p>
-            <p className="text-yellow-300/70 text-xs font-medium tracking-widest uppercase">
+            <p className="text-gray-400 text-xs font-medium tracking-widest uppercase">
               Protected by Divine Technology
             </p>
           </div>
