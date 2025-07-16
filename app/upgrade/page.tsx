@@ -276,14 +276,14 @@ export default function UpgradePage() {
 
           {/* Bottom CTA */}
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">
+            <p className="text-gray-300 mb-4">
               Need help choosing the right plan?
             </p>
             <div className="flex justify-center gap-4">
               <Link href="/pricing">
                 <Button variant="outline">Compare All Plans</Button>
               </Link>
-              <Button className="bg-primary hover:bg-primary/90">
+              <Button className="bg-gradient-to-r from-yellow-400 to-yellow-300 text-gray-900 hover:from-yellow-300 hover:to-yellow-200 font-medium transition-all duration-200">
                 Contact Sales
               </Button>
             </div>
