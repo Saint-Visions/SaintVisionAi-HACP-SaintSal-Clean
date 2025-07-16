@@ -7,6 +7,7 @@ export interface TrainingSection {
   difficulty: "Beginner" | "Intermediate" | "Advanced";
   videos: TrainingVideo[];
   downloadUrl?: string;
+  tags: string[];
 }
 
 export interface TrainingVideo {
@@ -17,6 +18,7 @@ export interface TrainingVideo {
   videoUrl: string;
   type: "youtube" | "vimeo" | "local";
   completed?: boolean;
+  tags: string[];
 }
 
 export const trainingData: TrainingSection[] = [
