@@ -40,7 +40,7 @@ export default function Index() {
           {/* Centered Content */}
           <div className="flex flex-col items-center justify-center min-h-screen text-center">
             {/* Divine Quote */}
-            <div className="mb-12 max-w-2xl">
+            <div className="mb-12 max-w-2xl mt-20">
               <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
                 "SaintSal" AI doesn't just answer.
               </p>
