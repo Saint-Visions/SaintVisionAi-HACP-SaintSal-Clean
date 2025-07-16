@@ -39,6 +39,7 @@ const App = () => (
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/help" element={<Help />} />
         <Route path="/chrome-install" element={<ChromeInstall />} />
         <Route path="/checkout-success" element={<CheckoutSuccess />} />
 
