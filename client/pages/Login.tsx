@@ -311,7 +311,8 @@ export default function Login() {
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
                         required
-                        className="w-full px-6 py-5 text-lg border-2 border-yellow-400/40 bg-black/70 backdrop-blur-sm rounded-2xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/25 transition-all duration-300 font-medium shadow-lg"
+                        className="w-full px-6 py-5 text-lg border border-yellow-400/30 bg-gray-800/60 backdrop-blur-sm rounded-2xl text-yellow-100 placeholder:text-gray-500 focus:border-yellow-400/60 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 font-medium shadow-lg"
+                        style={{ backgroundColor: "rgba(31, 41, 55, 0.6)" }}
                         placeholder="Your divine name"
                       />
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -334,7 +335,8 @@ export default function Login() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full px-6 py-5 text-lg border-2 border-yellow-400/40 bg-black/70 backdrop-blur-sm rounded-2xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/25 transition-all duration-300 font-medium shadow-lg"
+                      className="w-full px-6 py-5 text-lg border border-yellow-400/30 bg-gray-800/60 backdrop-blur-sm rounded-2xl text-yellow-100 placeholder:text-gray-500 focus:border-yellow-400/60 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 font-medium shadow-lg"
+                      style={{ backgroundColor: "rgba(31, 41, 55, 0.6)" }}
                       placeholder="saint@saintvisional.com"
                     />
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -356,7 +358,8 @@ export default function Login() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      className="w-full px-6 py-5 pr-16 text-lg border-2 border-yellow-400/40 bg-black/70 backdrop-blur-sm rounded-2xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/25 transition-all duration-300 font-medium shadow-lg"
+                      className="w-full px-6 py-5 pr-16 text-lg border border-yellow-400/30 bg-gray-800/60 backdrop-blur-sm rounded-2xl text-yellow-100 placeholder:text-gray-500 focus:border-yellow-400/60 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 font-medium shadow-lg"
+                      style={{ backgroundColor: "rgba(31, 41, 55, 0.6)" }}
                       placeholder="Your divine password"
                     />
                     <button
@@ -428,7 +431,8 @@ export default function Login() {
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                         required
-                        className="w-full px-6 py-5 pr-16 text-lg border-2 border-yellow-400/40 bg-black/70 backdrop-blur-sm rounded-2xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/25 transition-all duration-300 font-medium shadow-lg"
+                        className="w-full px-6 py-5 pr-16 text-lg border border-yellow-400/30 bg-gray-800/60 backdrop-blur-sm rounded-2xl text-yellow-100 placeholder:text-gray-500 focus:border-yellow-400/60 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 font-medium shadow-lg"
+                        style={{ backgroundColor: "rgba(31, 41, 55, 0.6)" }}
                         placeholder="Confirm your divine password"
                       />
                       <button
