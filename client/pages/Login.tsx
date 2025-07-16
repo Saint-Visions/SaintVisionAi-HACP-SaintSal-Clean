@@ -116,10 +116,10 @@ export default function Login() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Dark Atmospheric Environment */}
-      <div className="absolute inset-0 bg-gray-900 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-gray-900/90 to-black/95 z-1" />
-      <div className="absolute inset-0 bg-gradient-to-t from-yellow-800/10 via-transparent to-gray-900/60 z-2" />
+      {/* Subtle Atmospheric Glow */}
+      <div className="absolute inset-0 bg-black/20 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/10 via-black/30 to-black/40 z-1" />
+      <div className="absolute inset-0 bg-gradient-to-t from-yellow-800/5 via-transparent to-black/25 z-2" />
 
       {/* Immersive Golden Atmosphere */}
       <div className="absolute inset-0 z-3">
