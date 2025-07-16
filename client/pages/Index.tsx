@@ -472,6 +472,197 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+        {/* Professional Footer */}
+        <footer className="bg-black/80 backdrop-blur-xl border-t border-yellow-400/20">
+          <div className="max-w-7xl mx-auto px-6 py-16">
+            {/* Main Footer Content */}
+            <div className="grid md:grid-cols-4 gap-8 mb-12">
+              {/* Company Info */}
+              <div className="col-span-1">
+                <div className="flex items-center mb-4">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
+                    alt="SAINTSAL™"
+                    className="w-8 h-8 rounded-lg mr-3"
+                  />
+                  <div className="text-yellow-400 font-semibold">
+                    SAINTSAL™
+                  </div>
+                </div>
+                <p className="text-gray-400 text-sm font-light leading-relaxed mb-4">
+                  Enterprise AI with integrity. Professional-grade intelligence
+                  for those who demand excellence, privacy, and values-aligned
+                  technology.
+                </p>
+                <div className="text-xs text-gray-500">
+                  <div>Saint Vision Group LLC</div>
+                  <div>Delaware Limited Partnership</div>
+                </div>
+              </div>
+
+              {/* Platform */}
+              <div>
+                <h4 className="text-white font-semibold mb-4">Platform</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/console")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      AI Console
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/pricing")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      Pricing
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/signup")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      Get Started
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/chrome-install")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      Chrome Extension
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Enterprise */}
+              <div>
+                <h4 className="text-white font-semibold mb-4">Enterprise</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/partnertech")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      PartnerTech Elite
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() =>
+                        (window.location.href = "https://saintvisiontech.com")
+                      }
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      Saint Vision Institute
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/crm")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      CRM Integration
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/hacp")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      HACP™ Technology
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Legal & Support */}
+              <div>
+                <h4 className="text-white font-semibold mb-4">
+                  Legal & Support
+                </h4>
+                <ul className="space-y-2 text-sm">
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/privacy")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      Privacy Policy
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/terms")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      Terms of Service
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/help")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      Help Center
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => (window.location.href = "/setup")}
+                      className="text-gray-400 hover:text-yellow-400 transition-colors"
+                    >
+                      Setup Guide
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Legal Notice */}
+            <div className="border-t border-gray-700/50 pt-8 mb-8">
+              <div className="bg-black/40 border border-yellow-400/10 rounded-xl p-6">
+                <div className="text-center text-xs text-gray-500 leading-relaxed">
+                  <div className="mb-3">
+                    <strong className="text-yellow-400">HACP™</strong>{" "}
+                    (Hierarchical Adaptive Cognitive Processing) protected under{" "}
+                    <strong>U.S. Patent 10,290,222</strong> and additional
+                    patent-pending technologies.
+                  </div>
+                  <div className="mb-3">
+                    Infrastructure powered by{" "}
+                    <strong>Azure Cognitive Services</strong> •{" "}
+                    <strong>OpenAI GPT-4o</strong> • <strong>Supabase</strong> •{" "}
+                    <strong>Vercel Edge</strong>
+                  </div>
+                  <div>
+                    Built with enterprise-grade security:{" "}
+                    <strong>AES-256 encryption</strong> •{" "}
+                    <strong>SOC 2 compliance</strong> •{" "}
+                    <strong>Zero-trust architecture</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+              <div className="mb-4 md:mb-0">
+                © 2025 Saint Vision Group LLC. All rights reserved. Delaware
+                Limited Partnership.
+              </div>
+              <div className="flex items-center space-x-6">
+                <span>GDPR • CCPA • SOC 2 Compliant</span>
+                <span className="text-yellow-400">•</span>
+                <span>Faith-Aligned Technology</span>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
