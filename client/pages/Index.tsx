@@ -121,70 +121,98 @@ export default function Index() {
         </div>
 
         {/* What's Inside These Walls */}
-        <div className="p-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-6">
-              <h2 className="text-yellow-400 text-xl font-bold mb-2">
-                🚀 What's Inside These Walls
-              </h2>
-            </div>
+        <div className="p-6" style={{ backgroundColor: "#10161C" }}>
+          <div className="relative max-w-7xl mx-auto">
+            {/* Subtle gold shimmer edge effect */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-yellow-400/10 via-transparent to-yellow-400/10 blur-xl"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <Card className="bg-blue-900/90 border-blue-500/50 backdrop-blur-sm">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center space-x-2">
-                    <Search className="w-5 h-5 text-blue-400" />
-                    <CardTitle className="text-blue-400 text-sm font-bold">
-                      Lead Discovery
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-blue-300 text-xs">AI-powered lookup</p>
-                </CardContent>
-              </Card>
+            <div className="relative z-10 p-8">
+              <div className="text-center mb-8">
+                <h2 className="text-yellow-400 text-3xl font-bold mb-3">
+                  ✨ What's Inside These Walls
+                </h2>
+                <p className="text-gray-300 text-sm">
+                  Divine AI technology meets faith-aligned control
+                </p>
+              </div>
 
-              <Card className="bg-green-900/90 border-green-500/50 backdrop-blur-sm">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center space-x-2">
-                    <Users className="w-5 h-5 text-green-400" />
-                    <CardTitle className="text-green-400 text-sm font-bold">
-                      Referral Network
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-green-300 text-xs">Partner tracking</p>
-                </CardContent>
-              </Card>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Dual-AI Console */}
+                <Card className="bg-black/30 backdrop-blur-xl border border-yellow-400/30 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-2 rounded-lg bg-yellow-400/20">
+                        <Brain className="w-6 h-6 text-yellow-400" />
+                      </div>
+                      <CardTitle className="text-yellow-400 text-lg font-bold">
+                        🧠 Dual-AI Console
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      GPT-4o + Azure chat in perfect sync
+                    </p>
+                  </CardContent>
+                </Card>
 
-              <Card className="bg-purple-900/90 border-purple-500/50 backdrop-blur-sm">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center space-x-2">
-                    <BarChart3 className="w-5 h-5 text-purple-400" />
-                    <CardTitle className="text-purple-400 text-sm font-bold">
-                      AI Deal Analysis
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-purple-300 text-xs">GPT-4 insights</p>
-                </CardContent>
-              </Card>
+                {/* PartnerTech Suite */}
+                <Card className="bg-black/30 backdrop-blur-xl border border-yellow-400/30 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-2 rounded-lg bg-blue-400/20">
+                        <Wrench className="w-6 h-6 text-blue-400" />
+                      </div>
+                      <CardTitle className="text-blue-400 text-lg font-bold">
+                        🛠️ PartnerTech Suite
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      CRM, outreach, Chrome tools
+                    </p>
+                  </CardContent>
+                </Card>
 
-              <Card className="bg-red-900/90 border-red-500/50 backdrop-blur-sm">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center space-x-2">
-                    <Smartphone className="w-5 h-5 text-red-400" />
-                    <CardTitle className="text-red-400 text-sm font-bold">
-                      Mobile Export
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-red-300 text-xs">iOS/Android apps</p>
-                </CardContent>
-              </Card>
+                {/* Intelligent Routing */}
+                <Card className="bg-black/30 backdrop-blur-xl border border-yellow-400/30 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-2 rounded-lg bg-purple-400/20">
+                        <Zap className="w-6 h-6 text-purple-400" />
+                      </div>
+                      <CardTitle className="text-purple-400 text-lg font-bold">
+                        🎛️ Intelligent Routing
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Smart flows, lead scoring, automation
+                    </p>
+                  </CardContent>
+                </Card>
+
+                {/* Privacy + Control */}
+                <Card className="bg-black/30 backdrop-blur-xl border border-yellow-400/30 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-2 rounded-lg bg-green-400/20">
+                        <Shield className="w-6 h-6 text-green-400" />
+                      </div>
+                      <CardTitle className="text-green-400 text-lg font-bold">
+                        🔐 Privacy + Control
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Faith-aligned data & user control
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
