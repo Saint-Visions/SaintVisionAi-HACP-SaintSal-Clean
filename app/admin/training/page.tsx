@@ -64,20 +64,23 @@ export default function AdminTrainingPage() {
 
   return (
     <WorkspaceLayout>
-      <div className="min-h-screen relative overflow-hidden charcoal-depth">
-        {/* Background */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F8155e04eb6064174a0cb82e2eecf77b6')`,
-            backgroundAttachment: "fixed",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            opacity: 0.1,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+      <div
+        className="min-h-screen relative overflow-hidden charcoal-depth parallax parallax-bg"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fff0733af4a2e4a0b8c3ec5843ef9720e)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Enhanced Divine Overlay */}
+        <div className="absolute inset-0 bg-black/60 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/50 z-1" />
+
+        {/* Floating Gold Particles */}
+        <div className="absolute inset-0 gold-particles z-2" />
 
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
