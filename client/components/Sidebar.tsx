@@ -30,13 +30,13 @@ const sidebarItems = [
   },
   {
     icon: Brain,
-    label: "AI Console",
+    label: "My Companion",
     href: "/console",
     emoji: "🧠",
   },
   {
-    icon: Database,
-    label: "CRM Command",
+    icon: Building2,
+    label: "My Business",
     href: "/crm",
     emoji: "💼",
   },
