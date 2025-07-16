@@ -119,7 +119,7 @@ export default function Index() {
         </section>
 
         {/* Elite Technology Section */}
-        <section className="py-20">
+        <section className="py-24">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <div className="text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4">
               Elite Technology
