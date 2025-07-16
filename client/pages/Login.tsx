@@ -358,9 +358,6 @@ export default function Login() {
                 <span className="bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 bg-clip-text text-transparent">
                   {isSignup ? "Join Elite" : "Welcome Back"}
                 </span>
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <Sparkles className="w-8 h-8 text-yellow-400 animate-spin" />
-                </div>
               </h1>
 
               <p className="text-gray-200 text-xl font-light leading-relaxed px-4">
