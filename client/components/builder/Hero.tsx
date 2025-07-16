@@ -1,6 +1,6 @@
 // SAINTSAL™ Dynamic Hero Section for Builder.io
 import React from "react";
-import Builder from "@builder.io/react";
+import { Builder } from "@builder.io/react";
 import { Button } from "@/components/ui/button";
 
 interface HeroProps {
