@@ -41,7 +41,7 @@ export default function Index() {
           {/* Logo */}
           <div className="mb-8">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F3fc21ee16b6948fca8afc8dfc909ebba?format=webp&width=800"
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2c886623f7884837a659daf696b05be1?format=webp&width=800"
               alt="SAINTSAL™ Circuit Board Logo"
               className="w-28 h-28 mx-auto"
               style={{
@@ -645,7 +645,7 @@ export default function Index() {
                   <div>
                     Built with enterprise-grade security:{" "}
                     <strong>AES-256 encryption</strong> •{" "}
-                    <strong>SOC 2 compliance</strong> •{" "}
+                    <strong>SOC 2 compliance</strong> ���{" "}
                     <strong>Zero-trust architecture</strong>
                   </div>
                 </div>
