@@ -207,6 +207,14 @@ export const trainingData: TrainingSection[] = [
     icon: "🔗",
     duration: "40 mins",
     difficulty: "Advanced",
+    tags: [
+      "webhooks",
+      "automation",
+      "api",
+      "endpoints",
+      "triggers",
+      "advanced",
+    ],
     videos: [
       {
         id: "webhook-overview",
