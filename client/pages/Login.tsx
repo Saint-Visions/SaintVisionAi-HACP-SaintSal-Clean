@@ -304,12 +304,35 @@ export default function Login() {
             className="backdrop-blur-xl border border-yellow-400/30 shadow-2xl shadow-yellow-400/40 rounded-3xl overflow-hidden relative group"
             style={{ backgroundColor: "rgba(55, 65, 81, 0.25)" }}
           >
-            {/* Charcoal Energy Flow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent animate-pulse rounded-3xl"></div>
+            {/* 3D Golden Energy Flow */}
+            <div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/12 to-transparent animate-pulse rounded-3xl"
+              style={{
+                boxShadow: "inset 0 0 30px rgba(251, 191, 36, 0.2)",
+              }}
+            ></div>
 
-            {/* Deep Charcoal Sanctuary Glow */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-gray-700/20 via-yellow-400/15 to-gray-700/20 rounded-3xl blur-2xl animate-pulse"></div>
-            <div className="absolute -inset-1 bg-gradient-to-br from-gray-600/15 via-transparent to-yellow-400/8 rounded-3xl blur-xl"></div>
+            {/* Realistic 3D Sanctuary Glow */}
+            <div
+              className="absolute -inset-3 bg-gradient-to-r from-gray-700/15 via-yellow-400/20 to-gray-700/15 rounded-3xl blur-3xl animate-pulse"
+              style={{
+                boxShadow:
+                  "0 0 60px rgba(251, 191, 36, 0.3), 0 0 120px rgba(251, 191, 36, 0.15)",
+              }}
+            ></div>
+            <div
+              className="absolute -inset-2 bg-gradient-to-br from-gray-600/12 via-transparent to-yellow-400/12 rounded-3xl blur-2xl"
+              style={{
+                boxShadow:
+                  "0 0 40px rgba(251, 191, 36, 0.25), inset 0 0 20px rgba(251, 191, 36, 0.1)",
+              }}
+            ></div>
+            <div
+              className="absolute -inset-1 bg-gradient-to-t from-yellow-400/8 via-transparent to-yellow-300/6 rounded-3xl blur-xl"
+              style={{
+                boxShadow: "0 0 25px rgba(251, 191, 36, 0.2)",
+              }}
+            ></div>
 
             <CardHeader className="text-center space-y-8 relative pb-8 pt-12">
               {/* Prestigious Logo Section */}
