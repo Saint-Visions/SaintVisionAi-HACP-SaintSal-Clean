@@ -134,43 +134,51 @@ export default function Login() {
         ></div>
       </div>
 
-      {/* Elite Floating Particles System */}
+      {/* Atmospheric Energy Particles */}
       <div className="absolute inset-0 overflow-hidden z-4">
-        {/* Primary Particles */}
-        <div className="animate-pulse absolute top-1/4 left-1/4 w-3 h-3 bg-yellow-400 rounded-full opacity-70 shadow-lg shadow-yellow-400/50"></div>
+        {/* Primary Energy Orbs */}
+        <div className="animate-pulse absolute top-1/4 left-1/4 w-4 h-4 bg-yellow-400 rounded-full opacity-60 shadow-2xl shadow-yellow-400/80 blur-sm"></div>
         <div
-          className="animate-pulse absolute top-1/3 right-1/3 w-2 h-2 bg-yellow-300 rounded-full opacity-50 shadow-md shadow-yellow-300/40"
+          className="animate-pulse absolute top-1/3 right-1/3 w-3 h-3 bg-yellow-300 rounded-full opacity-40 shadow-xl shadow-yellow-300/60 blur-sm"
           style={{ animationDelay: "0.8s" }}
         ></div>
         <div
-          className="animate-pulse absolute bottom-1/4 right-1/4 w-4 h-4 bg-yellow-500 rounded-full opacity-40 shadow-xl shadow-yellow-500/30"
+          className="animate-pulse absolute bottom-1/4 right-1/4 w-5 h-5 bg-yellow-500 rounded-full opacity-30 shadow-2xl shadow-yellow-500/70 blur-sm"
           style={{ animationDelay: "1.6s" }}
         ></div>
         <div
-          className="animate-pulse absolute bottom-1/3 left-1/5 w-2 h-2 bg-yellow-400 rounded-full opacity-60 shadow-lg shadow-yellow-400/40"
+          className="animate-pulse absolute bottom-1/3 left-1/5 w-3 h-3 bg-yellow-400 rounded-full opacity-50 shadow-xl shadow-yellow-400/60 blur-sm"
           style={{ animationDelay: "2.4s" }}
         ></div>
         <div
-          className="animate-pulse absolute top-1/2 left-1/2 w-3 h-3 bg-yellow-300 rounded-full opacity-50 shadow-md shadow-yellow-300/35"
+          className="animate-pulse absolute top-1/2 left-1/2 w-4 h-4 bg-yellow-300 rounded-full opacity-35 shadow-xl shadow-yellow-300/50 blur-sm"
           style={{ animationDelay: "3.2s" }}
         ></div>
         <div
-          className="animate-pulse absolute top-3/4 left-3/4 w-2 h-2 bg-yellow-500 rounded-full opacity-45 shadow-lg shadow-yellow-500/30"
+          className="animate-pulse absolute top-3/4 left-3/4 w-3 h-3 bg-yellow-500 rounded-full opacity-40 shadow-xl shadow-yellow-500/60 blur-sm"
           style={{ animationDelay: "4s" }}
         ></div>
 
-        {/* Secondary Elite Particles */}
+        {/* Ambient Energy Dust */}
         <div
-          className="animate-pulse absolute top-1/6 right-1/6 w-1 h-1 bg-yellow-200 rounded-full opacity-30"
+          className="animate-pulse absolute top-1/6 right-1/6 w-2 h-2 bg-yellow-200 rounded-full opacity-20 shadow-lg shadow-yellow-200/40 blur-sm"
           style={{ animationDelay: "0.5s" }}
         ></div>
         <div
-          className="animate-pulse absolute bottom-1/6 left-1/3 w-1 h-1 bg-yellow-400 rounded-full opacity-35"
+          className="animate-pulse absolute bottom-1/6 left-1/3 w-2 h-2 bg-yellow-400 rounded-full opacity-25 shadow-lg shadow-yellow-400/50 blur-sm"
           style={{ animationDelay: "1.2s" }}
         ></div>
         <div
-          className="animate-pulse absolute top-2/3 right-1/5 w-1 h-1 bg-yellow-300 rounded-full opacity-25"
+          className="animate-pulse absolute top-2/3 right-1/5 w-2 h-2 bg-yellow-300 rounded-full opacity-15 shadow-lg shadow-yellow-300/40 blur-sm"
           style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="animate-pulse absolute top-1/8 left-2/3 w-1 h-1 bg-yellow-400 rounded-full opacity-30 shadow-md shadow-yellow-400/60 blur-sm"
+          style={{ animationDelay: "2.8s" }}
+        ></div>
+        <div
+          className="animate-pulse absolute bottom-1/8 right-2/3 w-1 h-1 bg-yellow-300 rounded-full opacity-25 shadow-md shadow-yellow-300/50 blur-sm"
+          style={{ animationDelay: "3.6s" }}
         ></div>
       </div>
 
