@@ -99,7 +99,7 @@ export default function AdminTrainingPage() {
           </div>
 
           {/* Training Overview */}
-          <div className="grid md:grid-cols-4 gap-6 mb-8">
+          <div className="grid md:grid-cols-5 gap-6 mb-8">
             <Card className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 border-blue-500/30">
               <CardContent className="p-6 text-center">
                 <Users className="w-8 h-8 text-blue-400 mx-auto mb-4" />
@@ -139,6 +139,17 @@ export default function AdminTrainingPage() {
                 <p className="text-sm text-muted-foreground">
                   Progress Complete
                 </p>
+              </CardContent>
+            </Card>
+
+            <Card
+              className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 border-orange-500/30 cursor-pointer hover:from-orange-500/30 hover:to-orange-600/30 transition-all"
+              onClick={() => setShowAnalytics(!showAnalytics)}
+            >
+              <CardContent className="p-6 text-center">
+                <BarChart3 className="w-8 h-8 text-orange-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-orange-400">📊</h3>
+                <p className="text-sm text-muted-foreground">Analytics</p>
               </CardContent>
             </Card>
           </div>
