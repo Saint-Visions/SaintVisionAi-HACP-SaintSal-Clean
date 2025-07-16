@@ -151,12 +151,16 @@ export function Sidebar({ className }: SidebarProps) {
         <div className="flex flex-col h-full p-6">
           {/* Logo Section */}
           <div className="flex items-center gap-3 mb-8 pb-6 border-b border-muted">
-            <div className="w-16 h-16 bg-gradient-to-br from-warning to-orange-400 rounded-2xl flex items-center justify-center shadow-lg">
-              <span className="text-2xl font-bold text-white">Sv</span>
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
+                alt="SAINTSAL™"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">
-                SaintVision AI™
+                SaintVisionAI™
               </h1>
               <p className="text-sm text-muted-foreground">Cookin' Knowledge</p>
             </div>
