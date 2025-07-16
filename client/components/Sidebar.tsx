@@ -176,12 +176,12 @@ export function Sidebar({ className }: SidebarProps) {
 
           {/* Navigation Items */}
           <nav className="flex-1 space-y-3 overflow-y-auto">
-            {sidebarItems.map((item, index) => {
+                        {sidebarItems.map((item, index) => {
               const IconComponent = item.icon;
               const isActive = location.pathname === item.href;
+              const isExternal = (item as any).external;
 
-              return (
-                <Link key={index} to={item.href}>
+              const content = (
                   <Button
                     variant="ghost"
                     className={cn(
