@@ -299,7 +299,7 @@ export default function Login() {
             </span>
           </Link>
 
-                    {/* Native Form Container */}
+          {/* Native Form Container */}
           <div className="w-full max-w-2xl mx-auto relative">
             {/* Header Section */}
             <div className="text-center space-y-8 relative pb-8 pt-12">
@@ -348,14 +348,14 @@ export default function Login() {
                 </div>
               </div>
 
-                            <h1 className="text-5xl font-bold relative">
+              <h1 className="text-5xl font-bold relative">
                 <span className="bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 bg-clip-text text-transparent">
                   {isSignup ? "Join Elite" : "Welcome Back"}
                 </span>
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <Sparkles className="w-8 h-8 text-yellow-400 animate-spin" />
                 </div>
-              </CardTitle>
+              </h1>
 
               <p className="text-gray-200 text-xl font-light leading-relaxed px-4">
                 {isSignup ? (
@@ -375,7 +375,7 @@ export default function Login() {
                   </>
                 )}
               </p>
-                        </div>
+            </div>
 
             {/* Form Content */}
             <div className="space-y-8 px-4 sm:px-8 pb-12">
@@ -604,7 +604,7 @@ export default function Login() {
                 >
                   {isSignup ? "Sign In" : "Create Elite Account"}
                 </Link>
-                            </div>
+              </div>
             </div>
           </div>
 
