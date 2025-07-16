@@ -475,9 +475,9 @@ export default function Index() {
 
         {/* Professional Footer */}
         <footer className="bg-black/80 backdrop-blur-xl border-t border-yellow-400/20">
-          <div className="max-w-7xl mx-auto px-6 py-16">
-            {/* Main Footer Content */}
-            <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="max-w-7xl mx-auto px-6 py-8 md:py-16">
+            {/* Main Footer Content - Hidden on mobile, shown on md+ */}
+            <div className="hidden md:grid md:grid-cols-4 gap-8 mb-12">
               {/* Company Info */}
               <div className="col-span-1">
                 <div className="flex items-center mb-4">
