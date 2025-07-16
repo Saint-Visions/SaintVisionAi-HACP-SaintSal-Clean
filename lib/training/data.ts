@@ -29,6 +29,7 @@ export const trainingData: TrainingSection[] = [
     icon: "🚀",
     duration: "45 mins",
     difficulty: "Beginner",
+    tags: ["beginner", "setup", "basics", "admin", "platform", "onboarding"],
     videos: [
       {
         id: "login-setup",
@@ -37,6 +38,7 @@ export const trainingData: TrainingSection[] = [
         duration: "8 mins",
         videoUrl: "https://youtu.be/example1",
         type: "youtube",
+        tags: ["login", "setup", "workspace", "configuration", "auth"],
       },
       {
         id: "onboarding-flow",
@@ -45,6 +47,7 @@ export const trainingData: TrainingSection[] = [
         duration: "12 mins",
         videoUrl: "https://youtu.be/example2",
         type: "youtube",
+        tags: ["onboarding", "users", "setup", "flow", "new user"],
       },
       {
         id: "dashboard-overview",
@@ -53,6 +56,7 @@ export const trainingData: TrainingSection[] = [
         duration: "15 mins",
         videoUrl: "https://youtu.be/example3",
         type: "youtube",
+        tags: ["dashboard", "navigation", "overview", "ui", "interface"],
       },
       {
         id: "ai-console-basics",
@@ -61,6 +65,7 @@ export const trainingData: TrainingSection[] = [
         duration: "10 mins",
         videoUrl: "https://youtu.be/example4",
         type: "youtube",
+        tags: ["ai", "console", "chat", "dual ai", "gpt", "azure"],
       },
     ],
   },
