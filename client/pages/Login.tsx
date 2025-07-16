@@ -203,12 +203,12 @@ export default function Login() {
             className="backdrop-blur-xl border border-yellow-400/30 shadow-2xl shadow-yellow-400/40 rounded-3xl overflow-hidden relative group"
             style={{ backgroundColor: "rgba(55, 65, 81, 0.25)" }}
           >
-            {/* Atmospheric Energy Flow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/20 to-transparent animate-pulse rounded-3xl"></div>
+            {/* Charcoal Energy Flow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent animate-pulse rounded-3xl"></div>
 
-            {/* Immersive Sanctuary Glow */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400/15 via-yellow-300/25 to-yellow-400/15 rounded-3xl blur-2xl animate-pulse"></div>
-            <div className="absolute -inset-1 bg-gradient-to-br from-yellow-500/10 via-transparent to-yellow-400/10 rounded-3xl blur-xl"></div>
+            {/* Deep Charcoal Sanctuary Glow */}
+            <div className="absolute -inset-2 bg-gradient-to-r from-gray-700/20 via-yellow-400/15 to-gray-700/20 rounded-3xl blur-2xl animate-pulse"></div>
+            <div className="absolute -inset-1 bg-gradient-to-br from-gray-600/15 via-transparent to-yellow-400/8 rounded-3xl blur-xl"></div>
 
             <CardHeader className="text-center space-y-8 relative pb-8 pt-12">
               {/* Prestigious Logo Section */}
