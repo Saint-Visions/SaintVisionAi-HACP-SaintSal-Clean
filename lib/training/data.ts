@@ -152,6 +152,15 @@ export const trainingData: TrainingSection[] = [
     icon: "💳",
     duration: "50 mins",
     difficulty: "Intermediate",
+    tags: [
+      "stripe",
+      "crm",
+      "tiers",
+      "pricing",
+      "subscriptions",
+      "billing",
+      "payments",
+    ],
     videos: [
       {
         id: "pricing-tiers",
@@ -160,6 +169,7 @@ export const trainingData: TrainingSection[] = [
         duration: "15 mins",
         videoUrl: "https://youtu.be/example9",
         type: "youtube",
+        tags: ["pricing", "tiers", "$27", "$97", "$497", "enterprise", "pro"],
       },
       {
         id: "stripe-integration",
@@ -168,6 +178,7 @@ export const trainingData: TrainingSection[] = [
         duration: "18 mins",
         videoUrl: "https://youtu.be/example10",
         type: "youtube",
+        tags: ["stripe", "integration", "payments", "webhooks", "upgrades"],
       },
       {
         id: "crm-features",
@@ -176,6 +187,7 @@ export const trainingData: TrainingSection[] = [
         duration: "12 mins",
         videoUrl: "https://youtu.be/example11",
         type: "youtube",
+        tags: ["crm", "features", "tier", "subscription", "unlock"],
       },
       {
         id: "upgrade-process",
@@ -184,6 +196,7 @@ export const trainingData: TrainingSection[] = [
         duration: "5 mins",
         videoUrl: "https://youtu.be/example12",
         type: "youtube",
+        tags: ["upgrade", "billing", "support", "process", "issues"],
       },
     ],
   },
