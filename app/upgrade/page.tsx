@@ -156,61 +156,77 @@ export default function UpgradePage() {
             </div>
 
             {/* Enterprise */}
-            <Card className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 border-purple-500/30 backdrop-blur-sm relative">
+            <div
+              className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-400/30 backdrop-blur-md rounded-3xl relative scale-105"
+              style={{
+                boxShadow:
+                  "0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 60px rgba(168, 85, 247, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+              }}
+            >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-purple-500 text-white px-4 py-1">
+                <div className="bg-gradient-to-r from-purple-500 to-purple-400 text-white px-4 py-1 rounded-full text-sm font-medium">
                   Most Popular
-                </Badge>
+                </div>
               </div>
-              <CardHeader className="text-center">
+              <div className="text-center p-8">
                 <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Crown className="w-8 h-8 text-purple-400" />
                 </div>
-                <CardTitle className="text-2xl text-purple-400">
+                <h2 className="text-2xl font-thin tracking-tight text-purple-400">
                   Enterprise
-                </CardTitle>
-                <div className="text-4xl font-bold text-purple-400 mb-2">
+                </h2>
+                <div className="text-4xl font-light text-purple-400 mb-2">
                   $497
-                  <span className="text-lg text-muted-foreground">/month</span>
+                  <span className="text-lg text-gray-400">/month</span>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-gray-300">
                   Full enterprise suite with admin controls
                 </p>
-              </CardHeader>
-              <CardContent>
+              </div>
+              <div className="px-8 pb-8">
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-purple-400" />
-                    <span className="text-sm">
+                    <span className="text-sm text-gray-200">
                       Everything in PartnerTech Pro
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-purple-400" />
-                    <span className="text-sm">Admin Dashboard</span>
+                    <span className="text-sm text-gray-200">
+                      Admin Dashboard
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-purple-400" />
-                    <span className="text-sm">Team Management</span>
+                    <span className="text-sm text-gray-200">
+                      Team Management
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-purple-400" />
-                    <span className="text-sm">Advanced Security Controls</span>
+                    <span className="text-sm text-gray-200">
+                      Advanced Security Controls
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-purple-400" />
-                    <span className="text-sm">24/7 Phone Support</span>
+                    <span className="text-sm text-gray-200">
+                      24/7 Phone Support
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-purple-400" />
-                    <span className="text-sm">White-label Options</span>
+                    <span className="text-sm text-gray-200">
+                      White-label Options
+                    </span>
                   </li>
                 </ul>
-                <Button className="w-full bg-purple-500 hover:bg-purple-600">
+                <Button className="w-full bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:from-purple-400 hover:to-purple-300 font-medium transition-all duration-200">
                   Upgrade to Enterprise
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
           {/* Why Upgrade */}
