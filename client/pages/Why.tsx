@@ -65,19 +65,68 @@ export default function Why() {
 
               {/* HACP Section */}
               <div className="bg-black/60 backdrop-blur-xl border border-blue-400/30 rounded-2xl p-8">
-                <h3 className="text-2xl font-semibold text-blue-400 mb-4">
+                <h3 className="text-3xl font-bold text-blue-400 mb-6">
                   The Secret Sauce: HACP™
                 </h3>
-                <p className="text-gray-300 text-lg font-light leading-relaxed mb-4">
+                <p className="text-gray-300 text-xl font-light leading-relaxed mb-6">
                   HACP isn't just tech jargon — it's what makes SaintSal™
                   intelligent.
                 </p>
-                <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                  <li>Two brains (GPT + Azure) work together</li>
-                  <li>They verify each other's answers</li>
-                  <li>You get clean, confident responses</li>
-                  <li>Zero hallucinations through dual-validation</li>
-                </ul>
+
+                {/* Technical Foundation */}
+                <div className="mb-8">
+                  <h4 className="text-lg font-semibold text-white mb-3">
+                    The Foundation:
+                  </h4>
+                  <ul className="list-disc pl-6 space-y-2 text-gray-300">
+                    <li>Two brains (GPT + Azure) work together</li>
+                    <li>They verify each other's answers</li>
+                    <li>You get clean, confident responses</li>
+                    <li>Zero hallucinations through dual-validation</li>
+                  </ul>
+                </div>
+
+                {/* The Real Magic */}
+                <div className="border-t border-blue-400/20 pt-6">
+                  <h4 className="text-xl font-bold text-yellow-400 mb-4">
+                    But Here's the REAL Magic:
+                  </h4>
+                  <p className="text-white text-lg font-medium leading-relaxed mb-4">
+                    SaintSal learns what YOU need to build — a business, a
+                    resume, a family schedule, or an empire — and actually{" "}
+                    <strong className="text-yellow-400">GETS IT DONE.</strong>
+                  </p>
+
+                  <div className="bg-blue-400/10 border border-blue-400/30 rounded-xl p-6 mb-4">
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                      <strong className="text-white">
+                        While you search and learn
+                      </strong>
+                      , your SaintSal cognitive companion adapts with you
+                      everywhere you go:
+                    </p>
+                    <ul className="list-none space-y-2 mt-4 text-gray-300">
+                      <li>
+                        🎤 <strong>Voice</strong> - Natural conversations
+                      </li>
+                      <li>
+                        📱 <strong>Mobile</strong> - Always in your pocket
+                      </li>
+                      <li>
+                        🌐 <strong>Chrome Extension</strong> - Sticky, always
+                        working
+                      </li>
+                      <li>
+                        ⚡ <strong>Real Action</strong> - Not just advice, but
+                        execution
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p className="text-yellow-400 text-xl font-bold text-center">
+                    Continue to grow your vision without limitation. 🚀
+                  </p>
+                </div>
               </div>
 
               {/* Comparison Table */}
