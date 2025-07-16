@@ -161,6 +161,26 @@ export default function Index() {
               </div>
             </div>
 
+            {/* Why CTA */}
+            <div className="max-w-3xl mx-auto mb-8">
+              <div className="bg-black/40 backdrop-blur-xl border border-purple-400/20 rounded-2xl p-6 text-center">
+                <h3 className="text-2xl font-semibold text-purple-400 mb-4">
+                  Why?
+                </h3>
+                <p className="text-gray-300 font-light leading-relaxed mb-6">
+                  Dive into what separates us from every other AI platform. See
+                  the full comparison, understand the technology, and discover
+                  why SAINTSAL™ isn't just another chatbot.
+                </p>
+                <button
+                  onClick={() => (window.location.href = "/why")}
+                  className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-xl text-lg shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  See What We're Made Of
+                </button>
+              </div>
+            </div>
+
             {/* Saint Vision Institute */}
             <div className="p-6 bg-black/40 backdrop-blur-xl border border-yellow-400/20 rounded-2xl max-w-4xl mx-auto">
               <p className="text-gray-300 text-lg font-light leading-relaxed">
