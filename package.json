@@ -11,7 +11,7 @@
     "start": "node dist/server/node-build.mjs",
     "test": "vitest --run",
     "typecheck": "tsc",
-    "deploy": "vercel --prod",
+    "deploy": "vercel --prod --yes",
     "builder:init": "npx tsx scripts/init-builder.ts",
     "builder:sync": "npx @builder.io/cli sync --push",
     "builder:setup": "npm run builder:init && npm run builder:sync"
