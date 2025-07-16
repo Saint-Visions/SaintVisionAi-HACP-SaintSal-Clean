@@ -25,6 +25,7 @@ import Settings from "./pages/Settings";
 import CheckoutSuccess from "./pages/CheckoutSuccess";
 import Help from "./pages/Help";
 import Setup from "./pages/Setup";
+import Why from "./pages/Why";
 import AdminClients from "./pages/AdminClients";
 import AdminLogs from "./pages/AdminLogs";
 import ReferralInvite from "./pages/ReferralInvite";
