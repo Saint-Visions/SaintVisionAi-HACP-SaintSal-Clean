@@ -372,7 +372,7 @@ export default function SetupPage() {
                             setFormData({ ...formData, apiKey: e.target.value })
                           }
                           placeholder="sk-... (Leave blank to use our premium API)"
-                          className="w-full px-4 py-3 pr-12 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
+                          className="w-full px-4 py-3 pr-12 border border-yellow-400/20 bg-gray-900/60 backdrop-blur-sm rounded-xl text-white placeholder-gray-400 focus:border-yellow-400/50 focus:outline-none focus:ring-2 focus:ring-yellow-400/20"
                         />
                         <button
                           type="button"
