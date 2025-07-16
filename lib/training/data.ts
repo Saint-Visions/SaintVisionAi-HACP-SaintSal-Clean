@@ -262,6 +262,14 @@ export const trainingData: TrainingSection[] = [
     icon: "⚙️",
     duration: "55 mins",
     difficulty: "Advanced",
+    tags: [
+      "admin",
+      "tools",
+      "dashboard",
+      "management",
+      "monitoring",
+      "advanced",
+    ],
     videos: [
       {
         id: "admin-dashboard",
