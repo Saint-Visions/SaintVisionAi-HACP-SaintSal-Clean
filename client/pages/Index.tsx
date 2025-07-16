@@ -120,133 +120,175 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Native Features Overlay */}
-        <div className="relative py-32 overflow-hidden bg-gradient-to-b from-black/90 to-black/60">
-          {/* Subtle golden shimmer */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/3 to-transparent animate-pulse"></div>
+        {/* Crystal Glass Features - Professional Typography */}
+        <div
+          className="relative py-20 overflow-hidden"
+          style={{
+            backgroundImage:
+              "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f?format=webp&width=1920)",
+            backgroundSize: "120%",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {/* Divine overlay */}
+          <div className="absolute inset-0 bg-black/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent animate-pulse"></div>
 
-          <div className="relative z-10 max-w-5xl mx-auto px-8">
-            {/* Native Header */}
-            <div className="text-center mb-20">
-              <div className="text-yellow-400/60 text-sm font-light tracking-[0.2em] uppercase mb-6">
-                Elite Technology
+          <div className="relative z-10 max-w-7xl mx-auto px-6">
+            {/* Professional Header */}
+            <div className="text-center mb-16">
+              <div
+                className="text-yellow-400/60 text-sm font-medium tracking-widest uppercase mb-4"
+                style={{
+                  fontFamily:
+                    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                }}
+              >
+                What's Inside These Walls
               </div>
-              <h2 className="text-5xl md:text-6xl font-extralight text-white mb-6 tracking-tight">
-                Enterprise Intelligence
+              <h2
+                className="text-4xl md:text-5xl font-light text-white mb-6 tracking-tight"
+                style={{
+                  fontFamily:
+                    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                }}
+              >
+                Divine AI Technology
               </h2>
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent mx-auto"></div>
+              <p
+                className="text-gray-300 text-lg font-light max-w-2xl mx-auto"
+                style={{
+                  fontFamily:
+                    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                }}
+              >
+                Professional-grade intelligence for those who demand excellence
+              </p>
             </div>
 
-            {/* Native Feature Flow */}
-            <div className="space-y-24">
-              {/* Dual-AI Engine */}
-              <div className="flex items-center space-x-12 md:space-x-20">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 flex items-center justify-center">
-                    <Brain className="w-8 h-8 text-yellow-400" />
+            {/* Crystal Glass Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+              {/* Dual AI Console */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative rounded-2xl bg-[#10161C]/70 border border-yellow-400/30 backdrop-blur-xl p-6 hover:shadow-2xl hover:shadow-yellow-400/20 hover:border-yellow-400 transition-all duration-300 hover:scale-105">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 border border-yellow-400/30">
+                      <Brain className="text-yellow-400 w-8 h-8" />
+                    </div>
+                    <h3
+                      className="text-lg font-semibold text-white"
+                      style={{
+                        fontFamily:
+                          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      Dual AI Console
+                    </h3>
+                    <p
+                      className="text-sm text-gray-300 leading-relaxed"
+                      style={{
+                        fontFamily:
+                          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      Azure + GPT-4o in perfect sync
+                    </p>
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">
-                    Dual-AI Engine
-                  </h3>
-                  <p className="text-gray-300 text-lg font-light leading-relaxed">
-                    GPT-4o and Azure Cognitive Services in perfect
-                    synchronization. Redundant intelligence ensures zero
-                    downtime, maximum reliability.
-                  </p>
-                  <div className="flex items-center mt-4 text-yellow-400/70 text-sm font-light">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-                    Live • 99.9% Uptime Guaranteed
-                  </div>
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div className="flex justify-center">
-                <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
               </div>
 
               {/* PartnerTech Suite */}
-              <div className="flex items-center space-x-12 md:space-x-20">
-                <div className="flex-1 order-2 md:order-1">
-                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">
-                    PartnerTech Suite
-                  </h3>
-                  <p className="text-gray-300 text-lg font-light leading-relaxed">
-                    Advanced CRM, automated outreach, Chrome extensions. Unlock
-                    when you're ready to scale beyond individual use.
-                  </p>
-                  <div className="flex items-center mt-4 text-blue-400/70 text-sm font-light">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    Partner Access • Premium Tier
-                  </div>
-                </div>
-                <div className="flex-shrink-0 order-1 md:order-2">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400/20 to-blue-600/20 flex items-center justify-center">
-                    <Wrench className="w-8 h-8 text-blue-400" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div className="flex justify-center">
-                <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-              </div>
-
-              {/* Intelligence Layer */}
-              <div className="flex items-center space-x-12 md:space-x-20">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400/20 to-purple-600/20 flex items-center justify-center">
-                    <Zap className="w-8 h-8 text-purple-400" />
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">
-                    Adaptive Intelligence
-                  </h3>
-                  <p className="text-gray-300 text-lg font-light leading-relaxed">
-                    Machine learning algorithms that evolve with your workflow.
-                    Smarter responses through continuous optimization.
-                  </p>
-                  <div className="flex items-center mt-4 text-purple-400/70 text-sm font-light">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3 animate-pulse"></div>
-                    Learning • Continuously Improving
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative rounded-2xl bg-[#10161C]/70 border border-yellow-400/30 backdrop-blur-xl p-6 hover:shadow-2xl hover:shadow-blue-400/20 hover:border-blue-400 transition-all duration-300 hover:scale-105">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-blue-400/20 to-blue-600/20 border border-blue-400/30">
+                      <Wrench className="text-blue-400 w-8 h-8" />
+                    </div>
+                    <h3
+                      className="text-lg font-semibold text-white"
+                      style={{
+                        fontFamily:
+                          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      PartnerTech Suite
+                    </h3>
+                    <p
+                      className="text-sm text-blue-300 leading-relaxed"
+                      style={{
+                        fontFamily:
+                          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      CRM tools, Chrome extension, workflows
+                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* Divider */}
-              <div className="flex justify-center">
-                <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-              </div>
-
-              {/* Faith-Aligned Security */}
-              <div className="flex items-center space-x-12 md:space-x-20">
-                <div className="flex-1 order-2 md:order-1">
-                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">
-                    Faith-Aligned Privacy
-                  </h3>
-                  <p className="text-gray-300 text-lg font-light leading-relaxed">
-                    Your conversations stay private. Your values stay intact.
-                    Built with ethical AI principles at the foundation.
-                  </p>
-                  <div className="flex items-center mt-4 text-green-400/70 text-sm font-light">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                    Encrypted • Values-First Design
+              {/* Intelligent Flows */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative rounded-2xl bg-[#10161C]/70 border border-yellow-400/30 backdrop-blur-xl p-6 hover:shadow-2xl hover:shadow-purple-400/20 hover:border-purple-400 transition-all duration-300 hover:scale-105">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-purple-400/20 to-purple-600/20 border border-purple-400/30">
+                      <Zap className="text-purple-400 w-8 h-8" />
+                    </div>
+                    <h3
+                      className="text-lg font-semibold text-white"
+                      style={{
+                        fontFamily:
+                          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      Intelligent Flows
+                    </h3>
+                    <p
+                      className="text-sm text-purple-300 leading-relaxed"
+                      style={{
+                        fontFamily:
+                          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      Pipeline logic, lead scoring, voice AI
+                    </p>
                   </div>
                 </div>
-                <div className="flex-shrink-0 order-1 md:order-2">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400/20 to-green-600/20 flex items-center justify-center">
-                    <Shield className="w-8 h-8 text-green-400" />
+              </div>
+
+              {/* Faith-Aligned Vault */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative rounded-2xl bg-[#10161C]/70 border border-yellow-400/30 backdrop-blur-xl p-6 hover:shadow-2xl hover:shadow-green-400/20 hover:border-green-400 transition-all duration-300 hover:scale-105">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-green-400/20 to-green-600/20 border border-green-400/30">
+                      <Shield className="text-green-400 w-8 h-8" />
+                    </div>
+                    <h3
+                      className="text-lg font-semibold text-white"
+                      style={{
+                        fontFamily:
+                          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      Faith-Aligned Vault
+                    </h3>
+                    <p
+                      className="text-sm text-green-300 leading-relaxed"
+                      style={{
+                        fontFamily:
+                          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      Private, secure, and principled
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Bottom Accent */}
-            <div className="text-center mt-20">
-              <div className="w-24 h-px bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent mx-auto"></div>
             </div>
           </div>
         </div>
