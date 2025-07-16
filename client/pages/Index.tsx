@@ -463,7 +463,7 @@ export default function Index() {
                 onClick={() => (window.location.href = "/signup")}
                 className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-12 py-4 rounded-2xl text-xl shadow-xl shadow-yellow-400/30 transition-all duration-300 hover:scale-105"
               >
-                🚀 Join SAINTSAL™
+                🚀 SaintVisionAI™ Access
               </Button>
 
               <div className="text-gray-400 text-sm font-light">
