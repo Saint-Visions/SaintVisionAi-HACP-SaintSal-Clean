@@ -305,12 +305,13 @@ export default function AdminTrainingPage() {
           {/* Training Sections */}
           <div className="space-y-6">
             {trainingData.map((section) => (
-              <SectionCard
-                key={section.id}
-                section={section}
-                onVideoComplete={handleVideoComplete}
-                onDownload={handleDownload}
-              />
+              <div key={section.id} id={`section-${section.id}`}>
+                <SectionCard
+                  section={section}
+                  onVideoComplete={handleVideoComplete}
+                  onDownload={handleDownload}
+                />
+              </div>
             ))}
           </div>
 
