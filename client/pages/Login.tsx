@@ -364,11 +364,15 @@ export default function Login() {
                 <div className="space-y-2">
                   <div className="text-white text-sm font-light uppercase tracking-[0.5em] opacity-90 flex items-center justify-center gap-2">
                     <Gem className="w-4 h-4 text-yellow-400" />
-                    SAINTSAL™
+                    <span>
+                      SAINTSAL<span className="text-yellow-400">™</span>
+                    </span>
                     <Gem className="w-4 h-4 text-yellow-400" />
                   </div>
-                  <div className="text-yellow-400 text-2xl font-bold tracking-wide">
-                    SaintVisionAI™
+                  <div className="text-white text-2xl font-bold tracking-wide">
+                    <span>
+                      SaintVisionAI<span className="text-yellow-400">™</span>
+                    </span>
                   </div>
                   <div className="text-yellow-300/90 text-base font-medium tracking-wider">
                     Enterprise Intelligence
