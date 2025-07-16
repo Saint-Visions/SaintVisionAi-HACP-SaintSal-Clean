@@ -20,7 +20,7 @@ export default function Why() {
 
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center p-8 text-center">
+        <section className="h-[75vh] flex flex-col items-center justify-center p-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg mb-6 tracking-tight">
             saintsal™ + you
           </h1>
