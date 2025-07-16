@@ -18,7 +18,7 @@ export default function Index() {
           className="absolute inset-0 parallax"
           style={{
             backgroundImage:
-              "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f?format=webp&width=1920)",
+              "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F51e896cb4f2047d5aef30f1a590471f6?format=webp&width=1920)",
             backgroundSize: "120%",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
@@ -111,7 +111,7 @@ export default function Index() {
               onClick={() => (window.location.href = "/setup")}
               className="text-blue-400 hover:text-blue-300 font-light transition-colors hover:scale-110 duration-300"
             >
-              🛠️ Setup
+              🛠��� Setup
             </button>
             <button
               onClick={() => (window.location.href = "/help")}
