@@ -16,6 +16,8 @@ import {
   User,
   Mail,
   Lock,
+  Star,
+  Gem,
 } from "lucide-react";
 import { useAuth } from "../contexts/AuthContext";
 
@@ -114,133 +116,184 @@ export default function Login() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Enhanced Divine Overlays */}
-      <div className="absolute inset-0 bg-black/70 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/70 z-1" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-2" />
+      {/* Prestigious Divine Overlays */}
+      <div className="absolute inset-0 bg-black/80 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/80 z-1" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-2" />
 
-      {/* Floating Gold Particles Animation */}
-      <div className="absolute inset-0 overflow-hidden z-3">
-        <div className="animate-pulse absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full opacity-60"></div>
+      {/* Premium Golden Gradient Sweep */}
+      <div className="absolute inset-0 z-3">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/8 to-transparent animate-pulse opacity-60"></div>
         <div
-          className="animate-pulse absolute top-1/3 right-1/3 w-1 h-1 bg-yellow-300 rounded-full opacity-40"
-          style={{ animationDelay: "1s" }}
+          className="absolute inset-0 bg-gradient-to-t from-yellow-400/8 via-transparent to-yellow-400/8 animate-pulse opacity-40"
+          style={{ animationDelay: "1.5s" }}
+        ></div>
+      </div>
+
+      {/* Elite Floating Particles System */}
+      <div className="absolute inset-0 overflow-hidden z-4">
+        {/* Primary Particles */}
+        <div className="animate-pulse absolute top-1/4 left-1/4 w-3 h-3 bg-yellow-400 rounded-full opacity-70 shadow-lg shadow-yellow-400/50"></div>
+        <div
+          className="animate-pulse absolute top-1/3 right-1/3 w-2 h-2 bg-yellow-300 rounded-full opacity-50 shadow-md shadow-yellow-300/40"
+          style={{ animationDelay: "0.8s" }}
         ></div>
         <div
-          className="animate-pulse absolute bottom-1/4 right-1/4 w-3 h-3 bg-yellow-500 rounded-full opacity-30"
-          style={{ animationDelay: "2s" }}
+          className="animate-pulse absolute bottom-1/4 right-1/4 w-4 h-4 bg-yellow-500 rounded-full opacity-40 shadow-xl shadow-yellow-500/30"
+          style={{ animationDelay: "1.6s" }}
         ></div>
         <div
-          className="animate-pulse absolute bottom-1/3 left-1/5 w-1 h-1 bg-yellow-400 rounded-full opacity-50"
-          style={{ animationDelay: "3s" }}
+          className="animate-pulse absolute bottom-1/3 left-1/5 w-2 h-2 bg-yellow-400 rounded-full opacity-60 shadow-lg shadow-yellow-400/40"
+          style={{ animationDelay: "2.4s" }}
         ></div>
         <div
-          className="animate-pulse absolute top-1/2 left-1/2 w-2 h-2 bg-yellow-300 rounded-full opacity-40"
+          className="animate-pulse absolute top-1/2 left-1/2 w-3 h-3 bg-yellow-300 rounded-full opacity-50 shadow-md shadow-yellow-300/35"
+          style={{ animationDelay: "3.2s" }}
+        ></div>
+        <div
+          className="animate-pulse absolute top-3/4 left-3/4 w-2 h-2 bg-yellow-500 rounded-full opacity-45 shadow-lg shadow-yellow-500/30"
           style={{ animationDelay: "4s" }}
+        ></div>
+
+        {/* Secondary Elite Particles */}
+        <div
+          className="animate-pulse absolute top-1/6 right-1/6 w-1 h-1 bg-yellow-200 rounded-full opacity-30"
+          style={{ animationDelay: "0.5s" }}
+        ></div>
+        <div
+          className="animate-pulse absolute bottom-1/6 left-1/3 w-1 h-1 bg-yellow-400 rounded-full opacity-35"
+          style={{ animationDelay: "1.2s" }}
+        ></div>
+        <div
+          className="animate-pulse absolute top-2/3 right-1/5 w-1 h-1 bg-yellow-300 rounded-full opacity-25"
+          style={{ animationDelay: "2s" }}
         ></div>
       </div>
 
       <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
-        <div className="w-full max-w-md space-y-6">
-          {/* Divine Back to Home */}
+        <div className="w-full max-w-lg space-y-8">
+          {/* Prestigious Back to Sanctuary */}
           <Link
             to="/"
-            className="inline-flex items-center gap-3 text-yellow-400 hover:text-yellow-300 transition-all duration-300 group"
+            className="inline-flex items-center gap-4 text-yellow-400 hover:text-yellow-300 transition-all duration-500 group transform hover:scale-105"
           >
-            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-sm font-medium tracking-wide">
+            <div className="relative">
+              <ArrowLeft className="w-6 h-6 group-hover:-translate-x-2 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-yellow-400/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <span className="text-sm font-bold tracking-wider uppercase">
               Back to Sanctuary
             </span>
           </Link>
 
-          {/* Divine Main Card */}
-          <Card className="bg-black/40 backdrop-blur-xl border border-yellow-400/30 shadow-2xl shadow-yellow-400/20 rounded-2xl overflow-hidden relative">
-            {/* Animated Border Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/20 to-transparent animate-pulse rounded-2xl"></div>
+          {/* Elite Divine Card */}
+          <Card className="bg-black/50 backdrop-blur-2xl border-2 border-yellow-400/40 shadow-2xl shadow-yellow-400/25 rounded-3xl overflow-hidden relative group">
+            {/* Premium Animated Border Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent animate-pulse rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-            <CardHeader className="text-center space-y-6 relative pb-6">
-              {/* Divine Logo Section */}
+            {/* Elite Glow Effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400/20 via-yellow-300/30 to-yellow-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+            <CardHeader className="text-center space-y-8 relative pb-8 pt-12">
+              {/* Prestigious Logo Section */}
               <div className="flex justify-center">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-yellow-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                  {/* Multi-layer Glow System */}
+                  <div className="absolute inset-0 bg-yellow-400/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 animate-pulse"></div>
+                  <div className="absolute inset-0 bg-yellow-300/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
+
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F90fa3cc4d85547ce9ae69ad15ae19bb2"
                     alt="SAINTSAL™ Circuit Board Logo"
-                    className="relative w-24 h-24 rounded-2xl shadow-xl group-hover:scale-105 transition-transform duration-300"
+                    className="relative w-28 h-28 rounded-3xl shadow-2xl group-hover:scale-110 transition-transform duration-500 border-2 border-yellow-400/30"
                   />
-                  <Crown className="absolute -top-2 -right-2 w-6 h-6 text-yellow-400 animate-pulse" />
+
+                  {/* Premium Crown Icon */}
+                  <div className="absolute -top-3 -right-3 bg-yellow-400 rounded-full p-2 shadow-lg shadow-yellow-400/50 animate-pulse">
+                    <Crown className="w-5 h-5 text-black" />
+                  </div>
+
+                  {/* Elite Sparkle Effects */}
+                  <Sparkles className="absolute -top-2 -left-2 w-5 h-5 text-yellow-300 animate-spin" />
+                  <Star className="absolute -bottom-2 -right-1 w-4 h-4 text-yellow-400 animate-pulse" />
                 </div>
               </div>
 
-              {/* Divine Branding */}
-              <div>
-                <div className="text-white text-sm font-light uppercase tracking-[0.4em] mb-3 opacity-90">
-                  SAINTSAL™
-                </div>
-                <div className="text-yellow-400 text-xl font-semibold tracking-wide mb-2">
-                  SaintVisionAI™
-                </div>
-                <div className="text-yellow-300/80 text-sm font-light tracking-wider">
-                  Cookin' Knowledge
+              {/* Elite Branding */}
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <div className="text-white text-sm font-light uppercase tracking-[0.5em] opacity-90 flex items-center justify-center gap-2">
+                    <Gem className="w-4 h-4 text-yellow-400" />
+                    SAINTSAL™
+                    <Gem className="w-4 h-4 text-yellow-400" />
+                  </div>
+                  <div className="text-yellow-400 text-2xl font-bold tracking-wide">
+                    SaintVisionAI™
+                  </div>
+                  <div className="text-yellow-300/90 text-base font-medium tracking-wider">
+                    Enterprise Intelligence
+                  </div>
                 </div>
               </div>
 
-              <CardTitle className="text-4xl font-bold relative">
-                <span className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent animate-pulse">
-                  {isSignup ? "Join the Divine" : "Welcome Back"}
+              <CardTitle className="text-5xl font-bold relative">
+                <span className="bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 bg-clip-text text-transparent">
+                  {isSignup ? "Join Elite" : "Welcome Back"}
                 </span>
-                <Sparkles className="absolute -top-2 -right-6 w-6 h-6 text-yellow-400 animate-spin" />
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <Sparkles className="w-8 h-8 text-yellow-400 animate-spin" />
+                </div>
               </CardTitle>
 
-              <p className="text-gray-300 text-lg font-light leading-relaxed">
+              <p className="text-gray-200 text-xl font-light leading-relaxed px-4">
                 {isSignup ? (
                   <>
                     Enter the{" "}
-                    <span className="text-yellow-400 font-medium">
-                      AI sanctuary
+                    <span className="text-yellow-400 font-semibold">
+                      elite AI sanctuary
                     </span>{" "}
                     and unlock divine knowledge
                   </>
                 ) : (
                   <>
                     Enter your divine credentials to access the{" "}
-                    <span className="text-yellow-400 font-medium">
-                      AI sanctuary
+                    <span className="text-yellow-400 font-semibold">
+                      premium AI sanctuary
                     </span>
                   </>
                 )}
               </p>
             </CardHeader>
 
-            <CardContent className="space-y-6 px-8 pb-8">
+            <CardContent className="space-y-8 px-10 pb-12">
               {/* Error/Success Messages */}
               {error && (
-                <Alert className="border border-red-400/40 bg-red-500/20 backdrop-blur-sm rounded-xl">
-                  <AlertDescription className="text-red-300 flex items-center gap-3">
-                    <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse flex-shrink-0" />
-                    <span className="font-medium">{error}</span>
+                <Alert className="border-2 border-red-400/50 bg-red-500/20 backdrop-blur-sm rounded-2xl shadow-lg">
+                  <AlertDescription className="text-red-200 flex items-center gap-3 text-base">
+                    <div className="w-4 h-4 bg-red-400 rounded-full animate-pulse flex-shrink-0" />
+                    <span className="font-semibold">{error}</span>
                   </AlertDescription>
                 </Alert>
               )}
 
               {success && (
-                <Alert className="border border-green-400/40 bg-green-500/20 backdrop-blur-sm rounded-xl">
-                  <AlertDescription className="text-green-300 flex items-center gap-3">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse flex-shrink-0" />
-                    <span className="font-medium">{success}</span>
+                <Alert className="border-2 border-green-400/50 bg-green-500/20 backdrop-blur-sm rounded-2xl shadow-lg">
+                  <AlertDescription className="text-green-200 flex items-center gap-3 text-base">
+                    <div className="w-4 h-4 bg-green-400 rounded-full animate-pulse flex-shrink-0" />
+                    <span className="font-semibold">{success}</span>
                   </AlertDescription>
                 </Alert>
               )}
 
-              {/* Divine Form */}
-              <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Elite Form */}
+              <form onSubmit={handleSubmit} className="space-y-8">
                 {isSignup && (
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <Label
                       htmlFor="fullName"
-                      className="text-sm font-semibold text-gray-200 tracking-wide flex items-center gap-2"
+                      className="text-base font-bold text-gray-100 tracking-wide flex items-center gap-3"
                     >
-                      <User className="w-4 h-4 text-yellow-400" />
+                      <User className="w-5 h-5 text-yellow-400" />
                       Full Name
                     </Label>
                     <div className="relative group">
@@ -250,20 +303,20 @@ export default function Login() {
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
                         required
-                        className="w-full px-5 py-4 border-2 border-yellow-400/30 bg-black/60 backdrop-blur-sm rounded-xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/20 transition-all duration-300 font-medium"
+                        className="w-full px-6 py-5 text-lg border-2 border-yellow-400/40 bg-black/70 backdrop-blur-sm rounded-2xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/25 transition-all duration-300 font-medium shadow-lg"
                         placeholder="Your divine name"
                       />
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                     </div>
                   </div>
                 )}
 
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <Label
                     htmlFor="email"
-                    className="text-sm font-semibold text-gray-200 tracking-wide flex items-center gap-2"
+                    className="text-base font-bold text-gray-100 tracking-wide flex items-center gap-3"
                   >
-                    <Mail className="w-4 h-4 text-yellow-400" />
+                    <Mail className="w-5 h-5 text-yellow-400" />
                     Email Address
                   </Label>
                   <div className="relative group">
@@ -273,19 +326,19 @@ export default function Login() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full px-5 py-4 border-2 border-yellow-400/30 bg-black/60 backdrop-blur-sm rounded-xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/20 transition-all duration-300 font-medium"
+                      className="w-full px-6 py-5 text-lg border-2 border-yellow-400/40 bg-black/70 backdrop-blur-sm rounded-2xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/25 transition-all duration-300 font-medium shadow-lg"
                       placeholder="saint@saintvisional.com"
                     />
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                   </div>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <Label
                     htmlFor="password"
-                    className="text-sm font-semibold text-gray-200 tracking-wide flex items-center gap-2"
+                    className="text-base font-bold text-gray-100 tracking-wide flex items-center gap-3"
                   >
-                    <Lock className="w-4 h-4 text-yellow-400" />
+                    <Lock className="w-5 h-5 text-yellow-400" />
                     Divine Password
                   </Label>
                   <div className="relative group">
@@ -295,42 +348,46 @@ export default function Login() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      className="w-full px-5 py-4 pr-14 border-2 border-yellow-400/30 bg-black/60 backdrop-blur-sm rounded-xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/20 transition-all duration-300 font-medium"
+                      className="w-full px-6 py-5 pr-16 text-lg border-2 border-yellow-400/40 bg-black/70 backdrop-blur-sm rounded-2xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/25 transition-all duration-300 font-medium shadow-lg"
                       placeholder="Your divine password"
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-yellow-400 transition-colors duration-200"
+                      className="absolute right-5 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-yellow-400 transition-colors duration-300"
                     >
                       {showPassword ? (
-                        <EyeOff className="w-5 h-5" />
+                        <EyeOff className="w-6 h-6" />
                       ) : (
-                        <Eye className="w-5 h-5" />
+                        <Eye className="w-6 h-6" />
                       )}
                     </button>
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                   </div>
 
-                  {/* Password Strength Indicator for Signup */}
+                  {/* Elite Password Strength Indicator */}
                   {isSignup && password && (
-                    <div className="space-y-2">
-                      <div className="flex gap-1">
+                    <div className="space-y-3">
+                      <div className="flex gap-2">
                         {[0, 1, 2, 3].map((index) => (
                           <div
                             key={index}
-                            className="h-2 flex-1 rounded-full transition-all duration-300"
+                            className="h-3 flex-1 rounded-full transition-all duration-500 shadow-sm"
                             style={{
                               backgroundColor:
                                 index < passwordStrength
                                   ? strengthColors[passwordStrength - 1]
                                   : "#374151",
+                              boxShadow:
+                                index < passwordStrength
+                                  ? `0 0 10px ${strengthColors[passwordStrength - 1]}40`
+                                  : "none",
                             }}
                           />
                         ))}
                       </div>
                       <p
-                        className="text-xs"
+                        className="text-sm font-semibold"
                         style={{
                           color:
                             passwordStrength > 0
@@ -348,12 +405,12 @@ export default function Login() {
                 </div>
 
                 {isSignup && (
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <Label
                       htmlFor="confirmPassword"
-                      className="text-sm font-semibold text-gray-200 tracking-wide flex items-center gap-2"
+                      className="text-base font-bold text-gray-100 tracking-wide flex items-center gap-3"
                     >
-                      <Shield className="w-4 h-4 text-yellow-400" />
+                      <Shield className="w-5 h-5 text-yellow-400" />
                       Confirm Password
                     </Label>
                     <div className="relative group">
@@ -363,7 +420,7 @@ export default function Login() {
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                         required
-                        className="w-full px-5 py-4 pr-14 border-2 border-yellow-400/30 bg-black/60 backdrop-blur-sm rounded-xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/20 transition-all duration-300 font-medium"
+                        className="w-full px-6 py-5 pr-16 text-lg border-2 border-yellow-400/40 bg-black/70 backdrop-blur-sm rounded-2xl text-white placeholder:text-gray-400 focus:border-yellow-400 focus:ring-4 focus:ring-yellow-400/25 transition-all duration-300 font-medium shadow-lg"
                         placeholder="Confirm your divine password"
                       />
                       <button
@@ -371,37 +428,37 @@ export default function Login() {
                         onClick={() =>
                           setShowConfirmPassword(!showConfirmPassword)
                         }
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-yellow-400 transition-colors duration-200"
+                        className="absolute right-5 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-yellow-400 transition-colors duration-300"
                       >
                         {showConfirmPassword ? (
-                          <EyeOff className="w-5 h-5" />
+                          <EyeOff className="w-6 h-6" />
                         ) : (
-                          <Eye className="w-5 h-5" />
+                          <Eye className="w-6 h-6" />
                         )}
                       </button>
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                     </div>
                   </div>
                 )}
 
-                {/* Divine Submit Button */}
+                {/* Elite Submit Button */}
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full relative overflow-hidden bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 hover:from-yellow-400 hover:via-yellow-300 hover:to-yellow-400 text-black font-bold py-5 rounded-xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-yellow-400/60 disabled:opacity-50 disabled:hover:scale-100 text-lg tracking-wide"
+                  className="w-full relative overflow-hidden bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 hover:from-yellow-400 hover:via-yellow-300 hover:to-yellow-400 text-black font-bold py-6 rounded-2xl shadow-2xl shadow-yellow-400/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-yellow-400/70 disabled:opacity-50 disabled:hover:scale-100 text-xl tracking-wide group"
                 >
                   {isLoading ? (
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-5 h-5 border-3 border-black/30 border-t-black rounded-full animate-spin" />
+                    <div className="flex items-center justify-center gap-4">
+                      <div className="w-6 h-6 border-4 border-black/30 border-t-black rounded-full animate-spin" />
                       <span>Processing...</span>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-center gap-3">
-                      <Zap className="w-5 h-5" />
+                    <div className="flex items-center justify-center gap-4">
+                      <Zap className="w-6 h-6 group-hover:scale-110 transition-transform" />
                       <span>
-                        {isSignup ? "🚀 Start Cooking" : "🔥 Enter Sanctuary"}
+                        {isSignup ? "🚀 Join Elite" : "👑 Enter Sanctuary"}
                       </span>
-                      <Crown className="w-5 h-5" />
+                      <Crown className="w-6 h-6 group-hover:scale-110 transition-transform" />
                     </div>
                   )}
                   <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 skew-x-12"></div>
@@ -409,29 +466,31 @@ export default function Login() {
               </form>
 
               {/* Toggle between login/signup */}
-              <div className="text-center space-y-3">
-                <p className="text-gray-400 text-sm">
+              <div className="text-center space-y-4 pt-4">
+                <p className="text-gray-300 text-base">
                   {isSignup
                     ? "Already have an account?"
                     : "New to SaintVision?"}
                 </p>
                 <Link
                   to={isSignup ? "/login" : "/signup"}
-                  className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold tracking-wide transition-colors duration-200 underline decoration-yellow-400/30 hover:decoration-yellow-300"
+                  className="text-yellow-400 hover:text-yellow-300 text-base font-bold tracking-wide transition-all duration-300 underline decoration-yellow-400/40 hover:decoration-yellow-300 underline-offset-4"
                 >
-                  {isSignup ? "Sign In" : "Create Account"}
+                  {isSignup ? "Sign In" : "Create Elite Account"}
                 </Link>
               </div>
             </CardContent>
           </Card>
 
-          {/* Divine Footer */}
-          <div className="text-center">
-            <p
-              className="text-xs font-medium tracking-wider"
-              style={{ color: "#f9d878", opacity: "0.8" }}
-            >
-              ✨ Elite AI Sanctuary • Protected by Divine Technology
+          {/* Prestigious Footer */}
+          <div className="text-center space-y-2">
+            <p className="text-yellow-400/90 text-sm font-bold tracking-wider flex items-center justify-center gap-2">
+              <Star className="w-4 h-4" />
+              Elite AI Sanctuary
+              <Star className="w-4 h-4" />
+            </p>
+            <p className="text-yellow-300/70 text-xs font-medium tracking-widest uppercase">
+              Protected by Divine Technology
             </p>
           </div>
         </div>
