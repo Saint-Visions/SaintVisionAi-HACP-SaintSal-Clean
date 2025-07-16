@@ -237,6 +237,179 @@ export const saintsalRoutes: RouteLayout[] = [
       },
     ],
   },
+  {
+    path: "/signup",
+    name: "SAINTSAL™ New User Creation",
+    description: "Divine registration with Supabase",
+    protected: false,
+    components: [
+      {
+        "@type": "@builder.io/sdk:Element",
+        component: {
+          name: "SAINTSAL Hero Section",
+          options: {
+            title: "Join the Divine Revolution",
+            subtitle: "Create your SAINTSAL™ account and unlock AI power",
+            backgroundImage: builderAssets.backgrounds.premium,
+            ctaText: "🚀 Create Account",
+            ctaLink: "/dashboard",
+          },
+        },
+      },
+    ],
+  },
+  {
+    path: "/chrome-install",
+    name: "SAINTSAL™ Chrome Extension",
+    description: "Browser extension installation guide",
+    protected: true,
+    components: [
+      {
+        "@type": "@builder.io/sdk:Element",
+        component: {
+          name: "SAINTSAL Feature Grid",
+          options: {
+            title: "Install SAINTSAL™ Chrome Extension",
+            subtitle: "Bring divine AI to every browser tab",
+            features: [
+              {
+                icon: "🌐",
+                title: "Browser Integration",
+                description: "Access SAINTSAL™ AI from any webpage",
+              },
+              {
+                icon: "⚡",
+                title: "One-Click Access",
+                description: "Instant AI assistance wherever you browse",
+              },
+            ],
+          },
+        },
+      },
+    ],
+  },
+  {
+    path: "/checkout-success",
+    name: "SAINTSAL™ Payment Success",
+    description: "Stripe checkout confirmation",
+    protected: true,
+    components: [
+      {
+        "@type": "@builder.io/sdk:Element",
+        component: {
+          name: "SAINTSAL Hero Section",
+          options: {
+            title: "Divine Power Unlocked! 🎉",
+            subtitle: "Your SAINTSAL™ upgrade is complete",
+            ctaText: "🔥 Start Cooking",
+            ctaLink: "/dashboard",
+          },
+        },
+      },
+    ],
+  },
+  {
+    path: "/referral/invite",
+    name: "SAINTSAL™ Referral Invite",
+    description: "Divine referral invitation system",
+    protected: true,
+    components: [
+      {
+        "@type": "@builder.io/sdk:Element",
+        component: {
+          name: "SAINTSAL Feature Grid",
+          options: {
+            title: "Spread the Divine Word",
+            subtitle: "Invite others to experience SAINTSAL™ AI",
+            features: [
+              {
+                icon: "🤝",
+                title: "Referral Rewards",
+                description: "Earn divine benefits for each referral",
+              },
+              {
+                icon: "📤",
+                title: "Easy Sharing",
+                description: "One-click invite system",
+              },
+            ],
+          },
+        },
+      },
+    ],
+  },
+  {
+    path: "/setup",
+    name: "SAINTSAL™ Admin Onboarding",
+    description: "Complete setup wizard for new admins",
+    protected: true,
+    tier: "admin",
+    components: [
+      {
+        "@type": "@builder.io/sdk:Element",
+        component: {
+          name: "SAINTSAL Feature Grid",
+          options: {
+            title: "Divine Setup Wizard",
+            subtitle: "Configure your SAINTSAL™ empire",
+            features: [
+              {
+                icon: "⚙️",
+                title: "System Configuration",
+                description: "Set up your divine AI parameters",
+              },
+              {
+                icon: "🔗",
+                title: "API Integration",
+                description: "Connect all your divine tools",
+              },
+              {
+                icon: "👥",
+                title: "Team Setup",
+                description: "Configure user roles and permissions",
+              },
+            ],
+          },
+        },
+      },
+    ],
+  },
+  {
+    path: "/admin/logs",
+    name: "SAINTSAL™ Admin Logs",
+    description: "Webhook and chat logs dashboard",
+    protected: true,
+    tier: "admin",
+    components: [
+      {
+        "@type": "@builder.io/sdk:Element",
+        component: {
+          name: "SAINTSAL Feature Grid",
+          options: {
+            title: "Divine Activity Logs",
+            subtitle: "Monitor all system activities",
+            features: [
+              {
+                icon: "📊",
+                title: "Chat Logs",
+                description: "All AI conversations and interactions",
+              },
+              {
+                icon: "🔗",
+                title: "Webhook Logs",
+                description: "API calls and system integrations",
+              },
+              {
+                icon: "⚠️",
+                title: "Error Tracking",
+                description: "System alerts and debugging info",
+              },
+            ],
+          },
+        },
+      },
+    ],
+  },
 ];
 
 export class SaintsalLayoutManager {
