@@ -623,6 +623,44 @@ export default function Index() {
               </div>
             </div>
 
+            {/* Simple Mobile Footer */}
+            <div className="md:hidden mb-8">
+              <div className="flex items-center justify-center mb-6">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F0c2c3dba9a664a668598e7591bc0c18b?format=webp&width=800"
+                  alt="SAINTSAL™"
+                  className="w-6 h-6 mr-2"
+                />
+                <div className="text-yellow-400 font-semibold">SAINTSAL™</div>
+              </div>
+              <div className="flex justify-center space-x-6 text-sm mb-6">
+                <button
+                  onClick={() => (window.location.href = "/console")}
+                  className="text-gray-400 hover:text-yellow-400 transition-colors"
+                >
+                  Console
+                </button>
+                <button
+                  onClick={() => (window.location.href = "/pricing")}
+                  className="text-gray-400 hover:text-yellow-400 transition-colors"
+                >
+                  Pricing
+                </button>
+                <button
+                  onClick={() => (window.location.href = "/help")}
+                  className="text-gray-400 hover:text-yellow-400 transition-colors"
+                >
+                  Help
+                </button>
+                <button
+                  onClick={() => (window.location.href = "/privacy")}
+                  className="text-gray-400 hover:text-yellow-400 transition-colors"
+                >
+                  Privacy
+                </button>
+              </div>
+            </div>
+
             {/* Legal Notice */}
             <div className="border-t border-gray-700/50 pt-8 mb-8">
               <div className="bg-black/40 border border-yellow-400/10 rounded-xl p-6">
