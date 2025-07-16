@@ -223,6 +223,7 @@ export const trainingData: TrainingSection[] = [
         duration: "10 mins",
         videoUrl: "https://youtu.be/example13",
         type: "youtube",
+        tags: ["webhook", "architecture", "overview", "system", "flow"],
       },
       {
         id: "onleadsubmit-demo",
@@ -231,6 +232,7 @@ export const trainingData: TrainingSection[] = [
         duration: "15 mins",
         videoUrl: "https://youtu.be/example14",
         type: "youtube",
+        tags: ["azure", "gpt", "twilio", "ghl", "workflow", "demo", "lead"],
       },
       {
         id: "twilio-alerts",
@@ -239,6 +241,7 @@ export const trainingData: TrainingSection[] = [
         duration: "8 mins",
         videoUrl: "https://youtu.be/example15",
         type: "youtube",
+        tags: ["twilio", "alerts", "sms", "voice", "configuration", "setup"],
       },
       {
         id: "webhook-troubleshooting",
@@ -247,6 +250,7 @@ export const trainingData: TrainingSection[] = [
         duration: "7 mins",
         videoUrl: "https://youtu.be/example16",
         type: "youtube",
+        tags: ["troubleshooting", "issues", "debugging", "problems", "fixes"],
       },
     ],
   },
