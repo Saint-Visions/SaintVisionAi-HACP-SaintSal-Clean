@@ -110,9 +110,9 @@ export default function SetupPage() {
     <div
       className="min-h-screen relative parallax parallax-bg"
       style={{
-        fontFamily:
+                fontFamily:
           "Gotham, 'Gotham Medium', 'Gotham Bold', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-        backgroundImage:
+                backgroundImage:
           "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fff0733af4a2e4a0b8c3ec5843ef9720e)",
         backgroundSize: "120%",
         backgroundPosition: "center",
@@ -120,72 +120,66 @@ export default function SetupPage() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Atmospheric Divine Layers */}
+            {/* Atmospheric Divine Layers */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 via-gray-900/60 to-gray-900/70 z-0" />
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-800/40 z-1" />
 
-      {/* 3D Golden Particles */}
+            {/* 3D Golden Particles */}
       <div className="absolute inset-0 z-2">
-        <div
-          className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/60 rounded-full animate-pulse"
-          style={{
-            boxShadow:
-              "0 0 20px rgba(251, 191, 36, 0.4), 0 0 40px rgba(251, 191, 36, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.3)",
-            filter: "blur(0.5px)",
-          }}
-        />
-        <div
-          className="absolute top-1/3 right-1/3 w-1 h-1 bg-yellow-300/80 rounded-full animate-pulse"
-          style={{
-            boxShadow:
-              "0 0 15px rgba(253, 224, 71, 0.5), 0 0 30px rgba(253, 224, 71, 0.3)",
-            filter: "blur(0.3px)",
-            animationDelay: "1.5s",
-          }}
-        />
-        <div
-          className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-amber-400/70 rounded-full animate-pulse"
-          style={{
-            boxShadow:
-              "0 0 18px rgba(245, 158, 11, 0.4), 0 0 35px rgba(245, 158, 11, 0.2)",
-            filter: "blur(0.4px)",
-            animationDelay: "3s",
-          }}
-        />
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400/60 rounded-full animate-pulse"
+             style={{
+               boxShadow: '0 0 20px rgba(251, 191, 36, 0.4), 0 0 40px rgba(251, 191, 36, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.3)',
+               filter: 'blur(0.5px)'
+             }} />
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-yellow-300/80 rounded-full animate-pulse"
+             style={{
+               boxShadow: '0 0 15px rgba(253, 224, 71, 0.5), 0 0 30px rgba(253, 224, 71, 0.3)',
+               filter: 'blur(0.3px)',
+               animationDelay: '1.5s'
+             }} />
+        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-amber-400/70 rounded-full animate-pulse"
+             style={{
+               boxShadow: '0 0 18px rgba(245, 158, 11, 0.4), 0 0 35px rgba(245, 158, 11, 0.2)',
+               filter: 'blur(0.4px)',
+               animationDelay: '3s'
+             }} />
       </div>
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
-        {/* Setup Container */}
-        <Card className="w-full max-w-4xl elite-card gotham-glow cinematic-fade">
+                {/* Setup Container */}
+        <div className="w-full max-w-4xl bg-gray-900/40 backdrop-blur-md border border-yellow-400/30 rounded-3xl shadow-2xl"
+             style={{
+               boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 60px rgba(251, 191, 36, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+             }}>
           <CardHeader className="text-center pb-6">
             {/* Logo */}
             <div className="flex justify-center mb-6">
               <div className="relative">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
-                  alt="SAINTSAL™ Circuit Board Logo"
-                  className="w-20 h-20 rounded-2xl shadow-lg"
+                                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fbeb96c992e5a49f4bbd354e8386d6153"
+                  alt="SAINTSAL™ Logo"
+                  className="w-20 h-20"
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 to-transparent opacity-50" />
+                
               </div>
             </div>
 
             {/* Branding */}
             <div className="mb-6">
-              <div className="text-white text-sm font-light uppercase tracking-[0.3em] mb-2">
+                            <div className="text-yellow-400 text-sm font-thin tracking-[0.3em] mb-2">
                 SAINTSAL™
               </div>
-              <div className="text-primary text-lg font-medium tracking-wide">
+                            <div className="text-yellow-300 text-lg font-thin tracking-wide">
                 Cookin' Knowledge
               </div>
             </div>
 
-            <CardTitle className="text-4xl font-bold mb-4">
-              <span className="gold-shimmer bg-clip-text text-transparent">
+                        <h1 className="text-4xl font-thin tracking-tight mb-4">
+              <span className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent">
                 Welcome to Your Divine Sanctuary
               </span>
-            </CardTitle>
+            </h1>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
               Let's configure your AI workspace for optimal divine performance.
               This will only take a few minutes.
