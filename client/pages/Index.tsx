@@ -120,7 +120,7 @@ export default function Index() {
           <div className="max-w-7xl mx-auto px-6 text-center">
             <button
               onClick={() => (window.location.href = "/why")}
-              className="text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4 hover:text-yellow-400 transition-colors cursor-pointer underline decoration-yellow-400/60 hover:decoration-yellow-400"
+              className="relative z-30 text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4 hover:text-yellow-400 transition-colors cursor-pointer underline decoration-yellow-400/60 hover:decoration-yellow-400 bg-transparent border-none p-2"
             >
               What Separates Us
             </button>
