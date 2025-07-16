@@ -49,7 +49,7 @@ export default function Index() {
 
           {/* Branding */}
           <div className="mb-6">
-            <div className="text-gray-300 text-lg font-light uppercase tracking-[0.4em] mb-2">
+            <div className="text-white text-lg font-light uppercase tracking-[0.4em] mb-2">
               SAINTSAL™
             </div>
             <div className="text-yellow-400 text-2xl font-medium tracking-wide">
