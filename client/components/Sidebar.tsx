@@ -176,49 +176,63 @@ export function Sidebar({ className }: SidebarProps) {
 
           {/* Navigation Items */}
           <nav className="flex-1 space-y-3 overflow-y-auto">
-                        {sidebarItems.map((item, index) => {
+            {sidebarItems.map((item, index) => {
               const IconComponent = item.icon;
               const isActive = location.pathname === item.href;
               const isExternal = (item as any).external;
 
-              const content = (
-                  <Button
-                    variant="ghost"
-                    className={cn(
-                      "w-full justify-start text-left h-auto py-4 px-6 rounded-2xl",
-                      "bg-muted/60 hover:bg-muted/80 transition-all duration-200",
-                      "border border-muted-foreground/20 hover:border-muted-foreground/40",
-                      "group relative overflow-hidden",
-                      isActive &&
-                        "bg-primary/20 border-primary/40 text-primary hover:bg-primary/30",
-                    )}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <div className="flex items-center gap-4 w-full">
-                      <div
-                        className={cn(
-                          "flex items-center justify-center w-6 h-6",
-                          isActive ? "text-primary" : "text-muted-foreground",
-                        )}
-                      >
-                        <IconComponent className="w-5 h-5" />
-                      </div>
-                      <span
-                        className={cn(
-                          "font-medium text-sm flex-1",
-                          isActive ? "text-primary" : "text-foreground",
-                        )}
-                      >
-                        {item.label}
-                      </span>
-                      {item.emoji && (
-                        <span className="text-sm opacity-80">{item.emoji}</span>
+              const buttonContent = (
+                <Button
+                  variant="ghost"
+                  className={cn(
+                    "w-full justify-start text-left h-auto py-4 px-6 rounded-2xl",
+                    "bg-muted/60 hover:bg-muted/80 transition-all duration-200",
+                    "border border-muted-foreground/20 hover:border-muted-foreground/40",
+                    "group relative overflow-hidden",
+                    isActive &&
+                      "bg-primary/20 border-primary/40 text-primary hover:bg-primary/30",
+                  )}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="flex items-center gap-4 w-full">
+                    <div
+                      className={cn(
+                        "flex items-center justify-center w-6 h-6",
+                        isActive ? "text-primary" : "text-muted-foreground",
                       )}
+                    >
+                      <IconComponent className="w-5 h-5" />
                     </div>
-                    {isActive && (
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent rounded-2xl" />
+                    <span
+                      className={cn(
+                        "font-medium text-sm flex-1",
+                        isActive ? "text-primary" : "text-foreground",
+                      )}
+                    >
+                      {item.label}
+                    </span>
+                    {item.emoji && (
+                      <span className="text-sm opacity-80">{item.emoji}</span>
                     )}
-                  </Button>
+                  </div>
+                  {isActive && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent rounded-2xl" />
+                  )}
+                </Button>
+              );
+
+              return isExternal ? (
+                <a
+                  key={index}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {buttonContent}
+                </a>
+              ) : (
+                <Link key={index} to={item.href}>
+                  {buttonContent}
                 </Link>
               );
             })}
