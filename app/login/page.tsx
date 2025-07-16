@@ -111,7 +111,6 @@ export default function LoginPage() {
               <span className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent animate-pulse">
                 Welcome Back
               </span>
-              <Sparkles className="absolute -top-2 -right-6 w-6 h-6 text-yellow-400 animate-spin" />
             </CardTitle>
 
             <p className="text-gray-300 text-lg font-light leading-relaxed">
