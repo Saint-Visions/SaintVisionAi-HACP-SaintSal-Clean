@@ -226,12 +226,29 @@
   .parallax {
     position: relative;
     background-attachment: fixed; /* Key for parallax effect */
-    background-size: cover; /* Ensures the background image covers the entire section */
+    background-size: 120%; /* Zoomed out to show more of your beautiful assets */
     background-position: center; /* Centers the background perfectly */
     background-repeat: no-repeat;
     transform: translateZ(0); /* Ensures it works smoothly */
     will-change: transform;
     min-height: 100vh;
+    image-rendering: -webkit-optimize-contrast; /* Better quality on WebKit */
+    image-rendering: crisp-edges; /* Better quality */
+  }
+
+  /* Enhanced parallax for mobile */
+  @media (max-width: 768px) {
+    .parallax {
+      background-size: 150%; /* More zoomed out on mobile */
+      background-attachment: scroll; /* Fixed attachment can cause issues on mobile */
+    }
+  }
+
+  /* High-DPI display optimization */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .parallax {
+      background-size: 110%; /* Slightly less zoom for high-DPI */
+    }
   }
 
   .parallax-bg::before {
