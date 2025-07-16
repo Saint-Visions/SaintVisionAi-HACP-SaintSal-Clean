@@ -30,12 +30,13 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
         <div className="text-center space-y-4">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
-            alt="SAINTSAL Logo"
-            className="w-16 h-16 mx-auto animate-pulse"
+            alt="SAINTSAL™ Circuit Board Logo"
+            className="w-20 h-20 mx-auto animate-pulse rounded-xl shadow-lg"
           />
-          <p className="text-amber-400 font-medium">
+          <p className="text-amber-400 font-medium text-lg">
             Loading your sanctuary...
           </p>
+          <p className="text-amber-400/70 text-sm">Cookin' Knowledge</p>
         </div>
       </div>
     );
