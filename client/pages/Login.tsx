@@ -121,16 +121,40 @@ export default function Login() {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 via-gray-900/60 to-gray-900/70 z-1" />
       <div className="absolute inset-0 bg-gradient-to-t from-gray-800/30 via-transparent to-gray-900/40 z-2" />
 
-      {/* Charcoal Glow with Gold Highlights */}
+      {/* Realistic 3D Golden Illumination */}
       <div className="absolute inset-0 z-3">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/4 to-transparent animate-pulse"></div>
         <div
-          className="absolute inset-0 bg-gradient-to-br from-gray-700/20 via-transparent to-yellow-400/3 animate-pulse"
-          style={{ animationDelay: "2s" }}
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/8 to-transparent animate-pulse"
+          style={{
+            filter: "blur(2px)",
+            boxShadow:
+              "inset 0 0 50px rgba(251, 191, 36, 0.15), 0 0 100px rgba(251, 191, 36, 0.1)",
+          }}
         ></div>
         <div
-          className="absolute inset-0 bg-gradient-to-t from-yellow-400/2 via-transparent to-gray-800/10 animate-pulse"
-          style={{ animationDelay: "3s" }}
+          className="absolute inset-0 bg-gradient-to-br from-gray-700/15 via-transparent to-yellow-400/6 animate-pulse"
+          style={{
+            animationDelay: "2s",
+            filter: "blur(1px)",
+            boxShadow: "inset 0 0 30px rgba(234, 179, 8, 0.2)",
+          }}
+        ></div>
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-yellow-400/5 via-transparent to-gray-800/8 animate-pulse"
+          style={{
+            animationDelay: "3s",
+            boxShadow: "0 0 200px rgba(251, 191, 36, 0.1)",
+          }}
+        ></div>
+        {/* 3D Depth Glow Layer */}
+        <div
+          className="absolute inset-0 bg-radial-gradient from-yellow-400/3 via-yellow-300/2 to-transparent animate-pulse"
+          style={{
+            animationDelay: "4s",
+            filter: "blur(3px)",
+            boxShadow:
+              "inset 0 0 80px rgba(251, 191, 36, 0.12), 0 0 150px rgba(251, 191, 36, 0.08)",
+          }}
         ></div>
       </div>
 
