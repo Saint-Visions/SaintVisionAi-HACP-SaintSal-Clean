@@ -120,98 +120,150 @@ export default function Index() {
           </div>
         </div>
 
-        {/* What's Inside These Walls */}
-        <div className="p-6" style={{ backgroundColor: "#10161C" }}>
-          <div className="relative max-w-7xl mx-auto">
-            {/* Subtle gold shimmer edge effect */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-yellow-400/10 via-transparent to-yellow-400/10 blur-xl"></div>
+        {/* Premium Features Section */}
+        <div
+          className="relative py-20 overflow-hidden"
+          style={{
+            background:
+              "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%)",
+          }}
+        >
+          {/* Animated golden shimmer overlay */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent animate-pulse"></div>
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent"></div>
+          </div>
 
-            <div className="relative z-10 p-8">
-              <div className="text-center mb-8">
-                <h2 className="text-yellow-400 text-3xl font-bold mb-3">
-                  ✨ What's Inside These Walls
-                </h2>
-                <p className="text-gray-300 text-sm">
-                  Divine AI technology meets faith-aligned control
-                </p>
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
+            {/* Premium Header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center space-x-3 mb-4">
+                <div className="w-12 h-px bg-gradient-to-r from-transparent to-yellow-400"></div>
+                <div className="text-yellow-400 text-sm font-medium tracking-widest uppercase">
+                  Elite Technology Stack
+                </div>
+                <div className="w-12 h-px bg-gradient-to-l from-transparent to-yellow-400"></div>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
+                Enterprise-Grade AI
+              </h2>
+              <p className="text-gray-400 text-lg font-light max-w-2xl mx-auto leading-relaxed">
+                Professional-grade intelligence for those who demand excellence
+              </p>
+            </div>
+
+            {/* Premium Feature Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Dual-AI Engine */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-black/40 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 hover:border-yellow-400/30 transition-all duration-500">
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 border border-yellow-400/30">
+                      <Brain className="w-8 h-8 text-yellow-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        Dual-AI Engine
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        GPT-4o and Azure Cognitive Services working in perfect
+                        harmony. Redundant intelligence, zero downtime.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center text-xs text-yellow-400/70 font-medium">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                    ACTIVE • 99.9% UPTIME
+                  </div>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {/* Dual-AI Console */}
-                <Card className="bg-black/30 backdrop-blur-xl border border-yellow-400/30 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-yellow-400/20">
-                        <Brain className="w-6 h-6 text-yellow-400" />
-                      </div>
-                      <CardTitle className="text-yellow-400 text-lg font-bold">
-                        🧠 Dual-AI Console
-                      </CardTitle>
+              {/* PartnerTech Suite */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-black/40 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 hover:border-blue-400/30 transition-all duration-500">
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-blue-400/20 to-blue-600/20 border border-blue-400/30">
+                      <Wrench className="w-8 h-8 text-blue-400" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      GPT-4o + Azure chat in perfect sync
-                    </p>
-                  </CardContent>
-                </Card>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        PartnerTech Suite
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        Advanced CRM, automated outreach, and Chrome extension
+                        tools. For partners ready to scale.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center text-xs text-blue-400/70 font-medium">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                    PARTNER ACCESS REQUIRED
+                  </div>
+                </div>
+              </div>
 
-                {/* PartnerTech Suite */}
-                <Card className="bg-black/30 backdrop-blur-xl border border-yellow-400/30 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-blue-400/20">
-                        <Wrench className="w-6 h-6 text-blue-400" />
-                      </div>
-                      <CardTitle className="text-blue-400 text-lg font-bold">
-                        🛠️ PartnerTech Suite
-                      </CardTitle>
+              {/* Intelligence Layer */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-black/40 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 hover:border-purple-400/30 transition-all duration-500">
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-purple-400/20 to-purple-600/20 border border-purple-400/30">
+                      <Zap className="w-8 h-8 text-purple-400" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      CRM, outreach, Chrome tools
-                    </p>
-                  </CardContent>
-                </Card>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        Intelligence Layer
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        Adaptive learning algorithms that understand your
+                        workflow and optimize responses in real-time.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center text-xs text-purple-400/70 font-medium">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-2 animate-pulse"></div>
+                    LEARNING • IMPROVING
+                  </div>
+                </div>
+              </div>
 
-                {/* Intelligent Routing */}
-                <Card className="bg-black/30 backdrop-blur-xl border border-yellow-400/30 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-purple-400/20">
-                        <Zap className="w-6 h-6 text-purple-400" />
-                      </div>
-                      <CardTitle className="text-purple-400 text-lg font-bold">
-                        🎛️ Intelligent Routing
-                      </CardTitle>
+              {/* Faith-Aligned Security */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-black/40 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 hover:border-green-400/30 transition-all duration-500">
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-green-400/20 to-green-600/20 border border-green-400/30">
+                      <Shield className="w-8 h-8 text-green-400" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Smart flows, lead scoring, automation
-                    </p>
-                  </CardContent>
-                </Card>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        Faith-Aligned Security
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        Your data stays private. Your values stay intact. Zero
+                        compromise on ethics or security.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center text-xs text-green-400/70 font-medium">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    ENCRYPTED • PRIVATE
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                {/* Privacy + Control */}
-                <Card className="bg-black/30 backdrop-blur-xl border border-yellow-400/30 shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-green-400/20">
-                        <Shield className="w-6 h-6 text-green-400" />
-                      </div>
-                      <CardTitle className="text-green-400 text-lg font-bold">
-                        🔐 Privacy + Control
-                      </CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Faith-aligned data & user control
-                    </p>
-                  </CardContent>
-                </Card>
+            {/* Premium Call to Action */}
+            <div className="text-center mt-16">
+              <div className="inline-flex items-center space-x-4 text-gray-400 text-sm">
+                <span>Enterprise ready</span>
+                <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                <span>Scalable architecture</span>
+                <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
+                <span>24/7 availability</span>
               </div>
             </div>
           </div>
