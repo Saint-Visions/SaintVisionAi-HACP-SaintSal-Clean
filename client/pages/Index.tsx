@@ -68,7 +68,7 @@ export default function Index() {
                 onClick={() => (window.location.href = "/signup")}
                 className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-12 py-5 rounded-2xl text-2xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
               >
-                🔥 Start Cooking
+                ��� Start Cooking
               </Button>
             </div>
 
@@ -118,12 +118,12 @@ export default function Index() {
         {/* Elite Technology Section */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <button
-              onClick={() => (window.location.href = "/why")}
-              className="relative z-30 text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4 hover:text-yellow-400 transition-colors cursor-pointer underline decoration-yellow-400/60 hover:decoration-yellow-400 bg-transparent border-none p-2"
+            <Link
+              to="/why"
+              className="inline-block text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4 hover:text-yellow-400 transition-colors cursor-pointer underline decoration-yellow-400/60 hover:decoration-yellow-400"
             >
               What Separates Us
-            </button>
+            </Link>
             <h2 className="text-4xl md:text-5xl font-light text-white mb-6 tracking-tight">
               Enterprise Intelligence
             </h2>
