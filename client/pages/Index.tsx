@@ -96,24 +96,24 @@ export default function Index() {
                   Quick Access:
                 </div>
                 <div className="flex justify-center space-x-4 text-xs">
-                  <Link
-                    to="/pricing"
+                  <button
+                    onClick={() => (window.location.href = "/pricing")}
                     className="text-red-400 hover:text-red-300"
                   >
                     🚨 Pricing
-                  </Link>
-                  <Link
-                    to="/setup"
+                  </button>
+                  <button
+                    onClick={() => (window.location.href = "/setup")}
                     className="text-blue-400 hover:text-blue-300"
                   >
                     🛠️ Setup
-                  </Link>
-                  <Link
-                    to="/help"
+                  </button>
+                  <button
+                    onClick={() => (window.location.href = "/help")}
                     className="text-yellow-400 hover:text-yellow-300"
                   >
                     📖 Help
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
