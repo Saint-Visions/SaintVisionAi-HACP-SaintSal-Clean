@@ -28,107 +28,97 @@ export default function Index() {
         />
         <div className="absolute inset-0 bg-black/20" />
 
-        <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
-          <div className="max-w-md w-full space-y-6">
-            {/* Divine Quote Bubble */}
-            <div className="bg-black/90 backdrop-blur-xl rounded-3xl p-8 border border-yellow-400/50 relative shadow-2xl shadow-yellow-400/20">
-              <div className="text-center">
-                <p className="text-yellow-400 text-xl font-light mb-2 tracking-wide">
-                  "SaintSal" AI doesn't just answer.
-                </p>
-                <p className="text-yellow-400 text-xl font-light mb-2 tracking-wide">
-                  It adapts. It empowers. It becomes your...
-                </p>
-                <p className="text-yellow-400 text-3xl font-bold tracking-wider">
-                  GOTTA GUY™!
-                </p>
-              </div>
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
-                <div className="w-0 h-0 border-l-6 border-r-6 border-t-12 border-l-transparent border-r-transparent border-t-yellow-400/50"></div>
-              </div>
+        <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-6 text-center">
+          {/* Divine Quote - No Box */}
+          <div className="mb-12 max-w-2xl">
+            <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
+              "SaintSal" AI doesn't just answer.
+            </p>
+            <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
+              It adapts. It empowers. It becomes your...
+            </p>
+            <p className="text-yellow-400 text-4xl md:text-5xl font-bold tracking-wider">
+              GOTTA GUY™!
+            </p>
+          </div>
+
+          {/* Logo - Floating */}
+          <div className="mb-8">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
+              alt="SAINTSAL™ Circuit Board Logo"
+              className="w-28 h-28 rounded-2xl mx-auto shadow-2xl shadow-yellow-400/20"
+            />
+          </div>
+
+          {/* Branding - Flowing */}
+          <div className="mb-6">
+            <div className="text-gray-300 text-lg font-light uppercase tracking-[0.4em] mb-2">
+              SAINTSAL™
             </div>
-
-            {/* Hero Command Center */}
-            <div className="bg-black/80 backdrop-blur-xl rounded-3xl p-8 border border-yellow-400/30 text-center shadow-2xl">
-              {/* Logo Section */}
-              <div className="flex items-center justify-center mb-6">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
-                  alt="SAINTSAL™ Circuit Board Logo"
-                  className="w-24 h-24 rounded-2xl shadow-xl border border-yellow-400/20"
-                />
-              </div>
-
-              {/* Branding */}
-              <div className="mb-6">
-                <div className="text-gray-400 text-sm font-light uppercase tracking-[0.3em] mb-1">
-                  SAINTSAL™
-                </div>
-                <div className="text-yellow-400 text-lg font-medium tracking-wide">
-                  Cookin' Knowledge
-                </div>
-              </div>
-
-              {/* Main Title */}
-              <h1 className="text-5xl font-light text-yellow-400 mb-8 tracking-tight">
-                SaintVisionAI™
-              </h1>
-
-              {/* Primary CTA */}
-              <Button
-                onClick={() =>
-                  document
-                    .getElementById("dual-ai-console")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-semibold py-4 rounded-2xl text-xl mb-6 shadow-xl shadow-yellow-400/30 transition-all duration-300 hover:scale-105"
-              >
-                🔥 Start Cooking
-              </Button>
-
-              {/* Action Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <Button
-                  onClick={() => (window.location.href = "/console")}
-                  className="bg-blue-600/20 border border-blue-400/50 text-blue-300 hover:bg-blue-600/30 hover:border-blue-400 backdrop-blur-sm py-3 rounded-xl transition-all duration-300"
-                >
-                  💬 AI Chat
-                </Button>
-                <Button
-                  onClick={() => (window.location.href = "/login")}
-                  className="bg-green-600/20 border border-green-400/50 text-green-300 hover:bg-green-600/30 hover:border-green-400 backdrop-blur-sm py-3 rounded-xl transition-all duration-300"
-                >
-                  📱 Sign In
-                </Button>
-              </div>
-
-              {/* Quick Access */}
-              <div className="pt-4 border-t border-yellow-400/20">
-                <div className="text-yellow-400/70 text-sm font-light mb-3 tracking-wide">
-                  Quick Access
-                </div>
-                <div className="flex justify-center space-x-6 text-sm">
-                  <button
-                    onClick={() => (window.location.href = "/pricing")}
-                    className="text-red-400 hover:text-red-300 font-light transition-colors"
-                  >
-                    🚨 Pricing
-                  </button>
-                  <button
-                    onClick={() => (window.location.href = "/setup")}
-                    className="text-blue-400 hover:text-blue-300 font-light transition-colors"
-                  >
-                    🛠️ Setup
-                  </button>
-                  <button
-                    onClick={() => (window.location.href = "/help")}
-                    className="text-yellow-400 hover:text-yellow-300 font-light transition-colors"
-                  >
-                    📖 Help
-                  </button>
-                </div>
-              </div>
+            <div className="text-yellow-400 text-2xl font-medium tracking-wide">
+              Cookin' Knowledge
             </div>
+          </div>
+
+          {/* Main Title - Hero */}
+          <h1 className="text-6xl md:text-7xl font-extralight text-yellow-400 mb-12 tracking-tight">
+            SaintVisionAI™
+          </h1>
+
+          {/* Primary CTA - Gleaming */}
+          <div className="mb-8">
+            <Button
+              onClick={() =>
+                document
+                  .getElementById("dual-ai-console")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-12 py-5 rounded-2xl text-2xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
+            >
+              🔥 Start Cooking
+            </Button>
+          </div>
+
+          {/* Action Buttons - Clean */}
+          <div className="flex flex-wrap gap-4 mb-8 justify-center">
+            <Button
+              onClick={() => (window.location.href = "/console")}
+              className="bg-blue-600/30 border border-blue-400/60 text-blue-200 hover:bg-blue-600/50 hover:text-white backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 text-lg"
+            >
+              💬 AI Chat
+            </Button>
+            <Button
+              onClick={() => (window.location.href = "/login")}
+              className="bg-green-600/30 border border-green-400/60 text-green-200 hover:bg-green-600/50 hover:text-white backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 text-lg"
+            >
+              📱 Sign In
+            </Button>
+          </div>
+
+          {/* Quick Access - Minimal */}
+          <div className="text-yellow-400/60 text-sm font-light mb-3 tracking-wide">
+            Quick Access
+          </div>
+          <div className="flex justify-center space-x-8 text-lg">
+            <button
+              onClick={() => (window.location.href = "/pricing")}
+              className="text-red-400 hover:text-red-300 font-light transition-colors hover:scale-110 duration-300"
+            >
+              🚨 Pricing
+            </button>
+            <button
+              onClick={() => (window.location.href = "/setup")}
+              className="text-blue-400 hover:text-blue-300 font-light transition-colors hover:scale-110 duration-300"
+            >
+              🛠️ Setup
+            </button>
+            <button
+              onClick={() => (window.location.href = "/help")}
+              className="text-yellow-400 hover:text-yellow-300 font-light transition-colors hover:scale-110 duration-300"
+            >
+              📖 Help
+            </button>
           </div>
         </div>
       </section>
