@@ -91,7 +91,7 @@ export default function Help() {
                 </h3>
               </div>
               <ul className="space-y-3 text-gray-300">
-                <li>• PartnerTech Elite integration</li>
+                <li>• PartnerTech AI integration</li>
                 <li>• CRM and workflow automation</li>
                 <li>• Chrome extension usage</li>
                 <li>• Enterprise security features</li>
