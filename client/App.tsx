@@ -35,10 +35,12 @@ const App = () => (
         {/* Public Routes */}
         <Route path="/" element={<Index />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/chrome-install" element={<ChromeInstall />} />
+        <Route path="/checkout-success" element={<CheckoutSuccess />} />
 
         {/* Protected Routes */}
         <Route
