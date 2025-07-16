@@ -58,7 +58,7 @@ export default function Index() {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-6xl md:text-7xl font-extralight text-yellow-400 mb-12 tracking-tight">
+          <h1 className="text-6xl md:text-7xl font-extralight text-white mb-12 tracking-tight">
             SaintVisionAI™
           </h1>
 
