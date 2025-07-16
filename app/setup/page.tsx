@@ -290,7 +290,7 @@ export default function SetupPage() {
                           })
                         }
                         placeholder="My Divine AI Sanctuary"
-                        className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
+                        className="w-full px-4 py-3 border border-yellow-400/20 bg-gray-900/60 backdrop-blur-sm rounded-xl text-white placeholder-gray-400 focus:border-yellow-400/50 focus:outline-none focus:ring-2 focus:ring-yellow-400/20"
                       />
                     </div>
                     <div className="space-y-2">
@@ -304,7 +304,7 @@ export default function SetupPage() {
                           setFormData({ ...formData, title: e.target.value })
                         }
                         placeholder="CEO, Developer, Consultant, etc."
-                        className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
+                        className="w-full px-4 py-3 border border-yellow-400/20 bg-gray-900/60 backdrop-blur-sm rounded-xl text-white placeholder-gray-400 focus:border-yellow-400/50 focus:outline-none focus:ring-2 focus:ring-yellow-400/20"
                       />
                     </div>
                     <div className="space-y-2">
@@ -316,7 +316,7 @@ export default function SetupPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, industry: e.target.value })
                         }
-                        className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
+                        className="w-full px-4 py-3 border border-yellow-400/20 bg-gray-900/60 backdrop-blur-sm rounded-xl text-white placeholder-gray-400 focus:border-yellow-400/50 focus:outline-none focus:ring-2 focus:ring-yellow-400/20"
                       >
                         <option value="">Select Industry</option>
                         <option value="technology">Technology</option>
@@ -340,7 +340,7 @@ export default function SetupPage() {
                             experience: e.target.value,
                           })
                         }
-                        className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
+                        className="w-full px-4 py-3 border border-yellow-400/20 bg-gray-900/60 backdrop-blur-sm rounded-xl text-white placeholder-gray-400 focus:border-yellow-400/50 focus:outline-none focus:ring-2 focus:ring-yellow-400/20"
                       >
                         <option value="">Select Experience</option>
                         <option value="beginner">Beginner - New to AI</option>
@@ -405,7 +405,7 @@ export default function SetupPage() {
                               responseStyle: e.target.value,
                             })
                           }
-                          className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
+                          className="w-full px-4 py-3 border border-yellow-400/20 bg-gray-900/60 backdrop-blur-sm rounded-xl text-white placeholder-gray-400 focus:border-yellow-400/50 focus:outline-none focus:ring-2 focus:ring-yellow-400/20"
                         >
                           <option value="professional">
                             Professional & Detailed
@@ -421,7 +421,7 @@ export default function SetupPage() {
                         <label className="block text-sm font-medium">
                           Default AI Model
                         </label>
-                        <select className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground">
+                        <select className="w-full px-4 py-3 border border-yellow-400/20 bg-gray-900/60 backdrop-blur-sm rounded-xl text-white placeholder-gray-400 focus:border-yellow-400/50 focus:outline-none focus:ring-2 focus:ring-yellow-400/20">
                           <option value="hacp">
                             HACP™ Dual Engine (Recommended)
                           </option>
