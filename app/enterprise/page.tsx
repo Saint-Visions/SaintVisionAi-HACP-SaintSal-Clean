@@ -17,33 +17,66 @@ export default function EnterprisePage() {
   return (
     <WorkspaceLayout>
       <div className="min-h-screen relative overflow-hidden charcoal-depth">
-        {/* Background */}
+        {/* Enterprise Business Background */}
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd83998c6a81f466db4fb83ab90c7ba25%2F8155e04eb6064174a0cb82e2eecf77b6')`,
+            fontFamily:
+              "Gotham, 'Gotham Medium', 'Gotham Bold', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F67fa88f04d284db78a9ad420de29a1e7')`,
             backgroundAttachment: "fixed",
-            backgroundSize: "cover",
+            backgroundSize: "120%",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            opacity: 0.1,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+        {/* Business Atmospheric Layers */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 via-gray-900/60 to-slate-900/70 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-slate-800/40 z-1" />
+
+        {/* Professional Golden Particles */}
+        <div className="absolute inset-0 z-2">
+          <div
+            className="absolute top-1/6 left-1/5 w-1.5 h-1.5 bg-yellow-400/50 rounded-full animate-pulse"
+            style={{
+              boxShadow:
+                "0 0 18px rgba(251, 191, 36, 0.3), 0 0 35px rgba(251, 191, 36, 0.2), inset 0 0 8px rgba(255, 255, 255, 0.3)",
+              filter: "blur(0.3px)",
+            }}
+          />
+          <div
+            className="absolute top-1/4 right-1/6 w-1 h-1 bg-blue-400/60 rounded-full animate-pulse"
+            style={{
+              boxShadow:
+                "0 0 12px rgba(59, 130, 246, 0.4), 0 0 25px rgba(59, 130, 246, 0.3)",
+              filter: "blur(0.2px)",
+              animationDelay: "3s",
+            }}
+          />
+          <div
+            className="absolute bottom-1/3 left-1/4 w-1.5 h-1.5 bg-purple-400/70 rounded-full animate-pulse"
+            style={{
+              boxShadow:
+                "0 0 15px rgba(168, 85, 247, 0.4), 0 0 30px rgba(168, 85, 247, 0.2)",
+              filter: "blur(0.3px)",
+              animationDelay: "1.5s",
+            }}
+          />
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
           <div className="mb-8 text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
-              <Crown className="w-12 h-12 text-primary" />
-              <h1 className="text-4xl font-bold text-primary">
+              <Crown className="w-12 h-12 text-yellow-400" />
+              <h1 className="text-4xl font-thin tracking-tight text-yellow-400">
                 Enterprise Command Center
               </h1>
-              <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/40">
+              <div className="bg-purple-500/20 text-purple-400 border border-purple-500/40 px-3 py-1 rounded-full text-sm font-medium">
                 Elite Access
-              </Badge>
+              </div>
             </div>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-gray-200 font-light">
               Advanced enterprise controls and automation at scale
             </p>
           </div>
