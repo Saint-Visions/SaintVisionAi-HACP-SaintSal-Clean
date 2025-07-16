@@ -24,7 +24,7 @@ export default function Index() {
       {/* All content flows over the same background */}
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="h-[70vh] relative p-8 pb-32">
+        <section className="min-h-[80vh] relative p-8 pb-16">
           {/* Top Left Logo & Title */}
           <div className="absolute top-8 left-8 z-20 flex items-center space-x-12">
             <img
