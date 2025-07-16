@@ -190,8 +190,11 @@ export default function Login() {
             </span>
           </Link>
 
-          {/* Elite Divine Card */}
-          <Card className="bg-black/50 backdrop-blur-2xl border-2 border-yellow-400/40 shadow-2xl shadow-yellow-400/25 rounded-3xl overflow-hidden relative group">
+          {/* Atmospheric Sanctuary Portal */}
+          <Card
+            className="bg-gray-900/30 backdrop-blur-xl border border-yellow-400/30 shadow-2xl shadow-yellow-400/40 rounded-3xl overflow-hidden relative group"
+            style={{ backgroundColor: "rgba(17, 24, 39, 0.3)" }}
+          >
             {/* Premium Animated Border Effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent animate-pulse rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
