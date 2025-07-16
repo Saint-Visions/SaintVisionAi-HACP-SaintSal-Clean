@@ -47,20 +47,32 @@ export default function Index() {
             />
           </div>
 
-          {/* Branding */}
-          <div className="mb-6">
-            <div className="text-white text-lg font-light uppercase tracking-[0.4em] mb-2">
+          {/* Branding - Mobile Compact, Desktop Spread */}
+          <div className="mb-8 md:mb-16">
+            <div className="text-white text-lg md:text-xl font-light uppercase tracking-[0.4em] mb-3 md:mb-8">
               SAINTSAL™
             </div>
-            <div className="text-yellow-400 text-2xl font-medium tracking-wide">
-              Cookin' Knowledge
+
+            {/* Desktop Layout - Same Size, Spread Out */}
+            <div className="hidden md:block space-y-12">
+              <div className="text-yellow-400 text-5xl font-bold tracking-wide">
+                Cookin' Knowledge
+              </div>
+              <h1 className="text-5xl font-bold text-white tracking-tight">
+                SaintVisionAI™
+              </h1>
+            </div>
+
+            {/* Mobile Layout - Compact */}
+            <div className="md:hidden space-y-4">
+              <div className="text-yellow-400 text-2xl font-medium tracking-wide">
+                Cookin' Knowledge
+              </div>
+              <h1 className="text-4xl font-extralight text-white tracking-tight">
+                SaintVisionAI™
+              </h1>
             </div>
           </div>
-
-          {/* Main Title */}
-          <h1 className="text-6xl md:text-7xl font-extralight text-white mb-12 tracking-tight">
-            SaintVisionAI™
-          </h1>
 
           {/* Primary CTA */}
           <div className="mb-8">
