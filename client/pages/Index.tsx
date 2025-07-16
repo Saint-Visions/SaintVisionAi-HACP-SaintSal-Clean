@@ -442,7 +442,7 @@ export default function Index() {
             <div className="bg-black/60 backdrop-blur-xl border border-yellow-400/30 rounded-3xl p-8 mb-12 shadow-2xl">
               <div className="flex items-center justify-center mb-6">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fa466473b4d2d4a5abe887942fe470eba?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2c886623f7884837a659daf696b05be1?format=webp&width=800"
                   alt="SAINTSAL™ Circuit Board Logo"
                   className="w-16 h-16"
                 />
@@ -469,7 +469,7 @@ export default function Index() {
               </Button>
 
               <div className="text-gray-400 text-sm font-light">
-                Azure Cognitive Services • OpenAI GPT-4o • Premium
+                Azure Cognitive Services ��� OpenAI GPT-4o • Premium
                 Infrastructure
               </div>
             </div>
@@ -485,7 +485,7 @@ export default function Index() {
               <div className="col-span-1">
                 <div className="flex items-center mb-4">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fa466473b4d2d4a5abe887942fe470eba?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2c886623f7884837a659daf696b05be1?format=webp&width=800"
                     alt="SAINTSAL™"
                     className="w-8 h-8 mr-3"
                   />
@@ -645,7 +645,7 @@ export default function Index() {
                   <div>
                     Built with enterprise-grade security:{" "}
                     <strong>AES-256 encryption</strong> •{" "}
-                    <strong>SOC 2 compliance</strong> ���{" "}
+                    <strong>SOC 2 compliance</strong> •{" "}
                     <strong>Zero-trust architecture</strong>
                   </div>
                 </div>
