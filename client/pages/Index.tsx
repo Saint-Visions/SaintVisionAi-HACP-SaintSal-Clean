@@ -116,7 +116,7 @@ export default function Index() {
         </section>
 
         {/* Elite Technology Section */}
-        <section className="py-24 relative z-20 mt-16">
+        <section className="py-24 relative z-20 mt-32">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <Link
               to="/why"
