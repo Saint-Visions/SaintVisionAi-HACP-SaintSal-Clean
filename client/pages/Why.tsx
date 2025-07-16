@@ -20,16 +20,16 @@ export default function Why() {
 
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="h-[75vh] flex flex-col items-center justify-center p-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg mb-6 tracking-tight">
+        <section className="h-[60vh] md:h-[75vh] flex flex-col items-center justify-center p-4 md:p-8 text-center">
+          <h1 className="text-3xl md:text-7xl font-bold text-yellow-400 drop-shadow-lg mb-4 md:mb-6 tracking-tight">
             saintsal™ + you
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl font-light leading-relaxed">
+          <p className="text-lg md:text-2xl text-white/90 mb-6 md:mb-8 max-w-2xl font-light leading-relaxed px-4">
             Where Divine Execution Meets Real-World Results.
           </p>
           <Button
             onClick={() => (window.location.href = "/signup")}
-            className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-12 py-6 rounded-2xl text-xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
+            className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-8 md:px-12 py-4 md:py-6 rounded-2xl text-lg md:text-xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
           >
             I'm Ready to Use Real AI
           </Button>
