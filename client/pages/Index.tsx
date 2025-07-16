@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, Users, BarChart3, Smartphone } from "lucide-react";
+import { Brain, Wrench, Zap, Shield } from "lucide-react";
 
 export default function Index() {
   return (
