@@ -121,15 +121,15 @@ export default function Login() {
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/10 via-black/30 to-black/40 z-1" />
       <div className="absolute inset-0 bg-gradient-to-t from-yellow-800/5 via-transparent to-black/25 z-2" />
 
-      {/* Immersive Golden Atmosphere */}
+      {/* Subtle Golden Atmosphere */}
       <div className="absolute inset-0 z-3">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/12 to-transparent animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/8 to-transparent animate-pulse"></div>
         <div
-          className="absolute inset-0 bg-gradient-to-br from-yellow-500/8 via-transparent to-yellow-400/10 animate-pulse"
+          className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 via-transparent to-yellow-400/6 animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
         <div
-          className="absolute inset-0 bg-radial-gradient from-yellow-400/6 via-transparent to-transparent animate-pulse"
+          className="absolute inset-0 bg-gradient-to-t from-yellow-400/4 via-transparent to-transparent animate-pulse"
           style={{ animationDelay: "3s" }}
         ></div>
       </div>
