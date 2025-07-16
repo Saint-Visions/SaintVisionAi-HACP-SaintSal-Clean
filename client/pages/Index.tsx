@@ -92,7 +92,7 @@ export default function Index() {
             <div className="text-yellow-400/60 text-sm font-light mb-6 tracking-wide">
               Quick Access
             </div>
-            <div className="flex justify-center space-x-40 text-lg">
+            <div className="flex justify-center space-x-80 text-lg">
               <button
                 onClick={() => (window.location.href = "/pricing")}
                 className="text-red-400 hover:text-red-300 font-light transition-colors hover:scale-110 duration-300"
