@@ -9,6 +9,7 @@ import "./components/builder";
 // Pages
 import Index from "./pages/Index";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Console from "./pages/Console";
 import Dashboard from "./pages/Dashboard";
 import CRM from "./pages/CRM";
@@ -17,6 +18,14 @@ import HACP from "./pages/HACP";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
+import ChromeInstall from "./pages/ChromeInstall";
+import PartnerTech from "./pages/PartnerTech";
+import Upgrade from "./pages/Upgrade";
+import Settings from "./pages/Settings";
+import CheckoutSuccess from "./pages/CheckoutSuccess";
+import AdminClients from "./pages/AdminClients";
+import AdminLogs from "./pages/AdminLogs";
+import ReferralInvite from "./pages/ReferralInvite";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => (
