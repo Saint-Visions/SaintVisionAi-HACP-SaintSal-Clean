@@ -63,7 +63,7 @@ export default function Index() {
             </div>
 
             {/* Primary CTA */}
-            <div className="mb-8">
+            <div className="mb-12">
               <Button
                 onClick={() => (window.location.href = "/signup")}
                 className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-12 py-5 rounded-2xl text-2xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
@@ -73,26 +73,26 @@ export default function Index() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 mb-8 justify-center">
+            <div className="flex flex-wrap gap-6 mb-16 justify-center">
               <Button
                 onClick={() => (window.location.href = "/console")}
-                className="bg-blue-600/30 border border-blue-400/60 text-blue-200 hover:bg-blue-600/50 hover:text-white backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 text-lg"
+                className="bg-blue-600/30 border border-blue-400/60 text-blue-200 hover:bg-blue-600/50 hover:text-white backdrop-blur-sm px-8 py-4 rounded-xl transition-all duration-300 text-lg"
               >
                 💬 AI Chat
               </Button>
               <Button
                 onClick={() => (window.location.href = "/login")}
-                className="bg-green-600/30 border border-green-400/60 text-green-200 hover:bg-green-600/50 hover:text-white backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 text-lg"
+                className="bg-green-600/30 border border-green-400/60 text-green-200 hover:bg-green-600/50 hover:text-white backdrop-blur-sm px-8 py-4 rounded-xl transition-all duration-300 text-lg"
               >
                 📱 Sign In
               </Button>
             </div>
 
             {/* Quick Access */}
-            <div className="text-yellow-400/60 text-sm font-light mb-3 tracking-wide">
+            <div className="text-yellow-400/60 text-sm font-light mb-6 tracking-wide">
               Quick Access
             </div>
-            <div className="flex justify-center space-x-8 text-lg">
+            <div className="flex justify-center space-x-12 text-lg">
               <button
                 onClick={() => (window.location.href = "/pricing")}
                 className="text-red-400 hover:text-red-300 font-light transition-colors hover:scale-110 duration-300"
