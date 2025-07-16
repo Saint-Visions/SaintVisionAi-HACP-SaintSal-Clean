@@ -319,8 +319,8 @@ export default function Login() {
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
                         required
-                        className="w-full px-6 py-5 text-lg border border-yellow-400/30 bg-gray-800/60 backdrop-blur-sm rounded-2xl text-yellow-100 placeholder:text-gray-500 focus:border-yellow-400/60 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 font-medium shadow-lg"
-                        style={{ backgroundColor: "rgba(31, 41, 55, 0.6)" }}
+                        className="w-full px-6 py-5 text-lg border border-yellow-400/25 bg-gray-700/40 backdrop-blur-sm rounded-2xl text-gray-100 placeholder:text-gray-400 focus:border-yellow-400/50 focus:ring-2 focus:ring-yellow-400/15 transition-all duration-300 font-medium shadow-lg"
+                        style={{ backgroundColor: "rgba(55, 65, 81, 0.4)" }}
                         placeholder="Your divine name"
                       />
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
