@@ -36,13 +36,13 @@ export default function Why() {
         </section>
 
         {/* What Separates Us Section */}
-        <section className="py-24 bg-black/80 backdrop-blur-xl">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-light text-white mb-6 tracking-tight">
+        <section className="py-12 md:py-24 bg-black/80 backdrop-blur-xl">
+          <div className="max-w-6xl mx-auto px-4 md:px-6">
+            <div className="text-center mb-8 md:mb-16">
+              <h2 className="text-3xl md:text-5xl font-light text-white mb-3 md:mb-6 tracking-tight">
                 What Separates Us?
               </h2>
-              <p className="text-gray-300 text-xl font-light max-w-3xl mx-auto">
+              <p className="text-gray-300 text-lg md:text-xl font-light max-w-3xl mx-auto">
                 Heard of ChatGPT? Here's what actually works.
               </p>
             </div>
