@@ -32,7 +32,7 @@ export default function Index() {
               alt="SAINTSAL™ Circuit Board Logo"
               className="w-20 h-20 md:w-24 md:h-24"
             />
-            <h1 className="text-white text-4xl md:text-5xl font-bold tracking-tight">
+            <h1 className="text-white text-4xl md:text-5xl font-light tracking-tight">
               SaintVisionAI™
             </h1>
           </div>
