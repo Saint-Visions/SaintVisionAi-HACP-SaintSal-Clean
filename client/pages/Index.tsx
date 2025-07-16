@@ -24,7 +24,7 @@ export default function Index() {
       {/* All content flows over the same background */}
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+        <section className="min-h-screen flex flex-col items-center justify-center p-8 text-center">
           {/* Divine Quote */}
           <div className="mb-12 max-w-2xl">
             <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
