@@ -247,8 +247,14 @@ export default function SetupPage() {
             </div>
 
             {/* Current Step Content */}
-            <Card className="bg-background/50 border-primary/30 backdrop-blur-sm">
-              <CardHeader>
+            <div
+              className="bg-gray-900/30 border border-yellow-400/20 backdrop-blur-sm rounded-2xl"
+              style={{
+                boxShadow:
+                  "0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+              }}
+            >
+              <div className="p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center">
                     {(() => {
@@ -257,16 +263,16 @@ export default function SetupPage() {
                     })()}
                   </div>
                   <div>
-                    <CardTitle className="text-2xl">
+                    <h2 className="text-2xl font-thin tracking-tight">
                       {setupSteps[currentStep].title}
-                    </CardTitle>
+                    </h2>
                     <p className="text-muted-foreground">
                       {setupSteps[currentStep].description}
                     </p>
                   </div>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-6">
+              </div>
+              <div className="px-6 pb-6 space-y-6">
                 {/* Step 1: Personal Information */}
                 {currentStep === 0 && (
                   <div className="grid md:grid-cols-2 gap-6">
@@ -540,8 +546,8 @@ export default function SetupPage() {
                     </p>
                   </div>
                 )}
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
             {/* Navigation */}
             <div className="flex justify-between items-center">
