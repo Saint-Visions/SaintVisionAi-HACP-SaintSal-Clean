@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => ({
     },
     chunkSizeWarningLimit: 1000,
   },
-  plugins: [react(), expressPlugin()],
+  plugins: [react(), ...(mode === "development" ? [expressPlugin()] : [])],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
