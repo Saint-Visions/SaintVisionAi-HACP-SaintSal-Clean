@@ -317,9 +317,9 @@ export default function Login() {
                   <div className="absolute inset-0 bg-yellow-300/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
 
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F90fa3cc4d85547ce9ae69ad15ae19bb2"
-                    alt="SAINTSAL™ Circuit Board Logo"
-                    className="relative w-28 h-28 rounded-3xl shadow-2xl group-hover:scale-110 transition-transform duration-500 border-2 border-yellow-400/30"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fbeb96c992e5a49f4bbd354e8386d6153?format=webp&width=800"
+                    alt="SAINTSAL™ Transparent Logo"
+                    className="relative w-28 h-28 shadow-2xl group-hover:scale-110 transition-transform duration-500"
                   />
 
                   {/* Premium Crown Icon */}
