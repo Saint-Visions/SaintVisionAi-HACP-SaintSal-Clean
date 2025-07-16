@@ -439,7 +439,7 @@ export default function Index() {
             <div className="bg-black/60 backdrop-blur-xl border border-yellow-400/30 rounded-3xl p-8 mb-12 shadow-2xl">
               <div className="flex items-center justify-center mb-6">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2c886623f7884837a659daf696b05be1?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F322552d5fb6846ec8a92d2806fb0e468?format=webp&width=800"
                   alt="SAINTSAL™ Circuit Board Logo"
                   className="w-16 h-16"
                 />
@@ -482,7 +482,7 @@ export default function Index() {
               <div className="col-span-1">
                 <div className="flex items-center mb-4">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2c886623f7884837a659daf696b05be1?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Ff81eb07b29ae41ff8df802c9da4b2387?format=webp&width=800"
                     alt="SAINTSAL™"
                     className="w-8 h-8 mr-3"
                   />
