@@ -405,7 +405,7 @@ export default function Index() {
         </section>
 
         {/* The Movement Section */}
-        <section className="py-20">
+        <section className="py-32">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <div className="mb-12">
               <div className="text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4">
