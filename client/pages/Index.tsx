@@ -23,7 +23,7 @@ export default function Index() {
 
       {/* All content flows over the same background */}
       <div className="relative z-10">
-                {/* Hero Section */}
+        {/* Hero Section */}
         <section className="min-h-screen relative p-8">
           {/* Top Left Branding */}
           <div className="absolute top-8 left-8 z-20">
@@ -64,55 +64,56 @@ export default function Index() {
               />
             </div>
 
-          {/* Primary CTA */}
-          <div className="mb-8">
-            <Button
-              onClick={() => (window.location.href = "/signup")}
-              className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-12 py-5 rounded-2xl text-2xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
-            >
-              🔥 Start Cooking
-            </Button>
-          </div>
+            {/* Primary CTA */}
+            <div className="mb-8">
+              <Button
+                onClick={() => (window.location.href = "/signup")}
+                className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-12 py-5 rounded-2xl text-2xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
+              >
+                🔥 Start Cooking
+              </Button>
+            </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4 mb-8 justify-center">
-            <Button
-              onClick={() => (window.location.href = "/console")}
-              className="bg-blue-600/30 border border-blue-400/60 text-blue-200 hover:bg-blue-600/50 hover:text-white backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 text-lg"
-            >
-              💬 AI Chat
-            </Button>
-            <Button
-              onClick={() => (window.location.href = "/login")}
-              className="bg-green-600/30 border border-green-400/60 text-green-200 hover:bg-green-600/50 hover:text-white backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 text-lg"
-            >
-              📱 Sign In
-            </Button>
-          </div>
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-4 mb-8 justify-center">
+              <Button
+                onClick={() => (window.location.href = "/console")}
+                className="bg-blue-600/30 border border-blue-400/60 text-blue-200 hover:bg-blue-600/50 hover:text-white backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 text-lg"
+              >
+                💬 AI Chat
+              </Button>
+              <Button
+                onClick={() => (window.location.href = "/login")}
+                className="bg-green-600/30 border border-green-400/60 text-green-200 hover:bg-green-600/50 hover:text-white backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 text-lg"
+              >
+                📱 Sign In
+              </Button>
+            </div>
 
-          {/* Quick Access */}
-          <div className="text-yellow-400/60 text-sm font-light mb-3 tracking-wide">
-            Quick Access
-          </div>
-          <div className="flex justify-center space-x-8 text-lg">
-            <button
-              onClick={() => (window.location.href = "/pricing")}
-              className="text-red-400 hover:text-red-300 font-light transition-colors hover:scale-110 duration-300"
-            >
-              🚨 Pricing
-            </button>
-            <button
-              onClick={() => (window.location.href = "/setup")}
-              className="text-blue-400 hover:text-blue-300 font-light transition-colors hover:scale-110 duration-300"
-            >
-              🛠️ Setup
-            </button>
-            <button
-              onClick={() => (window.location.href = "/help")}
-              className="text-yellow-400 hover:text-yellow-300 font-light transition-colors hover:scale-110 duration-300"
-            >
-              📖 Help
-            </button>
+            {/* Quick Access */}
+            <div className="text-yellow-400/60 text-sm font-light mb-3 tracking-wide">
+              Quick Access
+            </div>
+            <div className="flex justify-center space-x-8 text-lg">
+              <button
+                onClick={() => (window.location.href = "/pricing")}
+                className="text-red-400 hover:text-red-300 font-light transition-colors hover:scale-110 duration-300"
+              >
+                🚨 Pricing
+              </button>
+              <button
+                onClick={() => (window.location.href = "/setup")}
+                className="text-blue-400 hover:text-blue-300 font-light transition-colors hover:scale-110 duration-300"
+              >
+                🛠️ Setup
+              </button>
+              <button
+                onClick={() => (window.location.href = "/help")}
+                className="text-yellow-400 hover:text-yellow-300 font-light transition-colors hover:scale-110 duration-300"
+              >
+                📖 Help
+              </button>
+            </div>
           </div>
         </section>
 
