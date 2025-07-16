@@ -128,28 +128,36 @@ export default function Help() {
               </button>
             </div>
 
-            {/* Contact Support */}
+            {/* 24/7 SAINTSAL Support */}
             <div className="bg-black/60 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8">
               <div className="flex items-center mb-6">
                 <div className="p-3 rounded-xl bg-gradient-to-br from-purple-400/20 to-purple-600/20 border border-purple-400/30 mr-4">
                   <MessageCircle className="w-8 h-8 text-purple-400" />
                 </div>
                 <h3 className="text-2xl font-light text-white">
-                  Contact Support
+                  24/7 SAINTSAL Support
                 </h3>
               </div>
               <p className="text-gray-300 mb-6">
-                Need personalized assistance? Our support team is here to help
-                with any questions or issues.
+                Get instant help from our AI support agent. Handles upgrades,
+                troubleshooting, and questions better than any human support!
               </p>
-              <button
-                onClick={() =>
-                  (window.location.href = "mailto:support@saintvisional.com")
-                }
-                className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300"
-              >
-                Email Support
-              </button>
+              <div className="space-y-3">
+                <button
+                  onClick={() => (window.location.href = "/console")}
+                  className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300"
+                >
+                  💬 Chat with SAINTSAL Bot
+                </button>
+                <button
+                  onClick={() =>
+                    (window.location.href = "mailto:support@saintvisional.com")
+                  }
+                  className="w-full bg-gray-600/30 border border-gray-400/60 text-gray-200 hover:bg-gray-600/50 hover:text-white backdrop-blur-sm px-6 py-3 rounded-xl transition-all duration-300 text-sm"
+                >
+                  📧 Email Support (Backup)
+                </button>
+              </div>
             </div>
           </div>
         </div>
