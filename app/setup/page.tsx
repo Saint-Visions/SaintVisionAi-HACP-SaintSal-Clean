@@ -152,7 +152,7 @@ export default function SetupPage() {
              style={{
                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 60px rgba(251, 191, 36, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
              }}>
-          <CardHeader className="text-center pb-6">
+                    <div className="text-center p-8 pb-6">
             {/* Logo */}
             <div className="flex justify-center mb-6">
               <div className="relative">
@@ -201,10 +201,10 @@ export default function SetupPage() {
                   style={{ width: `${progress}%` }}
                 />
               </div>
-            </div>
-          </CardHeader>
+                        </div>
+          </div>
 
-          <CardContent className="space-y-8">
+          <div className="p-8 pt-0 space-y-8">
             {/* Step Indicators */}
             <div className="flex justify-center">
               <div className="flex items-center gap-4">
