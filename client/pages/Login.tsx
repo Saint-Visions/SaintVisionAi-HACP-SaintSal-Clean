@@ -158,51 +158,128 @@ export default function Login() {
         ></div>
       </div>
 
-      {/* Atmospheric Energy Particles */}
+      {/* 3D Illuminated Energy Particles */}
       <div className="absolute inset-0 overflow-hidden z-4">
-        {/* Primary Energy Orbs */}
-        <div className="animate-pulse absolute top-1/4 left-1/4 w-4 h-4 bg-yellow-400 rounded-full opacity-60 shadow-2xl shadow-yellow-400/80 blur-sm"></div>
+        {/* Primary Golden Orbs with 3D Glow */}
         <div
-          className="animate-pulse absolute top-1/3 right-1/3 w-3 h-3 bg-yellow-300 rounded-full opacity-40 shadow-xl shadow-yellow-300/60 blur-sm"
-          style={{ animationDelay: "0.8s" }}
+          className="animate-pulse absolute top-1/4 left-1/4 w-4 h-4 bg-yellow-400 rounded-full opacity-70"
+          style={{
+            boxShadow:
+              "0 0 20px rgba(251, 191, 36, 0.8), 0 0 40px rgba(251, 191, 36, 0.6), 0 0 60px rgba(251, 191, 36, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.3)",
+            filter: "blur(0.5px)",
+          }}
         ></div>
         <div
-          className="animate-pulse absolute bottom-1/4 right-1/4 w-5 h-5 bg-yellow-500 rounded-full opacity-30 shadow-2xl shadow-yellow-500/70 blur-sm"
-          style={{ animationDelay: "1.6s" }}
+          className="animate-pulse absolute top-1/3 right-1/3 w-3 h-3 bg-yellow-300 rounded-full opacity-50"
+          style={{
+            animationDelay: "0.8s",
+            boxShadow:
+              "0 0 15px rgba(253, 224, 71, 0.7), 0 0 30px rgba(253, 224, 71, 0.5), 0 0 45px rgba(253, 224, 71, 0.3), inset 0 0 8px rgba(255, 255, 255, 0.4)",
+            filter: "blur(0.5px)",
+          }}
         ></div>
         <div
-          className="animate-pulse absolute bottom-1/3 left-1/5 w-3 h-3 bg-yellow-400 rounded-full opacity-50 shadow-xl shadow-yellow-400/60 blur-sm"
-          style={{ animationDelay: "2.4s" }}
+          className="animate-pulse absolute bottom-1/4 right-1/4 w-5 h-5 bg-yellow-500 rounded-full opacity-40"
+          style={{
+            animationDelay: "1.6s",
+            boxShadow:
+              "0 0 25px rgba(234, 179, 8, 0.9), 0 0 50px rgba(234, 179, 8, 0.7), 0 0 75px rgba(234, 179, 8, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.2)",
+            filter: "blur(0.5px)",
+          }}
         ></div>
         <div
-          className="animate-pulse absolute top-1/2 left-1/2 w-4 h-4 bg-yellow-300 rounded-full opacity-35 shadow-xl shadow-yellow-300/50 blur-sm"
-          style={{ animationDelay: "3.2s" }}
+          className="animate-pulse absolute bottom-1/3 left-1/5 w-3 h-3 bg-yellow-400 rounded-full opacity-60"
+          style={{
+            animationDelay: "2.4s",
+            boxShadow:
+              "0 0 18px rgba(251, 191, 36, 0.8), 0 0 36px rgba(251, 191, 36, 0.6), 0 0 54px rgba(251, 191, 36, 0.4), inset 0 0 9px rgba(255, 255, 255, 0.3)",
+            filter: "blur(0.5px)",
+          }}
         ></div>
         <div
-          className="animate-pulse absolute top-3/4 left-3/4 w-3 h-3 bg-yellow-500 rounded-full opacity-40 shadow-xl shadow-yellow-500/60 blur-sm"
-          style={{ animationDelay: "4s" }}
+          className="animate-pulse absolute top-1/2 left-1/2 w-4 h-4 bg-yellow-300 rounded-full opacity-45"
+          style={{
+            animationDelay: "3.2s",
+            boxShadow:
+              "0 0 20px rgba(253, 224, 71, 0.8), 0 0 40px rgba(253, 224, 71, 0.6), 0 0 60px rgba(253, 224, 71, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.3)",
+            filter: "blur(0.5px)",
+          }}
+        ></div>
+        <div
+          className="animate-pulse absolute top-3/4 left-3/4 w-3 h-3 bg-yellow-500 rounded-full opacity-50"
+          style={{
+            animationDelay: "4s",
+            boxShadow:
+              "0 0 16px rgba(234, 179, 8, 0.8), 0 0 32px rgba(234, 179, 8, 0.6), 0 0 48px rgba(234, 179, 8, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.3)",
+            filter: "blur(0.5px)",
+          }}
         ></div>
 
-        {/* Ambient Energy Dust */}
+        {/* Ambient 3D Energy Dust */}
         <div
-          className="animate-pulse absolute top-1/6 right-1/6 w-2 h-2 bg-yellow-200 rounded-full opacity-20 shadow-lg shadow-yellow-200/40 blur-sm"
-          style={{ animationDelay: "0.5s" }}
+          className="animate-pulse absolute top-1/6 right-1/6 w-2 h-2 bg-yellow-200 rounded-full opacity-30"
+          style={{
+            animationDelay: "0.5s",
+            boxShadow:
+              "0 0 8px rgba(254, 240, 138, 0.6), 0 0 16px rgba(254, 240, 138, 0.4), inset 0 0 4px rgba(255, 255, 255, 0.4)",
+            filter: "blur(0.3px)",
+          }}
         ></div>
         <div
-          className="animate-pulse absolute bottom-1/6 left-1/3 w-2 h-2 bg-yellow-400 rounded-full opacity-25 shadow-lg shadow-yellow-400/50 blur-sm"
-          style={{ animationDelay: "1.2s" }}
+          className="animate-pulse absolute bottom-1/6 left-1/3 w-2 h-2 bg-yellow-400 rounded-full opacity-35"
+          style={{
+            animationDelay: "1.2s",
+            boxShadow:
+              "0 0 10px rgba(251, 191, 36, 0.7), 0 0 20px rgba(251, 191, 36, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.4)",
+            filter: "blur(0.3px)",
+          }}
         ></div>
         <div
-          className="animate-pulse absolute top-2/3 right-1/5 w-2 h-2 bg-yellow-300 rounded-full opacity-15 shadow-lg shadow-yellow-300/40 blur-sm"
-          style={{ animationDelay: "2s" }}
+          className="animate-pulse absolute top-2/3 right-1/5 w-2 h-2 bg-yellow-300 rounded-full opacity-25"
+          style={{
+            animationDelay: "2s",
+            boxShadow:
+              "0 0 9px rgba(253, 224, 71, 0.6), 0 0 18px rgba(253, 224, 71, 0.4), inset 0 0 4px rgba(255, 255, 255, 0.4)",
+            filter: "blur(0.3px)",
+          }}
         ></div>
         <div
-          className="animate-pulse absolute top-1/8 left-2/3 w-1 h-1 bg-yellow-400 rounded-full opacity-30 shadow-md shadow-yellow-400/60 blur-sm"
-          style={{ animationDelay: "2.8s" }}
+          className="animate-pulse absolute top-1/8 left-2/3 w-1 h-1 bg-yellow-400 rounded-full opacity-40"
+          style={{
+            animationDelay: "2.8s",
+            boxShadow:
+              "0 0 6px rgba(251, 191, 36, 0.8), 0 0 12px rgba(251, 191, 36, 0.6), inset 0 0 3px rgba(255, 255, 255, 0.5)",
+            filter: "blur(0.2px)",
+          }}
         ></div>
         <div
-          className="animate-pulse absolute bottom-1/8 right-2/3 w-1 h-1 bg-yellow-300 rounded-full opacity-25 shadow-md shadow-yellow-300/50 blur-sm"
-          style={{ animationDelay: "3.6s" }}
+          className="animate-pulse absolute bottom-1/8 right-2/3 w-1 h-1 bg-yellow-300 rounded-full opacity-35"
+          style={{
+            animationDelay: "3.6s",
+            boxShadow:
+              "0 0 5px rgba(253, 224, 71, 0.8), 0 0 10px rgba(253, 224, 71, 0.6), inset 0 0 2px rgba(255, 255, 255, 0.5)",
+            filter: "blur(0.2px)",
+          }}
+        ></div>
+
+        {/* Additional Depth Particles */}
+        <div
+          className="animate-pulse absolute top-1/5 left-1/8 w-1 h-1 bg-yellow-500 rounded-full opacity-20"
+          style={{
+            animationDelay: "5s",
+            boxShadow:
+              "0 0 4px rgba(234, 179, 8, 0.6), 0 0 8px rgba(234, 179, 8, 0.4)",
+            filter: "blur(0.2px)",
+          }}
+        ></div>
+        <div
+          className="animate-pulse absolute bottom-1/5 right-1/8 w-1 h-1 bg-yellow-400 rounded-full opacity-25"
+          style={{
+            animationDelay: "5.8s",
+            boxShadow:
+              "0 0 4px rgba(251, 191, 36, 0.6), 0 0 8px rgba(251, 191, 36, 0.4)",
+            filter: "blur(0.2px)",
+          }}
         ></div>
       </div>
 
