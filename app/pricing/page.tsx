@@ -67,21 +67,48 @@ export default function PricingPage() {
       className="min-h-screen relative parallax parallax-bg"
       style={{
         fontFamily:
-          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+          "Gotham, 'Gotham Medium', 'Gotham Bold', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
         backgroundImage:
-          "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Ff67beb60174e484092cc99d8a2e9517d?format=webp&width=800)",
+          "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fff0733af4a2e4a0b8c3ec5843ef9720e)",
         backgroundSize: "120%",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Enhanced Divine Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/50 z-1" />
+      {/* Atmospheric Divine Layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 via-gray-900/60 to-gray-900/70 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-800/40 z-1" />
 
-      {/* Floating Gold Particles */}
-      <div className="absolute inset-0 gold-particles z-2" />
+      {/* 3D Golden Particles */}
+      <div className="absolute inset-0 z-2">
+        <div
+          className="absolute top-1/6 left-1/5 w-2 h-2 bg-yellow-400/60 rounded-full animate-pulse"
+          style={{
+            boxShadow:
+              "0 0 20px rgba(251, 191, 36, 0.4), 0 0 40px rgba(251, 191, 36, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.3)",
+            filter: "blur(0.5px)",
+          }}
+        />
+        <div
+          className="absolute top-1/4 right-1/4 w-1 h-1 bg-yellow-300/80 rounded-full animate-pulse"
+          style={{
+            boxShadow:
+              "0 0 15px rgba(253, 224, 71, 0.5), 0 0 30px rgba(253, 224, 71, 0.3)",
+            filter: "blur(0.3px)",
+            animationDelay: "1.5s",
+          }}
+        />
+        <div
+          className="absolute bottom-1/3 left-1/4 w-1.5 h-1.5 bg-amber-400/70 rounded-full animate-pulse"
+          style={{
+            boxShadow:
+              "0 0 18px rgba(245, 158, 11, 0.4), 0 0 35px rgba(245, 158, 11, 0.2)",
+            filter: "blur(0.4px)",
+            animationDelay: "3s",
+          }}
+        />
+      </div>
 
       <div className="relative z-10 py-24">
         <div className="max-w-7xl mx-auto px-6">
@@ -89,15 +116,15 @@ export default function PricingPage() {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fbeb96c992e5a49f4bbd354e8386d6153"
                 alt="SAINTSAL™"
-                className="w-16 h-16 rounded-xl"
+                className="w-16 h-16"
               />
-              <h1 className="text-5xl font-bold text-primary">
+              <h1 className="text-5xl font-thin tracking-tight text-yellow-400">
                 SAINTSAL™ Pricing
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto font-light">
               Choose the perfect plan for your divine AI journey. All plans
               include our revolutionary HACP™ dual-engine technology.
             </p>
@@ -108,23 +135,28 @@ export default function PricingPage() {
             {plans.map((plan, index) => {
               const IconComponent = plan.icon;
               return (
-                <Card
+                <div
                   key={index}
                   className={`relative ${
                     plan.popular
-                      ? "border-primary/50 bg-primary/5 scale-105"
-                      : "border-muted/30 bg-background/50"
-                  } backdrop-blur-sm`}
+                      ? "border-yellow-400/50 bg-yellow-400/10 scale-105"
+                      : "border-yellow-400/20 bg-gray-900/40"
+                  } backdrop-blur-md rounded-3xl border`}
+                  style={{
+                    boxShadow: plan.popular
+                      ? "0 25px 50px -12px rgba(0, 0, 0, 0.9), 0 0 80px rgba(251, 191, 36, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
+                      : "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(251, 191, 36, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                  }}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-primary text-primary-foreground px-4 py-1">
+                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-300 text-gray-900 px-4 py-1 rounded-full text-sm font-medium">
                         Most Popular
-                      </Badge>
+                      </div>
                     </div>
                   )}
 
-                  <CardHeader className="text-center pb-4">
+                  <div className="text-center p-8 pb-4">
                     <div className="flex justify-center mb-4">
                       <div
                         className={`w-16 h-16 rounded-full flex items-center justify-center ${
@@ -138,31 +170,29 @@ export default function PricingPage() {
                         <IconComponent className="w-8 h-8" />
                       </div>
                     </div>
-                    <CardTitle className="text-2xl font-bold">
+                    <h2 className="text-2xl font-thin tracking-tight text-white">
                       {plan.name}
-                    </CardTitle>
+                    </h2>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold text-primary">
+                      <span className="text-4xl font-light text-yellow-400">
                         {plan.price}
                       </span>
-                      <span className="text-muted-foreground">
-                        {plan.period}
-                      </span>
+                      <span className="text-gray-400">{plan.period}</span>
                     </div>
-                    <p className="text-sm text-muted-foreground">
-                      {plan.description}
-                    </p>
-                  </CardHeader>
+                    <p className="text-sm text-gray-300">{plan.description}</p>
+                  </div>
 
-                  <CardContent>
+                  <div className="px-8 pb-8">
                     <ul className="space-y-3 mb-6">
                       {plan.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
                           className="flex items-start gap-3"
                         >
-                          <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
+                          <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-gray-200">
+                            {feature}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -171,28 +201,34 @@ export default function PricingPage() {
                       <Button
                         className={`w-full ${
                           plan.popular
-                            ? "bg-primary hover:bg-primary/90"
-                            : "bg-muted hover:bg-muted/80"
-                        }`}
+                            ? "bg-gradient-to-r from-yellow-400 to-yellow-300 text-gray-900 hover:from-yellow-300 hover:to-yellow-200 font-medium"
+                            : "bg-gray-800 border border-yellow-400/30 text-yellow-400 hover:bg-gray-700 hover:border-yellow-400/50"
+                        } transition-all duration-200`}
                       >
                         Get Started
                       </Button>
                     </Link>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               );
             })}
           </div>
 
           {/* HACP Technology */}
-          <Card className="bg-background/50 border-primary/30 backdrop-blur-sm mb-16">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold text-primary mb-4">
+          <div
+            className="bg-gray-900/40 border border-yellow-400/30 backdrop-blur-md rounded-3xl mb-16"
+            style={{
+              boxShadow:
+                "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(251, 191, 36, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+            }}
+          >
+            <div className="p-8 text-center">
+              <h3 className="text-2xl font-thin tracking-tight text-yellow-400 mb-4">
                 HACP™ Technology Included
               </h3>
-              <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-200 mb-6 max-w-3xl mx-auto font-light">
                 All plans include our revolutionary{" "}
-                <strong className="text-primary">
+                <strong className="text-yellow-400">
                   Hierarchical Adaptive Cognitive Processing
                 </strong>{" "}
                 technology - the dual-brain architecture that sets SAINTSAL™
@@ -200,55 +236,67 @@ export default function PricingPage() {
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="text-left">
-                  <h4 className="font-semibold mb-2 text-primary">
+                  <h4 className="font-medium mb-2 text-yellow-400">
                     Dual-Engine Processing
                   </h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-gray-300">
                     GPT-4o and Azure Cognitive Services working in perfect
                     synchronization for unmatched accuracy and reliability.
                   </p>
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold mb-2 text-primary">
+                  <h4 className="font-medium mb-2 text-yellow-400">
                     Zero Hallucinations
                   </h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-gray-300">
                     Cross-validation architecture ensures every response is
                     verified and accurate before delivery.
                   </p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* FAQ */}
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-6">
+            <h3 className="text-2xl font-thin tracking-tight text-yellow-400 mb-6">
               Frequently Asked Questions
             </h3>
             <div className="grid md:grid-cols-2 gap-6 text-left">
-              <Card className="bg-background/50 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold mb-2">
+              <div
+                className="bg-gray-900/40 border border-yellow-400/20 backdrop-blur-sm rounded-2xl"
+                style={{
+                  boxShadow:
+                    "0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                }}
+              >
+                <div className="p-6">
+                  <h4 className="font-medium mb-2 text-yellow-400">
                     Can I upgrade or downgrade anytime?
                   </h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-gray-300">
                     Yes, you can change your plan at any time. Changes take
                     effect immediately, and billing is prorated.
                   </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-background/50 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold mb-2">
+                </div>
+              </div>
+              <div
+                className="bg-gray-900/40 border border-yellow-400/20 backdrop-blur-sm rounded-2xl"
+                style={{
+                  boxShadow:
+                    "0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                }}
+              >
+                <div className="p-6">
+                  <h4 className="font-medium mb-2 text-yellow-400">
                     What's included in the free trial?
                   </h4>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-gray-300">
                     All new accounts get 7 days free access to the Unlimited
                     plan to experience the full HACP™ technology.
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </div>
         </div>
