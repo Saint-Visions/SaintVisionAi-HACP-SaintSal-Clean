@@ -55,29 +55,44 @@ export default function Signup() {
       {/* Content overlay */}
       <div className="absolute inset-0 bg-black/20" />
 
+      {/* Welcome Message - Top */}
+      <div className="bg-black/90 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/40 relative">
+        <div className="text-center">
+          <p className="text-yellow-400 text-lg font-medium mb-1">
+            Welcome to the Divine Revolution
+          </p>
+          <p className="text-yellow-400 text-lg font-medium mb-1">
+            Join thousands who've discovered their...
+          </p>
+          <p className="text-yellow-400 text-2xl font-bold">GOTTA GUY™!</p>
+        </div>
+        {/* Speech bubble tail */}
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
+          <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-yellow-400/40"></div>
+        </div>
+      </div>
+
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
-        <div className="max-w-md w-full space-y-6">
-          {/* Welcome Message */}
-          <div className="bg-black/90 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/40 relative">
-            <div className="text-center">
-              <p className="text-yellow-400 text-lg font-medium mb-1">
-                Welcome to the Divine Revolution
-              </p>
-              <p className="text-yellow-400 text-lg font-medium mb-1">
-                Join thousands who've discovered their...
-              </p>
-              <p className="text-yellow-400 text-2xl font-bold">GOTTA GUY™!</p>
-            </div>
-            {/* Speech bubble tail */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
-              <div className="w-0 h-0 border-l-4 border-r-4 border-t-8 border-l-transparent border-r-transparent border-t-yellow-400/40"></div>
-            </div>
-          </div>
-
-          {/* Signup Form */}
-          <Card className="elite-card">
+        <div className="max-w-md w-full">
+          {/* Unified Signup Card */}
+          <Card className="elite-card mt-6">
             <CardHeader className="text-center space-y-4">
+              {/* GOTTA GUY Message at Top */}
+              <div className="bg-black/30 rounded-xl p-4 border border-yellow-400/20 mb-4">
+                <div className="text-center">
+                  <p className="text-yellow-400 text-lg font-medium mb-1">
+                    Welcome to the Divine Revolution
+                  </p>
+                  <p className="text-yellow-400 text-lg font-medium mb-1">
+                    Join thousands who've discovered their...
+                  </p>
+                  <p className="text-yellow-400 text-2xl font-bold">
+                    GOTTA GUY™!
+                  </p>
+                </div>
+              </div>
+
               <div className="flex justify-center">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
