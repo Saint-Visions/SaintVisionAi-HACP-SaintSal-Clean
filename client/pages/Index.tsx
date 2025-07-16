@@ -462,7 +462,20 @@ export default function Index() {
       </section>
 
       {/* Section 6: The Movement */}
-      <section className="relative py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section className="relative py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 parallax"
+          style={{
+            backgroundImage:
+              "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F51e896cb4f2047d5aef30f1a590471f6?format=webp&width=1920)",
+            backgroundSize: "120%",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            transform: "translateZ(0)",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/75" />
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="mb-12">
             <div className="text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4">
