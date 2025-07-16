@@ -64,16 +64,24 @@ const plans = [
 export default function PricingPage() {
   return (
     <div
-      className="min-h-screen relative"
+      className="min-h-screen relative parallax parallax-bg"
       style={{
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
         backgroundImage:
-          "url(https://api.builder.io/api/v1/image/assets/TEMP/48bf7ae07524f3ab5cd7dbd41650b41a12d29df9?width=1920)",
-        backgroundSize: "cover",
+          "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Ff67beb60174e484092cc99d8a2e9517d?format=webp&width=800)",
+        backgroundSize: "120%",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="absolute inset-0 bg-black/50" />
+      {/* Enhanced Divine Overlay */}
+      <div className="absolute inset-0 bg-black/60 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/50 z-1" />
+
+      {/* Floating Gold Particles */}
+      <div className="absolute inset-0 gold-particles z-2" />
 
       <div className="relative z-10 py-24">
         <div className="max-w-7xl mx-auto px-6">
