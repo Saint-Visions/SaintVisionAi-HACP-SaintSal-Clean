@@ -5,14 +5,16 @@
 ### Main Circuit Logo (Golden)
 
 - **URL**: `https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048`
-- **Usage**: Primary brand logo, navigation, headers
-- **Style**: Golden circuit board with SV emblem
+- **Usage**: Primary brand logo, navigation, headers, loading screens
+- **Style**: Golden circuit board with SV emblem and circuit patterns
+- **Dimensions**: Square (1024x1024)
 
 ### Cookin' Knowledge Logo
 
 - **URL**: `https://cdn.builder.io/api/v1/image/assets/TEMP/4509d1503f738400c83cbc94ba7a62f0470b21d7?width=2048`
-- **Usage**: Secondary branding, taglines
+- **Usage**: Secondary branding, taglines, hero sections
 - **Style**: Golden script font with circuit patterns
+- **Text**: "Cookin' Knowledge" with SV circuit emblem
 
 ### SaintVisionAI.com Logo
 
