@@ -23,44 +23,46 @@ export default function Index() {
 
       {/* All content flows over the same background */}
       <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center p-8 text-center">
-          {/* Divine Quote */}
-          <div className="mb-12 max-w-2xl">
-            <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
-              "SaintSal" AI doesn't just answer.
-            </p>
-            <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
-              It adapts. It empowers. It becomes your...
-            </p>
-            <p className="text-yellow-400 text-4xl md:text-5xl font-bold tracking-wider">
-              GOTTA GUY™!
-            </p>
-          </div>
-
-          {/* Logo */}
-          <div className="mb-8">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F90fa3cc4d85547ce9ae69ad15ae19bb2"
-              alt="SAINTSAL™ Circuit Board Logo"
-              className="w-28 h-28 mx-auto"
-            />
-          </div>
-
-          {/* Branding */}
-          <div className="mb-6">
-            <div className="text-white text-lg font-light uppercase tracking-[0.4em] mb-2">
+                {/* Hero Section */}
+        <section className="min-h-screen relative p-8">
+          {/* Top Left Branding */}
+          <div className="absolute top-8 left-8 z-20">
+            <div className="text-white text-lg font-light uppercase tracking-[0.4em] mb-6">
               SAINTSAL™
             </div>
-            <div className="text-yellow-400 text-2xl font-medium tracking-wide">
-              Cookin' Knowledge
+            <div className="space-y-8">
+              <div className="text-yellow-400 text-4xl md:text-5xl font-bold tracking-wide">
+                Cookin' Knowledge
+              </div>
+              <h1 className="text-white text-4xl md:text-5xl font-bold tracking-tight">
+                SaintVisionAI™
+              </h1>
             </div>
           </div>
 
-          {/* Main Title */}
-          <h1 className="text-6xl md:text-7xl font-extralight text-white mb-12 tracking-tight">
-            SaintVisionAI™
-          </h1>
+          {/* Centered Content */}
+          <div className="flex flex-col items-center justify-center min-h-screen text-center">
+            {/* Divine Quote */}
+            <div className="mb-12 max-w-2xl">
+              <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
+                "SaintSal" AI doesn't just answer.
+              </p>
+              <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
+                It adapts. It empowers. It becomes your...
+              </p>
+              <p className="text-yellow-400 text-4xl md:text-5xl font-bold tracking-wider">
+                GOTTA GUY™!
+              </p>
+            </div>
+
+            {/* Logo */}
+            <div className="mb-8">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F90fa3cc4d85547ce9ae69ad15ae19bb2"
+                alt="SAINTSAL™ Circuit Board Logo"
+                className="w-28 h-28 mx-auto"
+              />
+            </div>
 
           {/* Primary CTA */}
           <div className="mb-8">
