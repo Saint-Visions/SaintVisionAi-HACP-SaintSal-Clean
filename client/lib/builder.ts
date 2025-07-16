@@ -1,10 +1,12 @@
 // SAINTSAL™ Builder.io Configuration
-import { builder } from "@builder.io/react";
+import { Builder } from "@builder.io/react";
 
 // Initialize Builder.io with your API key
-builder.init(
+Builder.init(
   process.env.VITE_BUILDER_API_KEY || "065997bd13e4442e888a08652fcd61ba",
 );
+
+export const builder = Builder;
 
 // SAINTSAL™ Brand Assets for Builder.io
 export const builderAssets = {
