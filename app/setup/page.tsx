@@ -160,14 +160,19 @@ export default function SetupPage() {
               </span>
             </CardTitle>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
-              Let's configure your AI workspace for optimal divine performance. This will only take a few minutes.
+              Let's configure your AI workspace for optimal divine performance.
+              This will only take a few minutes.
             </p>
 
             {/* Progress */}
             <div className="mt-8">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-sm text-muted-foreground">Setup Progress</span>
-                <span className="text-sm font-medium text-primary">{progress}% Complete</span>
+                <span className="text-sm text-muted-foreground">
+                  Setup Progress
+                </span>
+                <span className="text-sm font-medium text-primary">
+                  {progress}% Complete
+                </span>
               </div>
               <div className="w-full bg-muted/30 rounded-full h-3">
                 <div
@@ -214,11 +219,18 @@ export default function SetupPage() {
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center">
-                    <setupSteps[currentStep].icon className="w-8 h-8 text-primary" />
+                    {(() => {
+                      const IconComponent = setupSteps[currentStep].icon;
+                      return <IconComponent className="w-8 h-8 text-primary" />;
+                    })()}
                   </div>
                   <div>
-                    <CardTitle className="text-2xl">{setupSteps[currentStep].title}</CardTitle>
-                    <p className="text-muted-foreground">{setupSteps[currentStep].description}</p>
+                    <CardTitle className="text-2xl">
+                      {setupSteps[currentStep].title}
+                    </CardTitle>
+                    <p className="text-muted-foreground">
+                      {setupSteps[currentStep].description}
+                    </p>
                   </div>
                 </div>
               </CardHeader>
@@ -227,30 +239,45 @@ export default function SetupPage() {
                 {currentStep === 0 && (
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="block text-sm font-medium">Workspace Name</label>
+                      <label className="block text-sm font-medium">
+                        Workspace Name
+                      </label>
                       <input
                         type="text"
                         value={formData.workspaceName}
-                        onChange={(e) => setFormData({...formData, workspaceName: e.target.value})}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            workspaceName: e.target.value,
+                          })
+                        }
                         placeholder="My Divine AI Sanctuary"
                         className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-sm font-medium">Professional Title</label>
+                      <label className="block text-sm font-medium">
+                        Professional Title
+                      </label>
                       <input
                         type="text"
                         value={formData.title}
-                        onChange={(e) => setFormData({...formData, title: e.target.value})}
+                        onChange={(e) =>
+                          setFormData({ ...formData, title: e.target.value })
+                        }
                         placeholder="CEO, Developer, Consultant, etc."
                         className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-sm font-medium">Industry/Focus Area</label>
+                      <label className="block text-sm font-medium">
+                        Industry/Focus Area
+                      </label>
                       <select
                         value={formData.industry}
-                        onChange={(e) => setFormData({...formData, industry: e.target.value})}
+                        onChange={(e) =>
+                          setFormData({ ...formData, industry: e.target.value })
+                        }
                         className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
                       >
                         <option value="">Select Industry</option>
@@ -264,16 +291,27 @@ export default function SetupPage() {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-sm font-medium">AI Experience Level</label>
+                      <label className="block text-sm font-medium">
+                        AI Experience Level
+                      </label>
                       <select
                         value={formData.experience}
-                        onChange={(e) => setFormData({...formData, experience: e.target.value})}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            experience: e.target.value,
+                          })
+                        }
                         className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
                       >
                         <option value="">Select Experience</option>
                         <option value="beginner">Beginner - New to AI</option>
-                        <option value="intermediate">Intermediate - Some AI Experience</option>
-                        <option value="advanced">Advanced - AI Power User</option>
+                        <option value="intermediate">
+                          Intermediate - Some AI Experience
+                        </option>
+                        <option value="advanced">
+                          Advanced - AI Power User
+                        </option>
                         <option value="expert">Expert - AI Professional</option>
                       </select>
                     </div>
@@ -292,7 +330,9 @@ export default function SetupPage() {
                         <input
                           type={showApiKey ? "text" : "password"}
                           value={formData.apiKey}
-                          onChange={(e) => setFormData({...formData, apiKey: e.target.value})}
+                          onChange={(e) =>
+                            setFormData({ ...formData, apiKey: e.target.value })
+                          }
                           placeholder="sk-... (Leave blank to use our premium API)"
                           className="w-full px-4 py-3 pr-12 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
                         />
@@ -301,34 +341,52 @@ export default function SetupPage() {
                           onClick={() => setShowApiKey(!showApiKey)}
                           className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
                         >
-                          {showApiKey ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                          {showApiKey ? (
+                            <EyeOff className="w-5 h-5" />
+                          ) : (
+                            <Eye className="w-5 h-5" />
+                          )}
                         </button>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        Using your own API key gives you unlimited access. Leave blank to use our premium shared API.
+                        Using your own API key gives you unlimited access. Leave
+                        blank to use our premium shared API.
                       </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="block text-sm font-medium">Response Style</label>
+                        <label className="block text-sm font-medium">
+                          Response Style
+                        </label>
                         <select
                           value={formData.responseStyle}
-                          onChange={(e) => setFormData({...formData, responseStyle: e.target.value})}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              responseStyle: e.target.value,
+                            })
+                          }
                           className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
                         >
-                          <option value="professional">Professional & Detailed</option>
-                          <option value="conversational">Conversational & Friendly</option>
+                          <option value="professional">
+                            Professional & Detailed
+                          </option>
+                          <option value="conversational">
+                            Conversational & Friendly
+                          </option>
                           <option value="concise">Concise & Direct</option>
                           <option value="creative">Creative & Inspiring</option>
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label className="block text-sm font-medium">Default AI Model</label>
-                        <select
-                          className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground"
-                        >
-                          <option value="hacp">HACP™ Dual Engine (Recommended)</option>
+                        <label className="block text-sm font-medium">
+                          Default AI Model
+                        </label>
+                        <select className="w-full px-4 py-3 border border-primary/30 bg-background/80 backdrop-blur-sm rounded-xl text-foreground">
+                          <option value="hacp">
+                            HACP™ Dual Engine (Recommended)
+                          </option>
                           <option value="gpt4o">GPT-4o Primary</option>
                           <option value="azure">Azure Cognitive Primary</option>
                         </select>
@@ -348,16 +406,33 @@ export default function SetupPage() {
                         </h4>
                         <div className="space-y-3">
                           <label className="flex items-center gap-3">
-                            <input type="checkbox" defaultChecked className="rounded border-primary/30" />
-                            <span className="text-sm">Faith-aligned data processing</span>
+                            <input
+                              type="checkbox"
+                              defaultChecked
+                              className="rounded border-primary/30"
+                            />
+                            <span className="text-sm">
+                              Faith-aligned data processing
+                            </span>
                           </label>
                           <label className="flex items-center gap-3">
-                            <input type="checkbox" defaultChecked className="rounded border-primary/30" />
-                            <span className="text-sm">Enhanced privacy protection</span>
+                            <input
+                              type="checkbox"
+                              defaultChecked
+                              className="rounded border-primary/30"
+                            />
+                            <span className="text-sm">
+                              Enhanced privacy protection
+                            </span>
                           </label>
                           <label className="flex items-center gap-3">
-                            <input type="checkbox" className="rounded border-primary/30" />
-                            <span className="text-sm">Anonymous usage analytics</span>
+                            <input
+                              type="checkbox"
+                              className="rounded border-primary/30"
+                            />
+                            <span className="text-sm">
+                              Anonymous usage analytics
+                            </span>
                           </label>
                         </div>
                       </div>
@@ -368,16 +443,33 @@ export default function SetupPage() {
                         </h4>
                         <div className="space-y-3">
                           <label className="flex items-center gap-3">
-                            <input type="checkbox" defaultChecked className="rounded border-primary/30" />
-                            <span className="text-sm">AI response notifications</span>
+                            <input
+                              type="checkbox"
+                              defaultChecked
+                              className="rounded border-primary/30"
+                            />
+                            <span className="text-sm">
+                              AI response notifications
+                            </span>
                           </label>
                           <label className="flex items-center gap-3">
-                            <input type="checkbox" defaultChecked className="rounded border-primary/30" />
-                            <span className="text-sm">System update alerts</span>
+                            <input
+                              type="checkbox"
+                              defaultChecked
+                              className="rounded border-primary/30"
+                            />
+                            <span className="text-sm">
+                              System update alerts
+                            </span>
                           </label>
                           <label className="flex items-center gap-3">
-                            <input type="checkbox" className="rounded border-primary/30" />
-                            <span className="text-sm">Marketing communications</span>
+                            <input
+                              type="checkbox"
+                              className="rounded border-primary/30"
+                            />
+                            <span className="text-sm">
+                              Marketing communications
+                            </span>
                           </label>
                         </div>
                       </div>
@@ -411,7 +503,8 @@ export default function SetupPage() {
                       </Card>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      These integrations are optional and can be set up later from your dashboard.
+                      These integrations are optional and can be set up later
+                      from your dashboard.
                     </p>
                   </div>
                 )}
