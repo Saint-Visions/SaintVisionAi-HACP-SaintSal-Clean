@@ -4,6 +4,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/spa",
   "installCommand": "npm install",
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/api/(.*)",
