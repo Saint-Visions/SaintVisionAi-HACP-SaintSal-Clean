@@ -22,6 +22,11 @@ import {
 import { useAuth } from "../contexts/AuthContext";
 
 export default function Login() {
+  // Ensure Gotham font loads
+  const fontStyle = {
+    fontFamily:
+      "Gotham, 'Gotham Medium', 'Gotham Bold', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Roboto, Helvetica, Arial, sans-serif !important",
+  };
   const location = useLocation();
   const navigate = useNavigate();
   const { signIn, signUp, user } = useAuth();
