@@ -25,19 +25,16 @@ export default function Index() {
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="min-h-screen relative p-8">
-          {/* Top Left Branding */}
-          <div className="absolute top-8 left-8 z-20">
-            <div className="text-white text-lg font-light uppercase tracking-[0.4em] mb-6">
-              SAINTSAL™
-            </div>
-            <div className="space-y-8">
-              <div className="text-yellow-400 text-4xl md:text-5xl font-bold tracking-wide">
-                Cookin' Knowledge
-              </div>
-              <h1 className="text-white text-4xl md:text-5xl font-bold tracking-tight">
-                SaintVisionAI™
-              </h1>
-            </div>
+          {/* Top Left Logo & Title */}
+          <div className="absolute top-8 left-8 z-20 flex items-center space-x-4">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F90fa3cc4d85547ce9ae69ad15ae19bb2"
+              alt="SAINTSAL™ Circuit Board Logo"
+              className="w-12 h-12"
+            />
+            <h1 className="text-white text-2xl md:text-3xl font-bold tracking-tight">
+              SaintVisionAI™
+            </h1>
           </div>
 
           {/* Centered Content */}
