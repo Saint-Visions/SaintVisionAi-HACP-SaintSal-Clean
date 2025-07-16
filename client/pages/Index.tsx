@@ -65,11 +65,7 @@ export default function Index() {
           {/* Primary CTA */}
           <div className="mb-8">
             <Button
-              onClick={() =>
-                document
-                  .getElementById("dual-ai-console")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => (window.location.href = "/signup")}
               className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-12 py-5 rounded-2xl text-2xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
             >
               🔥 Start Cooking
