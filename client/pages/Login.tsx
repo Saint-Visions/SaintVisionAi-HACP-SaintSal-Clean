@@ -343,7 +343,7 @@ export default function Login() {
                     </span>
                     <Gem className="w-4 h-4 text-yellow-400" />
                   </div>
-                  <div className="text-white text-2xl font-bold tracking-wide">
+                  <div className="text-white text-2xl font-thin tracking-tight">
                     <span>
                       SaintVisionAI<span className="text-yellow-400">™</span>
                     </span>
