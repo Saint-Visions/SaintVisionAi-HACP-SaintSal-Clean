@@ -55,7 +55,16 @@ export default function LoginPage() {
       <div className="absolute inset-0 gold-particles z-2" />
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
+      <div
+        className="relative z-10 min-h-screen flex items-center justify-center p-6"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fff0733af4a2e4a0b8c3ec5843ef9720e)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
         {/* Back to Home Link */}
         <Link
           href="/"
