@@ -36,7 +36,7 @@ export default function Why() {
         </section>
 
         {/* What Separates Us Section */}
-        <section className="py-12 md:py-24 bg-black/80 backdrop-blur-xl">
+        <section className="py-12 md:py-24 bg-black/40 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4 md:px-6">
             <div className="text-center mb-8 md:mb-16">
               <h2 className="text-3xl md:text-5xl font-light text-white mb-3 md:mb-6 tracking-tight">
