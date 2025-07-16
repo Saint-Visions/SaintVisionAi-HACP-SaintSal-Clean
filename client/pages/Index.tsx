@@ -18,8 +18,8 @@ export default function Index() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Global overlay for readability */}
-      <div className="absolute inset-0 bg-black/30 z-0" />
+      {/* Enhanced translucent overlay for better readability */}
+      <div className="absolute inset-0 bg-black/50 z-0" />
 
       {/* All content flows over the same background */}
       <div className="relative z-10">
