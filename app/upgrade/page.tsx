@@ -230,37 +230,49 @@ export default function UpgradePage() {
           </div>
 
           {/* Why Upgrade */}
-          <Card className="bg-background/50 border-primary/30 backdrop-blur-sm">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-center mb-8">
+          <div
+            className="bg-gray-900/40 border border-yellow-400/30 backdrop-blur-md rounded-3xl"
+            style={{
+              boxShadow:
+                "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(251, 191, 36, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+            }}
+          >
+            <div className="p-8">
+              <h3 className="text-2xl font-thin tracking-tight text-yellow-400 text-center mb-8">
                 Why Upgrade?
               </h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <Building2 className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h4 className="font-semibold mb-2">Advanced CRM</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <Building2 className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                  <h4 className="font-medium mb-2 text-yellow-400">
+                    Advanced CRM
+                  </h4>
+                  <p className="text-sm text-gray-300">
                     Seamless integration with GoHighLevel and other CRM
                     platforms
                   </p>
                 </div>
                 <div className="text-center">
-                  <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h4 className="font-semibold mb-2">AI Automation</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <Zap className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                  <h4 className="font-medium mb-2 text-yellow-400">
+                    AI Automation
+                  </h4>
+                  <p className="text-sm text-gray-300">
                     Intelligent workflows that learn and adapt to your business
                   </p>
                 </div>
                 <div className="text-center">
-                  <Crown className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h4 className="font-semibold mb-2">Enterprise Features</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <Crown className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                  <h4 className="font-medium mb-2 text-yellow-400">
+                    Enterprise Features
+                  </h4>
+                  <p className="text-sm text-gray-300">
                     Team management, admin controls, and enterprise security
                   </p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* Bottom CTA */}
           <div className="text-center mt-12">
