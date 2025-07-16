@@ -593,12 +593,12 @@ export default function Login() {
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full relative overflow-hidden bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-500 text-gray-900 font-bold py-6 rounded-2xl shadow-2xl shadow-yellow-500/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-yellow-400/80 disabled:opacity-50 disabled:hover:scale-100 text-xl tracking-wide group"
+                  className="w-full relative overflow-hidden text-gray-900 font-bold py-6 rounded-2xl transition-all duration-500 hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100 text-xl tracking-wide group"
                   style={{
                     background:
                       "linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%)",
                     boxShadow:
-                      "0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2)",
+                      "0 0 30px rgba(212, 175, 55, 0.6), 0 0 60px rgba(212, 175, 55, 0.4), 0 0 90px rgba(212, 175, 55, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.3), inset 0 -2px 0 rgba(0, 0, 0, 0.2)",
                   }}
                 >
                   {isLoading ? (
