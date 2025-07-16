@@ -12,9 +12,9 @@ export default function Index() {
           "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
         backgroundImage:
           "url(https://api.builder.io/api/v1/image/assets/TEMP/48bf7ae07524f3ab5cd7dbd41650b41a12d29df9?width=1920)",
-        backgroundSize: "120%",
+        backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: window.innerWidth > 768 ? "fixed" : "scroll",
+        backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -29,7 +29,7 @@ export default function Index() {
           <div className="absolute top-8 left-8 z-20 flex items-center space-x-12">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F90fa3cc4d85547ce9ae69ad15ae19bb2"
-              alt="SAINTSAL™ Circuit Board Logo"
+              alt="SAINTSAL�� Circuit Board Logo"
               className="w-20 h-20 md:w-24 md:h-24"
             />
             <h1 className="text-white text-4xl md:text-5xl font-thin tracking-tight">
