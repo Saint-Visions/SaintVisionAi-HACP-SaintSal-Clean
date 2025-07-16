@@ -12,16 +12,7 @@ export default function Index() {
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Main Content */}
-        <div
-          className="flex-1 flex items-center justify-center p-6"
-          style={{
-            backgroundImage:
-              "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
+        <div className="flex-1 flex items-center justify-center p-6">
           <div className="max-w-md w-full space-y-6">
             {/* Quote Bubble */}
             <div className="bg-black/90 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/40 relative">
