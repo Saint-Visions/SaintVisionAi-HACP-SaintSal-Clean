@@ -154,6 +154,131 @@ export default function AdminTrainingPage() {
             </Card>
           </div>
 
+          {/* Analytics Dashboard */}
+          {showAnalytics && (
+            <Card className="mb-8 bg-gradient-to-br from-orange-500/10 to-red-500/10 border-orange-500/30">
+              <CardHeader>
+                <CardTitle className="text-2xl text-orange-400 flex items-center gap-3">
+                  <BarChart3 className="w-8 h-8" />
+                  📊 Training Analytics Dashboard
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-3 gap-6 mb-6">
+                  <Card className="bg-background/50 border-green-500/30">
+                    <CardContent className="p-4 text-center">
+                      <UserCheck className="w-6 h-6 text-green-400 mx-auto mb-2" />
+                      <h4 className="text-lg font-bold text-green-400">3</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Admins Completed
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-background/50 border-blue-500/30">
+                    <CardContent className="p-4 text-center">
+                      <TrendingUp className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+                      <h4 className="text-lg font-bold text-blue-400">87%</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Avg Completion
+                      </p>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-background/50 border-purple-500/30">
+                    <CardContent className="p-4 text-center">
+                      <Clock className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+                      <h4 className="text-lg font-bold text-purple-400">
+                        4.2h
+                      </h4>
+                      <p className="text-sm text-muted-foreground">Avg Time</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-foreground">
+                    Recent Completions:
+                  </h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-background/30 border border-muted">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                          <span className="text-sm">👑</span>
+                        </div>
+                        <div>
+                          <p className="font-medium">Admin Sarah</p>
+                          <p className="text-sm text-muted-foreground">
+                            Completed: Webhooks 101
+                          </p>
+                        </div>
+                      </div>
+                      <Badge className="bg-green-500/20 text-green-400">
+                        2h ago
+                      </Badge>
+                    </div>
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-background/30 border border-muted">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
+                          <span className="text-sm">🛠️</span>
+                        </div>
+                        <div>
+                          <p className="font-medium">Admin Marcus</p>
+                          <p className="text-sm text-muted-foreground">
+                            Started: Admin Tools
+                          </p>
+                        </div>
+                      </div>
+                      <Badge className="bg-blue-500/20 text-blue-400">
+                        1d ago
+                      </Badge>
+                    </div>
+                    <div className="flex items-center justify-between p-3 rounded-lg bg-background/30 border border-muted">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center">
+                          <span className="text-sm">🎆</span>
+                        </div>
+                        <div>
+                          <p className="font-medium">Admin Lisa</p>
+                          <p className="text-sm text-muted-foreground">
+                            Certified: Full Training
+                          </p>
+                        </div>
+                      </div>
+                      <Badge className="bg-purple-500/20 text-purple-400">
+                        3d ago
+                      </Badge>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Search Component */}
+          <TrainingSearch
+            sections={trainingData}
+            onResultSelect={handleSearchResult}
+            onAICoachMode={setAICoachEnabled}
+            aiCoachEnabled={aiCoachEnabled}
+          />
+
+          {/* AI Coach */}
+          {aiCoachEnabled && (selectedSection || selectedVideo) && (
+            <AICoach
+              section={trainingData.find((s) => s.id === selectedSection)}
+              video={
+                selectedSection
+                  ? trainingData
+                      .find((s) => s.id === selectedSection)
+                      ?.videos.find((v) => v.id === selectedVideo)
+                  : undefined
+              }
+              onClose={() => {
+                setSelectedSection(null);
+                setSelectedVideo(null);
+              }}
+            />
+          )}
+
           {/* Quick Actions */}
           <Card className="mb-8 bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
             <CardHeader>
