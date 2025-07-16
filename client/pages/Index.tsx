@@ -266,7 +266,20 @@ export default function Index() {
       </section>
 
       {/* Section 4: PartnerTech Elite */}
-      <section className="relative py-20 bg-gray-900">
+      <section className="relative py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 parallax"
+          style={{
+            backgroundImage:
+              "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f?format=webp&width=1920)",
+            backgroundSize: "120%",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            transform: "translateZ(0)",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/65" />
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Visual */}
