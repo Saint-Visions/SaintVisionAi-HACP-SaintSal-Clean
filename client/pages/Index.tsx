@@ -6,8 +6,8 @@ import { Search, Users, BarChart3, Smartphone } from "lucide-react";
 export default function Index() {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Subtle content overlay to enhance readability */}
-      <div className="absolute inset-0 bg-black/30" />
+      {/* Subtle content overlay to enhance readability - reduced to show your beautiful background */}
+      <div className="absolute inset-0 bg-black/10" />
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
