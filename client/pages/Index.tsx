@@ -68,7 +68,7 @@ export default function Index() {
                 onClick={() => (window.location.href = "/signup")}
                 className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-12 py-5 rounded-2xl text-2xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
               >
-                ��� Start Cooking
+                🔥 Start Cooking
               </Button>
             </div>
 
@@ -172,12 +172,12 @@ export default function Index() {
                   the full comparison, understand the technology, and discover
                   why SAINTSAL™ isn't just another chatbot.
                 </p>
-                <button
-                  onClick={() => (window.location.href = "/why")}
-                  className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-xl text-lg shadow-xl transition-all duration-300 hover:scale-105"
+                <Link
+                  to="/why"
+                  className="inline-block bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-xl text-lg shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   See What We're Made Of
-                </button>
+                </Link>
               </div>
             </div>
 
