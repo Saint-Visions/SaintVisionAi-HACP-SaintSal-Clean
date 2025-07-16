@@ -34,8 +34,7 @@
     "tailwind-merge": "^2.5.2",
     "class-variance-authority": "^0.7.1",
     "react-hook-form": "^7.51.0",
-    "@hookform/resolvers": "^3.9.0",
-    "cmdk": "^0.2.0"
+    "@hookform/resolvers": "^3.9.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react-swc": "^3.5.0",
