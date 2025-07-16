@@ -75,6 +75,54 @@ const App = () => (
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/partnertech"
+          element={
+            <ProtectedRoute>
+              <PartnerTech />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/upgrade"
+          element={
+            <ProtectedRoute>
+              <Upgrade />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/clients"
+          element={
+            <ProtectedRoute>
+              <AdminClients />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/logs"
+          element={
+            <ProtectedRoute>
+              <AdminLogs />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/referral/invite"
+          element={
+            <ProtectedRoute>
+              <ReferralInvite />
+            </ProtectedRoute>
+          }
+        />
 
         {/* Catch-all route for 404 */}
         <Route path="*" element={<NotFound />} />
