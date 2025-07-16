@@ -222,15 +222,16 @@
     z-index: -1;
   }
 
-  /* Advanced Parallax Background Effects */
-  .parallax-bg {
+  /* Perfect Parallax Effect for Brand Backgrounds */
+  .parallax {
     position: relative;
-    background-attachment: fixed !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    transform: translateZ(0);
+    background-attachment: fixed; /* Key for parallax effect */
+    background-size: cover; /* Ensures the background image covers the entire section */
+    background-position: center; /* Centers the background perfectly */
+    background-repeat: no-repeat;
+    transform: translateZ(0); /* Ensures it works smoothly */
     will-change: transform;
+    min-height: 100vh;
   }
 
   .parallax-bg::before {
