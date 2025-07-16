@@ -144,7 +144,7 @@ export default function Help() {
               </p>
               <button
                 onClick={() =>
-                  (window.location.href = `mailto:${import.meta.env.VITE_SUPPORT_EMAIL || "support@saintvisional.com"}`)
+                  (window.location.href = "mailto:support@saintvisional.com")
                 }
                 className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300"
               >
