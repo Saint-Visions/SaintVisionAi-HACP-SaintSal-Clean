@@ -30,7 +30,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => (
   <AuthProvider>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.PROD ? "/" : "/"}>
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Index />} />
