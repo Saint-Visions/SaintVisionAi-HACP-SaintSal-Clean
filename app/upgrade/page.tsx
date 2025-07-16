@@ -70,18 +70,26 @@ export default function UpgradePage() {
           </div>
 
           {/* Current Plan */}
-          <Card className="mb-12 bg-muted/20 border-muted/30 backdrop-blur-sm">
-            <CardContent className="p-8 text-center">
-              <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Current Plan</h3>
-              <Badge className="bg-primary/20 text-primary mb-4">
+          <div
+            className="mb-12 bg-gray-900/40 border border-yellow-400/20 backdrop-blur-md rounded-3xl"
+            style={{
+              boxShadow:
+                "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(251, 191, 36, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+            }}
+          >
+            <div className="p-8 text-center">
+              <Zap className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+              <h3 className="text-xl font-medium mb-2 text-white">
+                Current Plan
+              </h3>
+              <div className="bg-yellow-400/20 text-yellow-400 mb-4 px-4 py-1 rounded-full inline-block text-sm font-medium">
                 Unlimited - $27/month
-              </Badge>
-              <p className="text-muted-foreground">
+              </div>
+              <p className="text-gray-300">
                 You're currently on the Unlimited plan with basic AI features
               </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
           {/* Upgrade Options */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
