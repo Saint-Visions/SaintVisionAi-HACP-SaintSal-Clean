@@ -11,11 +11,12 @@
     "start": "node dist/server/node-build.mjs",
     "test": "vitest --run",
     "typecheck": "tsc",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod",
+    "builder:init": "npx tsx scripts/init-builder.ts",
+    "builder:sync": "npx @builder.io/cli sync --push",
+    "builder:setup": "npm run builder:init && npm run builder:sync"
   },
   "dependencies": {
-    "@builder.io/react": "^8.2.6",
-    "@builder.io/sdk": "^6.1.2",
     "@stripe/stripe-js": "^4.8.0",
     "@supabase/supabase-js": "^2.51.0",
     "@upstash/vector": "^1.1.5",
