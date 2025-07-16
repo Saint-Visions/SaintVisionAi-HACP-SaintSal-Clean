@@ -13,7 +13,7 @@ export default function Index() {
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Main Content */}
         <div
-          className="flex-1 flex items-center justify-center p-6 parallax-bg"
+          className="flex-1 flex items-center justify-center p-6 parallax"
           style={{
             backgroundImage:
               "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
@@ -21,6 +21,7 @@ export default function Index() {
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundAttachment: "fixed",
+            transform: "translateZ(0)",
           }}
         >
           <div className="max-w-md w-full space-y-6">
