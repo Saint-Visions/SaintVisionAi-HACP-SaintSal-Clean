@@ -65,29 +65,28 @@ export default function Index() {
 
               {/* Action Buttons */}
               <div className="space-y-3 pt-4">
-                <Link to="/signup" className="w-full">
-                  <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 rounded-xl text-lg">
-                    🔥 Start Cooking
-                  </Button>
-                </Link>
+                <Button
+                  onClick={() => (window.location.href = "/signup")}
+                  className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 rounded-xl text-lg"
+                >
+                  🔥 Start Cooking
+                </Button>
 
                 <div className="grid grid-cols-2 gap-3">
-                  <Link to="/console">
-                    <Button
-                      variant="outline"
-                      className="w-full border-blue-500 text-blue-400 hover:bg-blue-500/10 bg-blue-900/50"
-                    >
-                      💬 AI Chat
-                    </Button>
-                  </Link>
-                  <Link to="/login">
-                    <Button
-                      variant="outline"
-                      className="w-full border-green-500 text-green-400 hover:bg-green-500/10 bg-green-900/50"
-                    >
-                      📱 Sign In
-                    </Button>
-                  </Link>
+                  <Button
+                    onClick={() => (window.location.href = "/console")}
+                    variant="outline"
+                    className="w-full border-blue-500 text-blue-400 hover:bg-blue-500/10 bg-blue-900/50"
+                  >
+                    💬 AI Chat
+                  </Button>
+                  <Button
+                    onClick={() => (window.location.href = "/login")}
+                    variant="outline"
+                    className="w-full border-green-500 text-green-400 hover:bg-green-500/10 bg-green-900/50"
+                  >
+                    📱 Sign In
+                  </Button>
                 </div>
               </div>
 
