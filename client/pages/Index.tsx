@@ -362,7 +362,20 @@ export default function Index() {
       </section>
 
       {/* Section 5: Faith-Aligned Vault */}
-      <section className="relative py-20 bg-black">
+      <section className="relative py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 parallax"
+          style={{
+            backgroundImage:
+              "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F51e896cb4f2047d5aef30f1a590471f6?format=webp&width=1920)",
+            backgroundSize: "120%",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            transform: "translateZ(0)",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/70" />
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Content */}
