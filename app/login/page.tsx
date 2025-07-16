@@ -97,8 +97,10 @@ export default function LoginPage() {
               <div className="text-white text-sm font-light uppercase tracking-[0.4em] mb-3 opacity-90">
                 SAINTSAL��
               </div>
-              <div className="text-yellow-400 text-xl font-semibold tracking-wide mb-2">
-                SaintVisionAI™
+              <div className="text-white text-xl font-thin tracking-tight mb-2">
+                <span>
+                  SaintVisionAI<span className="text-yellow-400">™</span>
+                </span>
               </div>
               <div className="text-yellow-300/80 text-sm font-light tracking-wider">
                 Cookin' Knowledge
