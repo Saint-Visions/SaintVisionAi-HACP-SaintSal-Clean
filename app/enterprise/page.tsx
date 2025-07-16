@@ -143,124 +143,144 @@ export default function EnterprisePage() {
           {/* Enterprise Features */}
           <div className="grid lg:grid-cols-2 gap-8 mb-8">
             {/* Team Management */}
-            <Card className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 border-blue-500/30 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-blue-400">
+            <div
+              className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-400/40 backdrop-blur-md rounded-3xl"
+              style={{
+                boxShadow:
+                  "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+              }}
+            >
+              <div className="p-6">
+                <h2 className="flex items-center gap-3 text-blue-400 text-xl font-thin tracking-tight mb-4">
                   <Users className="w-8 h-8" />
                   Team Management
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
+                </h2>
+              </div>
+              <div className="px-6 pb-6">
                 <div className="space-y-4">
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-300">
                     Advanced user management with role-based access controls and
                     enterprise-grade security.
                   </p>
 
                   <div className="space-y-3">
-                    <div className="bg-background/50 rounded-lg p-3 flex items-center justify-between">
+                    <div className="bg-gray-900/40 border border-blue-400/20 rounded-lg p-3 flex items-center justify-between backdrop-blur-sm">
                       <div>
-                        <div className="text-sm font-medium">
+                        <div className="text-sm font-medium text-white">
                           Administrators
                         </div>
-                        <div className="text-xs text-muted-foreground">
+                        <div className="text-xs text-gray-400">
                           Full system access
                         </div>
                       </div>
-                      <Badge className="bg-red-500/20 text-red-400">3</Badge>
+                      <div className="bg-red-500/20 text-red-400 px-2 py-1 rounded text-sm font-medium">
+                        3
+                      </div>
                     </div>
-                    <div className="bg-background/50 rounded-lg p-3 flex items-center justify-between">
+                    <div className="bg-gray-900/40 border border-blue-400/20 rounded-lg p-3 flex items-center justify-between backdrop-blur-sm">
                       <div>
-                        <div className="text-sm font-medium">Managers</div>
-                        <div className="text-xs text-muted-foreground">
+                        <div className="text-sm font-medium text-white">
+                          Managers
+                        </div>
+                        <div className="text-xs text-gray-400">
                           Team oversight
                         </div>
                       </div>
-                      <Badge className="bg-yellow-500/20 text-yellow-400">
+                      <div className="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-sm font-medium">
                         12
-                      </Badge>
+                      </div>
                     </div>
-                    <div className="bg-background/50 rounded-lg p-3 flex items-center justify-between">
+                    <div className="bg-gray-900/40 border border-blue-400/20 rounded-lg p-3 flex items-center justify-between backdrop-blur-sm">
                       <div>
-                        <div className="text-sm font-medium">Users</div>
-                        <div className="text-xs text-muted-foreground">
+                        <div className="text-sm font-medium text-white">
+                          Users
+                        </div>
+                        <div className="text-xs text-gray-400">
                           Standard access
                         </div>
                       </div>
-                      <Badge className="bg-blue-500/20 text-blue-400">
+                      <div className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-sm font-medium">
                         141
-                      </Badge>
+                      </div>
                     </div>
                   </div>
 
-                  <Button className="w-full bg-blue-500 hover:bg-blue-600">
+                  <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium transition-all duration-200">
                     Manage Team
                   </Button>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
             {/* Security & Compliance */}
-            <Card className="bg-gradient-to-br from-green-500/20 to-green-600/20 border-green-500/30 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-green-400">
+            <div
+              className="bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-400/40 backdrop-blur-md rounded-3xl"
+              style={{
+                boxShadow:
+                  "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(34, 197, 94, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+              }}
+            >
+              <div className="p-6">
+                <h2 className="flex items-center gap-3 text-green-400 text-xl font-thin tracking-tight mb-4">
                   <Shield className="w-8 h-8" />
                   Security & Compliance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
+                </h2>
+              </div>
+              <div className="px-6 pb-6">
                 <div className="space-y-4">
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-300">
                     Enterprise-grade security with SOC 2 compliance, advanced
                     encryption, and comprehensive audit trails.
                   </p>
 
                   <div className="space-y-3">
-                    <div className="bg-background/50 rounded-lg p-3 flex items-center justify-between">
+                    <div className="bg-gray-900/40 border border-green-400/20 rounded-lg p-3 flex items-center justify-between backdrop-blur-sm">
                       <div className="flex items-center gap-3">
                         <Lock className="w-4 h-4 text-green-400" />
                         <div>
-                          <div className="text-sm font-medium">
+                          <div className="text-sm font-medium text-white">
                             AES-256 Encryption
                           </div>
                         </div>
                       </div>
-                      <Badge className="bg-green-500/20 text-green-400">
+                      <div className="bg-green-500/20 text-green-400 px-2 py-1 rounded text-sm font-medium">
                         Active
-                      </Badge>
+                      </div>
                     </div>
-                    <div className="bg-background/50 rounded-lg p-3 flex items-center justify-between">
+                    <div className="bg-gray-900/40 border border-green-400/20 rounded-lg p-3 flex items-center justify-between backdrop-blur-sm">
                       <div className="flex items-center gap-3">
                         <Shield className="w-4 h-4 text-green-400" />
                         <div>
-                          <div className="text-sm font-medium">
+                          <div className="text-sm font-medium text-white">
                             SOC 2 Compliance
                           </div>
                         </div>
                       </div>
-                      <Badge className="bg-green-500/20 text-green-400">
+                      <div className="bg-green-500/20 text-green-400 px-2 py-1 rounded text-sm font-medium">
                         Certified
-                      </Badge>
+                      </div>
                     </div>
-                    <div className="bg-background/50 rounded-lg p-3 flex items-center justify-between">
+                    <div className="bg-gray-900/40 border border-green-400/20 rounded-lg p-3 flex items-center justify-between backdrop-blur-sm">
                       <div className="flex items-center gap-3">
                         <BarChart3 className="w-4 h-4 text-green-400" />
                         <div>
-                          <div className="text-sm font-medium">Audit Logs</div>
+                          <div className="text-sm font-medium text-white">
+                            Audit Logs
+                          </div>
                         </div>
                       </div>
-                      <Badge className="bg-green-500/20 text-green-400">
+                      <div className="bg-green-500/20 text-green-400 px-2 py-1 rounded text-sm font-medium">
                         Enabled
-                      </Badge>
+                      </div>
                     </div>
                   </div>
 
-                  <Button className="w-full bg-green-500 hover:bg-green-600">
+                  <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-medium transition-all duration-200">
                     Security Settings
                   </Button>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
           {/* Enterprise Analytics */}
