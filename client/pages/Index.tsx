@@ -44,9 +44,6 @@ export default function Index() {
               src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fb267a9a76dff455db59535be6840cecb?format=webp&width=800"
               alt="SAINTSAL™ Circuit Board Logo"
               className="w-28 h-28 mx-auto"
-              style={{
-                boxShadow: "1px 1px 3px 0",
-              }}
             />
           </div>
 
