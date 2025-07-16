@@ -212,8 +212,8 @@ export class ConversationService {
       // Handle different AI models
       if (conversation.ai_model === "dual") {
         const responses = await aiService.sendDualMessage(chatMessages);
-        // For now, use Azure response as primary, could implement dual UI later
-        aiResponse = responses.azure;
+        // For now, use companion response as primary, could implement dual UI later
+        aiResponse = responses.companion;
       } else if (onStreamChunk) {
         aiResponse = await aiService.streamMessage(
           chatMessages,
