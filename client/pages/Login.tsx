@@ -116,17 +116,21 @@ export default function Login() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Prestigious Divine Overlays */}
-      <div className="absolute inset-0 bg-black/80 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/80 z-1" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-2" />
+      {/* Dark Atmospheric Environment */}
+      <div className="absolute inset-0 bg-gray-900 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-gray-900/90 to-black/95 z-1" />
+      <div className="absolute inset-0 bg-gradient-to-t from-yellow-800/10 via-transparent to-gray-900/60 z-2" />
 
-      {/* Premium Golden Gradient Sweep */}
+      {/* Immersive Golden Atmosphere */}
       <div className="absolute inset-0 z-3">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/8 to-transparent animate-pulse opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/12 to-transparent animate-pulse"></div>
         <div
-          className="absolute inset-0 bg-gradient-to-t from-yellow-400/8 via-transparent to-yellow-400/8 animate-pulse opacity-40"
-          style={{ animationDelay: "1.5s" }}
+          className="absolute inset-0 bg-gradient-to-br from-yellow-500/8 via-transparent to-yellow-400/10 animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute inset-0 bg-radial-gradient from-yellow-400/6 via-transparent to-transparent animate-pulse"
+          style={{ animationDelay: "3s" }}
         ></div>
       </div>
 
