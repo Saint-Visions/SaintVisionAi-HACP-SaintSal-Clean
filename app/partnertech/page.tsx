@@ -1,7 +1,5 @@
 import WorkspaceLayout from "@/components/WorkspaceLayout";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Zap, Chrome, Building2, Brain, Users, Target } from "lucide-react";
 
 export default function PartnerTechPage() {
