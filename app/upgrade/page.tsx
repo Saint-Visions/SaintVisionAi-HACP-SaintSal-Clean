@@ -58,12 +58,12 @@ export default function UpgradePage() {
           {/* Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
-              <Crown className="w-16 h-16 text-primary" />
-              <h1 className="text-5xl font-bold text-primary">
+              <Crown className="w-16 h-16 text-yellow-400" />
+              <h1 className="text-5xl font-thin tracking-tight text-yellow-400">
                 Upgrade Your Plan
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto font-light">
               Unlock the full power of SAINTSAL™ with advanced features and
               enterprise capabilities
             </p>
