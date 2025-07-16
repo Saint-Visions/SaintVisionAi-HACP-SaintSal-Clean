@@ -120,151 +120,133 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Premium Features Section */}
-        <div
-          className="relative py-20 overflow-hidden"
-          style={{
-            background:
-              "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%)",
-          }}
-        >
-          {/* Animated golden shimmer overlay */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent animate-pulse"></div>
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent"></div>
-          </div>
+        {/* Native Features Overlay */}
+        <div className="relative py-32 overflow-hidden bg-gradient-to-b from-black/90 to-black/60">
+          {/* Subtle golden shimmer */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/3 to-transparent animate-pulse"></div>
 
-          <div className="relative z-10 max-w-6xl mx-auto px-6">
-            {/* Premium Header */}
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center space-x-3 mb-4">
-                <div className="w-12 h-px bg-gradient-to-r from-transparent to-yellow-400"></div>
-                <div className="text-yellow-400 text-sm font-medium tracking-widest uppercase">
-                  Elite Technology Stack
-                </div>
-                <div className="w-12 h-px bg-gradient-to-l from-transparent to-yellow-400"></div>
+          <div className="relative z-10 max-w-5xl mx-auto px-8">
+            {/* Native Header */}
+            <div className="text-center mb-20">
+              <div className="text-yellow-400/60 text-sm font-light tracking-[0.2em] uppercase mb-6">
+                Elite Technology
               </div>
-              <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-                Enterprise-Grade AI
+              <h2 className="text-5xl md:text-6xl font-extralight text-white mb-6 tracking-tight">
+                Enterprise Intelligence
               </h2>
-              <p className="text-gray-400 text-lg font-light max-w-2xl mx-auto leading-relaxed">
-                Professional-grade intelligence for those who demand excellence
-              </p>
+              <div className="w-16 h-px bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent mx-auto"></div>
             </div>
 
-            {/* Premium Feature Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Native Feature Flow */}
+            <div className="space-y-24">
               {/* Dual-AI Engine */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-black/40 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 hover:border-yellow-400/30 transition-all duration-500">
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 border border-yellow-400/30">
-                      <Brain className="w-8 h-8 text-yellow-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">
-                        Dual-AI Engine
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        GPT-4o and Azure Cognitive Services working in perfect
-                        harmony. Redundant intelligence, zero downtime.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center text-xs text-yellow-400/70 font-medium">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                    ACTIVE • 99.9% UPTIME
+              <div className="flex items-center space-x-12 md:space-x-20">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 flex items-center justify-center">
+                    <Brain className="w-8 h-8 text-yellow-400" />
                   </div>
                 </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">
+                    Dual-AI Engine
+                  </h3>
+                  <p className="text-gray-300 text-lg font-light leading-relaxed">
+                    GPT-4o and Azure Cognitive Services in perfect
+                    synchronization. Redundant intelligence ensures zero
+                    downtime, maximum reliability.
+                  </p>
+                  <div className="flex items-center mt-4 text-yellow-400/70 text-sm font-light">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                    Live • 99.9% Uptime Guaranteed
+                  </div>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="flex justify-center">
+                <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
               </div>
 
               {/* PartnerTech Suite */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-black/40 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 hover:border-blue-400/30 transition-all duration-500">
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-blue-400/20 to-blue-600/20 border border-blue-400/30">
-                      <Wrench className="w-8 h-8 text-blue-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">
-                        PartnerTech Suite
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        Advanced CRM, automated outreach, and Chrome extension
-                        tools. For partners ready to scale.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center text-xs text-blue-400/70 font-medium">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                    PARTNER ACCESS REQUIRED
+              <div className="flex items-center space-x-12 md:space-x-20">
+                <div className="flex-1 order-2 md:order-1">
+                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">
+                    PartnerTech Suite
+                  </h3>
+                  <p className="text-gray-300 text-lg font-light leading-relaxed">
+                    Advanced CRM, automated outreach, Chrome extensions. Unlock
+                    when you're ready to scale beyond individual use.
+                  </p>
+                  <div className="flex items-center mt-4 text-blue-400/70 text-sm font-light">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                    Partner Access • Premium Tier
                   </div>
                 </div>
+                <div className="flex-shrink-0 order-1 md:order-2">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400/20 to-blue-600/20 flex items-center justify-center">
+                    <Wrench className="w-8 h-8 text-blue-400" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="flex justify-center">
+                <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
               </div>
 
               {/* Intelligence Layer */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-black/40 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 hover:border-purple-400/30 transition-all duration-500">
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-purple-400/20 to-purple-600/20 border border-purple-400/30">
-                      <Zap className="w-8 h-8 text-purple-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">
-                        Intelligence Layer
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        Adaptive learning algorithms that understand your
-                        workflow and optimize responses in real-time.
-                      </p>
-                    </div>
+              <div className="flex items-center space-x-12 md:space-x-20">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400/20 to-purple-600/20 flex items-center justify-center">
+                    <Zap className="w-8 h-8 text-purple-400" />
                   </div>
-                  <div className="flex items-center text-xs text-purple-400/70 font-medium">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-2 animate-pulse"></div>
-                    LEARNING • IMPROVING
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">
+                    Adaptive Intelligence
+                  </h3>
+                  <p className="text-gray-300 text-lg font-light leading-relaxed">
+                    Machine learning algorithms that evolve with your workflow.
+                    Smarter responses through continuous optimization.
+                  </p>
+                  <div className="flex items-center mt-4 text-purple-400/70 text-sm font-light">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3 animate-pulse"></div>
+                    Learning • Continuously Improving
                   </div>
                 </div>
               </div>
 
+              {/* Divider */}
+              <div className="flex justify-center">
+                <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+              </div>
+
               {/* Faith-Aligned Security */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-black/40 backdrop-blur-2xl border border-white/10 rounded-2xl p-8 hover:border-green-400/30 transition-all duration-500">
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-green-400/20 to-green-600/20 border border-green-400/30">
-                      <Shield className="w-8 h-8 text-green-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">
-                        Faith-Aligned Security
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        Your data stays private. Your values stay intact. Zero
-                        compromise on ethics or security.
-                      </p>
-                    </div>
+              <div className="flex items-center space-x-12 md:space-x-20">
+                <div className="flex-1 order-2 md:order-1">
+                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">
+                    Faith-Aligned Privacy
+                  </h3>
+                  <p className="text-gray-300 text-lg font-light leading-relaxed">
+                    Your conversations stay private. Your values stay intact.
+                    Built with ethical AI principles at the foundation.
+                  </p>
+                  <div className="flex items-center mt-4 text-green-400/70 text-sm font-light">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                    Encrypted • Values-First Design
                   </div>
-                  <div className="flex items-center text-xs text-green-400/70 font-medium">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                    ENCRYPTED • PRIVATE
+                </div>
+                <div className="flex-shrink-0 order-1 md:order-2">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400/20 to-green-600/20 flex items-center justify-center">
+                    <Shield className="w-8 h-8 text-green-400" />
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Premium Call to Action */}
-            <div className="text-center mt-16">
-              <div className="inline-flex items-center space-x-4 text-gray-400 text-sm">
-                <span>Enterprise ready</span>
-                <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
-                <span>Scalable architecture</span>
-                <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
-                <span>24/7 availability</span>
-              </div>
+            {/* Bottom Accent */}
+            <div className="text-center mt-20">
+              <div className="w-24 h-px bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent mx-auto"></div>
             </div>
           </div>
         </div>
