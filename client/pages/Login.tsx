@@ -629,6 +629,9 @@ export default function Login() {
                 <Link
                   to={isSignup ? "/login" : "/signup"}
                   className="text-yellow-400 hover:text-yellow-300 text-base font-bold tracking-wide transition-all duration-300 underline decoration-yellow-400/40 hover:decoration-yellow-300 underline-offset-4"
+                  style={{
+                    textShadow: "0 0 10px rgba(251, 191, 36, 0.3)",
+                  }}
                 >
                   {isSignup ? "Sign In" : "Create Elite Account"}
                 </Link>
