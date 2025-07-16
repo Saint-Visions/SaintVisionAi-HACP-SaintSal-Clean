@@ -26,7 +26,7 @@ export default function Index() {
             transform: "translateZ(0)",
           }}
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/30" />
 
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-6 text-center">
           {/* Divine Quote - No Box */}
