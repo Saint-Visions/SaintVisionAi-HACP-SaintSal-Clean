@@ -64,7 +64,7 @@ export default function Why() {
               </div>
 
               {/* HACP Section */}
-              <div className="bg-black/60 backdrop-blur-xl border border-blue-400/30 rounded-2xl p-8">
+              <div className="bg-black/60 backdrop-blur-xl border border-blue-400/30 rounded-2xl p-4 md:p-8">
                 <h3 className="text-3xl font-bold text-blue-400 mb-6">
                   The Secret Sauce: HACP™
                 </h3>
@@ -130,7 +130,7 @@ export default function Why() {
               </div>
 
               {/* Comparison Table */}
-              <div className="bg-black/60 backdrop-blur-xl border border-green-400/30 rounded-2xl p-8">
+              <div className="bg-black/60 backdrop-blur-xl border border-green-400/30 rounded-2xl p-4 md:p-8">
                 <h3 className="text-2xl font-semibold text-green-400 mb-6 text-center">
                   SaintSal™ vs. The Rest
                 </h3>
@@ -187,7 +187,7 @@ export default function Why() {
               </div>
 
               {/* No Team Section */}
-              <div className="bg-black/60 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8 text-center">
+              <div className="bg-black/60 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-4 md:p-8 text-center">
                 <h3 className="text-2xl font-semibold text-purple-400 mb-4">
                   No Team? No Problem.
                 </h3>
