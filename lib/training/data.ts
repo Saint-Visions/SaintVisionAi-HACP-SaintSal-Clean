@@ -77,6 +77,14 @@ export const trainingData: TrainingSection[] = [
     icon: "👥",
     duration: "60 mins",
     difficulty: "Intermediate",
+    tags: [
+      "client",
+      "journey",
+      "lifecycle",
+      "ai interactions",
+      "support",
+      "customers",
+    ],
     videos: [
       {
         id: "client-lifecycle",
@@ -85,6 +93,7 @@ export const trainingData: TrainingSection[] = [
         duration: "15 mins",
         videoUrl: "https://youtu.be/example5",
         type: "youtube",
+        tags: ["lifecycle", "signup", "enterprise", "journey", "stages"],
       },
       {
         id: "ai-interactions",
@@ -93,6 +102,14 @@ export const trainingData: TrainingSection[] = [
         duration: "20 mins",
         videoUrl: "https://youtu.be/example6",
         type: "youtube",
+        tags: [
+          "ai",
+          "hacp",
+          "technology",
+          "interactions",
+          "patterns",
+          "responses",
+        ],
       },
       {
         id: "support-escalation",
@@ -101,6 +118,14 @@ export const trainingData: TrainingSection[] = [
         duration: "12 mins",
         videoUrl: "https://youtu.be/example7",
         type: "youtube",
+        tags: [
+          "support",
+          "escalation",
+          "procedures",
+          "issues",
+          "help",
+          "tickets",
+        ],
       },
       {
         id: "success-metrics",
@@ -109,6 +134,14 @@ export const trainingData: TrainingSection[] = [
         duration: "13 mins",
         videoUrl: "https://youtu.be/example8",
         type: "youtube",
+        tags: [
+          "metrics",
+          "kpis",
+          "success",
+          "tracking",
+          "analytics",
+          "performance",
+        ],
       },
     ],
   },
