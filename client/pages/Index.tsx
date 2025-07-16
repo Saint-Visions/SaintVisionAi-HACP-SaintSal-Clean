@@ -16,10 +16,10 @@ export default function Index() {
           className="flex-1 flex items-center justify-center p-6 parallax"
           style={{
             backgroundImage:
-              "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+              "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f?format=webp&width=1920)",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            backgroundSize: "cover",
+            backgroundSize: "120%",
             backgroundAttachment: "fixed",
             transform: "translateZ(0)",
           }}
