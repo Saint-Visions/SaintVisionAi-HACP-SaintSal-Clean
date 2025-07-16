@@ -9,7 +9,7 @@ export default function Why() {
         fontFamily:
           "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
         backgroundImage:
-          "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F34383e81d3a649718d150b57fb4aff34?format=webp&width=1920)",
+          "url(https://api.builder.io/api/v1/image/assets/TEMP/ecb797766f42592dddf70913a1ed92a7500a244f?width=3386)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
