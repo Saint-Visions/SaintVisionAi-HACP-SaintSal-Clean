@@ -46,8 +46,8 @@ export default function Index() {
               <div className="flex items-center justify-center">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
-                  alt="SAINTSAL Circuit Logo"
-                  className="w-16 h-16"
+                  alt="SAINTSAL™ Circuit Board Logo"
+                  className="w-20 h-20 rounded-xl shadow-lg"
                 />
               </div>
               <div>
