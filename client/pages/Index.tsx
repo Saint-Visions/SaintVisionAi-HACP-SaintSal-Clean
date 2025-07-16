@@ -321,7 +321,7 @@ export default function Index() {
                 </div>
 
                 <Button
-                  onClick={() => (window.location.href = "/upgrade")}
+                  onClick={() => (window.location.href = "/pricing")}
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-xl text-lg shadow-xl transition-all duration-300"
                 >
                   Unlock Partner Access
