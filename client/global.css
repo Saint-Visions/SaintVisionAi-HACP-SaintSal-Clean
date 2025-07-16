@@ -247,6 +247,102 @@
     z-index: -1;
   }
 
+  /* Advanced Parallax Background Effects */
+  .parallax-bg {
+    position: relative;
+    background-attachment: fixed !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .parallax-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(
+        circle at 30% 40%,
+        rgba(231, 176, 8, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 70% 20%,
+        rgba(231, 176, 8, 0.08) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 20% 80%,
+        rgba(231, 176, 8, 0.06) 0%,
+        transparent 40%
+      );
+    z-index: 1;
+    pointer-events: none;
+    animation: parallaxGlow 8s ease-in-out infinite alternate;
+  }
+
+  .parallax-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(2px 2px at 15% 25%, rgba(231, 176, 8, 0.4), transparent),
+      radial-gradient(1px 1px at 45% 15%, rgba(231, 176, 8, 0.3), transparent),
+      radial-gradient(3px 3px at 75% 35%, rgba(231, 176, 8, 0.5), transparent),
+      radial-gradient(1px 1px at 25% 65%, rgba(231, 176, 8, 0.2), transparent),
+      radial-gradient(2px 2px at 85% 75%, rgba(231, 176, 8, 0.35), transparent);
+    background-size:
+      400px 300px,
+      300px 200px,
+      500px 400px,
+      250px 180px,
+      350px 250px;
+    background-repeat: repeat;
+    z-index: 2;
+    pointer-events: none;
+    animation: parallaxDust 12s linear infinite;
+  }
+
+  @keyframes parallaxGlow {
+    0% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0.6;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes parallaxDust {
+    0% {
+      transform: translateX(-10px) translateY(-5px);
+    }
+    50% {
+      transform: translateX(5px) translateY(10px);
+    }
+    100% {
+      transform: translateX(-10px) translateY(-5px);
+    }
+  }
+
+  /* Enhanced Parallax Scroll Effect */
+  @media (prefers-reduced-motion: no-preference) {
+    .parallax-bg {
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+  }
+
   .war-grid {
     background-image:
       linear-gradient(rgba(45, 93, 47, 0.05) 1px, transparent 1px),
