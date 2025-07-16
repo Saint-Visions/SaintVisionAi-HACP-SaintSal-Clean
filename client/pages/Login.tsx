@@ -198,10 +198,10 @@ export default function Login() {
             </span>
           </Link>
 
-          {/* Atmospheric Sanctuary Portal */}
+          {/* Charcoal Sanctuary Portal */}
           <Card
-            className="backdrop-blur-lg border border-yellow-400/40 shadow-2xl shadow-yellow-400/50 rounded-3xl overflow-hidden relative group"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.15)" }}
+            className="backdrop-blur-xl border border-yellow-400/30 shadow-2xl shadow-yellow-400/40 rounded-3xl overflow-hidden relative group"
+            style={{ backgroundColor: "rgba(55, 65, 81, 0.25)" }}
           >
             {/* Atmospheric Energy Flow */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/20 to-transparent animate-pulse rounded-3xl"></div>
