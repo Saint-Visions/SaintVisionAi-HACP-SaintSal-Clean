@@ -254,52 +254,80 @@ export default function PartnerTechPage() {
           </div>
 
           {/* Integration Hub */}
-          <Card className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
-            <CardHeader>
-              <CardTitle className="text-center text-2xl">
+          <div
+            className="bg-gradient-to-r from-amber-500/10 to-orange-500/5 border border-amber-400/30 backdrop-blur-md rounded-3xl"
+            style={{
+              boxShadow:
+                "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(245, 158, 11, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+            }}
+          >
+            <div className="p-8">
+              <h2 className="text-center text-2xl font-thin tracking-tight text-amber-400 mb-4">
                 Integration Hub
-              </CardTitle>
-              <p className="text-center text-muted-foreground">
+              </h2>
+              <p className="text-center text-gray-300 mb-8">
                 Connect PartnerTech AI with your existing tools
               </p>
-            </CardHeader>
-            <CardContent>
+            </div>
+            <div className="px-8 pb-8">
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/20">
-                  <Building2 className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">GoHighLevel CRM</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                <div
+                  className="text-center p-6 bg-gray-900/40 border border-amber-400/20 rounded-2xl backdrop-blur-sm"
+                  style={{
+                    boxShadow:
+                      "0 10px 25px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                  }}
+                >
+                  <Building2 className="w-12 h-12 text-amber-400 mx-auto mb-4" />
+                  <h3 className="font-medium mb-2 text-white">
+                    GoHighLevel CRM
+                  </h3>
+                  <p className="text-sm text-gray-300 mb-4">
                     Seamless two-way sync with your CRM pipeline
                   </p>
-                  <Badge className="bg-green-500/20 text-green-400">
+                  <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium inline-block">
                     Connected
-                  </Badge>
+                  </div>
                 </div>
 
-                <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/20">
-                  <Chrome className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Browser Extension</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                <div
+                  className="text-center p-6 bg-gray-900/40 border border-amber-400/20 rounded-2xl backdrop-blur-sm"
+                  style={{
+                    boxShadow:
+                      "0 10px 25px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                  }}
+                >
+                  <Chrome className="w-12 h-12 text-amber-400 mx-auto mb-4" />
+                  <h3 className="font-medium mb-2 text-white">
+                    Browser Extension
+                  </h3>
+                  <p className="text-sm text-gray-300 mb-4">
                     AI-powered data extraction and automation
                   </p>
-                  <Badge className="bg-blue-500/20 text-blue-400">
+                  <div className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-medium inline-block">
                     Available
-                  </Badge>
+                  </div>
                 </div>
 
-                <div className="text-center p-6 bg-background/50 rounded-lg border border-primary/20">
-                  <Brain className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">AI Workflows</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                <div
+                  className="text-center p-6 bg-gray-900/40 border border-amber-400/20 rounded-2xl backdrop-blur-sm"
+                  style={{
+                    boxShadow:
+                      "0 10px 25px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                  }}
+                >
+                  <Brain className="w-12 h-12 text-amber-400 mx-auto mb-4" />
+                  <h3 className="font-medium mb-2 text-white">AI Workflows</h3>
+                  <p className="text-sm text-gray-300 mb-4">
                     Custom automation rules and triggers
                   </p>
-                  <Badge className="bg-purple-500/20 text-purple-400">
+                  <div className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium inline-block">
                     Active
-                  </Badge>
+                  </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </WorkspaceLayout>
