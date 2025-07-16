@@ -118,19 +118,51 @@ export default function Index() {
         {/* Elite Technology Section */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <div className="text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4">
-              Elite Technology
-            </div>
+            <button
+              onClick={() => (window.location.href = "/why")}
+              className="text-yellow-400/60 text-sm font-light tracking-[0.3em] uppercase mb-4 hover:text-yellow-400 transition-colors cursor-pointer underline decoration-yellow-400/60 hover:decoration-yellow-400"
+            >
+              What Separates Us
+            </button>
             <h2 className="text-4xl md:text-5xl font-light text-white mb-6 tracking-tight">
               Enterprise Intelligence
             </h2>
-            <p className="text-gray-300 text-xl font-light max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-300 text-xl font-light max-w-3xl mx-auto leading-relaxed mb-8">
               Professional-grade AI infrastructure with dual-engine redundancy,
               faith-aligned privacy, and enterprise-scale reliability.
             </p>
 
+            {/* HACP Integration */}
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-8">
+              <div className="bg-black/40 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-6">
+                <h3 className="text-xl font-semibold text-yellow-400 mb-3">
+                  HACP™ Technology
+                </h3>
+                <p className="text-gray-300 font-light leading-relaxed">
+                  Dual-brain architecture (GPT + Azure) that learns what YOU
+                  need to build and actually gets it done.
+                  <strong className="text-white">
+                    {" "}
+                    Not just advice, but action.
+                  </strong>
+                </p>
+              </div>
+              <div className="bg-black/40 backdrop-blur-xl border border-blue-400/20 rounded-2xl p-6">
+                <h3 className="text-xl font-semibold text-blue-400 mb-3">
+                  Everywhere You Go
+                </h3>
+                <p className="text-gray-300 font-light leading-relaxed">
+                  🎤 Voice • 📱 Mobile • 🌐 Chrome Extension
+                  <br />
+                  <strong className="text-white">
+                    Your cognitive companion, always working.
+                  </strong>
+                </p>
+              </div>
+            </div>
+
             {/* Saint Vision Institute */}
-            <div className="mt-12 p-6 bg-black/40 backdrop-blur-xl border border-yellow-400/20 rounded-2xl max-w-4xl mx-auto">
+            <div className="p-6 bg-black/40 backdrop-blur-xl border border-yellow-400/20 rounded-2xl max-w-4xl mx-auto">
               <p className="text-gray-300 text-lg font-light leading-relaxed">
                 Powered by{" "}
                 <button
