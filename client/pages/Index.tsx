@@ -26,7 +26,7 @@ export default function Index() {
         {/* Hero Section */}
         <section className="min-h-screen relative p-8">
           {/* Top Left Logo & Title */}
-          <div className="absolute top-8 left-8 z-20 flex items-center space-x-6">
+          <div className="absolute top-8 left-8 z-20 flex items-center space-x-12">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F90fa3cc4d85547ce9ae69ad15ae19bb2"
               alt="SAINTSAL™ Circuit Board Logo"
