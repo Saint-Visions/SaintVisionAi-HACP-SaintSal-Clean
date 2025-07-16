@@ -94,50 +94,66 @@ export default function UpgradePage() {
           {/* Upgrade Options */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {/* PartnerTech Pro */}
-            <Card className="bg-gradient-to-br from-green-500/10 to-green-600/10 border-green-500/30 backdrop-blur-sm">
-              <CardHeader className="text-center">
+            <div
+              className="bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-400/30 backdrop-blur-md rounded-3xl"
+              style={{
+                boxShadow:
+                  "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(34, 197, 94, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+              }}
+            >
+              <div className="text-center p-8">
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Building2 className="w-8 h-8 text-green-400" />
                 </div>
-                <CardTitle className="text-2xl text-green-400">
+                <h2 className="text-2xl font-thin tracking-tight text-green-400">
                   PartnerTech Pro
-                </CardTitle>
-                <div className="text-4xl font-bold text-green-400 mb-2">
+                </h2>
+                <div className="text-4xl font-light text-green-400 mb-2">
                   $97
-                  <span className="text-lg text-muted-foreground">/month</span>
+                  <span className="text-lg text-gray-400">/month</span>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-gray-300">
                   Advanced CRM and automation tools
                 </p>
-              </CardHeader>
-              <CardContent>
+              </div>
+              <div className="px-8 pb-8">
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-sm">Everything in Unlimited</span>
+                    <span className="text-sm text-gray-200">
+                      Everything in Unlimited
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-sm">Advanced CRM Integration</span>
+                    <span className="text-sm text-gray-200">
+                      Advanced CRM Integration
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-sm">Chrome Extension Pro</span>
+                    <span className="text-sm text-gray-200">
+                      Chrome Extension Pro
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-sm">AI Workflow Triggers</span>
+                    <span className="text-sm text-gray-200">
+                      AI Workflow Triggers
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-sm">Priority Support</span>
+                    <span className="text-sm text-gray-200">
+                      Priority Support
+                    </span>
                   </li>
                 </ul>
-                <Button className="w-full bg-green-500 hover:bg-green-600">
+                <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-medium transition-all duration-200">
                   Upgrade to Pro
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
             {/* Enterprise */}
             <Card className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 border-purple-500/30 backdrop-blur-sm relative">
