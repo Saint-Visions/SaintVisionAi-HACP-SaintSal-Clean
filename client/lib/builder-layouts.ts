@@ -11,7 +11,7 @@ export interface RouteLayout {
   components: any[];
 }
 
-// Complete SAINTSAL™ route definitions
+// Complete SAINTSAL™ route definitions - ALL ROUTES with divine branding
 export const saintsalRoutes: RouteLayout[] = [
   {
     path: "/",
