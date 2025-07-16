@@ -135,7 +135,7 @@ export default function Index() {
         </section>
 
         {/* Dual AI Console Section */}
-        <section id="dual-ai-console" className="py-20">
+        <section id="dual-ai-console" className="py-24">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Content */}
