@@ -14,7 +14,7 @@ export default function Index() {
           "url(https://api.builder.io/api/v1/image/assets/TEMP/48bf7ae07524f3ab5cd7dbd41650b41a12d29df9?width=1920)",
         backgroundSize: "120%",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: window.innerWidth > 768 ? "fixed" : "scroll",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -78,7 +78,7 @@ export default function Index() {
                 onClick={() => (window.location.href = "/console")}
                 className="bg-blue-600/30 border border-blue-400/60 text-blue-200 hover:bg-blue-600/50 hover:text-white backdrop-blur-sm px-8 py-4 rounded-xl transition-all duration-300 text-lg"
               >
-                💬 AI Chat
+                ��� AI Chat
               </Button>
               <Button
                 onClick={() => (window.location.href = "/login")}
@@ -248,7 +248,7 @@ export default function Index() {
           </div>
         </section>
 
-        {/* PartnerTech Elite Section */}
+        {/* PartnerTech AI Section */}
         <section className="py-28">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -294,7 +294,7 @@ export default function Index() {
                 </div>
 
                 <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
-                  PartnerTech Elite
+                  PartnerTech AI
                 </h3>
 
                 <p className="text-gray-300 text-lg font-light leading-relaxed mb-6">
@@ -550,7 +550,7 @@ export default function Index() {
                       onClick={() => (window.location.href = "/partnertech")}
                       className="text-gray-400 hover:text-yellow-400 transition-colors"
                     >
-                      PartnerTech Elite
+                      PartnerTech AI
                     </button>
                   </li>
                   <li>
