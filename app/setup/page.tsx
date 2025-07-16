@@ -519,7 +519,13 @@ export default function SetupPage() {
                 {currentStep === 3 && (
                   <div className="text-center space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
-                      <Card className="bg-background/30 border-primary/20 p-6">
+                      <div
+                        className="bg-gray-900/30 border border-yellow-400/20 p-6 rounded-2xl backdrop-blur-sm"
+                        style={{
+                          boxShadow:
+                            "0 8px 25px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                        }}
+                      >
                         <Chrome className="w-12 h-12 text-primary mx-auto mb-4" />
                         <h4 className="font-semibold mb-2">Chrome Extension</h4>
                         <p className="text-sm text-muted-foreground mb-4">
@@ -528,8 +534,14 @@ export default function SetupPage() {
                         <Button variant="outline" className="w-full">
                           Install Extension
                         </Button>
-                      </Card>
-                      <Card className="bg-background/30 border-primary/20 p-6">
+                      </div>
+                      <div
+                        className="bg-gray-900/30 border border-yellow-400/20 p-6 rounded-2xl backdrop-blur-sm"
+                        style={{
+                          boxShadow:
+                            "0 8px 25px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+                        }}
+                      >
                         <Smartphone className="w-12 h-12 text-primary mx-auto mb-4" />
                         <h4 className="font-semibold mb-2">Mobile PWA</h4>
                         <p className="text-sm text-muted-foreground mb-4">
@@ -538,7 +550,7 @@ export default function SetupPage() {
                         <Button variant="outline" className="w-full">
                           Install PWA
                         </Button>
-                      </Card>
+                      </div>
                     </div>
                     <p className="text-sm text-muted-foreground">
                       These integrations are optional and can be set up later
