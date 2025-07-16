@@ -52,6 +52,16 @@ export default function Index() {
               </p>
             </div>
 
+            {/* Branding */}
+            <div className="mb-8">
+              <div className="text-white text-lg font-light uppercase tracking-[0.4em] mb-3">
+                SAINTSAL™
+              </div>
+              <div className="text-yellow-400 text-3xl md:text-4xl font-bold tracking-wide mb-8">
+                Cookin' Knowledge
+              </div>
+            </div>
+
             {/* Logo */}
             <div className="mb-8">
               <img
