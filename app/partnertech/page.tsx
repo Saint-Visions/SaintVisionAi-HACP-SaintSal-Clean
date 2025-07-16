@@ -196,39 +196,61 @@ export default function PartnerTechPage() {
 
           {/* Performance Metrics */}
           <div className="grid md:grid-cols-4 gap-6 mb-8">
-            <Card className="bg-gradient-to-br from-green-500/20 to-green-600/20 border-green-500/30">
-              <CardContent className="p-6 text-center">
+            <div
+              className="bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-400/40 backdrop-blur-md rounded-2xl"
+              style={{
+                boxShadow:
+                  "0 15px 35px -10px rgba(0, 0, 0, 0.6), 0 0 30px rgba(34, 197, 94, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+              }}
+            >
+              <div className="p-6 text-center">
                 <Target className="w-8 h-8 text-green-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-green-400">82%</h3>
-                <p className="text-sm text-muted-foreground">
-                  Automation Success
-                </p>
-              </CardContent>
-            </Card>
+                <h3 className="text-2xl font-light text-green-400">82%</h3>
+                <p className="text-sm text-gray-300">Automation Success</p>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 border-blue-500/30">
-              <CardContent className="p-6 text-center">
+            <div
+              className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-400/40 backdrop-blur-md rounded-2xl"
+              style={{
+                boxShadow:
+                  "0 15px 35px -10px rgba(0, 0, 0, 0.6), 0 0 30px rgba(59, 130, 246, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+              }}
+            >
+              <div className="p-6 text-center">
                 <Users className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-blue-400">247</h3>
-                <p className="text-sm text-muted-foreground">Leads Processed</p>
-              </CardContent>
-            </Card>
+                <h3 className="text-2xl font-light text-blue-400">247</h3>
+                <p className="text-sm text-gray-300">Leads Processed</p>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 border-purple-500/30">
-              <CardContent className="p-6 text-center">
+            <div
+              className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-400/40 backdrop-blur-md rounded-2xl"
+              style={{
+                boxShadow:
+                  "0 15px 35px -10px rgba(0, 0, 0, 0.6), 0 0 30px rgba(168, 85, 247, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+              }}
+            >
+              <div className="p-6 text-center">
                 <Brain className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-purple-400">1.2s</h3>
-                <p className="text-sm text-muted-foreground">Response Time</p>
-              </CardContent>
-            </Card>
+                <h3 className="text-2xl font-light text-purple-400">1.2s</h3>
+                <p className="text-sm text-gray-300">Response Time</p>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 border-yellow-500/30">
-              <CardContent className="p-6 text-center">
+            <div
+              className="bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 border border-yellow-400/40 backdrop-blur-md rounded-2xl"
+              style={{
+                boxShadow:
+                  "0 15px 35px -10px rgba(0, 0, 0, 0.6), 0 0 30px rgba(251, 191, 36, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+              }}
+            >
+              <div className="p-6 text-center">
                 <Building2 className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-yellow-400">47%</h3>
-                <p className="text-sm text-muted-foreground">Revenue Growth</p>
-              </CardContent>
-            </Card>
+                <h3 className="text-2xl font-light text-yellow-400">47%</h3>
+                <p className="text-sm text-gray-300">Revenue Growth</p>
+              </div>
+            </div>
           </div>
 
           {/* Integration Hub */}
