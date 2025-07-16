@@ -41,7 +41,7 @@ export default function Index() {
           {/* Logo */}
           <div className="mb-8">
             <img
-              src="https://cdn.builder.io/o/assets%2F065997bd13e4442e888a08652fcd61ba%2Fa3a9e3e5a1444477b05e91910463de9c?alt=media&token=728c2c7b-ac5c-41ef-b847-c5e1bb670a3c&apiKey=065997bd13e4442e888a08652fcd61ba"
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fb267a9a76dff455db59535be6840cecb?format=webp&width=800"
               alt="SAINTSAL™ Circuit Board Logo"
               className="w-28 h-28 mx-auto"
               style={{
