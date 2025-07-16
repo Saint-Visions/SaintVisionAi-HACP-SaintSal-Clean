@@ -439,7 +439,7 @@ export default function Index() {
             <div className="bg-black/60 backdrop-blur-xl border border-yellow-400/30 rounded-3xl p-8 mb-12 shadow-2xl">
               <div className="flex items-center justify-center mb-6">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F9ebd00288a294e37a7a4e755db513aff?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F26b5158aa6864ad3bc02cc771407b767?format=webp&width=800"
                   alt="SAINTSAL™ Circuit Board Logo"
                   className="w-16 h-16"
                 />
