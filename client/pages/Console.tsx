@@ -36,7 +36,7 @@ export default function Console() {
     {
       id: "welcome",
       content:
-        "Welcome to SaintVision AI Console. I'm your divine AI assistant ecosystem - featuring SaintSal™ models and your custom Azure companion. Ready to cook some knowledge and build your empire?",
+        "🔥 Welcome to SAINTSAL™ Console - your divine AI assistant ecosystem! I'm powered by dual-engine processing (GPT-4o + Azure Cognitive Services) for enterprise-grade intelligence. Ready to cook some knowledge and build your empire?",
       role: "assistant",
       model: "saintsal-4o",
       timestamp: new Date(),
