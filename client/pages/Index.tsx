@@ -127,6 +127,24 @@ export default function Index() {
               Professional-grade AI infrastructure with dual-engine redundancy,
               faith-aligned privacy, and enterprise-scale reliability.
             </p>
+
+            {/* Saint Vision Institute */}
+            <div className="mt-12 p-6 bg-black/40 backdrop-blur-xl border border-yellow-400/20 rounded-2xl max-w-4xl mx-auto">
+              <p className="text-gray-300 text-lg font-light leading-relaxed">
+                Powered by{" "}
+                <button
+                  onClick={() =>
+                    (window.location.href = "https://saintvisiontech.com")
+                  }
+                  className="text-yellow-400 hover:text-yellow-300 font-medium transition-colors cursor-pointer"
+                >
+                  The Saint Vision Institute of AI Research and Development
+                </button>
+                , featuring our groundbreaking patent and patent-pending{" "}
+                <span className="text-yellow-400 font-medium">HACP</span>{" "}
+                technology. Where divine innovation meets enterprise excellence.
+              </p>
+            </div>
           </div>
         </section>
 
