@@ -124,9 +124,6 @@ const FallbackHomepage = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
-
         {/* Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20">
           {/* Logo */}
