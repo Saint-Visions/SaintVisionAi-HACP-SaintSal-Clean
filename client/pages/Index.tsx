@@ -218,6 +218,8 @@ const FallbackHomepage = () => {
           backgroundAttachment: "fixed",
         }}
       >
+        {/* Dark Overlay - Same as Hero */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             {/* What Separates Us Header */}
