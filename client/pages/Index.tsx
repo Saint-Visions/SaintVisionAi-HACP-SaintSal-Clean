@@ -223,16 +223,53 @@ const FallbackHomepage = () => {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
+            {/* Elite Technology Header */}
+            <div className="mb-4">
+              <span
+                className="text-sm font-semibold tracking-[0.2em] uppercase"
+                style={{
+                  fontFamily:
+                    "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+                  color: "#FACC15",
+                  letterSpacing: "0.2em",
+                }}
+              >
+                ELITE TECHNOLOGY
+              </span>
+            </div>
+
             <h2
               className="text-5xl md:text-6xl mb-6 text-white"
               style={{ fontFamily: "DM Serif Display, serif" }}
             >
               Enterprise Intelligence
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
+
+            <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed mb-8">
               Professional-grade AI infrastructure with dual-engine redundancy,
               faith-aligned policies, and enterprise-scale reliability.
             </p>
+
+            {/* What Separates Us */}
+            <div className="max-w-4xl mx-auto mb-12 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+              <p className="text-lg text-white/90 leading-relaxed">
+                Powered by{" "}
+                <span className="neon-blue font-semibold">
+                  The Saint Vision Institute of AI Research and Development
+                </span>
+                , featuring our groundbreaking patent and patent-pending{" "}
+                <span className="text-[#FACC15] font-semibold">HACP</span>{" "}
+                technology. Where{" "}
+                <span className="neon-green font-semibold">
+                  divine innovation
+                </span>{" "}
+                meets{" "}
+                <span className="neon-purple font-semibold">
+                  enterprise excellence
+                </span>
+                .
+              </p>
+            </div>
           </div>
 
           {/* Features Grid */}
