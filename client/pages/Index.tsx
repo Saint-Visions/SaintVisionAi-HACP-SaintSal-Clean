@@ -92,13 +92,6 @@ const FallbackHomepage = () => (
 );
 
 export default function Index() {
-  return (
-    <BuilderPage
-      model="page"
-      chatMode="companion"
-      showHeader={false}
-      showFooter={false}
-      fallback={<FallbackHomepage />}
-    />
-  );
+  // For now, show the divine content directly while Builder.io content is being set up
+  return <FallbackHomepage />;
 }
