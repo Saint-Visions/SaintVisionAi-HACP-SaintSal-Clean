@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 builder.init("065997bd13e4442e888a08652fcd61ba");
 
 interface LayoutProps {
-  children: ReactNode;
+  children?: ReactNode;
   builderModel?: string;
   builderContent?: any;
   chatMode?: "off" | "companion" | "admin" | "dual";
@@ -166,7 +166,7 @@ const StickyChat: React.FC<StickyChatProps> = ({ mode, userTier }) => {
               onClick={() => setIsOpen(false)}
               className="text-primary-foreground hover:opacity-70"
             >
-              ✕
+              ��
             </button>
           </div>
 
