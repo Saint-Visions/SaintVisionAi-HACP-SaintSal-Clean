@@ -9,57 +9,59 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 210 15% 11%; /* Charcoal #10161C */
-    --foreground: 0 0% 95%;
+    /* SaintSal™ Divine Color System */
+    --background: 210 15% 11%; /* Charcoal #10161C - SaintSal primary dark */
+    --foreground: 39 20% 95%; /* Warm White #F6F5F4 */
 
     --card: 210 15% 13%;
-    --card-foreground: 0 0% 95%;
+    --card-foreground: 39 20% 95%;
 
     --popover: 210 15% 13%;
-    --popover-foreground: 0 0% 95%;
+    --popover-foreground: 39 20% 95%;
 
-    --primary: 45 93% 47%; /* Gold */
+    --primary: 46 100% 53%; /* Gold rgb(250, 204, 21) - SaintSal brand gold */
     --primary-foreground: 210 15% 11%;
 
     --secondary: 210 15% 18%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary-foreground: 39 20% 90%;
 
     --muted: 210 15% 16%;
-    --muted-foreground: 0 0% 60%;
+    --muted-foreground: 39 20% 60%;
 
-    --accent: 45 93% 47%;
+    --accent: 46 100% 53%; /* Gold accent matching primary */
     --accent-foreground: 210 15% 11%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 39 20% 98%;
 
     --border: 210 15% 20%;
     --input: 210 15% 16%;
-    --ring: 45 93% 47%;
+    --ring: 46 100% 53%;
 
     --radius: 1rem;
 
-    --gradient-start: 45 93% 47%;
-    --gradient-end: 35 100% 45%;
+    /* SaintSal™ Brand Gradients */
+    --gradient-start: 46 100% 53%; /* Primary gold */
+    --gradient-end: 35 100% 45%; /* Warm gold variation */
     --success: 142 76% 36%;
-    --warning: 45 93% 47%;
-    --gold-shimmer: 45 100% 60%;
+    --warning: 46 100% 53%;
+    --gold-shimmer: 46 100% 70%; /* Enhanced shimmer */
 
-    --sidebar-background: 0 0% 98%;
+    /* Divine color extensions */
+    --color-gold: 46 100% 53%; /* rgb(250, 204, 21) */
+    --color-charcoal: 210 15% 11%; /* #10161C */
+    --color-warm-white: 39 20% 95%; /* #F6F5F4 */
+    --divine-glow: 46 100% 53%;
+    --prestige-shadow: 210 15% 5%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 210 15% 11%;
+    --sidebar-foreground: 39 20% 95%;
+    --sidebar-primary: 46 100% 53%;
+    --sidebar-primary-foreground: 210 15% 11%;
+    --sidebar-accent: 210 15% 18%;
+    --sidebar-accent-foreground: 39 20% 90%;
+    --sidebar-border: 210 15% 20%;
+    --sidebar-ring: 46 100% 53%;
   }
 
   .light {
@@ -112,12 +114,51 @@
     @apply border-border;
   }
 
+  /* SaintSal™ Typography */
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital,wght@0,400;1,400&display=swap");
+
   body {
     @apply bg-background text-foreground;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
     position: relative;
+    background: linear-gradient(
+      135deg,
+      #0f1419 0%,
+      #181c20 25%,
+      #1a1f24 50%,
+      #0d1117 75%,
+      #0a0e13 100%
+    );
   }
 
-  /* Subtle Gold Dust Enhancement - works with your brand backgrounds */
+  /* SaintSal™ Typography Classes */
+  .font-inter {
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  .font-serif {
+    font-family: "DM Serif Display", Georgia, serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+  }
+
+  /* SaintSal™ Divine Gold Dust Enhancement */
   body::before {
     content: "";
     position: fixed;
@@ -127,12 +168,24 @@
     height: 100vh;
     z-index: -1;
     background:
-      /* Subtle gold dust that enhances your brand backgrounds */
-      radial-gradient(1px 1px at 10% 20%, rgba(231, 176, 8, 0.15), transparent),
-      radial-gradient(1px 1px at 80% 30%, rgba(231, 176, 8, 0.1), transparent),
-      radial-gradient(1px 1px at 30% 70%, rgba(231, 176, 8, 0.12), transparent),
-      radial-gradient(1px 1px at 70% 80%, rgba(231, 176, 8, 0.08), transparent),
-      radial-gradient(1px 1px at 50% 40%, rgba(231, 176, 8, 0.1), transparent);
+      /* Enhanced SaintSal™ gold dust using brand colors */
+      radial-gradient(1px 1px at 10% 20%, rgba(250, 204, 21, 0.2), transparent),
+      radial-gradient(
+        1px 1px at 80% 30%,
+        rgba(250, 204, 21, 0.15),
+        transparent
+      ),
+      radial-gradient(
+        1px 1px at 30% 70%,
+        rgba(250, 204, 21, 0.18),
+        transparent
+      ),
+      radial-gradient(
+        1px 1px at 70% 80%,
+        rgba(250, 204, 21, 0.12),
+        transparent
+      ),
+      radial-gradient(1px 1px at 50% 40%, rgba(250, 204, 21, 0.16), transparent);
     background-size:
       600px 400px,
       500px 350px,
@@ -141,9 +194,9 @@
       550px 400px;
     background-repeat: repeat;
     background-attachment: fixed;
-    animation: subtleGoldFloat 25s ease-in-out infinite;
+    animation: divineGoldFloat 25s ease-in-out infinite;
     pointer-events: none;
-    opacity: 0.3;
+    opacity: 0.4;
   }
 
   /* Subtle animation for the gold dust */
@@ -167,7 +220,7 @@
     }
   }
 
-  /* Enhanced gold illumination effect for content */
+  /* SaintSal™ Divine Illumination Effect */
   body::after {
     content: "";
     position: fixed;
@@ -179,17 +232,17 @@
     background:
       radial-gradient(
         circle at 20% 30%,
-        rgba(231, 176, 8, 0.05) 0%,
+        rgba(250, 204, 21, 0.08) 0%,
         transparent 50%
       ),
       radial-gradient(
         circle at 80% 70%,
-        rgba(231, 176, 8, 0.03) 0%,
+        rgba(250, 204, 21, 0.06) 0%,
         transparent 50%
       ),
       radial-gradient(
         circle at 50% 50%,
-        rgba(231, 176, 8, 0.02) 0%,
+        rgba(250, 204, 21, 0.04) 0%,
         transparent 70%
       );
     pointer-events: none;
