@@ -280,7 +280,7 @@ const FallbackHomepage = () => {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2180d28e80a741d68e8659ea962a9f05"
                 alt="Professional Business Platform"
-                className="h-12 w-auto"
+                className="h-20 w-auto"
               />
               <div className="text-left">
                 <p className="text-[#FACC15] font-semibold text-sm">
