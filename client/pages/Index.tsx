@@ -255,7 +255,6 @@ export default function Index() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Footer */}
         <footer className="py-16 px-8 text-center border-t border-yellow-400/20">
           <div className="max-w-4xl mx-auto">
@@ -265,14 +264,6 @@ export default function Index() {
                 alt="SAINTSAL™ Logo"
                 className="w-12 h-12"
               />
-=======
-        {/* Dual AI Console Section */}
-        <section id="dual-ai-console" className="py-24">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Content */}
-              <div>
-                <div className="flex items-center mb-6">
                   <div className="p-3 rounded-xl bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 border border-yellow-400/30 mr-4">
                     <Brain className="w-8 h-8 text-yellow-400" />
                   </div>
