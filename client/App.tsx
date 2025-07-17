@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 
 // Initialize Builder.io components
-import "./components/builder";
+import "./components/builder/index";
 
 // Pages
 import Index from "./pages/Index";
