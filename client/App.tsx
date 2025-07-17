@@ -33,122 +33,123 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
   // Force override any environment base URL hijacking
-  if (typeof window !== 'undefined') {
-    window.history.replaceState(null, '', window.location.pathname);
+  if (typeof window !== "undefined") {
+    window.history.replaceState(null, "", window.location.pathname);
   }
 
   return (
     <AuthProvider>
       <BrowserRouter basename={undefined}>
         <Routes>
-        {/* Public Routes */}
-        <Route path="/" element={<Index />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/setup" element={<Setup />} />
-        <Route path="/why" element={<Why />} />
-        <Route
-          path="/chrome-install"
-          element={
-            <ProtectedRoute requiredTier="coretools">
-              <ChromeInstall />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="/checkout-success" element={<CheckoutSuccess />} />
+          {/* Public Routes */}
+          <Route path="/" element={<Index />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/setup" element={<Setup />} />
+          <Route path="/why" element={<Why />} />
+          <Route
+            path="/chrome-install"
+            element={
+              <ProtectedRoute requiredTier="coretools">
+                <ChromeInstall />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/checkout-success" element={<CheckoutSuccess />} />
 
-        {/* Protected Routes */}
-        <Route
-          path="/console"
-          element={
-            <ProtectedRoute requiredTier="unlimited">
-              <Console />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute requiredTier="free_trial">
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/crm"
-          element={
-            <ProtectedRoute requiredTier="partnertech">
-              <CRM />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/hacp"
-          element={
-            <ProtectedRoute requiredTier="coretools">
-              <HACP />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/partnertech"
-          element={
-            <ProtectedRoute requiredTier="partnertech">
-              <PartnerTech />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/upgrade"
-          element={
-            <ProtectedRoute requiredTier="free_trial">
-              <Upgrade />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/settings"
-          element={
-            <ProtectedRoute requiredTier="free_trial">
-              <Settings />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/admin/clients"
-          element={
-            <ProtectedRoute requiredTier="partnertech">
-              <AdminClients />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/admin/logs"
-          element={
-            <ProtectedRoute requiredTier="partnertech">
-              <AdminLogs />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/referral/invite"
-          element={
-            <ProtectedRoute requiredTier="free_trial">
-              <ReferralInvite />
-            </ProtectedRoute>
-          }
-        />
+          {/* Protected Routes */}
+          <Route
+            path="/console"
+            element={
+              <ProtectedRoute requiredTier="unlimited">
+                <Console />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute requiredTier="free_trial">
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/crm"
+            element={
+              <ProtectedRoute requiredTier="partnertech">
+                <CRM />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/hacp"
+            element={
+              <ProtectedRoute requiredTier="coretools">
+                <HACP />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/partnertech"
+            element={
+              <ProtectedRoute requiredTier="partnertech">
+                <PartnerTech />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/upgrade"
+            element={
+              <ProtectedRoute requiredTier="free_trial">
+                <Upgrade />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <ProtectedRoute requiredTier="free_trial">
+                <Settings />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/clients"
+            element={
+              <ProtectedRoute requiredTier="partnertech">
+                <AdminClients />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/logs"
+            element={
+              <ProtectedRoute requiredTier="partnertech">
+                <AdminLogs />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/referral/invite"
+            element={
+              <ProtectedRoute requiredTier="free_trial">
+                <ReferralInvite />
+              </ProtectedRoute>
+            }
+          />
 
-        {/* Catch-all route for 404 */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-  </AuthProvider>
-);
+          {/* Catch-all route for 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
+  );
+};
 
 // Mount the app
 const root = createRoot(document.getElementById("root") as HTMLElement);
