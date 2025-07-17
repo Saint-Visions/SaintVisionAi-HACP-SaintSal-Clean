@@ -2,9 +2,27 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { User, Session, AuthError } from "@supabase/supabase-js";
 import { supabase } from "../lib/supabase";
 
+export type SubscriptionTier =
+  | "free_trial"
+  | "unlimited"
+  | "coretools"
+  | "pro"
+  | "partnertech";
+
+export interface UserProfile {
+  id: string;
+  email: string;
+  full_name: string;
+  avatar_url?: string;
+  subscription_tier: SubscriptionTier;
+  created_at: string;
+  updated_at: string;
+}
+
 interface AuthContextType {
   user: User | null;
   session: Session | null;
+  profile: UserProfile | null;
   loading: boolean;
   signUp: (
     email: string,
@@ -18,6 +36,8 @@ interface AuthContextType {
     full_name?: string;
     avatar_url?: string;
   }) => Promise<{ error?: any }>;
+  hasAccess: (requiredTier: SubscriptionTier) => boolean;
+  refreshProfile: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -37,6 +57,7 @@ interface AuthProviderProps {
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -63,16 +84,39 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     } = supabase.auth.onAuthStateChange(async (event, session) => {
       setSession(session);
       setUser(session?.user ?? null);
-      setLoading(false);
 
       if (event === "SIGNED_IN" && session?.user) {
-        // Upsert user profile
+        // Upsert user profile and fetch full profile
         await upsertUserProfile(session.user);
+        await fetchUserProfile(session.user.id);
+      } else if (event === "SIGNED_OUT") {
+        setProfile(null);
       }
+
+      setLoading(false);
     });
 
     return () => subscription.unsubscribe();
   }, []);
+
+  const fetchUserProfile = async (userId: string) => {
+    try {
+      const { data, error } = await supabase
+        .from("users")
+        .select("*")
+        .eq("id", userId)
+        .single();
+
+      if (error) {
+        console.error("Error fetching user profile:", error);
+        return;
+      }
+
+      setProfile(data as UserProfile);
+    } catch (error) {
+      console.error("Error in fetchUserProfile:", error);
+    }
+  };
 
   const upsertUserProfile = async (user: User) => {
     try {
@@ -82,7 +126,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           email: user.email!,
           full_name: user.user_metadata?.full_name || user.email!.split("@")[0],
           avatar_url: user.user_metadata?.avatar_url,
-          subscription_tier: "free",
+          subscription_tier: "free_trial" as SubscriptionTier,
           updated_at: new Date().toISOString(),
         },
         {
@@ -96,6 +140,28 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     } catch (error) {
       console.error("Error in upsertUserProfile:", error);
     }
+  };
+
+  const refreshProfile = async () => {
+    if (user?.id) {
+      await fetchUserProfile(user.id);
+    }
+  };
+
+  // Define tier hierarchy for access control
+  const tierHierarchy: Record<SubscriptionTier, number> = {
+    free_trial: 0,
+    unlimited: 1,
+    coretools: 2,
+    pro: 3,
+    partnertech: 4,
+  };
+
+  const hasAccess = (requiredTier: SubscriptionTier): boolean => {
+    if (!profile) return false;
+    return (
+      tierHierarchy[profile.subscription_tier] >= tierHierarchy[requiredTier]
+    );
   };
 
   const signUp = async (email: string, password: string, fullName: string) => {
@@ -159,12 +225,15 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const value: AuthContextType = {
     user,
     session,
+    profile,
     loading,
     signUp,
     signIn,
     signOut,
     resetPassword,
     updateProfile,
+    hasAccess,
+    refreshProfile,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
