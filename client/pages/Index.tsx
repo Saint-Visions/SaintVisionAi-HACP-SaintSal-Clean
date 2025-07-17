@@ -194,9 +194,9 @@ const FallbackHomepage = () => {
         <div className="fixed bottom-6 right-6 z-50">
           <button className="w-14 h-14 bg-[#FACC15] text-black rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F032bb6b4632e4a3ca4a41a4996df0d8f?format=webp&width=400"
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F03153bd5b4c343c08a8337ee7aa5dbc0?format=webp&width=800"
               alt="Chat"
-              className="w-8 h-8"
+              className="w-8 h-8 opacity-90 filter brightness-110"
             />
           </button>
         </div>
