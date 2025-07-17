@@ -62,7 +62,16 @@ const DivineHero: React.FC<DivineHeroProps> = ({
       className={`divine-parallax ${getBackgroundClass()} relative overflow-hidden`}
     >
       {/* Content Layer */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center">
+      <div
+        className="relative z-10 min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="container mx-auto px-6 text-center">
           {/* Main Logo */}
           <div className="mb-8">
