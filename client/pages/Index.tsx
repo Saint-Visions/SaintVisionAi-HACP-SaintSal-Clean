@@ -229,16 +229,17 @@ const FallbackHomepage = () => {
                 className="text-3xl lg:text-4xl mb-6 text-white leading-tight"
                 style={{ fontFamily: "DM Serif Display, serif" }}
               >
-                Your Business Companion.
+                Your Growth Partner.
                 <br />
-                Not Just Another Bot.
+                Business. Life. Everything.
               </h2>
 
               <p className="text-lg text-white/85 mb-8 leading-relaxed">
                 We built something different. Two AI systems work together—one
-                handles your questions instantly, the other learns your business
-                and takes action. Think of it as having your smartest employee
-                available 24/7.
+                handles your questions instantly, the other learns how you work
+                and takes action. Think of it as having your smartest advisor
+                available 24/7, helping you grow your business, streamline your
+                life, and achieve more in every area that matters.
               </p>
 
               <div className="space-y-5 mb-8">
