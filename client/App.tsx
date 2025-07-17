@@ -32,25 +32,14 @@ import ReferralInvite from "./pages/ReferralInvite";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
-  // Force override any environment base URL hijacking
-  if (typeof window !== "undefined") {
+  // Clean initialization without causing re-renders
+  React.useEffect(() => {
     // Clear any base tag that might be interfering
     const baseTags = document.getElementsByTagName("base");
     for (let i = 0; i < baseTags.length; i++) {
       baseTags[i].remove();
     }
-
-    // Ensure we're using local paths only
-    const currentPath = window.location.pathname;
-    if (window.location.origin.includes("fly.dev")) {
-      window.location.href = window.location.pathname;
-    }
-
-    // Override any environment variables that might set external URLs
-    if (window.location.pathname !== currentPath) {
-      window.history.replaceState(null, "", currentPath);
-    }
-  }
+  }, []);
 
   return (
     <AuthProvider>
