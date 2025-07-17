@@ -15,7 +15,7 @@
     "builder:setup": "npm run builder:init && npm run builder:sync"
   },
   "dependencies": {
-    "@builder.io/react": "^3.0.0",
+    "@builder.io/react": "^3.2.12",
     "@builder.io/sdk": "^2.0.0",
     "@hookform/resolvers": "^3.9.0",
     "@stripe/stripe-js": "^4.8.0",
