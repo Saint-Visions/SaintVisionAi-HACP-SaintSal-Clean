@@ -18,36 +18,28 @@ export default function Index() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Atmospheric Divine Layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 via-gray-900/60 to-gray-900/70 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-800/40 z-1" />
+      {/* Professional Business Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-gray-900/70 to-slate-900/80 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-slate-800/50 z-1" />
 
-      {/* 3D Golden Particles */}
+      {/* Subtle Business Glow */}
       <div className="absolute inset-0 z-2">
         <div
-          className="absolute top-1/5 left-1/6 w-2 h-2 bg-yellow-400/60 rounded-full animate-pulse"
+          className="absolute top-1/4 left-1/5 w-1 h-1 bg-blue-400/40 rounded-full animate-pulse"
           style={{
             boxShadow:
-              "0 0 20px rgba(251, 191, 36, 0.4), 0 0 40px rgba(251, 191, 36, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.3)",
-            filter: "blur(0.5px)",
-          }}
-        />
-        <div
-          className="absolute top-1/3 right-1/5 w-1 h-1 bg-yellow-300/80 rounded-full animate-pulse"
-          style={{
-            boxShadow:
-              "0 0 15px rgba(253, 224, 71, 0.5), 0 0 30px rgba(253, 224, 71, 0.3)",
+              "0 0 15px rgba(59, 130, 246, 0.3), 0 0 30px rgba(59, 130, 246, 0.1)",
             filter: "blur(0.3px)",
-            animationDelay: "1.5s",
+            animationDelay: "2s",
           }}
         />
         <div
-          className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-amber-400/70 rounded-full animate-pulse"
+          className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-yellow-400/50 rounded-full animate-pulse"
           style={{
             boxShadow:
-              "0 0 18px rgba(245, 158, 11, 0.4), 0 0 35px rgba(245, 158, 11, 0.2)",
-            filter: "blur(0.4px)",
-            animationDelay: "3s",
+              "0 0 12px rgba(251, 191, 36, 0.3), 0 0 25px rgba(251, 191, 36, 0.1)",
+            filter: "blur(0.2px)",
+            animationDelay: "4s",
           }}
         />
       </div>
