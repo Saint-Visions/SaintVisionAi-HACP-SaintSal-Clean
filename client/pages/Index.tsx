@@ -277,7 +277,7 @@ const FallbackHomepage = () => {
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Dual AI Console */}
-            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FACC15]/30 transition-all duration-300 hover:bg-white/10">
+            <div className="group p-8 rounded-2xl bg-white/3 backdrop-blur-sm border border-white/8 hover:border-[#FACC15]/30 transition-all duration-300 hover:bg-white/5">
               <Brain className="w-12 h-12 text-[#FACC15] mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3
                 className="text-xl text-white mb-4"
@@ -292,7 +292,7 @@ const FallbackHomepage = () => {
             </div>
 
             {/* PartnerTech CRM */}
-            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FACC15]/30 transition-all duration-300 hover:bg-white/10">
+            <div className="group p-8 rounded-2xl bg-white/3 backdrop-blur-sm border border-white/8 hover:border-[#FACC15]/30 transition-all duration-300 hover:bg-white/5">
               <Chrome className="w-12 h-12 text-[#FACC15] mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3
                 className="text-xl text-white mb-4"
@@ -307,7 +307,7 @@ const FallbackHomepage = () => {
             </div>
 
             {/* Divine Security */}
-            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FACC15]/30 transition-all duration-300 hover:bg-white/10 md:col-span-2 lg:col-span-1">
+            <div className="group p-8 rounded-2xl bg-white/3 backdrop-blur-sm border border-white/8 hover:border-[#FACC15]/30 transition-all duration-300 hover:bg-white/5 md:col-span-2 lg:col-span-1">
               <Lock className="w-12 h-12 text-[#FACC15] mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3
                 className="text-xl text-white mb-4"
