@@ -204,7 +204,7 @@ export default function Why() {
                   Need help? 📬 support@saintvisionai.com
                 </p>
                 <Button
-                  onClick={() => (window.location.href = "/signup")}
+                  onClick={() => navigate("/signup")}
                   className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-10 py-4 rounded-xl text-lg shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   Now I Get It — Let's Go
@@ -268,13 +268,13 @@ export default function Why() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={() => (window.location.href = "/signup")}
+                onClick={() => navigate("/signup")}
                 className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-10 py-4 rounded-xl text-lg shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Let's Roll
               </Button>
               <Button
-                onClick={() => (window.location.href = "/pricing")}
+                onClick={() => navigate("/pricing")}
                 className="bg-white/10 border border-white/30 text-white hover:bg-white/20 backdrop-blur-sm px-10 py-4 rounded-xl text-lg transition-all duration-300"
               >
                 See Plans
