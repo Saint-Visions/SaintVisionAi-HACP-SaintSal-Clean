@@ -222,19 +222,33 @@ const FallbackHomepage = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/70 to-black/80" />
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <h2
-              className="text-4xl md:text-5xl mb-4 text-white"
-              style={{ fontFamily: "DM Serif Display, serif" }}
-            >
-              Elite Technology
-            </h2>
-            <p className="text-lg text-white/70 max-w-2xl mx-auto">
-              <span className="text-[#FACC15] font-semibold">
-                Dual AI systems
-              </span>{" "}
-              handle your business operations while you focus on growth.
-            </p>
+          {/* Header with Title and Image Side by Side */}
+          <div className="flex items-center justify-center gap-8 mb-12">
+            <div className="text-center">
+              <h2
+                className="text-4xl md:text-5xl mb-2 text-white"
+                style={{ fontFamily: "DM Serif Display, serif" }}
+              >
+                Elite Technology
+              </h2>
+              <p className="text-[#FACC15] font-semibold text-sm tracking-[0.2em] uppercase">
+                ENTERPRISE READY
+              </p>
+              <p className="text-white/70 text-sm mt-2 max-w-md">
+                <span className="text-[#FACC15] font-semibold">
+                  Dual AI systems
+                </span>{" "}
+                handle your business operations while you focus on growth.
+              </p>
+            </div>
+
+            <Link to="/why" className="group cursor-pointer">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F02ff2f35a12b4109b12c7056786736bc?format=webp&width=800"
+                alt="Elite Technology Platform"
+                className="h-24 w-auto transition-transform duration-300 group-hover:scale-105"
+              />
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
