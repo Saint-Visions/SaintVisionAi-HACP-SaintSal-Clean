@@ -208,7 +208,16 @@ const FallbackHomepage = () => {
       </section>
 
       {/* Enterprise Intelligence - Clean Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section
+        className="py-24 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             {/* What Separates Us Header */}
