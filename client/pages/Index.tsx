@@ -207,6 +207,122 @@ const FallbackHomepage = () => {
         </div>
       </section>
 
+      {/* What Separates Us - Conversion Booster */}
+      <section
+        className="py-24 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content Side */}
+            <div>
+              <div className="mb-6">
+                <span
+                  className="text-sm font-semibold tracking-[0.2em] uppercase"
+                  style={{
+                    fontFamily:
+                      "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+                    color: "#FACC15",
+                    letterSpacing: "0.2em",
+                  }}
+                >
+                  WHAT SEPARATES US
+                </span>
+              </div>
+
+              <h2
+                className="text-4xl lg:text-5xl mb-6 text-white leading-tight"
+                style={{ fontFamily: "DM Serif Display, serif" }}
+              >
+                Not Another Chatbot.
+                <br />
+                Your <span className="text-[#FACC15]">GOTTA GUY™</span>.
+              </h2>
+
+              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                While others build tools, we forge partnerships.{" "}
+                <span className="neon-blue font-semibold">
+                  Patent-protected HACP™ technology
+                </span>{" "}
+                meets{" "}
+                <span className="neon-green font-semibold">
+                  faith-aligned values
+                </span>
+                , creating enterprise AI that actually understands your
+                business—and your beliefs.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-[#FACC15] flex items-center justify-center">
+                    <div className="w-3 h-3 bg-black rounded-full"></div>
+                  </div>
+                  <span className="text-white/90">
+                    Dual AI engines working in perfect harmony
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-neon-blue flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-white/90">
+                    Enterprise-grade security with moral excellence
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-neon-green flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-white/90">
+                    Faith-centered technology that grows with you
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/why">
+                  <Button className="bg-[#FACC15] text-black hover:bg-[#FACC15]/90 px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl shadow-[#FACC15]/20 transition-all duration-300 hover:scale-105">
+                    Discover What Makes Us Different
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link to="/console">
+                  <Button
+                    variant="outline"
+                    className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-medium rounded-xl backdrop-blur-sm"
+                  >
+                    Experience SaintSal™
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Image Side */}
+            <div className="text-center">
+              <div className="relative">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F6833d6fd5fd1400fa29d50547767b76b?format=webp&width=800"
+                  alt="SaintSal + You"
+                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-[#FACC15] text-black px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                  Join Thousands ✨
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Enterprise Intelligence - Clean Section */}
       <section
         className="py-24 px-6 relative overflow-hidden"
