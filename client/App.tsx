@@ -44,10 +44,7 @@ const App = () => {
 
   return (
     <AuthProvider>
-      <BrowserRouter
-        basename=""
-        future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
-      >
+      <BrowserRouter>
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Index />} />
