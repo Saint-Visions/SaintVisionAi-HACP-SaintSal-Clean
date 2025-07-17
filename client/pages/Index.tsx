@@ -244,7 +244,7 @@ const FallbackHomepage = () => {
 
             <Link to="/why" className="group cursor-pointer">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F02ff2f35a12b4109b12c7056786736bc?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2180d28e80a741d68e8659ea962a9f05"
                 alt="Elite Technology Platform"
                 className="h-24 w-auto transition-transform duration-300 group-hover:scale-105"
               />
@@ -819,7 +819,7 @@ const FallbackHomepage = () => {
             {/* Patent Information */}
             <div>
               <p className="text-white/80 text-sm">
-                <span className="text-[#FACC15] font-semibold">HACP��</span>{" "}
+                <span className="text-[#FACC15] font-semibold">HACP™</span>{" "}
                 (Hierarchical Adaptive Cognitive Processing) protected under{" "}
                 <span className="font-semibold">U.S. Patent 10,290,222</span>{" "}
                 and additional patent-pending technologies.
