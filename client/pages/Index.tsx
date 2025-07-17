@@ -167,7 +167,8 @@ const FallbackHomepage = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-            AI doesn't just answer. It adapts. It empowers. It becomes yours.
+            AI doesn't just answer. It adapts. It empowers. It becomes your
+            GOTTA GUY™.
           </p>
 
           {/* CTA Buttons */}
