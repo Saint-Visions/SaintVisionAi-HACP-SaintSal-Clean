@@ -208,7 +208,7 @@ const FallbackHomepage = () => {
       </section>
 
       {/* Enterprise Intelligence - Clean Section */}
-      <section className="py-24 px-6 bg-[#10161C] relative overflow-hidden">
+      <section className="py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             {/* What Separates Us Header */}
