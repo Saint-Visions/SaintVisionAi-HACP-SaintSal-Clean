@@ -53,8 +53,8 @@ export default function Index() {
               alt="SAINTSAL™ Logo"
               className="w-20 h-20 md:w-24 md:h-24"
             />
-            <h1 className="text-yellow-400 text-4xl md:text-5xl font-thin tracking-tight">
-              SaintVisionAI™
+            <h1 className="text-white text-5xl md:text-6xl font-light tracking-tight">
+              SaintVisionAI���
             </h1>
           </div>
 
