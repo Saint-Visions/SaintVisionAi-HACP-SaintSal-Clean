@@ -107,10 +107,17 @@ const FallbackHomepage = () => (
             </div>
           </div>
 
-          {/* Clean CTA at bottom */}
-          <div className="text-center mt-16">
+          {/* Final Footer - Clean & Refined */}
+          <div className="text-center mt-20">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fafaafac07c1f4617b1c7c6f73b70e8a0?format=webp&width=800"
+              alt="SaintSal Footer"
+              className="w-full h-auto max-w-4xl mx-auto divine-card rounded-2xl mb-12"
+            />
+
+            {/* Clean CTA */}
             <Link to="/signup">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4 text-xl font-medium rounded-2xl saintsal-glow">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4 text-lg font-medium rounded-xl transition-all duration-300 hover:scale-105">
                 Start Cookin' Knowledge
               </Button>
             </Link>
