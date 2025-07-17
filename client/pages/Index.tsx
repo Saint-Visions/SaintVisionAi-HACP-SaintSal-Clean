@@ -15,7 +15,7 @@ const FallbackHomepage = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F8e02b6a79a1740e3b17a25706375db1a?format=webp&width=800"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/46ab1422c157e614ab6683e4bc30e5ce36870ec4?width=3072"
               alt="SaintVisionAI™"
               className="w-8 h-8 opacity-80 filter brightness-110"
             />
