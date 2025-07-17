@@ -227,7 +227,7 @@ const FallbackHomepage = () => {
               className="text-4xl md:text-5xl mb-4 text-white"
               style={{ fontFamily: "DM Serif Display, serif" }}
             >
-              Professional Business Intelligence
+              Elite Technology
             </h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">
               <span className="text-[#FACC15] font-semibold">
