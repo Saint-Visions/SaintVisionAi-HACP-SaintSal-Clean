@@ -35,11 +35,16 @@ const App = () => {
   // Force override any environment base URL hijacking
   if (typeof window !== "undefined") {
     window.history.replaceState(null, "", window.location.pathname);
+    // Clear any base tag that might be interfering
+    const baseTags = document.getElementsByTagName('base');
+    for (let i = 0; i < baseTags.length; i++) {
+      baseTags[i].remove();
+    }
   }
 
   return (
     <AuthProvider>
-      <BrowserRouter basename={undefined}>
+      <BrowserRouter basename=""}
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Index />} />
