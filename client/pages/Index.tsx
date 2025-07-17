@@ -22,43 +22,43 @@ const FallbackHomepage = () => (
 
     <div className="relative z-10">
       {/* Section One - Hero with Logo */}
-      <section className="min-h-screen flex items-center justify-center px-8">
-        <div className="text-center max-w-4xl mx-auto">
+      <section className="min-h-screen flex items-center justify-center px-6 md:px-12">
+        <div className="text-center max-w-5xl mx-auto">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F4bafe18e513045228cec488725e6bd5e?format=webp&width=800"
             alt="SaintSal™ Hero"
-            className="w-full h-auto max-w-2xl mx-auto divine-card rounded-2xl"
+            className="w-full h-auto max-w-3xl mx-auto rounded-2xl shadow-2xl transition-all duration-500 hover:scale-105"
           />
         </div>
       </section>
 
       {/* Section Two - Following Layout */}
-      <section className="py-20 px-8">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto text-center">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Febbdf8d3645e4aac938a960a58c198dc?format=webp&width=800"
             alt="Enterprise Features"
-            className="w-full h-auto max-w-5xl mx-auto divine-card rounded-2xl"
+            className="w-full h-auto max-w-6xl mx-auto rounded-2xl shadow-xl"
           />
         </div>
       </section>
 
       {/* Section Three - Dual Features */}
-      <section className="py-20 px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="text-center">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F1a91dbc02b744270bc0cfbe5229a2d82?format=webp&width=800"
                 alt="Dual AI Console"
-                className="w-full h-auto divine-card rounded-2xl"
+                className="w-full h-auto rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl"
               />
             </div>
             <div className="text-center">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fd1fc5649c7e145e299ac0589b7782313?format=webp&width=800"
                 alt="PartnerTech CRM"
-                className="w-full h-auto divine-card rounded-2xl"
+                className="w-full h-auto rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl"
               />
             </div>
           </div>
@@ -66,43 +66,43 @@ const FallbackHomepage = () => (
       </section>
 
       {/* Section Four - Security Features */}
-      <section className="py-20 px-8">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto text-center">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F46222c772c0d40b6930aeca8f8b1b0c6?format=webp&width=800"
             alt="Faith-Aligned Vault"
-            className="w-full h-auto max-w-5xl mx-auto divine-card rounded-2xl"
+            className="w-full h-auto max-w-6xl mx-auto rounded-2xl shadow-xl"
           />
         </div>
       </section>
 
       {/* Section Five - Protected Data */}
-      <section className="py-20 px-8">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto text-center">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fce460512dd614adfa8d4cbd0bca37934?format=webp&width=800"
             alt="Protected Data Vault"
-            className="w-full h-auto max-w-5xl mx-auto divine-card rounded-2xl"
+            className="w-full h-auto max-w-6xl mx-auto rounded-2xl shadow-xl"
           />
         </div>
       </section>
 
-      {/* Section Six - Final Gorgeous Footer */}
-      <section className="py-20 px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      {/* Section Six - Gorgeous Footer */}
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
             <div className="text-center">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F99356cf9e8bb49e08c65840ed3dd2360?format=webp&width=800"
                 alt="Footer Section 1"
-                className="w-full h-auto divine-card rounded-2xl"
+                className="w-full h-auto rounded-2xl shadow-xl"
               />
             </div>
             <div className="text-center">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fabfeede56dff4877aa4fd742ad2e77ad?format=webp&width=800"
                 alt="Footer Section 2"
-                className="w-full h-auto divine-card rounded-2xl"
+                className="w-full h-auto rounded-2xl shadow-xl"
               />
             </div>
           </div>
