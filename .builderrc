@@ -1,0 +1,53 @@
+{
+  "apiKey": "065997bd13e4442e888a08652fcd61ba",
+  "models": [
+    {
+      "name": "page",
+      "includeContent": true,
+      "outputPath": "client/pages/builder"
+    },
+    {
+      "name": "section",
+      "includeContent": true,
+      "outputPath": "client/components/builder/sections"
+    },
+    {
+      "name": "header",
+      "includeContent": true,
+      "outputPath": "client/components/builder/headers"
+    },
+    {
+      "name": "footer",
+      "includeContent": true,
+      "outputPath": "client/components/builder/footers"
+    },
+    {
+      "name": "hero",
+      "includeContent": true,
+      "outputPath": "client/components/builder/heroes"
+    },
+    {
+      "name": "testimonial",
+      "includeContent": true,
+      "outputPath": "client/components/builder/testimonials"
+    },
+    {
+      "name": "pricing",
+      "includeContent": true,
+      "outputPath": "client/components/builder/pricing"
+    },
+    {
+      "name": "cta",
+      "includeContent": true,
+      "outputPath": "client/components/builder/ctas"
+    }
+  ],
+  "framework": "react",
+  "typescript": true,
+  "tailwindcss": true,
+  "generateTypes": true,
+  "sync": {
+    "enabled": true,
+    "outputDir": "client/builder-components"
+  }
+}
