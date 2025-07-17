@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/components/AuthProvider";
@@ -104,7 +103,8 @@ interface SidebarProps {
 
 export function Sidebar({ className }: SidebarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
+  const location = useLocation();
+  const pathname = location.pathname;
   const { user, signOut } = useAuth();
 
   const handleSignOut = async () => {
