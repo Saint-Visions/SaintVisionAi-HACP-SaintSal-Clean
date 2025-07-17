@@ -289,15 +289,8 @@ const FallbackHomepage = () => {
             </div>
           </div>
 
+          {/* CTA Buttons Below Boxes */}
           <div className="text-center">
-            <Link to="/why" className="inline-block mb-8 group cursor-pointer">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2ee3b57e082749f88b62d4dd261954b0?format=webp&width=800"
-                alt="Why SaintVisionAI - Elite Technology"
-                className="h-32 w-auto mx-auto transition-transform duration-300 group-hover:scale-105"
-              />
-            </Link>
-
             <div className="flex justify-center gap-4">
               <Link to="/console">
                 <Button className="bg-[#FACC15] text-black hover:bg-[#FACC15]/90 px-8 py-3 font-semibold rounded-lg">
@@ -826,7 +819,7 @@ const FallbackHomepage = () => {
             {/* Patent Information */}
             <div>
               <p className="text-white/80 text-sm">
-                <span className="text-[#FACC15] font-semibold">HACP™</span>{" "}
+                <span className="text-[#FACC15] font-semibold">HACP��</span>{" "}
                 (Hierarchical Adaptive Cognitive Processing) protected under{" "}
                 <span className="font-semibold">U.S. Patent 10,290,222</span>{" "}
                 and additional patent-pending technologies.
