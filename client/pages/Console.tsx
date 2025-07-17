@@ -93,9 +93,10 @@ export default function Console() {
     setInput("");
     setIsLoading(true);
 
+    // Add a temporary streaming message
+    const streamingMessageId = (Date.now() + 1).toString();
+
     try {
-      // Add a temporary streaming message
-      const streamingMessageId = (Date.now() + 1).toString();
       const streamingMessage: Message = {
         id: streamingMessageId,
         content: "",
