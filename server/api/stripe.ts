@@ -81,6 +81,220 @@ export const handleWebhook = async (req: Request, res: Response) => {
   res.status(200).json({ received: true });
 };
 
+// Helper function to map Stripe price IDs to subscription tiers
+function getPriceIdToTierMapping(): Record<string, string> {
+  return {
+    [process.env.VITE_STRIPE_UNLIMITED_PRICE_ID || "price_unlimited"]:
+      "unlimited",
+    [process.env.VITE_STRIPE_CORETOOLS_PRICE_ID || "price_coretools"]:
+      "coretools",
+    [process.env.VITE_STRIPE_PRO_PRICE_ID || "price_pro"]: "pro",
+    [process.env.VITE_STRIPE_PARTNERTECH_PRICE_ID || "price_partnertech"]:
+      "partnertech",
+  };
+}
+
+const handleCheckoutSessionCompleted = async (
+  session: Stripe.Checkout.Session,
+) => {
+  try {
+    console.log("Processing checkout session completed:", session.id);
+
+    const userId = session.metadata?.userId;
+    if (!userId) {
+      console.error("No userId found in session metadata");
+      return;
+    }
+
+    // Get the subscription details
+    const subscription = await getStripe().subscriptions.retrieve(
+      session.subscription as string,
+    );
+    const priceId = subscription.items.data[0]?.price.id;
+
+    if (!priceId) {
+      console.error("No price ID found in subscription");
+      return;
+    }
+
+    // Map price ID to subscription tier
+    const priceToTierMap = getPriceIdToTierMapping();
+    const tier = priceToTierMap[priceId];
+
+    if (!tier) {
+      console.error("Unknown price ID:", priceId);
+      return;
+    }
+
+    // Update user subscription tier in Supabase
+    const { error: userError } = await supabase
+      .from("users")
+      .update({
+        subscription_tier: tier,
+        updated_at: new Date().toISOString(),
+      })
+      .eq("id", userId);
+
+    if (userError) {
+      console.error("Error updating user subscription tier:", userError);
+      return;
+    }
+
+    // Create/update subscription record
+    const { error: subError } = await supabase.from("subscriptions").upsert(
+      {
+        user_id: userId,
+        stripe_customer_id: session.customer as string,
+        stripe_subscription_id: session.subscription as string,
+        tier: tier,
+        status: subscription.status,
+        current_period_start: new Date(
+          subscription.current_period_start * 1000,
+        ).toISOString(),
+        current_period_end: new Date(
+          subscription.current_period_end * 1000,
+        ).toISOString(),
+        updated_at: new Date().toISOString(),
+      },
+      {
+        onConflict: "user_id",
+      },
+    );
+
+    if (subError) {
+      console.error("Error creating subscription record:", subError);
+    } else {
+      console.log(`Successfully updated user ${userId} to ${tier} tier`);
+    }
+  } catch (error) {
+    console.error("Error in handleCheckoutSessionCompleted:", error);
+  }
+};
+
+const handleSubscriptionDeleted = async (subscription: Stripe.Subscription) => {
+  try {
+    console.log("Processing subscription deletion:", subscription.id);
+
+    // Find user by stripe subscription ID
+    const { data: subscriptionData, error: findError } = await supabase
+      .from("subscriptions")
+      .select("user_id")
+      .eq("stripe_subscription_id", subscription.id)
+      .single();
+
+    if (findError || !subscriptionData) {
+      console.error("Could not find subscription:", findError);
+      return;
+    }
+
+    // Downgrade user to free trial
+    const { error: userError } = await supabase
+      .from("users")
+      .update({
+        subscription_tier: "free_trial",
+        updated_at: new Date().toISOString(),
+      })
+      .eq("id", subscriptionData.user_id);
+
+    if (userError) {
+      console.error("Error downgrading user:", userError);
+      return;
+    }
+
+    // Update subscription status
+    const { error: subError } = await supabase
+      .from("subscriptions")
+      .update({
+        status: "cancelled",
+        updated_at: new Date().toISOString(),
+      })
+      .eq("stripe_subscription_id", subscription.id);
+
+    if (subError) {
+      console.error("Error updating subscription status:", subError);
+    } else {
+      console.log(
+        `Successfully downgraded user ${subscriptionData.user_id} to free trial`,
+      );
+    }
+  } catch (error) {
+    console.error("Error in handleSubscriptionDeleted:", error);
+  }
+};
+
+const handleSubscriptionUpdated = async (subscription: Stripe.Subscription) => {
+  try {
+    console.log("Processing subscription update:", subscription.id);
+
+    // Find user by stripe subscription ID
+    const { data: subscriptionData, error: findError } = await supabase
+      .from("subscriptions")
+      .select("user_id")
+      .eq("stripe_subscription_id", subscription.id)
+      .single();
+
+    if (findError || !subscriptionData) {
+      console.error("Could not find subscription:", findError);
+      return;
+    }
+
+    const priceId = subscription.items.data[0]?.price.id;
+    if (!priceId) {
+      console.error("No price ID found in subscription update");
+      return;
+    }
+
+    // Map price ID to subscription tier
+    const priceToTierMap = getPriceIdToTierMapping();
+    const tier = priceToTierMap[priceId];
+
+    if (!tier) {
+      console.error("Unknown price ID in update:", priceId);
+      return;
+    }
+
+    // Update user subscription tier
+    const { error: userError } = await supabase
+      .from("users")
+      .update({
+        subscription_tier: tier,
+        updated_at: new Date().toISOString(),
+      })
+      .eq("id", subscriptionData.user_id);
+
+    if (userError) {
+      console.error("Error updating user subscription tier:", userError);
+      return;
+    }
+
+    // Update subscription record
+    const { error: subError } = await supabase
+      .from("subscriptions")
+      .update({
+        tier: tier,
+        status: subscription.status,
+        current_period_start: new Date(
+          subscription.current_period_start * 1000,
+        ).toISOString(),
+        current_period_end: new Date(
+          subscription.current_period_end * 1000,
+        ).toISOString(),
+        updated_at: new Date().toISOString(),
+      })
+      .eq("stripe_subscription_id", subscription.id);
+
+    if (subError) {
+      console.error("Error updating subscription record:", subError);
+    } else {
+      console.log(
+        `Successfully updated user ${subscriptionData.user_id} to ${tier} tier`,
+      );
+    }
+  } catch (error) {
+    console.error("Error in handleSubscriptionUpdated:", error);
+  }
+};
+
 export const getSubscriptionStatus = async (req: Request, res: Response) => {
   try {
     const { customerId } = req.params;
