@@ -16,7 +16,7 @@ const FallbackHomepage = () => (
       showCTA={true}
     />
 
-          {/* Features Preview - Divine Prestige */}
+    {/* Features Preview - Divine Prestige */}
     <section className="py-20 px-8 openai-premium">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
@@ -88,7 +88,6 @@ const FallbackHomepage = () => (
         </div>
       </div>
     </section>
-  </div>
   </div>
 );
 
