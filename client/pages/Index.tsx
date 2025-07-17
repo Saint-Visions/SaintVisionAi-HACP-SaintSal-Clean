@@ -116,27 +116,85 @@ export default function Index() {
 
             <p className="text-yellow-400 text-sm mb-4">Quick Access</p>
 
-            {/* Bottom Navigation Icons */}
-            <div className="flex space-x-8 items-center">
-              <Link to="/pricing" className="text-center">
-                <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-2">
-                  <span className="text-white text-xl">💰</span>
+            {/* 24/7 SAINTSAL Help Section - Divine Styling */}
+            <div
+              className="p-8 rounded-3xl border mb-8 max-w-lg"
+              style={{
+                backdropFilter: "blur(24px)",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+                borderColor: "rgba(138, 43, 226, 0.3)",
+              }}
+            >
+              <div className="text-center space-y-4">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-purple-400/20 to-purple-600/20 border border-purple-400/30 mr-3">
+                    <span className="text-purple-400 text-2xl">💬</span>
+                  </div>
+                  <h3 className="text-purple-400 text-xl font-light">
+                    24/7 SAINTSAL Support
+                  </h3>
                 </div>
-                <span className="text-yellow-400 text-xs">Pricing</span>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Get instant help from our AI support agent. Handles upgrades,
+                  troubleshooting, and questions better than any human support!
+                </p>
+                <Link to="/console">
+                  <Button
+                    className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-medium px-6 py-3 rounded-xl"
+                    style={{
+                      boxShadow: "rgba(138, 43, 226, 0.4) 0px 15px 35px -12px",
+                    }}
+                  >
+                    💬 Chat with SAINTSAL Bot
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Bottom Navigation Icons - Divine Styling */}
+            <div className="flex space-x-6 items-center">
+              <Link to="/pricing" className="text-center group">
+                <div
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-2 transition-all duration-300 group-hover:scale-110"
+                  style={{
+                    backdropFilter: "blur(24px)",
+                    backgroundColor: "rgba(0, 0, 0, 0.6)",
+                    border: "1px solid rgba(250, 204, 21, 0.3)",
+                  }}
+                >
+                  <span className="text-yellow-400 text-xl">💰</span>
+                </div>
+                <span className="text-yellow-400 text-xs font-medium">
+                  Pricing
+                </span>
               </Link>
 
-              <Link to="/setup" className="text-center">
-                <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mb-2">
-                  <span className="text-white text-xl">⚙️</span>
+              <Link to="/setup" className="text-center group">
+                <div
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-2 transition-all duration-300 group-hover:scale-110"
+                  style={{
+                    backdropFilter: "blur(24px)",
+                    backgroundColor: "rgba(0, 0, 0, 0.6)",
+                    border: "1px solid rgba(156, 163, 175, 0.3)",
+                  }}
+                >
+                  <span className="text-gray-400 text-xl">⚙️</span>
                 </div>
-                <span className="text-yellow-400 text-xs">Setup</span>
+                <span className="text-gray-400 text-xs font-medium">Setup</span>
               </Link>
 
-              <Link to="/help" className="text-center">
-                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-2">
-                  <span className="text-white text-xl">📚</span>
+              <Link to="/help" className="text-center group">
+                <div
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-2 transition-all duration-300 group-hover:scale-110"
+                  style={{
+                    backdropFilter: "blur(24px)",
+                    backgroundColor: "rgba(0, 0, 0, 0.6)",
+                    border: "1px solid rgba(96, 165, 250, 0.3)",
+                  }}
+                >
+                  <span className="text-blue-400 text-xl">📚</span>
                 </div>
-                <span className="text-yellow-400 text-xs">Help</span>
+                <span className="text-blue-400 text-xs font-medium">Help</span>
               </Link>
             </div>
           </div>
