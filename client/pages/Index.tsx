@@ -15,15 +15,15 @@ const FallbackHomepage = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F03153bd5b4c343c08a8337ee7aa5dbc0?format=webp&width=800"
-              alt="SaintSal™"
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fd761d5fb4b204ca8b5df5865a4bc16db?format=webp&width=800"
+              alt="SaintVisionAI™"
               className="w-8 h-8 opacity-80 filter brightness-110"
             />
             <span
               className="text-xl font-medium text-white"
               style={{ fontFamily: "DM Serif Display, serif" }}
             >
-              SaintSal™
+              SaintVisionAI™
             </span>
           </div>
 
