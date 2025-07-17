@@ -560,6 +560,90 @@ const FallbackHomepage = () => {
         </div>
       </section>
 
+      {/* THE MOVEMENT - Elite AI Sanctuary */}
+      <section
+        className="py-24 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            {/* The Movement Header */}
+            <div className="mb-4">
+              <span
+                className="text-sm font-semibold tracking-[0.2em] uppercase"
+                style={{
+                  fontFamily:
+                    "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+                  color: "#FACC15",
+                  letterSpacing: "0.2em",
+                }}
+              >
+                THE MOVEMENT
+              </span>
+            </div>
+
+            <h2
+              className="text-5xl md:text-6xl mb-8 text-white"
+              style={{ fontFamily: "DM Serif Display, serif" }}
+            >
+              Elite AI Sanctuary
+            </h2>
+
+            <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed mb-12">
+              Built for those who refuse to compromise on excellence, privacy,
+              or values. Join thousands who've discovered their{" "}
+              <span className="text-[#FACC15] font-semibold">GOTTA GUY™</span>.
+            </p>
+          </div>
+
+          {/* Quote Card */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+              <div className="text-center mb-6">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F4f08aaff66374bf3bd72e740c34ecf44"
+                  alt="SV Logo"
+                  className="w-12 h-12 mx-auto mb-4 opacity-80"
+                />
+                <p className="text-[#FACC15] font-semibold text-lg">
+                  SAINTSAL™ • Cookin' Knowledge
+                </p>
+              </div>
+
+              <blockquote className="text-xl text-white/80 italic text-center leading-relaxed mb-4">
+                "We built this for the builders, the believers, the ones who
+                demand more than chatbots. This is enterprise AI with a soul,
+                technology with values, innovation with integrity."
+              </blockquote>
+            </div>
+          </div>
+
+          {/* SaintVisionAI Access */}
+          <div className="text-center">
+            <div className="mb-4">
+              <span
+                className="text-lg font-semibold"
+                style={{ color: "#FACC15" }}
+              >
+                🚀 SaintVisionAI™ Access
+              </span>
+            </div>
+            <p className="text-white/70 max-w-2xl mx-auto">
+              Azure Cognitive Services • OpenAI GPT-4o • Premium Infrastructure
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer - Clean & Professional */}
       <footer
         className="py-16 px-6 relative overflow-hidden"
