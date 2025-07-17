@@ -4,15 +4,9 @@
   "type": "module",
   "version": "2.0.0",
   "scripts": {
-<<<<<<< HEAD
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-=======
-    "dev": "next dev",
-    "build": "vite build",
-    "start": "next start",
->>>>>>> 2baafbeb (🔥 Switched to Vite build + cleaned Next.js conflict)
     "test": "vitest --run",
     "typecheck": "tsc --noEmit",
     "deploy": "vercel --prod --yes",
