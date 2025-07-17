@@ -323,6 +323,132 @@ const FallbackHomepage = () => {
         </div>
       </section>
 
+      {/* PartnerTech Section */}
+      <section
+        className="py-24 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2
+              className="text-5xl md:text-6xl mb-6 text-white"
+              style={{ fontFamily: "DM Serif Display, serif" }}
+            >
+              PartnerTech AI
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
+              When you're ready to scale. Advanced CRM integration, Chrome
+              extension automation, AI-triggered workflows, and intelligent
+              client routing systems.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* PartnerTech AI Card */}
+            <div className="p-8 rounded-2xl bg-white/3 backdrop-blur-sm border border-white/8">
+              <div className="mb-6">
+                <Chrome className="w-12 h-12 text-[#FACC15] mb-4" />
+                <h3
+                  className="text-2xl text-white mb-4"
+                  style={{ fontFamily: "DM Serif Display, serif" }}
+                >
+                  PartnerTech AI
+                </h3>
+                <p className="text-white/70 mb-6">
+                  When you're ready to scale. Advanced CRM integration, Chrome
+                  extension automation, AI-triggered workflows, and intelligent
+                  client routing systems.
+                </p>
+              </div>
+
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-neon-green flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-white/80">
+                    Enterprise CRM integration
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-neon-green flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-white/80">
+                    Chrome extension automation
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-neon-green flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-white/80">AI workflow triggers</span>
+                </div>
+              </div>
+
+              <Button className="w-full bg-white/10 text-white border border-white/20 hover:bg-white/20">
+                Unlock Partner Access
+              </Button>
+            </div>
+
+            {/* PartnerTech Suite Card */}
+            <div className="p-8 rounded-2xl bg-white/3 backdrop-blur-sm border border-neon-blue/30">
+              <div className="flex justify-between items-start mb-6">
+                <h3
+                  className="text-2xl text-white"
+                  style={{ fontFamily: "DM Serif Display, serif" }}
+                >
+                  PartnerTech Suite
+                </h3>
+                <span className="neon-blue text-sm font-semibold px-3 py-1 rounded-full bg-neon-blue/20">
+                  Premium Tier
+                </span>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-neon-blue/20 flex items-center justify-center">
+                    <Chrome className="w-6 h-6 neon-blue" />
+                  </div>
+                  <span className="text-white/70 text-sm">CRM</span>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-neon-blue/20 flex items-center justify-center">
+                    <Chrome className="w-6 h-6 neon-blue" />
+                  </div>
+                  <span className="text-white/70 text-sm">Chrome</span>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-neon-blue/20 flex items-center justify-center">
+                    <Brain className="w-6 h-6 neon-blue" />
+                  </div>
+                  <span className="text-white/70 text-sm">Triggers</span>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-neon-blue/20 flex items-center justify-center">
+                    <Brain className="w-6 h-6 neon-blue" />
+                  </div>
+                  <span className="text-white/70 text-sm">AI Logic</span>
+                </div>
+              </div>
+
+              <Button className="w-full bg-neon-blue text-white hover:bg-neon-blue/80 neon-glow-blue">
+                Upgrade to Premium
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer - Clean & Professional */}
       <footer
         className="py-16 px-6 relative overflow-hidden"
