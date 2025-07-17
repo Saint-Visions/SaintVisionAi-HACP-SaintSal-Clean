@@ -174,14 +174,14 @@ const StickyChat: React.FC<StickyChatProps> = ({ mode, userTier }) => {
             {/* Chat content will be implemented based on mode */}
             <div className="p-4 text-center text-muted-foreground">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
-                alt="SaintSal Logo"
-                className="w-12 h-12 mx-auto mb-2 rounded-lg"
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F032bb6b4632e4a3ca4a41a4996df0d8f?format=webp&width=400"
+                alt="SaintSal™ Brain Logo"
+                className="w-12 h-12 mx-auto mb-2 saintsal-brain"
               />
-              <p className="text-sm">
+              <p className="text-sm prestige-text">
                 {mode === "dual"
-                  ? "DualBot interface coming soon..."
-                  : "Chat interface coming soon..."}
+                  ? "DualBot™ interface coming soon..."
+                  : "Cookin' Knowledge..."}
               </p>
             </div>
           </div>
@@ -194,9 +194,9 @@ const StickyChat: React.FC<StickyChatProps> = ({ mode, userTier }) => {
         className="w-16 h-16 bg-primary text-primary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gotham-glow"
       >
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b227793103accd33c7649ebabb0572cddb55c1?width=2048"
-          alt="SaintSal"
-          className="w-8 h-8 rounded"
+          src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F54882ffd278443aeb1184a2d072d152d?format=webp&width=200"
+          alt="SaintSal™"
+          className="w-8 h-8 favicon-glow"
         />
       </button>
     </div>
