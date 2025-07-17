@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import BuilderPage from "../components/BuilderPage";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,142 +16,51 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getPricingTiers } from "../lib/stripe";
+import { useAuth } from "../contexts/AuthContext";
+import { redirectToCheckout } from "../lib/stripe";
 
-const pricingTiers = [
-  {
-    id: "free",
-    name: "Free Trial",
-    description: "Get started with basic AI companion",
-    price: { monthly: 0, yearly: 0 },
-    badge: "Start Here",
-    badgeColor: "bg-blue-500/20 text-blue-400 border-blue-500/40",
-    features: [
-      "2 AI conversations",
-      "Basic GPT-4o access",
-      "Email support",
-      "7-day trial period",
-    ],
-    limitations: ["Limited to 2 chats", "No CRM integration"],
-    cta: "Start Free Trial",
-    popular: false,
-  },
-  {
-    id: "unlimited",
-    name: "Unlimited",
-    description: "Unlimited GPT Companion for serious users",
-    price: { monthly: 27, yearly: 270 },
-    badge: "Most Popular",
-    badgeColor: "bg-yellow-500/20 text-yellow-400 border-yellow-500/40",
-    features: [
-      "Unlimited AI conversations",
-      "GPT-4o + Azure dual AI",
-      "Faith-aligned responses",
-      "Priority support",
-      "Mobile app access",
-      "Basic analytics",
-    ],
-    limitations: [],
-    cta: "Get Unlimited",
-    popular: true,
-  },
-  {
-    id: "partnertech",
-    name: "PartnerTech",
-    description: "CRM access + business automation",
-    price: { monthly: 97, yearly: 970 },
-    badge: "Business",
-    badgeColor: "bg-green-500/20 text-green-400 border-green-500/40",
-    features: [
-      "Everything in Unlimited",
-      "GoHighLevel CRM access",
-      "Lead automation",
-      "Chrome extension",
-      "Advanced analytics",
-      "Webhook integrations",
-      "Priority phone support",
-    ],
-    limitations: [],
-    cta: "Upgrade to PartnerTech",
-    popular: false,
-  },
-  {
-    id: "pro",
-    name: "Pro Suite",
-    description: "Complete business automation suite",
-    price: { monthly: 297, yearly: 2970 },
-    badge: "Professional",
-    badgeColor: "bg-purple-500/20 text-purple-400 border-purple-500/40",
-    features: [
-      "Everything in PartnerTech",
-      "All AI tools unlocked",
-      "Image generator",
-      "SVG launchpad",
-      "Sticky notes system",
-      "Client portal access",
-      "Advanced CRM features",
-      "Custom integrations",
-    ],
-    limitations: [],
-    cta: "Go Pro",
-    popular: false,
-  },
-  {
-    id: "fullpro",
-    name: "Full Pro",
-    description: "Enterprise-grade with Chrome + webhooks",
-    price: { monthly: 497, yearly: 4970 },
-    badge: "Enterprise",
-    badgeColor: "bg-orange-500/20 text-orange-400 border-orange-500/40",
-    features: [
-      "Everything in Pro Suite",
-      "Advanced Chrome extension",
-      "Full webhook access",
-      "Custom automation flows",
-      "Dedicated account manager",
-      "SLA guarantees",
-      "White-label options",
-      "API access",
-    ],
-    limitations: [],
-    cta: "Get Full Pro",
-    popular: false,
-  },
-  {
-    id: "custom",
-    name: "White Label",
-    description: "Custom branding and enterprise deployment",
-    price: { monthly: 1500, yearly: 15000 },
-    badge: "Custom",
-    badgeColor: "bg-yellow-500/20 text-yellow-400 border-yellow-500/40",
-    features: [
-      "Everything in Full Pro",
-      "Custom branding",
-      "White-label deployment",
-      "Dedicated infrastructure",
-      "Custom training",
-      "24/7 dedicated support",
-      "Legal compliance review",
-      "Custom contract terms",
-    ],
-    limitations: [],
-    cta: "Contact Sales",
-    popular: false,
-  },
-];
-
-export default function Pricing() {
+// Fallback pricing component
+const FallbackPricing = () => {
   const [isYearly, setIsYearly] = useState(false);
+  const { user } = useAuth();
 
-  const handleUpgrade = (tierId: string) => {
-    // Redirect to Stripe checkout based on tier
-    console.log(`Upgrading to ${tierId}`, { isYearly });
+  const pricingTiers = getPricingTiers();
 
-    if (tierId === "custom") {
-      // Redirect to contact form or sales
-      window.location.href = "/contact";
-    } else {
-      // Redirect to Stripe checkout
-      window.location.href = `/upgrade?plan=${tierId}&billing=${isYearly ? "yearly" : "monthly"}`;
+  const handleUpgrade = async (tier: any) => {
+    if (!user) {
+      // Redirect to signup if not logged in
+      window.location.href = "/signup";
+      return;
+    }
+
+    if (tier.id === "free_trial") {
+      // Already free
+      return;
+    }
+
+    try {
+      await redirectToCheckout(tier.priceId, user.id, user.email!);
+    } catch (error) {
+      console.error("Checkout error:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
+  const getBadgeColor = (tier: any) => {
+    switch (tier.tier) {
+      case "free_trial":
+        return "bg-blue-500/20 text-blue-400 border-blue-500/40";
+      case "unlimited":
+        return "bg-yellow-500/20 text-yellow-400 border-yellow-500/40";
+      case "coretools":
+        return "bg-green-500/20 text-green-400 border-green-500/40";
+      case "pro":
+        return "bg-purple-500/20 text-purple-400 border-purple-500/40";
+      case "partnertech":
+        return "bg-orange-500/20 text-orange-400 border-orange-500/40";
+      default:
+        return "bg-gray-500/20 text-gray-400 border-gray-500/40";
     }
   };
 
@@ -271,7 +181,9 @@ export default function Pricing() {
 
                 <CardHeader className="text-center pb-4">
                   <div className="flex justify-center mb-4">
-                    <Badge className={tier.badgeColor}>{tier.badge}</Badge>
+                    <Badge className={getBadgeColor(tier)}>
+                      {tier.popular ? "Most Popular" : tier.name}
+                    </Badge>
                   </div>
 
                   <CardTitle className="text-2xl font-light text-white mb-2">
@@ -285,16 +197,13 @@ export default function Pricing() {
                   <div className="mb-6">
                     <div className="flex items-baseline justify-center gap-2">
                       <span className="text-4xl font-light text-white">
-                        ${tier.price[isYearly ? "yearly" : "monthly"]}
+                        ${tier.price}
                       </span>
-                      <span className="text-gray-400">
-                        /{isYearly ? "year" : "month"}
-                      </span>
+                      <span className="text-gray-400">/month</span>
                     </div>
-                    {isYearly && tier.price.monthly > 0 && (
+                    {tier.description && (
                       <p className="text-sm text-gray-400 mt-2">
-                        ${Math.round(tier.price.yearly / 12)}/month billed
-                        yearly
+                        {tier.description}
                       </p>
                     )}
                   </div>
@@ -311,32 +220,13 @@ export default function Pricing() {
                     ))}
                   </div>
 
-                  {/* Limitations */}
-                  {tier.limitations.length > 0 && (
-                    <div className="border-t border-gray-600/50 pt-4">
-                      <p className="text-xs text-gray-400 mb-2">Limitations:</p>
-                      <div className="space-y-2">
-                        {tier.limitations.map((limitation, index) => (
-                          <div key={index} className="flex items-center gap-3">
-                            <div className="w-4 h-4 rounded-full border border-gray-500/30 flex-shrink-0"></div>
-                            <span className="text-xs text-gray-400">
-                              {limitation}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
                   {/* CTA Button */}
                   <Button
-                    onClick={() => handleUpgrade(tier.id)}
+                    onClick={() => handleUpgrade(tier)}
                     className={`w-full ${
                       tier.popular
                         ? "bg-gradient-to-r from-yellow-400 to-yellow-300 text-gray-900 font-medium hover:opacity-90"
-                        : tier.id === "custom"
-                          ? "bg-yellow-400/20 border border-yellow-400/40 text-yellow-400 hover:bg-yellow-400/30"
-                          : "bg-gray-700/60 border border-gray-600/40 text-gray-200 hover:bg-gray-700/80"
+                        : "bg-gray-700/60 border border-gray-600/40 text-gray-200 hover:bg-gray-700/80"
                     } py-3 rounded-xl transition-all duration-300`}
                     style={
                       tier.popular
@@ -347,10 +237,8 @@ export default function Pricing() {
                         : {}
                     }
                   >
-                    {tier.cta}
-                    {tier.id !== "custom" && (
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    )}
+                    {tier.price === 0 ? "Start Free" : `Get ${tier.name}`}
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </CardContent>
               </Card>
@@ -479,5 +367,17 @@ export default function Pricing() {
         </div>
       </div>
     </div>
+  );
+};
+
+export default function Pricing() {
+  return (
+    <BuilderPage
+      model="page"
+      chatMode="admin"
+      showHeader={true}
+      showFooter={true}
+      fallback={<FallbackPricing />}
+    />
   );
 }
