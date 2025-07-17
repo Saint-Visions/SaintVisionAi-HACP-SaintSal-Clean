@@ -45,67 +45,98 @@ export const getSubscriptionStatus = async (customerId: string) => {
   }
 };
 
-export const getPricingTiers = () => {
+export type PricingTier = {
+  id: string;
+  name: string;
+  price: number;
+  priceId: string;
+  features: string[];
+  tier: "free_trial" | "unlimited" | "coretools" | "pro" | "partnertech";
+  popular?: boolean;
+  description?: string;
+};
+
+export const getPricingTiers = (): PricingTier[] => {
   return [
     {
-      id: "free",
+      id: "free_trial",
       name: "Free Trial",
       price: 0,
-      priceId: import.meta.env.VITE_STRIPE_FREE_PRICE_ID,
-      features: ["Limited AI conversations", "Basic features", "Email support"],
-    },
-    {
-      id: "pro",
-      name: "Professional",
-      price: 27,
-      priceId: import.meta.env.VITE_STRIPE_PRO_PRICE_ID,
+      priceId: "", // No price ID for free trial
+      tier: "free_trial",
       features: [
-        "Unlimited AI conversations",
-        "SaintSal™ 4o & Turbo access",
-        "Custom Azure companion",
-        "CRM integration",
-        "Priority support",
+        "2 AI conversations",
+        "Basic SaintSal™ access",
+        "Client Mode chat only",
+        "Email support",
       ],
-      popular: true,
+      description: "Try SaintSal™ for free",
     },
     {
       id: "unlimited",
       name: "Unlimited",
-      price: 97,
-      priceId: import.meta.env.VITE_STRIPE_UNLIMITED_PRICE_ID,
+      price: 27,
+      priceId:
+        import.meta.env.VITE_STRIPE_UNLIMITED_PRICE_ID || "price_unlimited",
+      tier: "unlimited",
       features: [
-        "Everything in Professional",
+        "Unlimited AI conversations",
+        "DualBot unlocked",
+        "Full SaintSal™ access",
+        "Companion Mode",
+        "Priority support",
+      ],
+      popular: true,
+      description: "Perfect for individuals",
+    },
+    {
+      id: "coretools",
+      name: "Core Tools",
+      price: 97,
+      priceId:
+        import.meta.env.VITE_STRIPE_CORETOOLS_PRICE_ID || "price_coretools",
+      tier: "coretools",
+      features: [
+        "Everything in Unlimited",
+        "Chrome Extension access",
+        "Advanced AI tools",
+        "HACP training portal",
+        "Analytics dashboard",
+      ],
+      description: "For power users",
+    },
+    {
+      id: "pro",
+      name: "Pro Suite",
+      price: 297,
+      priceId: import.meta.env.VITE_STRIPE_PRO_PRICE_ID || "price_pro",
+      tier: "pro",
+      features: [
+        "Everything in Core Tools",
         "Advanced analytics",
         "API access",
         "Custom integrations",
         "24/7 phone support",
       ],
+      description: "For professionals",
     },
     {
-      id: "white-label",
-      name: "White Label",
+      id: "partnertech",
+      name: "Full Pro",
       price: 497,
-      priceId: import.meta.env.VITE_STRIPE_WHITE_LABEL_PRICE_ID,
+      priceId:
+        import.meta.env.VITE_STRIPE_PARTNERTECH_PRICE_ID || "price_partnertech",
+      tier: "partnertech",
       features: [
-        "Everything in Unlimited",
-        "White-label solution",
-        "Custom branding",
-        "Dedicated support team",
-        "Enterprise SLA",
+        "Everything in Pro Suite",
+        "Full CRM access",
+        "GHL iframe integration",
+        "Admin Mode chat",
+        "Pipeline management",
+        "Client status tracking",
+        "Dedicated support",
       ],
-    },
-    {
-      id: "custom",
-      name: "Custom Enterprise",
-      price: 1500,
-      priceId: import.meta.env.VITE_STRIPE_CUSTOM_PRICE_ID,
-      features: [
-        "Everything in White Label",
-        "Custom development",
-        "On-premise deployment",
-        "Dedicated infrastructure",
-        "Custom contract terms",
-      ],
+      description: "Complete business solution",
     },
   ];
 };
