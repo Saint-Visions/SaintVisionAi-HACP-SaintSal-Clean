@@ -748,7 +748,7 @@ const FallbackHomepage = () => {
                 </span>{" "}
                 •{" "}
                 <span className="neon-green font-semibold">
-                  Zero-trust architecture
+                  Elite Security Architecture
                 </span>
               </p>
             </div>
