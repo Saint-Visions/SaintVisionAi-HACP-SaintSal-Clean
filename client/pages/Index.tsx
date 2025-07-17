@@ -449,6 +449,117 @@ const FallbackHomepage = () => {
         </div>
       </section>
 
+      {/* Faith-Aligned Vault Section */}
+      <section
+        className="py-24 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Faith-Aligned Vault Card */}
+            <div className="p-8 rounded-2xl bg-white/3 backdrop-blur-sm border border-white/8">
+              <div className="mb-6">
+                <Lock className="w-12 h-12 text-neon-green mb-4" />
+                <h3
+                  className="text-2xl text-white mb-4"
+                  style={{ fontFamily: "DM Serif Display, serif" }}
+                >
+                  Faith-Aligned Vault
+                </h3>
+                <p className="text-white/70 mb-6">
+                  <span className="neon-green font-semibold">
+                    Secure. Private. Moral.
+                  </span>{" "}
+                  Your conversations, billing data, and personal information
+                  protected by enterprise-grade encryption with values-first
+                  architecture.
+                </p>
+              </div>
+
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-neon-green flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-white/80">End-to-end encryption</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-neon-green flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-white/80">Secure Stripe billing</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-neon-green flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-white/80">
+                    Role-based authentication
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-neon-green flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <span className="text-white/80">
+                    Faith-centered data policies
+                  </span>
+                </div>
+              </div>
+
+              <Button className="w-full bg-white/10 text-white border border-white/20 hover:bg-white/20">
+                Learn About Security
+              </Button>
+            </div>
+
+            {/* Protected Data Vault Card */}
+            <div className="p-8 rounded-2xl bg-white/3 backdrop-blur-sm border border-neon-green/30">
+              <div className="text-center mb-8">
+                <Lock className="w-16 h-16 mx-auto mb-4 text-neon-green" />
+                <h3
+                  className="text-2xl text-white"
+                  style={{ fontFamily: "DM Serif Display, serif" }}
+                >
+                  Protected Data Vault
+                </h3>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Encryption Status</span>
+                  <span className="neon-green font-semibold">
+                    AES-256 Active
+                  </span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Data Location</span>
+                  <span className="text-white/90">Private Cloud</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Access Control</span>
+                  <span className="neon-blue font-semibold">Role-Based</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-white/70">Ethics Compliance</span>
+                  <span className="neon-green font-semibold">
+                    Faith-Aligned
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer - Clean & Professional */}
       <footer
         className="py-16 px-6 relative overflow-hidden"
