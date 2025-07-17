@@ -11,7 +11,7 @@ export default function PartnerTech() {
         className="absolute inset-0 parallax"
         style={{
           backgroundImage:
-            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fe0bfd59dd0ee47e5859b1510493a0cfd?format=webp&width=1920)",
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2f82241debb2428ea9cf41e453743ff2)",
           backgroundSize: "120%",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
