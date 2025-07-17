@@ -207,7 +207,7 @@ const FallbackHomepage = () => {
       </section>
 
       {/* Enterprise Intelligence - Clean Section */}
-      <section className="py-24 px-6 bg-[#10161C] relative overflow-hidden">
+      <section className="py-24 px-6 bg-[#10161C]/20 relative overflow-hidden">
         {/* Subtle Circuit Overlay */}
         <div
           className="absolute opacity-5"
