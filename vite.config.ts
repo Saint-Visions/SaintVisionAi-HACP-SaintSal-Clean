@@ -9,6 +9,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "."),
     },
   },
+  define: {
+    global: "globalThis",
+  },
   build: {
     outDir: "dist/spa",
   },
