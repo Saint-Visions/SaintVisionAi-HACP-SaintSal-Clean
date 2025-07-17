@@ -1,5 +1,11 @@
 import { Request, Response } from "express";
 import Stripe from "stripe";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  process.env.VITE_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!,
+);
 
 let stripe: Stripe;
 
@@ -25,8 +31,8 @@ export const createCheckoutSession = async (req: Request, res: Response) => {
         },
       ],
       mode: "subscription",
-      success_url: `${process.env.VITE_APP_URL}/upgrade/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.VITE_APP_URL}/upgrade/cancelled`,
+      success_url: `${process.env.VITE_APP_URL || "http://localhost:8080"}/checkout-success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.VITE_APP_URL || "http://localhost:8080"}/upgrade`,
       customer_email: email,
       metadata: {
         userId: userId,
@@ -58,12 +64,15 @@ export const handleWebhook = async (req: Request, res: Response) => {
   // Handle the event
   switch (event.type) {
     case "checkout.session.completed":
-      console.log("Payment successful:", event.data.object);
-      // Update user subscription in Supabase
+      await handleCheckoutSessionCompleted(
+        event.data.object as Stripe.Checkout.Session,
+      );
       break;
     case "customer.subscription.deleted":
-      console.log("Subscription cancelled:", event.data.object);
-      // Handle subscription cancellation
+      await handleSubscriptionDeleted(event.data.object as Stripe.Subscription);
+      break;
+    case "customer.subscription.updated":
+      await handleSubscriptionUpdated(event.data.object as Stripe.Subscription);
       break;
     default:
       console.log(`Unhandled event type ${event.type}`);
