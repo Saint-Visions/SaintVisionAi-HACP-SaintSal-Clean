@@ -33,7 +33,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => (
   <AuthProvider>
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Index />} />
