@@ -11,16 +11,16 @@ const FallbackHomepage = () => {
     <div className="relative">
       {/* Header - OpenAI Style Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/80 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between min-h-[110px]">
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/46ab1422c157e614ab6683e4bc30e5ce36870ec4?width=3072"
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F4f08aaff66374bf3bd72e740c34ecf44"
               alt="SaintVisionAI™"
-              className="w-8 h-8 opacity-80 filter brightness-110"
+              className="w-[52px] h-[52px] opacity-80 filter brightness-110"
             />
             <span
-              className="text-xl font-medium text-white"
+              className="text-[34px] font-medium text-white"
               style={{ fontFamily: "DM Serif Display, serif" }}
             >
               SaintVisionAI™
@@ -128,9 +128,9 @@ const FallbackHomepage = () => {
           {/* Logo */}
           <div className="mb-8">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F03153bd5b4c343c08a8337ee7aa5dbc0?format=webp&width=800"
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F547ecdbc578840e9a4885d464b48018b"
               alt="SaintSal™"
-              className="w-20 h-20 mx-auto mb-6 animate-pulse filter drop-shadow-2xl opacity-70 brightness-125"
+              className="w-[180px] h-[180px] mx-auto mb-6 animate-pulse filter drop-shadow-2xl opacity-70 brightness-125"
               style={{
                 filter:
                   "drop-shadow(0 0 20px rgba(250, 204, 21, 0.3)) brightness(1.25)",
@@ -206,11 +206,14 @@ const FallbackHomepage = () => {
       <section className="py-24 px-6 bg-[#10161C] relative overflow-hidden">
         {/* Subtle Circuit Overlay */}
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute opacity-5"
           style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg, transparent, transparent 1px, #FACC15 1px, #FACC15 2px), repeating-linear-gradient(90deg, transparent, transparent 1px, #FACC15 1px, #FACC15 2px)",
+            left: "-1095px",
+            top: "-376px",
+            right: "0px",
+            bottom: "0px",
             backgroundSize: "50px 50px",
+            boxShadow: "1px 1px 3px 0 rgba(255, 255, 255, 1)",
           }}
         />
 
