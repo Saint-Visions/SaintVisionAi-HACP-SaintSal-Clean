@@ -1,43 +1,22 @@
-// SAINTSAL™ Builder.io Component Registry
-import { Builder } from "@builder.io/react";
+import { Builder, BuilderComponent } from '@builder.io/react';
+import { useEffect } from 'react';
 
-// Import all your dynamic components
-import Hero from "./Hero";
-import ProductCard from "./ProductCard";
-import TestimonialCard from "./TestimonialCard";
-import FeatureGrid from "./FeatureGrid";
-import PricingSection from "./PricingSection";
-import AIChat from "./AIChat";
+// Initialize Builder
+Builder.init('065997bd13e4442e888a08652fcd61ba');
 
-// Register all components with Builder.io
-export const registerBuilderComponents = () => {
-  // Components are already registered in their respective files:
-  // - Hero (SAINTSAL Hero Section)
-  // - ProductCard (SAINTSAL Product Card)
-  // - TestimonialCard (SAINTSAL Testimonial Card)
-  // - FeatureGrid (SAINTSAL Feature Grid)
-  // - PricingSection (SAINTSAL Pricing Section)
-  // - AIChat (SAINTSAL AI Chat)
+// Register custom components (add your custom components here)
+Builder.registerComponent({
+  name: 'SaintVisionHero',
+  inputs: [
+    { name: 'title', type: 'string', defaultValue: 'Welcome to SaintVision' },
+    { name: 'subtitle', type: 'string', defaultValue: 'Divine AI Technology' },
+    { name: 'backgroundImage', type: 'file', allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg'] }
+  ]
+}, (props) => (
+  <div className="hero-section" style={{ backgroundImage: `url(${props.backgroundImage})` }}>
+    <h1>{props.title}</h1>
+    <p>{props.subtitle}</p>
+  </div>
+));
 
-  console.log("🏛️ SAINTSAL™ Builder.io components registered successfully!");
-  console.log("🔥 Available components:");
-  console.log("  - SAINTSAL Hero Section (parallax backgrounds)");
-  console.log("  - SAINTSAL Product Card (pricing & features)");
-  console.log("  - SAINTSAL Testimonial Card (customer reviews)");
-  console.log("  - SAINTSAL Feature Grid (features showcase)");
-  console.log("  - SAINTSAL Pricing Section (complete pricing layout)");
-  console.log("  - SAINTSAL AI Chat (GPT-4 powered war room chat)");
-};
-
-// Export all components for use
-export {
-  Hero,
-  ProductCard,
-  TestimonialCard,
-  FeatureGrid,
-  PricingSection,
-  AIChat,
-};
-
-// Auto-register when imported
-registerBuilderComponents();
+export { Builder, BuilderComponent };
