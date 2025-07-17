@@ -4,9 +4,9 @@
   "type": "module",
   "version": "2.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "vitest --run",
     "typecheck": "tsc --noEmit",
     "deploy": "vercel --prod --yes",
