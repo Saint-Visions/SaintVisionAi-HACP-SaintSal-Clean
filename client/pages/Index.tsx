@@ -223,19 +223,21 @@ const FallbackHomepage = () => {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            {/* Elite Technology Header */}
+            {/* What Separates Us Header */}
             <div className="mb-4">
-              <span
-                className="text-sm font-semibold tracking-[0.2em] uppercase"
-                style={{
-                  fontFamily:
-                    "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
-                  color: "#FACC15",
-                  letterSpacing: "0.2em",
-                }}
-              >
-                ELITE TECHNOLOGY
-              </span>
+              <Link to="/why">
+                <span
+                  className="text-sm font-semibold tracking-[0.2em] uppercase hover:opacity-80 transition-opacity cursor-pointer"
+                  style={{
+                    fontFamily:
+                      "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+                    color: "#FACC15",
+                    letterSpacing: "0.2em",
+                  }}
+                >
+                  WHAT SEPARATES US
+                </span>
+              </Link>
             </div>
 
             <h2
