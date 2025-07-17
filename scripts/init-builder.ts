@@ -1,62 +1,123 @@
 #!/usr/bin/env tsx
-// SAINTSAL™ Builder.io Initialization Script
-// Run with: npx tsx scripts/init-builder.ts
 
-import { saintsalLayouts } from "../client/lib/builder-layouts";
-import { builderAutomation } from "../client/lib/builder-api";
+import { writeFileSync, mkdirSync, existsSync } from "fs";
+import { join } from "path";
 
-async function initializeSaintsalBuilder() {
-  console.log("🏛️ Initializing SAINTSAL™ Builder.io Integration...");
-  console.log("🔥 Build #46 - THE PERFECT ONE!");
-  console.log("");
+const BUILDER_API_KEY = "065997bd13e4442e888a08652fcd61ba";
 
-  try {
-    // Step 1: Sync environment variables
-    console.log("Step 1: Syncing environment variables...");
-    await saintsalLayouts.syncEnvironment();
-    console.log("✅ Environment synced");
-    console.log("");
+console.log("🚀 Initializing Builder.io setup...");
 
-    // Step 2: Sync brand assets
-    console.log("Step 2: Syncing SAINTSAL™ brand assets...");
-    await builderAutomation.syncAssets();
-    console.log("✅ Assets synced");
-    console.log("");
+// Create builder directories
+const builderDirs = [
+  "client/pages/builder",
+  "client/components/builder/sections",
+  "client/components/builder/headers",
+  "client/components/builder/footers",
+  "client/components/builder/heroes",
+  "client/components/builder/testimonials",
+  "client/components/builder/pricing",
+  "client/components/builder/ctas",
+];
 
-    // Step 3: Create all route layouts
-    console.log("Step 3: Creating all route layouts...");
-    await saintsalLayouts.createAllLayouts();
-    console.log("✅ All layouts created");
-    console.log("");
-
-    // Step 4: Verify components are registered
-    console.log("Step 4: Verifying component registration...");
-    console.log("🔥 SAINTSAL™ Builder.io components available:");
-    console.log("  - SAINTSAL Hero Section (parallax backgrounds)");
-    console.log("  - SAINTSAL Product Card (pricing & features)");
-    console.log("  - SAINTSAL Testimonial Card (customer reviews)");
-    console.log("  - SAINTSAL Feature Grid (features showcase)");
-    console.log("  - SAINTSAL Pricing Section (complete pricing layout)");
-    console.log("  - SAINTSAL AI Chat (GPT-4 powered war room chat)");
-    console.log("✅ All components registered");
-    console.log("");
-
-    console.log("🎉 SAINTSAL™ Builder.io Integration Complete!");
-    console.log("🔥 Your divine platform is ready for content creation!");
-    console.log("");
-    console.log("Next steps:");
-    console.log("1. Run: npx @builder.io/cli sync --push");
-    console.log("2. Visit: https://builder.io/content");
-    console.log("3. Start creating divine content!");
-  } catch (error) {
-    console.error("❌ Initialization failed:", error);
-    process.exit(1);
+builderDirs.forEach((dir) => {
+  if (!existsSync(dir)) {
+    mkdirSync(dir, { recursive: true });
+    console.log(`✅ Created directory: ${dir}`);
   }
+});
+
+// Create builder types
+const builderTypes = `// Builder.io Types
+export interface BuilderPage {
+  id: string;
+  name: string;
+  data: {
+    title?: string;
+    description?: string;
+    [key: string]: any;
+  };
 }
 
-// Run if called directly
-if (require.main === module) {
-  initializeSaintsalBuilder();
+export interface BuilderSection {
+  id: string;
+  name: string;
+  data: {
+    [key: string]: any;
+  };
 }
 
-export default initializeSaintsalBuilder;
+export interface BuilderComponent {
+  '@type': string;
+  component: {
+    name: string;
+    options: Record<string, any>;
+  };
+  children?: BuilderComponent[];
+}
+`;
+
+writeFileSync("client/types/builder.ts", builderTypes);
+
+// Create builder context
+const builderContext = `import { createContext, useContext, ReactNode } from 'react';
+
+interface BuilderContextType {
+  apiKey: string;
+  model: string;
+}
+
+const BuilderContext = createContext<BuilderContextType>({
+  apiKey: '${BUILDER_API_KEY}',
+  model: 'page'
+});
+
+export const useBuilder = () => useContext(BuilderContext);
+
+export const BuilderProvider = ({ children }: { children: ReactNode }) => {
+  return (
+    <BuilderContext.Provider value={{ apiKey: '${BUILDER_API_KEY}', model: 'page' }}>
+      {children}
+    </BuilderContext.Provider>
+  );
+};
+`;
+
+// Create types directory if it doesn't exist
+if (!existsSync("client/types")) {
+  mkdirSync("client/types", { recursive: true });
+}
+
+writeFileSync("client/contexts/BuilderContext.tsx", builderContext);
+
+// Create builder component wrapper
+const builderWrapper = `import { Builder, BuilderComponent } from '@builder.io/react';
+import { useEffect } from 'react';
+
+// Initialize Builder
+Builder.init('${BUILDER_API_KEY}');
+
+// Register custom components (add your custom components here)
+Builder.registerComponent({
+  name: 'SaintVisionHero',
+  inputs: [
+    { name: 'title', type: 'string', defaultValue: 'Welcome to SaintVision' },
+    { name: 'subtitle', type: 'string', defaultValue: 'Divine AI Technology' },
+    { name: 'backgroundImage', type: 'file', allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg'] }
+  ]
+}, (props) => (
+  <div className="hero-section" style={{ backgroundImage: \`url(\${props.backgroundImage})\` }}>
+    <h1>{props.title}</h1>
+    <p>{props.subtitle}</p>
+  </div>
+));
+
+export { Builder, BuilderComponent };
+`;
+
+writeFileSync("client/components/builder/index.ts", builderWrapper);
+
+console.log("✅ Builder.io initialization complete!");
+console.log("📝 Next steps:");
+console.log("   1. Run: npm run builder:sync");
+console.log("   2. Check client/pages/builder/ for synced pages");
+console.log("   3. Import and use Builder components in your app");
