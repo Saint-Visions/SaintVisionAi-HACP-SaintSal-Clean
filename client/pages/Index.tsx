@@ -209,7 +209,7 @@ const FallbackHomepage = () => {
 
       {/* What We Actually Do For You */}
       <section
-        className="py-20 px-6 relative overflow-hidden"
+        className="py-16 px-6 relative overflow-hidden"
         style={{
           backgroundImage:
             "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
@@ -221,97 +221,92 @@ const FallbackHomepage = () => {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/70 to-black/80" />
 
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Content Side */}
-            <div>
-              <h2
-                className="text-3xl lg:text-4xl mb-6 text-white leading-tight"
-                style={{ fontFamily: "DM Serif Display, serif" }}
-              >
-                Your Growth Partner.
-                <br />
-                Business. Life. Everything.
-              </h2>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2
+              className="text-4xl md:text-5xl mb-4 text-white"
+              style={{ fontFamily: "DM Serif Display, serif" }}
+            >
+              Professional Business Intelligence
+            </h2>
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">
+              <span className="text-[#FACC15] font-semibold">
+                Dual AI systems
+              </span>{" "}
+              handle your business operations while you focus on growth.
+            </p>
+          </div>
 
-              <p className="text-lg text-white/85 mb-8 leading-relaxed">
-                We built something different. Two AI systems work together—one
-                handles your questions instantly, the other learns how you work
-                and takes action. Think of it as having your smartest advisor
-                available 24/7, helping you grow your business, streamline your
-                life, and achieve more in every area that matters.
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Business Strategy */}
+            <div className="group p-6 rounded-xl bg-white/3 backdrop-blur-sm border border-white/8 hover:border-[#FACC15]/30 transition-all duration-300">
+              <Brain className="w-10 h-10 text-[#FACC15] mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg text-white mb-3 font-semibold">
+                Business Strategy
+              </h3>
+              <p className="text-white/70 text-sm">
+                Market analysis, competitive research, and strategic planning
+                powered by dual AI engines.
               </p>
+            </div>
 
-              <div className="space-y-5 mb-8">
-                <div className="bg-white/5 p-4 rounded-lg border-l-4 border-[#FACC15]">
-                  <h4 className="text-white font-semibold mb-2">
-                    Smart Answers + Real Action
-                  </h4>
-                  <p className="text-white/80 text-sm">
-                    Ask about business strategy, life planning, or daily
-                    tasks—get answers that actually help you move forward and
-                    take action on what matters.
-                  </p>
-                </div>
-                <div className="bg-white/5 p-4 rounded-lg border-l-4 border-neon-blue">
-                  <h4 className="text-white font-semibold mb-2">
-                    Your Everything Assistant
-                  </h4>
-                  <p className="text-white/80 text-sm">
-                    Manages your business CRM, tracks personal goals, organizes
-                    your life—all while learning your preferences and working
-                    style.
-                  </p>
-                </div>
-                <div className="bg-white/5 p-4 rounded-lg border-l-4 border-neon-green">
-                  <h4 className="text-white font-semibold mb-2">
-                    Evolves With Your Growth
-                  </h4>
-                  <p className="text-white/80 text-sm">
-                    Adapts as your business scales, life changes, and goals
-                    evolve. Gets smarter about helping you succeed in whatever
-                    direction you're heading.
-                  </p>
-                </div>
-              </div>
+            {/* CRM Automation */}
+            <div className="group p-6 rounded-xl bg-white/3 backdrop-blur-sm border border-white/8 hover:border-neon-blue/30 transition-all duration-300">
+              <Chrome className="w-10 h-10 text-neon-blue mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg text-white mb-3 font-semibold">
+                CRM Integration
+              </h3>
+              <p className="text-white/70 text-sm">
+                Seamless contact management, automated follow-ups, and
+                intelligent lead scoring.
+              </p>
+            </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link to="/console">
-                  <Button className="bg-[#FACC15] text-black hover:bg-[#FACC15]/90 px-6 py-3 font-semibold rounded-lg transition-all duration-300">
-                    Try It Now - Free
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </Link>
-                <Link to="/setup">
-                  <Button
-                    variant="outline"
-                    className="border-white/30 text-white hover:bg-white/10 px-6 py-3 rounded-lg"
-                  >
-                    See How It Works
-                  </Button>
-                </Link>
+            {/* Growth Analytics */}
+            <div className="group p-6 rounded-xl bg-white/3 backdrop-blur-sm border border-white/8 hover:border-neon-green/30 transition-all duration-300">
+              <Lock className="w-10 h-10 text-neon-green mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="text-lg text-white mb-3 font-semibold">
+                Growth Analytics
+              </h3>
+              <p className="text-white/70 text-sm">
+                Real-time performance tracking with actionable insights for
+                scaling your business.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="inline-flex items-center gap-4 mb-8">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fb31ee17794d644cab9a0c38caea40039?format=webp&width=800"
+                alt="Professional Business Platform"
+                className="h-12 w-auto"
+              />
+              <div className="text-left">
+                <p className="text-[#FACC15] font-semibold text-sm">
+                  ENTERPRISE READY
+                </p>
+                <p className="text-white/80 text-xs">
+                  Trusted by 10,000+ professionals
+                </p>
               </div>
             </div>
 
-            {/* Image Side */}
-            <div className="text-center">
-              <div className="relative">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F72757335a8ec4593a5ee822970a6fc90?format=webp&width=800"
-                  alt="SaintSal + You Partnership"
-                  className="w-full max-w-lg mx-auto"
-                />
-                <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-[#FACC15] text-black px-3 py-1 rounded-full text-sm font-medium shadow-lg">
-                  Join 10,000+ Users
-                </div>
-              </div>
-
-              <div className="mt-6 text-center">
-                <p className="text-white/60 text-sm italic">
-                  "Finally, AI that actually helps my business instead of just
-                  answering questions."
-                </p>
-              </div>
+            <div className="flex justify-center gap-4">
+              <Link to="/console">
+                <Button className="bg-[#FACC15] text-black hover:bg-[#FACC15]/90 px-8 py-3 font-semibold rounded-lg">
+                  Start Free Trial
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+              <Link to="/pricing">
+                <Button
+                  variant="outline"
+                  className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-lg"
+                >
+                  View Plans
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
