@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Zap, Shield } from "lucide-react";
 
-// Divine Homepage - Exact Layout as Uploaded Images
+// Divine Homepage - Exact Layout Flow with One Parallax Background
 const FallbackHomepage = () => (
   <div
     className="min-h-screen relative"
@@ -22,14 +22,14 @@ const FallbackHomepage = () => (
     <div className="absolute inset-0 bg-gradient-to-br from-charcoal/80 via-charcoal/85 to-charcoal/90 z-0" />
 
     <div className="relative z-10">
-      {/* Hero Section - Exact Layout */}
+      {/* Section One - Exact Layout from First Image */}
       <section className="min-h-screen flex flex-col items-center justify-center px-8 text-center">
         {/* Main Logo */}
         <div className="mb-8">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc6e9413e4af34aafb51cff944ec2836b?format=webp&width=800"
+            src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F4bafe18e513045228cec488725e6bd5e?format=webp&width=800"
             alt="SaintSal™ Divine Logo"
-            className="w-24 h-24 mx-auto mb-6 saintsal-brain"
+            className="w-32 h-32 mx-auto mb-6 saintsal-brain"
           />
         </div>
 
@@ -75,124 +75,160 @@ const FallbackHomepage = () => (
         </p>
       </section>
 
-      {/* Features Section - Divine Layout */}
-      <section
-        className="py-20 px-8"
-        style={{
-          backgroundImage:
-            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-          backdropFilter: "blur(40px) saturate(1.5)",
-          borderTop: "1px solid rgba(250, 204, 21, 0.15)",
-          boxShadow:
-            "rgba(0, 0, 0, 0.6) 0px 20px 60px 0px, rgba(250, 204, 21, 0.1) 0px 1px 0px 0px inset, rgba(250, 204, 21, 0.05) 0px 0px 40px 0px",
-        }}
-      >
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2
-              className="text-4xl md:text-5xl mb-4 prestige-text"
-              style={{ fontFamily: "DM Serif Display, serif" }}
-            >
-              Enterprise AI, Simplified
-            </h2>
-            <p className="text-xl text-white/60 font-light">
-              From free trial to full enterprise - scale at your own pace
-            </p>
-          </div>
+      {/* Section Two - Following Layout from Second Image */}
+      <section className="py-20 px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Febbdf8d3645e4aac938a960a58c198dc?format=webp&width=800"
+            alt="Divine Features Overview"
+            className="w-full h-auto max-w-4xl mx-auto mb-16 rounded-xl divine-card"
+          />
 
-          {/* Features Grid - Divine Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {/* Dual AI Console */}
-            <div className="divine-card p-8 text-center group hover:scale-105 transition-all duration-300">
+          <h2
+            className="text-4xl md:text-5xl mb-6 prestige-text"
+            style={{ fontFamily: "DM Serif Display, serif" }}
+          >
+            Enterprise AI, Simplified
+          </h2>
+          <p className="text-xl text-white/60 font-light max-w-3xl mx-auto">
+            From free trial to full enterprise - scale at your own pace
+          </p>
+        </div>
+      </section>
+
+      {/* Section Three - Layout from Third & Fourth Images */}
+      <section className="py-20 px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+            {/* Left Feature */}
+            <div className="text-center">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F3ab89839852645d6ab1cdf0da7eecfff?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F1a91dbc02b744270bc0cfbe5229a2d82?format=webp&width=800"
                 alt="Dual AI Console"
-                className="w-16 h-16 mx-auto mb-4 group-hover:animate-pulse"
+                className="w-full h-auto rounded-xl divine-card mb-6"
               />
               <h3
-                className="text-xl font-medium text-white mb-4 prestige-text"
+                className="text-2xl font-medium text-white mb-4 prestige-text"
                 style={{ fontFamily: "DM Serif Display, serif" }}
               >
                 Dual AI Console
               </h3>
-              <p className="text-white/60 mb-6 font-light">
+              <p className="text-white/60 font-light">
                 GPT-4o + Azure working in perfect synchronization
               </p>
-              <Link to="/console">
-                <Button className="saintsal-glow">Try Console</Button>
-              </Link>
             </div>
 
-            {/* PartnerTech CRM */}
-            <div className="divine-card p-8 text-center group hover:scale-105 transition-all duration-300">
+            {/* Right Feature */}
+            <div className="text-center">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fe1c5b6cf06784f88acdddbf544f4ec6c?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fd1fc5649c7e145e299ac0589b7782313?format=webp&width=800"
                 alt="PartnerTech CRM"
-                className="w-16 h-16 mx-auto mb-4 group-hover:animate-pulse"
+                className="w-full h-auto rounded-xl divine-card mb-6"
               />
               <h3
-                className="text-xl font-medium text-white mb-4 prestige-text"
+                className="text-2xl font-medium text-white mb-4 prestige-text"
                 style={{ fontFamily: "DM Serif Display, serif" }}
               >
                 PartnerTech CRM
               </h3>
-              <p className="text-white/60 mb-6 font-light">
+              <p className="text-white/60 font-light">
                 Chrome extension + enterprise automation
               </p>
-              <Link to="/partnertech">
-                <Button className="saintsal-glow">Learn More</Button>
-              </Link>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Divine Security */}
-            <div className="divine-card p-8 text-center group hover:scale-105 transition-all duration-300">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fbbcfca5c6e9a45a08c61cc95c1b41330?format=webp&width=800"
-                alt="Divine Security"
-                className="w-16 h-16 mx-auto mb-4 group-hover:animate-pulse"
-              />
-              <h3
-                className="text-xl font-medium text-white mb-4 prestige-text"
-                style={{ fontFamily: "DM Serif Display, serif" }}
-              >
-                Divine Security
-              </h3>
-              <p className="text-white/60 mb-6 font-light">
-                Enterprise-grade protection with moral excellence
-              </p>
-              <Link to="/privacy">
-                <Button className="saintsal-glow">Security Details</Button>
-              </Link>
+      {/* Section Four - Layout from Fifth Image */}
+      <section className="py-20 px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F46222c772c0d40b6930aeca8f8b1b0c6?format=webp&width=800"
+            alt="Divine Security Features"
+            className="w-full h-auto max-w-4xl mx-auto mb-12 rounded-xl divine-card"
+          />
+
+          <h2
+            className="text-3xl md:text-4xl mb-6 prestige-text"
+            style={{ fontFamily: "DM Serif Display, serif" }}
+          >
+            Faith-Aligned Vault
+          </h2>
+          <p className="text-lg text-white/60 font-light max-w-3xl mx-auto mb-8">
+            Secure. Private. Moral. Your conversations, billing data, and
+            personal information protected by enterprise-grade encryption with
+            values-first architecture.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto text-left">
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-white/70">End-to-end encryption</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-white/70">Secure Stripe billing</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-white/70">Role-based authentication</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-white/70">
+                Faith-centered data policies
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Five - Final Layout from Sixth Image */}
+      <section className="py-20 px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fce460512dd614adfa8d4cbd0bca37934?format=webp&width=800"
+            alt="Protected Data Vault"
+            className="w-full h-auto max-w-4xl mx-auto mb-12 rounded-xl divine-card"
+          />
+
+          <h2
+            className="text-3xl md:text-4xl mb-6 prestige-text"
+            style={{ fontFamily: "DM Serif Display, serif" }}
+          >
+            Protected Data Vault
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="text-left space-y-4">
+              <div className="flex justify-between">
+                <span className="text-white/70">Encryption Status</span>
+                <span className="text-primary font-medium">AES-256 Active</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-white/70">Data Location</span>
+                <span className="text-white/90">Private Cloud</span>
+              </div>
+            </div>
+            <div className="text-left space-y-4">
+              <div className="flex justify-between">
+                <span className="text-white/70">Access Control</span>
+                <span className="text-white/90">Role-Based</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-white/70">Ethics Compliance</span>
+                <span className="text-primary font-medium">Faith-Aligned</span>
+              </div>
             </div>
           </div>
 
-          {/* Bottom Featured Images */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center opacity-60">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F18e7bfbd72bd4d909bbbdda9451d2670?format=webp&width=800"
-              alt="Feature 1"
-              className="w-full h-auto rounded-lg"
-            />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F18efc59e983c483da056e945425df093?format=webp&width=800"
-              alt="Feature 2"
-              className="w-full h-auto rounded-lg"
-            />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Feedda806f4414105bf3959310fa35804?format=webp&width=800"
-              alt="Feature 3"
-              className="w-full h-auto rounded-lg"
-            />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F0fd1dba64d964e05bc8c9bdc1a6e157f?format=webp&width=800"
-              alt="Feature 4"
-              className="w-full h-auto rounded-lg"
-            />
+          {/* Final CTA */}
+          <div className="mt-16">
+            <Link to="/signup">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4 text-xl font-medium rounded-2xl saintsal-glow">
+                Experience Divine AI
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
