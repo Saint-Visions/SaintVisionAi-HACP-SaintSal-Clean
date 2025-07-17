@@ -36,7 +36,7 @@ const App = () => {
   if (typeof window !== "undefined") {
     window.history.replaceState(null, "", window.location.pathname);
     // Clear any base tag that might be interfering
-    const baseTags = document.getElementsByTagName('base');
+    const baseTags = document.getElementsByTagName("base");
     for (let i = 0; i < baseTags.length; i++) {
       baseTags[i].remove();
     }
@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <AuthProvider>
-      <BrowserRouter basename=""}
+      <BrowserRouter basename="">
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Index />} />
