@@ -50,6 +50,64 @@
     --gold-shimmer: 46 100% 70%; /* Enhanced shimmer */
 
     /* Divine color extensions */
+  }
+
+  /* Apple-level Typography System */
+  .font-sf-pro {
+    font-family:
+      ui-sans-serif,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      "Noto Sans",
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji";
+  }
+
+  .font-avenir {
+    font-family:
+      "Avenir Next",
+      ui-sans-serif,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+  }
+
+  /* Divine prestige text styles */
+  .prestige-title {
+    font-family:
+      ui-sans-serif,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+  .apple-text {
+    font-family:
+      ui-sans-serif,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
     --color-gold: 46 100% 53%; /* rgb(250, 204, 21) */
     --color-charcoal: 210 15% 11%; /* #10161C */
     --color-warm-white: 39 20% 95%; /* #F6F5F4 */
