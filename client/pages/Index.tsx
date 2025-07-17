@@ -17,7 +17,22 @@ const FallbackHomepage = () => (
     />
 
     {/* Features Preview - Divine Prestige */}
-    <section className="py-20 px-8 openai-premium">
+    <section
+      className="py-20 px-8"
+      style={{
+        backgroundImage:
+          "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backdropFilter: "blur(40px) saturate(1.5)",
+        borderColor: "rgba(250, 204, 21, 0.15)",
+        borderWidth: "1px",
+        boxShadow:
+          "rgba(0, 0, 0, 0.6) 0px 20px 60px 0px, rgba(250, 204, 21, 0.1) 0px 1px 0px 0px inset, rgba(250, 204, 21, 0.05) 0px 0px 40px 0px",
+      }}
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-serif text-foreground mb-4 prestige-text">
