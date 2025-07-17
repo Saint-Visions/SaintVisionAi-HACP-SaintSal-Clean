@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export default function Why() {
+  const navigate = useNavigate();
+
   return (
     <div
       className="min-h-screen relative"
@@ -28,7 +30,7 @@ export default function Why() {
             Where Divine Execution Meets Real-World Results.
           </p>
           <Button
-            onClick={() => (window.location.href = "/signup")}
+            onClick={() => navigate("/signup")}
             className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-8 md:px-12 py-4 md:py-6 rounded-2xl text-lg md:text-xl shadow-2xl shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
           >
             I'm Ready to Use Real AI
