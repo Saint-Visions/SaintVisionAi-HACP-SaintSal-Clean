@@ -50,6 +50,61 @@
     --gold-shimmer: 46 100% 70%; /* Enhanced shimmer */
 
     /* Divine color extensions */
+    --neon-blue: 199 89% 48%; /* Electric blue for premium features */
+    --neon-purple: 270 89% 65%; /* Vibrant purple for enterprise */
+    --neon-green: 134 89% 55%; /* Success green for status */
+    --neon-cyan: 180 89% 60%; /* Cyan for processing states */
+    --neon-pink: 320 89% 65%; /* Pink for special offers */
+  }
+
+  /* Neon Accent System */
+  .neon-blue {
+    color: hsl(var(--neon-blue));
+  }
+
+  .neon-purple {
+    color: hsl(var(--neon-purple));
+  }
+
+  .neon-green {
+    color: hsl(var(--neon-green));
+  }
+
+  .bg-neon-blue {
+    background-color: hsl(var(--neon-blue));
+  }
+
+  .bg-neon-purple {
+    background-color: hsl(var(--neon-purple));
+  }
+
+  .bg-neon-green {
+    background-color: hsl(var(--neon-green));
+  }
+
+  .border-neon-blue {
+    border-color: hsl(var(--neon-blue));
+  }
+
+  .border-neon-purple {
+    border-color: hsl(var(--neon-purple));
+  }
+
+  .border-neon-green {
+    border-color: hsl(var(--neon-green));
+  }
+
+  /* Neon glow effects */
+  .neon-glow-blue {
+    box-shadow: 0 0 20px hsla(var(--neon-blue), 0.3);
+  }
+
+  .neon-glow-purple {
+    box-shadow: 0 0 20px hsla(var(--neon-purple), 0.3);
+  }
+
+  .neon-glow-green {
+    box-shadow: 0 0 20px hsla(var(--neon-green), 0.3);
   }
 
   /* Apple-level Typography System */
