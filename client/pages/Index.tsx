@@ -344,7 +344,7 @@ const FallbackHomepage = () => {
             </div>
 
             <h2
-              className="text-5xl md:text-6xl mb-6 text-white"
+              className="text-5xl md:text-6xl mb-6 text-white font-light"
               style={{ fontFamily: "DM Serif Display, serif" }}
             >
               Enterprise Intelligence
