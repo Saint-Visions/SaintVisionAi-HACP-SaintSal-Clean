@@ -245,31 +245,32 @@ const FallbackHomepage = () => {
               <div className="space-y-5 mb-8">
                 <div className="bg-white/5 p-4 rounded-lg border-l-4 border-[#FACC15]">
                   <h4 className="text-white font-semibold mb-2">
-                    Instant Answers + Smart Actions
+                    Smart Answers + Real Action
                   </h4>
                   <p className="text-white/80 text-sm">
-                    Ask anything about your business, get immediate answers, and
-                    watch it actually help with tasks—from research to CRM
-                    updates.
+                    Ask about business strategy, life planning, or daily
+                    tasks—get answers that actually help you move forward and
+                    take action on what matters.
                   </p>
                 </div>
                 <div className="bg-white/5 p-4 rounded-lg border-l-4 border-neon-blue">
                   <h4 className="text-white font-semibold mb-2">
-                    Your CRM Companion
+                    Your Everything Assistant
                   </h4>
                   <p className="text-white/80 text-sm">
-                    Connects with your existing tools. Updates contacts, tracks
-                    conversations, and helps you stay organized without extra
-                    work.
+                    Manages your business CRM, tracks personal goals, organizes
+                    your life—all while learning your preferences and working
+                    style.
                   </p>
                 </div>
                 <div className="bg-white/5 p-4 rounded-lg border-l-4 border-neon-green">
                   <h4 className="text-white font-semibold mb-2">
-                    Grows With Your Business
+                    Evolves With Your Growth
                   </h4>
                   <p className="text-white/80 text-sm">
-                    Learns how you work, remembers what matters to you, and gets
-                    better at helping over time. Plus, it respects your values.
+                    Adapts as your business scales, life changes, and goals
+                    evolve. Gets smarter about helping you succeed in whatever
+                    direction you're heading.
                   </p>
                 </div>
               </div>
@@ -747,7 +748,7 @@ const FallbackHomepage = () => {
               </span>
             </div>
             <p className="text-white/70 max-w-2xl mx-auto">
-              Azure Cognitive Services • OpenAI GPT-4o • Premium Infrastructure
+              Azure Cognitive Services • OpenAI GPT-4o �� Premium Infrastructure
             </p>
           </div>
         </div>
