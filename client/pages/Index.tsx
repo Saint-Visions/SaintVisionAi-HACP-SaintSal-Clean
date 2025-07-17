@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Brain, Zap, Shield } from "lucide-react";
+import { Brain, Zap, Shield, Lock, Server, CheckCircle } from "lucide-react";
 
 export default function Index() {
   return (
@@ -33,7 +33,7 @@ export default function Index() {
           }}
         />
         <div
-          className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-yellow-400/50 rounded-full animate-pulse"
+          className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-amber-400/50 rounded-full animate-pulse"
           style={{
             boxShadow:
               "0 0 12px rgba(251, 191, 36, 0.3), 0 0 25px rgba(251, 191, 36, 0.1)",
@@ -43,233 +43,329 @@ export default function Index() {
         />
       </div>
 
-      {/* All content flows over the same background */}
       <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="min-h-[80vh] relative p-8 pb-16">
-          {/* Top Left Logo & Title */}
-          <div className="absolute top-8 left-8 z-20 flex items-center space-x-12">
+        {/* Header */}
+        <section className="relative px-8 py-8 min-h-screen">
+          <div className="absolute top-8 left-8 flex items-center z-20">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fbeb96c992e5a49f4bbd354e8386d6153"
               alt="SAINTSAL™ Logo"
-              className="w-20 h-20 md:w-24 md:h-24"
+              className="w-24 h-24"
             />
-            <h1 className="text-yellow-400 text-4xl md:text-5xl font-thin tracking-tight">
+            <h1 className="ml-12 text-5xl font-thin text-amber-400 tracking-tight leading-tight">
               SaintVisionAI™
             </h1>
           </div>
 
-          {/* Centered Content */}
+          {/* Elite Technology Hero */}
           <div className="flex flex-col items-center justify-center min-h-screen text-center">
-            {/* Divine Quote */}
-            <div className="mb-12 max-w-2xl mt-20">
-              <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
-                "SaintSal" AI doesn't just answer.
+            <div className="mb-12 mt-20 max-w-4xl">
+              <p className="text-amber-400 text-lg font-light tracking-wider mb-2">
+                ™ E L I T E T E C H N O L O G Y
               </p>
-              <p className="text-yellow-400 text-2xl md:text-3xl font-light mb-3 tracking-wide">
-                It adapts. It empowers. It becomes your...
+              <h2 className="text-white text-4xl font-light mb-8 leading-relaxed">
+                Enterprise Intelligence
+              </h2>
+              <p className="text-gray-300 text-lg mb-12 leading-relaxed">
+                Professional-grade AI infrastructure with dual-engine
+                redundancy, faith-aligned privacy, and enterprise-scale
+                reliability.
               </p>
-              <p className="text-yellow-400 text-4xl md:text-5xl font-bold tracking-wider">
-                Divine Partner™
-              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Dual AI Console */}
+        <section className="px-8 py-20">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+              <div className="space-y-6">
+                <h3 className="text-amber-400 text-2xl font-light">
+                  Dual AI Console
+                </h3>
+                <p className="text-white text-lg">
+                  GPT-4o + Azure Cognitive Services working in perfect
+                  synchronization.
+                </p>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
+                    Real-time cognition with 24/7 service reliability
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
+                    Zero hallucinations through dual-validation architecture
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
+                    Real-time dual-engine processing
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
+                    99.9% uptime guarantee
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
+                    Enterprise-grade security
+                  </li>
+                </ul>
+                <div className="pt-6">
+                  <Button className="bg-gradient-to-r from-amber-400 to-yellow-300 text-gray-900 font-medium px-8 py-3 rounded-xl">
+                    Try Dual Chat Mode
+                  </Button>
+                </div>
+              </div>
+
+              {/* Console Mockup */}
+              <div className="bg-gray-900/60 backdrop-blur border border-amber-400/20 rounded-2xl p-6">
+                <div className="space-y-4">
+                  <div className="text-amber-400 text-sm font-medium">
+                    SaintVisionAI Console
+                  </div>
+                  <div className="space-y-3">
+                    <div className="bg-blue-900/30 p-3 rounded-lg">
+                      <div className="text-blue-300 text-xs mb-1">
+                        GPT-4o Engine
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        Processing natural language...
+                      </div>
+                    </div>
+                    <div className="bg-purple-900/30 p-3 rounded-lg">
+                      <div className="text-purple-300 text-xs mb-1">
+                        Azure Cognitive
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        Cross-validating response...
+                      </div>
+                    </div>
+                    <div className="bg-green-900/30 p-3 rounded-lg">
+                      <div className="text-green-300 text-xs mb-1">
+                        Unified Output
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        ✓ Verified response ready
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PartnerTech AI */}
+        <section className="px-8 py-20 bg-gray-900/20">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <h3 className="text-amber-400 text-2xl font-light">
+                  PartnerTech AI
+                </h3>
+                <p className="text-gray-300 text-lg">
+                  When you're ready to scale. Advanced CRM integration, Chrome
+                  extension automation, AI-triggered workflows, and intelligent
+                  client routing systems.
+                </p>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
+                    Enterprise CRM integration
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
+                    Chrome extension automation
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
+                    AI workflow triggers
+                  </li>
+                </ul>
+                <Button className="border border-amber-400/50 text-amber-400 bg-transparent hover:bg-amber-400/10 px-8 py-3 rounded-xl">
+                  Unlock Partner Access
+                </Button>
+              </div>
+
+              {/* Faith-Aligned Vault */}
+              <div className="space-y-6">
+                <h3 className="text-amber-400 text-2xl font-light">
+                  Faith-Aligned Vault
+                </h3>
+                <p className="text-gray-300 text-lg">
+                  Secure. Private. Moral. Your conversations, billing data, and
+                  personal information protected by enterprise-grade encryption
+                  with values-first architecture.
+                </p>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center">
+                    <Lock className="w-5 h-5 text-amber-400 mr-3" />
+                    End-to-end encryption
+                  </li>
+                  <li className="flex items-center">
+                    <Shield className="w-5 h-5 text-amber-400 mr-3" />
+                    Secure Stripe billing
+                  </li>
+                  <li className="flex items-center">
+                    <Server className="w-5 h-5 text-amber-400 mr-3" />
+                    Role-based authentication
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
+                    Faith-centered data policies
+                  </li>
+                </ul>
+                <Button className="border border-amber-400/50 text-amber-400 bg-transparent hover:bg-amber-400/10 px-8 py-3 rounded-xl">
+                  Learn About Security
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Movement */}
+        <section className="px-8 py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-amber-400 text-6xl font-thin mb-8 tracking-wider">
+              T H E M O V E M E N T
+            </h2>
+            <h3 className="text-white text-3xl font-light mb-6">
+              Elite AI Sanctuary
+            </h3>
+            <p className="text-gray-300 text-xl mb-12 leading-relaxed">
+              Built for those who refuse to compromise on excellence, privacy,
+              or values. Join thousands who've discovered their GOTTA GUY™.
+            </p>
+
+            {/* Security Status */}
+            <div className="bg-gray-900/40 backdrop-blur border border-amber-400/20 rounded-2xl p-8 mb-12">
+              <h4 className="text-amber-400 text-lg font-medium mb-6">
+                Protected Data Vault
+              </h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+                <div>
+                  <div className="text-gray-400">Encryption Status</div>
+                  <div className="text-green-400 font-medium">
+                    AES-256 Active
+                  </div>
+                </div>
+                <div>
+                  <div className="text-gray-400">Data Location</div>
+                  <div className="text-green-400 font-medium">
+                    Private Cloud
+                  </div>
+                </div>
+                <div>
+                  <div className="text-gray-400">Access Control</div>
+                  <div className="text-green-400 font-medium">Role-Based</div>
+                </div>
+                <div>
+                  <div className="text-gray-400">Ethics Compliance</div>
+                  <div className="text-green-400 font-medium">
+                    Faith-Aligned
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="space-y-4 max-w-md w-full">
+            <div className="space-y-4 max-w-md mx-auto">
               <Link to="/login">
-                <Button
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-yellow-400 to-yellow-300 text-gray-900 hover:from-yellow-300 hover:to-yellow-200 font-medium text-lg py-6"
-                >
-                  Start Your Divine Journey
+                <Button className="w-full bg-gradient-to-r from-amber-400 to-yellow-300 text-gray-900 font-medium py-6 text-lg rounded-xl">
+                  SaintVisionAI™ Access
                 </Button>
               </Link>
               <Link to="/pricing">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full border-yellow-400/50 text-yellow-400 hover:bg-yellow-400/10 font-medium text-lg py-6"
-                >
-                  View Divine Plans
+                <Button className="w-full border border-amber-400/50 text-amber-400 bg-transparent hover:bg-amber-400/10 py-6 text-lg rounded-xl">
+                  View Enterprise Plans
                 </Button>
               </Link>
-            </div>
-
-            {/* Free Trial Notice */}
-            <p className="text-gray-300 text-sm mt-6">
-              ✨ Start with 7 days free • No credit card required
-            </p>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-8">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-thin tracking-tight text-yellow-400 text-center mb-16">
-              Why Choose Divine AI?
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div
-                className="bg-gray-900/40 border border-yellow-400/20 backdrop-blur-md rounded-3xl p-8 text-center"
-                style={{
-                  boxShadow:
-                    "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(251, 191, 36, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-                }}
-              >
-                <Brain className="w-12 h-12 text-yellow-400 mx-auto mb-6" />
-                <h3 className="text-xl font-medium text-white mb-4">
-                  HACP™ Technology
-                </h3>
-                <p className="text-gray-300">
-                  Dual-engine processing with GPT-4o and Azure for unmatched
-                  accuracy
-                </p>
-              </div>
-
-              <div
-                className="bg-gray-900/40 border border-yellow-400/20 backdrop-blur-md rounded-3xl p-8 text-center"
-                style={{
-                  boxShadow:
-                    "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(251, 191, 36, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-                }}
-              >
-                <Shield className="w-12 h-12 text-yellow-400 mx-auto mb-6" />
-                <h3 className="text-xl font-medium text-white mb-4">
-                  Faith-Aligned AI
-                </h3>
-                <p className="text-gray-300">
-                  AI that respects your values and provides ethical guidance
-                </p>
-              </div>
-
-              <div
-                className="bg-gray-900/40 border border-yellow-400/20 backdrop-blur-md rounded-3xl p-8 text-center"
-                style={{
-                  boxShadow:
-                    "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(251, 191, 36, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-                }}
-              >
-                <Zap className="w-12 h-12 text-yellow-400 mx-auto mb-6" />
-                <h3 className="text-xl font-medium text-white mb-4">
-                  Enterprise Ready
-                </h3>
-                <p className="text-gray-300">
-                  Scale from personal use to enterprise with advanced CRM tools
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Preview */}
-        <section className="py-20 px-8 bg-gray-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-thin tracking-tight text-yellow-400 mb-8">
-              Choose Your Divine Plan
-            </h2>
-            <p className="text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
-              From individual seekers to enterprise organizations, we have the
-              perfect divine solution
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {/* Unlimited Plan */}
-              <div
-                className="bg-gray-900/40 border border-yellow-400/20 backdrop-blur-md rounded-3xl p-6"
-                style={{
-                  boxShadow:
-                    "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(251, 191, 36, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-                }}
-              >
-                <h3 className="text-xl font-medium text-white mb-2">
-                  Unlimited
-                </h3>
-                <div className="text-3xl font-light text-yellow-400 mb-4">
-                  $27<span className="text-lg text-gray-400">/mo</span>
-                </div>
-                <p className="text-gray-300 text-sm mb-6">
-                  Perfect for individuals
-                </p>
-                <Link to="/pricing">
-                  <Button className="w-full bg-gray-800 border border-yellow-400/30 text-yellow-400 hover:bg-gray-700">
-                    Get Started
-                  </Button>
-                </Link>
-              </div>
-
-              {/* PartnerTech Pro Plan */}
-              <div
-                className="bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 border border-yellow-400/50 backdrop-blur-md rounded-3xl p-6 scale-105"
-                style={{
-                  boxShadow:
-                    "0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 60px rgba(251, 191, 36, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
-                }}
-              >
-                <div className="text-center mb-4">
-                  <div className="bg-gradient-to-r from-yellow-400 to-yellow-300 text-gray-900 px-3 py-1 rounded-full text-sm font-medium inline-block">
-                    Most Popular
-                  </div>
-                </div>
-                <h3 className="text-xl font-medium text-white mb-2">
-                  PartnerTech Pro
-                </h3>
-                <div className="text-3xl font-light text-yellow-400 mb-4">
-                  $97<span className="text-lg text-gray-400">/mo</span>
-                </div>
-                <p className="text-gray-300 text-sm mb-6">
-                  Advanced CRM & automation
-                </p>
-                <Link to="/pricing">
-                  <Button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-300 text-gray-900 hover:from-yellow-300 hover:to-yellow-200 font-medium">
-                    Upgrade to Pro
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Enterprise Plan */}
-              <div
-                className="bg-gray-900/40 border border-purple-400/30 backdrop-blur-md rounded-3xl p-6"
-                style={{
-                  boxShadow:
-                    "0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(168, 85, 247, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-                }}
-              >
-                <h3 className="text-xl font-medium text-white mb-2">
-                  Enterprise
-                </h3>
-                <div className="text-3xl font-light text-purple-400 mb-4">
-                  $497<span className="text-lg text-gray-400">/mo</span>
-                </div>
-                <p className="text-gray-300 text-sm mb-6">
-                  Full enterprise suite
-                </p>
-                <Link to="/pricing">
-                  <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white">
-                    Contact Sales
-                  </Button>
-                </Link>
-              </div>
             </div>
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="py-16 px-8 text-center border-t border-yellow-400/20">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex justify-center mb-6">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fbeb96c992e5a49f4bbd354e8386d6153"
-                alt="SAINTSAL™ Logo"
-                className="w-12 h-12"
-              />
+        <footer className="px-8 py-16 border-t border-gray-800/50">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-amber-400 text-lg font-medium mb-4">
+                SAINTSAL™ • Cookin' Knowledge
+              </p>
+              <p className="text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed">
+                "We built this for the builders, the believers, the ones who
+                demand more than chatbots. This is enterprise AI with a soul,
+                technology with values, innovation with integrity."
+              </p>
             </div>
-            <p className="text-yellow-400 text-sm font-thin tracking-[0.3em] mb-2">
-              SAINTSAL™
-            </p>
-            <p className="text-gray-400 text-sm">
-              Divine AI technology for the modern world
-            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-sm text-gray-400">
+              <div>
+                <h5 className="text-amber-400 font-medium mb-3">SAINTSAL™</h5>
+                <ul className="space-y-2">
+                  <li>
+                    <Link to="/console" className="hover:text-amber-400">
+                      Console
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/pricing" className="hover:text-amber-400">
+                      Pricing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/help" className="hover:text-amber-400">
+                      Help
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/privacy" className="hover:text-amber-400">
+                      Privacy
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h5 className="text-amber-400 font-medium mb-3">Technology</h5>
+                <ul className="space-y-2">
+                  <li>Azure Cognitive Services</li>
+                  <li>OpenAI GPT-4o</li>
+                  <li>Premium Infrastructure</li>
+                  <li>HACP™ Processing</li>
+                </ul>
+              </div>
+
+              <div>
+                <h5 className="text-amber-400 font-medium mb-3">Security</h5>
+                <ul className="space-y-2">
+                  <li>AES-256 encryption</li>
+                  <li>SOC 2 compliance</li>
+                  <li>Zero-trust architecture</li>
+                  <li>Faith-Aligned Technology</li>
+                </ul>
+              </div>
+
+              <div>
+                <h5 className="text-amber-400 font-medium mb-3">Legal</h5>
+                <ul className="space-y-2">
+                  <li>GDPR Compliant</li>
+                  <li>CCPA Compliant</li>
+                  <li>SOC 2 Certified</li>
+                  <li>Patent Protected</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center mt-12 pt-8 border-t border-gray-800/50">
+              <p className="text-gray-500 text-sm">
+                HACP™ (Hierarchical Adaptive Cognitive Processing) protected
+                under U.S. Patent 10,290,222 and additional patent-pending
+                technologies.
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                © 2025 Saint Vision Group LLC. All rights reserved. Delaware
+                Limited Partnership.
+              </p>
+            </div>
           </div>
         </footer>
       </div>
