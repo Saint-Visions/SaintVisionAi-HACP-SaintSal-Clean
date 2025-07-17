@@ -207,9 +207,9 @@ const FallbackHomepage = () => {
         </div>
       </section>
 
-      {/* What Separates Us - Conversion Booster */}
+      {/* What We Actually Do For You */}
       <section
-        className="py-24 px-6 relative overflow-hidden"
+        className="py-20 px-6 relative overflow-hidden"
         style={{
           backgroundImage:
             "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
@@ -219,88 +219,73 @@ const FallbackHomepage = () => {
         }}
       >
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/70 to-black/80" />
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Content Side */}
             <div>
-              <div className="mb-6">
-                <span
-                  className="text-sm font-semibold tracking-[0.2em] uppercase"
-                  style={{
-                    fontFamily:
-                      "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
-                    color: "#FACC15",
-                    letterSpacing: "0.2em",
-                  }}
-                >
-                  WHAT SEPARATES US
-                </span>
-              </div>
-
               <h2
-                className="text-4xl lg:text-5xl mb-6 text-white leading-tight"
+                className="text-3xl lg:text-4xl mb-6 text-white leading-tight"
                 style={{ fontFamily: "DM Serif Display, serif" }}
               >
-                Not Another Chatbot.
+                Your Business Companion.
                 <br />
-                Your <span className="text-[#FACC15]">GOTTA GUY™</span>.
+                Not Just Another Bot.
               </h2>
 
-              <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                While others build tools, we forge partnerships.{" "}
-                <span className="neon-blue font-semibold">
-                  Patent-protected HACP™ technology
-                </span>{" "}
-                meets{" "}
-                <span className="neon-green font-semibold">
-                  faith-aligned values
-                </span>
-                , creating enterprise AI that actually understands your
-                business—and your beliefs.
+              <p className="text-lg text-white/85 mb-8 leading-relaxed">
+                We built something different. Two AI systems work together—one
+                handles your questions instantly, the other learns your business
+                and takes action. Think of it as having your smartest employee
+                available 24/7.
               </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#FACC15] flex items-center justify-center">
-                    <div className="w-3 h-3 bg-black rounded-full"></div>
-                  </div>
-                  <span className="text-white/90">
-                    Dual AI engines working in perfect harmony
-                  </span>
+              <div className="space-y-5 mb-8">
+                <div className="bg-white/5 p-4 rounded-lg border-l-4 border-[#FACC15]">
+                  <h4 className="text-white font-semibold mb-2">
+                    Instant Answers + Smart Actions
+                  </h4>
+                  <p className="text-white/80 text-sm">
+                    Ask anything about your business, get immediate answers, and
+                    watch it actually help with tasks—from research to CRM
+                    updates.
+                  </p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-neon-blue flex items-center justify-center">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
-                  </div>
-                  <span className="text-white/90">
-                    Enterprise-grade security with moral excellence
-                  </span>
+                <div className="bg-white/5 p-4 rounded-lg border-l-4 border-neon-blue">
+                  <h4 className="text-white font-semibold mb-2">
+                    Your CRM Companion
+                  </h4>
+                  <p className="text-white/80 text-sm">
+                    Connects with your existing tools. Updates contacts, tracks
+                    conversations, and helps you stay organized without extra
+                    work.
+                  </p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-neon-green flex items-center justify-center">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
-                  </div>
-                  <span className="text-white/90">
-                    Faith-centered technology that grows with you
-                  </span>
+                <div className="bg-white/5 p-4 rounded-lg border-l-4 border-neon-green">
+                  <h4 className="text-white font-semibold mb-2">
+                    Grows With Your Business
+                  </h4>
+                  <p className="text-white/80 text-sm">
+                    Learns how you work, remembers what matters to you, and gets
+                    better at helping over time. Plus, it respects your values.
+                  </p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/why">
-                  <Button className="bg-[#FACC15] text-black hover:bg-[#FACC15]/90 px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl shadow-[#FACC15]/20 transition-all duration-300 hover:scale-105">
-                    Discover What Makes Us Different
-                    <ArrowRight className="ml-2 w-5 h-5" />
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link to="/console">
+                  <Button className="bg-[#FACC15] text-black hover:bg-[#FACC15]/90 px-6 py-3 font-semibold rounded-lg transition-all duration-300">
+                    Try It Now - Free
+                    <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
-                <Link to="/console">
+                <Link to="/setup">
                   <Button
                     variant="outline"
-                    className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-medium rounded-xl backdrop-blur-sm"
+                    className="border-white/30 text-white hover:bg-white/10 px-6 py-3 rounded-lg"
                   >
-                    Experience SaintSal™
+                    See How It Works
                   </Button>
                 </Link>
               </div>
@@ -310,13 +295,20 @@ const FallbackHomepage = () => {
             <div className="text-center">
               <div className="relative">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F6833d6fd5fd1400fa29d50547767b76b?format=webp&width=800"
-                  alt="SaintSal + You"
-                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F72757335a8ec4593a5ee822970a6fc90?format=webp&width=800"
+                  alt="SaintSal + You Partnership"
+                  className="w-full max-w-lg mx-auto"
                 />
-                <div className="absolute -bottom-4 -right-4 bg-[#FACC15] text-black px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                  Join Thousands ✨
+                <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-[#FACC15] text-black px-3 py-1 rounded-full text-sm font-medium shadow-lg">
+                  Join 10,000+ Users
                 </div>
+              </div>
+
+              <div className="mt-6 text-center">
+                <p className="text-white/60 text-sm italic">
+                  "Finally, AI that actually helps my business instead of just
+                  answering questions."
+                </p>
               </div>
             </div>
           </div>
