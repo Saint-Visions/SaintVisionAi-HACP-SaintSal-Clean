@@ -17,8 +17,8 @@ const FallbackHomepage = () => (
       backgroundRepeat: "no-repeat",
     }}
   >
-    {/* Divine overlay for perfect readability */}
-    <div className="absolute inset-0 bg-gradient-to-br from-charcoal/75 via-charcoal/80 to-charcoal/85 z-0" />
+    {/* Clean overlay for perfect readability - Apple/OpenAI level */}
+    <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/70 to-black/80 z-0" />
 
     <div className="relative z-10">
       {/* Section One - Hero with Logo */}
