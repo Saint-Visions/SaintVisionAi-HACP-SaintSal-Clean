@@ -45,14 +45,21 @@ const App = () => (
         <Route path="/help" element={<Help />} />
         <Route path="/setup" element={<Setup />} />
         <Route path="/why" element={<Why />} />
-        <Route path="/chrome-install" element={<ChromeInstall />} />
+        <Route
+          path="/chrome-install"
+          element={
+            <ProtectedRoute requiredTier="coretools">
+              <ChromeInstall />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/checkout-success" element={<CheckoutSuccess />} />
 
         {/* Protected Routes */}
         <Route
           path="/console"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="unlimited">
               <Console />
             </ProtectedRoute>
           }
@@ -60,7 +67,7 @@ const App = () => (
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="free_trial">
               <Dashboard />
             </ProtectedRoute>
           }
@@ -68,7 +75,7 @@ const App = () => (
         <Route
           path="/crm"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="partnertech">
               <CRM />
             </ProtectedRoute>
           }
@@ -76,7 +83,7 @@ const App = () => (
         <Route
           path="/hacp"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="coretools">
               <HACP />
             </ProtectedRoute>
           }
@@ -84,7 +91,7 @@ const App = () => (
         <Route
           path="/partnertech"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="partnertech">
               <PartnerTech />
             </ProtectedRoute>
           }
@@ -92,7 +99,7 @@ const App = () => (
         <Route
           path="/upgrade"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="free_trial">
               <Upgrade />
             </ProtectedRoute>
           }
@@ -100,7 +107,7 @@ const App = () => (
         <Route
           path="/settings"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="free_trial">
               <Settings />
             </ProtectedRoute>
           }
@@ -108,7 +115,7 @@ const App = () => (
         <Route
           path="/admin/clients"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="partnertech">
               <AdminClients />
             </ProtectedRoute>
           }
@@ -116,7 +123,7 @@ const App = () => (
         <Route
           path="/admin/logs"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="partnertech">
               <AdminLogs />
             </ProtectedRoute>
           }
@@ -124,7 +131,7 @@ const App = () => (
         <Route
           path="/referral/invite"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute requiredTier="free_trial">
               <ReferralInvite />
             </ProtectedRoute>
           }
