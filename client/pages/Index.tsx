@@ -1,46 +1,146 @@
 import React from "react";
-import BuilderPage from "../components/BuilderPage";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Zap, Shield, Brain, Chrome, Lock } from "lucide-react";
+import { Brain, Chrome, Lock, ArrowRight, Menu, X } from "lucide-react";
 
-// Native High-Level Homepage - Content from Screenshots
-const FallbackHomepage = () => (
-  <div
-    className="min-h-screen relative"
-    style={{
-      fontFamily: "Inter, system-ui, -apple-system, sans-serif",
-      backgroundImage:
-        "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundAttachment: "fixed",
-      backgroundRepeat: "no-repeat",
-    }}
-  >
-    {/* Clean overlay */}
-    <div className="absolute inset-0 bg-black/60 z-0" />
+// Elite Flagship Homepage - OpenAI Architecture with SaintSal Divine Styling
+const FallbackHomepage = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
-    <div className="relative z-10">
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-8">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* SaintSal Logo */}
-          <div className="mb-12">
+  return (
+    <div className="relative">
+      {/* Header - OpenAI Style Navigation */}
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/80 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center gap-3">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F032bb6b4632e4a3ca4a41a4996df0d8f?format=webp&width=400"
               alt="SaintSal™"
-              className="w-20 h-20 mx-auto mb-8 saintsal-brain"
+              className="w-8 h-8"
+            />
+            <span
+              className="text-xl font-medium text-white"
+              style={{ fontFamily: "DM Serif Display, serif" }}
+            >
+              SaintSal™
+            </span>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            <Link
+              to="/dashboard"
+              className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+            >
+              Dashboard
+            </Link>
+            <Link
+              to="/setup"
+              className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+            >
+              Setup
+            </Link>
+            <Link
+              to="/help"
+              className="text-white/70 hover:text-white transition-colors text-sm font-medium"
+            >
+              Help
+            </Link>
+          </nav>
+
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <Link to="/login">
+              <Button
+                variant="ghost"
+                className="text-white/70 hover:text-white hover:bg-white/5"
+              >
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button className="bg-[#FACC15] text-black hover:bg-[#FACC15]/90 font-medium">
+                Start Cooking
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
+            <div className="px-6 py-4 space-y-4">
+              <Link to="/dashboard" className="block text-white/70 py-2">
+                Dashboard
+              </Link>
+              <Link to="/setup" className="block text-white/70 py-2">
+                Setup
+              </Link>
+              <Link to="/help" className="block text-white/70 py-2">
+                Help
+              </Link>
+              <div className="pt-4 border-t border-white/10 space-y-3">
+                <Link to="/login" className="block">
+                  <Button variant="ghost" className="w-full text-white/70">
+                    Sign In
+                  </Button>
+                </Link>
+                <Link to="/signup" className="block">
+                  <Button className="w-full bg-[#FACC15] text-black">
+                    Start Cooking
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Hero Section - Full Bleed Background */}
+      <section
+        className="relative min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
+
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-20">
+          {/* Logo */}
+          <div className="mb-8">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F032bb6b4632e4a3ca4a41a4996df0d8f?format=webp&width=400"
+              alt="SaintSal™"
+              className="w-20 h-20 mx-auto mb-6 animate-pulse filter drop-shadow-lg"
             />
           </div>
 
-          {/* Main Title */}
+          {/* Hero Title */}
           <h1
-            className="text-7xl md:text-8xl mb-6 tracking-tight"
+            className="text-6xl md:text-8xl mb-4 tracking-tight"
             style={{
               fontFamily: "DM Serif Display, serif",
               background:
-                "linear-gradient(135deg, rgb(250, 204, 21) 0%, rgba(250, 204, 21, 0.8) 50%, rgb(250, 204, 21) 100%)",
+                "linear-gradient(135deg, #FACC15 0%, rgba(250, 204, 21, 0.8) 50%, #FACC15 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -51,266 +151,202 @@ const FallbackHomepage = () => (
 
           {/* Tagline */}
           <p
-            className="text-2xl md:text-3xl mb-12 tracking-wide"
-            style={{
-              fontFamily: "DM Serif Display, serif",
-              color: "rgb(250, 204, 21)",
-            }}
+            className="text-2xl md:text-3xl mb-6 text-[#FACC15] tracking-wide"
+            style={{ fontFamily: "DM Serif Display, serif" }}
           >
             Cookin' Knowledge
           </p>
 
-          {/* CTA */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            AI doesn't just answer. It adapts. It empowers. It becomes yours.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link to="/signup">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4 text-xl font-medium rounded-xl">
+              <Button className="bg-[#FACC15] text-black hover:bg-[#FACC15]/90 px-8 py-6 text-lg font-medium rounded-xl shadow-2xl shadow-[#FACC15]/20 transition-all duration-300 hover:scale-105">
                 Start Cookin' Knowledge
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Link to="/pricing">
-              <Button className="border border-white/30 text-white hover:bg-white/10 px-12 py-4 text-xl font-medium rounded-xl backdrop-blur-sm">
-                Learn More
+            <Link to="/console">
+              <Button
+                variant="outline"
+                className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg font-medium rounded-xl backdrop-blur-sm"
+              >
+                Try Console
               </Button>
             </Link>
           </div>
+
+          {/* Bottom Quote */}
+          <p className="text-white/60 text-lg italic max-w-2xl mx-auto">
+            "Ready to move smarter today than you did yesterday?"
+          </p>
+        </div>
+
+        {/* Sticky Chat Bubble - Bottom Right */}
+        <div className="fixed bottom-6 right-6 z-50">
+          <button className="w-14 h-14 bg-[#FACC15] text-black rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F032bb6b4632e4a3ca4a41a4996df0d8f?format=webp&width=400"
+              alt="Chat"
+              className="w-8 h-8"
+            />
+          </button>
         </div>
       </section>
 
-      {/* Enterprise Intelligence Section */}
-      <section className="py-24 px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2
-            className="text-5xl mb-6"
-            style={{
-              fontFamily: "DM Serif Display, serif",
-              color: "white",
-            }}
-          >
-            Enterprise Intelligence
-          </h2>
-          <p className="text-xl text-white/70 mb-16 max-w-3xl mx-auto font-light">
-            Professional-grade AI infrastructure with dual-engine redundancy,
-            faith-aligned policies, and enterprise-scale reliability.
-          </p>
+      {/* Enterprise Intelligence - Clean Section */}
+      <section className="py-24 px-6 bg-[#10161C] relative overflow-hidden">
+        {/* Subtle Circuit Overlay */}
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg, transparent, transparent 1px, #FACC15 1px, #FACC15 2px), repeating-linear-gradient(90deg, transparent, transparent 1px, #FACC15 1px, #FACC15 2px)",
+            backgroundSize: "50px 50px",
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2
+              className="text-5xl md:text-6xl mb-6 text-white"
+              style={{ fontFamily: "DM Serif Display, serif" }}
+            >
+              Enterprise Intelligence
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
+              Professional-grade AI infrastructure with dual-engine redundancy,
+              faith-aligned policies, and enterprise-scale reliability.
+            </p>
+          </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8">
-              <Brain className="w-12 h-12 text-primary mx-auto mb-4" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Dual AI Console */}
+            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FACC15]/30 transition-all duration-300 hover:bg-white/10">
+              <Brain className="w-12 h-12 text-[#FACC15] mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3
-                className="text-xl text-white mb-3"
+                className="text-xl text-white mb-4"
                 style={{ fontFamily: "DM Serif Display, serif" }}
               >
                 Dual AI Console
               </h3>
-              <p className="text-white/60 font-light">
-                GPT-4o + Azure working in perfect synchronization
+              <p className="text-white/60 font-light leading-relaxed">
+                GPT-4o + Azure working in perfect synchronization for unmatched
+                reliability and intelligence.
               </p>
             </div>
-            <div className="text-center p-8">
-              <Chrome className="w-12 h-12 text-primary mx-auto mb-4" />
+
+            {/* PartnerTech CRM */}
+            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FACC15]/30 transition-all duration-300 hover:bg-white/10">
+              <Chrome className="w-12 h-12 text-[#FACC15] mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3
-                className="text-xl text-white mb-3"
+                className="text-xl text-white mb-4"
                 style={{ fontFamily: "DM Serif Display, serif" }}
               >
                 PartnerTech CRM
               </h3>
-              <p className="text-white/60 font-light">
-                Chrome extension + enterprise automation
+              <p className="text-white/60 font-light leading-relaxed">
+                Chrome extension + enterprise automation for seamless workflow
+                integration.
               </p>
             </div>
-            <div className="text-center p-8">
-              <Lock className="w-12 h-12 text-primary mx-auto mb-4" />
+
+            {/* Divine Security */}
+            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#FACC15]/30 transition-all duration-300 hover:bg-white/10 md:col-span-2 lg:col-span-1">
+              <Lock className="w-12 h-12 text-[#FACC15] mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3
-                className="text-xl text-white mb-3"
+                className="text-xl text-white mb-4"
                 style={{ fontFamily: "DM Serif Display, serif" }}
               >
-                Divine Security
+                Faith-Aligned Security
               </h3>
-              <p className="text-white/60 font-light">
-                Faith-aligned data protection
+              <p className="text-white/60 font-light leading-relaxed">
+                Enterprise-grade encryption with values-first architecture and
+                moral excellence.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Dual Console Layout */}
-      <section className="py-24 px-8">
+      {/* Footer - Clean & Professional */}
+      <footer className="bg-black py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Left Console */}
-            <div className="divine-card p-8 rounded-2xl">
-              <div className="text-center mb-6">
-                <h3
-                  className="text-2xl text-white mb-4"
-                  style={{ fontFamily: "DM Serif Display, serif" }}
-                >
-                  AI Console
-                </h3>
-                <div className="bg-black/60 rounded-xl p-6 mb-4">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-black font-bold text-sm">AI</span>
-                    </div>
-                    <span className="text-white">SaintSal Assistant</span>
-                  </div>
-                  <p className="text-white/70 text-left text-sm">
-                    Ready to help with your business intelligence needs. What
-                    would you like to accomplish today?
-                  </p>
-                </div>
-                <div className="text-left space-y-2">
-                  <div className="text-primary text-sm">• Lead generation</div>
-                  <div className="text-primary text-sm">• CRM automation</div>
-                  <div className="text-primary text-sm">• Data analysis</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Console */}
-            <div className="divine-card p-8 rounded-2xl">
-              <div className="text-center mb-6">
-                <h3
-                  className="text-2xl text-white mb-4"
-                  style={{ fontFamily: "DM Serif Display, serif" }}
-                >
-                  PartnerTech CRM
-                </h3>
-                <div className="bg-black/60 rounded-xl p-6 mb-4">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Chrome className="w-6 h-6 text-primary" />
-                    <span className="text-white">Chrome Extension</span>
-                  </div>
-                  <p className="text-white/70 text-left text-sm">
-                    Seamlessly integrates with your existing workflow. Capture
-                    leads, automate follow-ups, and scale your outreach.
-                  </p>
-                </div>
-                <div className="text-left space-y-2">
-                  <div className="text-primary text-sm">• Lead capture</div>
-                  <div className="text-primary text-sm">• Email automation</div>
-                  <div className="text-primary text-sm">
-                    • Pipeline management
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Thank You Section */}
+          <div className="text-center mb-12">
+            <h3
+              className="text-4xl text-[#FACC15] mb-4"
+              style={{ fontFamily: "DM Serif Display, serif" }}
+            >
+              Thank You!
+            </h3>
+            <p className="text-2xl text-white/80">SV.</p>
           </div>
-        </div>
-      </section>
 
-      {/* Faith-Aligned Vault */}
-      <section className="py-24 px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="divine-card p-12 rounded-2xl">
-            <div className="mb-8">
-              <Shield className="w-16 h-16 text-primary mx-auto mb-6" />
-              <h2
-                className="text-4xl text-white mb-4"
-                style={{ fontFamily: "DM Serif Display, serif" }}
-              >
-                Faith-Aligned Vault
-              </h2>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                Secure. Private. Moral. Your conversations, billing data, and
-                personal information protected by enterprise-grade encryption
-                with values-first architecture.
+          {/* Footer Content */}
+          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
+            {/* Company */}
+            <div>
+              <h4 className="text-white font-medium mb-4">SaintVisionAI</h4>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Divine AI companion for business intelligence.
+                Professional-grade solutions with faith-aligned values.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-primary" />
-                <span className="text-white">End-to-end encryption</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-primary" />
-                <span className="text-white">Secure Stripe billing</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-primary" />
-                <span className="text-white">Role-based authentication</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-primary" />
-                <span className="text-white">Faith-centered data policies</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Protected Data Vault */}
-      <section className="py-24 px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="divine-card p-12 rounded-2xl text-center">
-            <h2
-              className="text-4xl text-white mb-8"
-              style={{ fontFamily: "DM Serif Display, serif" }}
-            >
-              Protected Data Vault
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-8">
-              <div className="text-left space-y-4">
-                <div className="flex justify-between border-b border-white/10 pb-2">
-                  <span className="text-white/70">Encryption Status</span>
-                  <span className="text-primary font-medium">
-                    AES-256 Active
-                  </span>
-                </div>
-                <div className="flex justify-between border-b border-white/10 pb-2">
-                  <span className="text-white/70">Data Location</span>
-                  <span className="text-white">Private Cloud</span>
-                </div>
-              </div>
-              <div className="text-left space-y-4">
-                <div className="flex justify-between border-b border-white/10 pb-2">
-                  <span className="text-white/70">Access Control</span>
-                  <span className="text-white">Role-Based</span>
-                </div>
-                <div className="flex justify-between border-b border-white/10 pb-2">
-                  <span className="text-white/70">Ethics Compliance</span>
-                  <span className="text-primary font-medium">
-                    Faith-Aligned
-                  </span>
-                </div>
+            {/* Legal */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Legal</h4>
+              <div className="space-y-2">
+                <Link
+                  to="/terms"
+                  className="block text-white/60 hover:text-white text-sm transition-colors"
+                >
+                  Terms of Service
+                </Link>
+                <Link
+                  to="/privacy"
+                  className="block text-white/60 hover:text-white text-sm transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+                <a
+                  href="mailto:support@saintvisionai.com"
+                  className="block text-white/60 hover:text-white text-sm transition-colors"
+                >
+                  Contact
+                </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Footer */}
-      <section className="py-24 px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="divine-card p-12 rounded-2xl mb-12">
-            <h2
-              className="text-3xl text-white mb-6"
-              style={{ fontFamily: "DM Serif Display, serif" }}
-            >
-              Ready to Experience Divine AI?
-            </h2>
-            <p className="text-white/70 text-xl mb-8">
-              Join thousands of professionals who trust SaintSal™ for their
-              business intelligence needs.
+            {/* Patent & Copyright */}
+            <div>
+              <h4 className="text-white font-medium mb-4">Innovation</h4>
+              <p className="text-white/60 text-sm mb-2">
+                U.S. Patent 10.290.222
+              </p>
+              <p className="text-white/60 text-sm">
+                © 2024 SaintVisionAI. All rights reserved.
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom Line */}
+          <div className="border-t border-white/10 mt-12 pt-8 text-center">
+            <p className="text-white/40 text-sm">
+              Built with divine precision. Powered by faith-aligned technology.
             </p>
-            <Link to="/signup">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-4 text-xl font-medium rounded-xl saintsal-glow">
-                Start Cookin' Knowledge
-              </Button>
-            </Link>
           </div>
-
-          <p className="text-white/40 text-sm">
-            © 2024 SaintVisionAI. All rights reserved.
-          </p>
         </div>
-      </section>
+      </footer>
     </div>
-  </div>
-);
+  );
+};
 
 export default function Index() {
   return <FallbackHomepage />;
