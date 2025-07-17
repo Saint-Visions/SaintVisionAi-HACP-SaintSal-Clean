@@ -226,7 +226,7 @@ const FallbackHomepage = () => {
           <div className="flex items-center justify-center gap-8 mb-12">
             <div className="text-center">
               <h2
-                className="text-4xl md:text-5xl mb-2 text-white"
+                className="text-4xl md:text-5xl mb-2 text-white font-light"
                 style={{ fontFamily: "DM Serif Display, serif" }}
               >
                 Elite Technology
