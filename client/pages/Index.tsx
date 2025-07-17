@@ -206,19 +206,6 @@ const FallbackHomepage = () => {
 
       {/* Enterprise Intelligence - Clean Section */}
       <section className="py-24 px-6 bg-[#10161C] relative overflow-hidden">
-        {/* Subtle Circuit Overlay */}
-        <div
-          className="absolute opacity-5"
-          style={{
-            left: "-1095px",
-            top: "-376px",
-            right: "0px",
-            bottom: "0px",
-            backgroundSize: "50px 50px",
-            boxShadow: "1px 1px 3px 0 rgba(255, 255, 255, 1)",
-          }}
-        />
-
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             {/* What Separates Us Header */}
