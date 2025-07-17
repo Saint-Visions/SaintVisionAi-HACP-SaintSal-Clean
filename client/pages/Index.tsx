@@ -20,8 +20,12 @@ const FallbackHomepage = () => {
               className="w-[52px] h-[52px] opacity-80 filter brightness-110"
             />
             <span
-              className="text-[34px] font-medium text-white"
-              style={{ fontFamily: "DM Serif Display, serif" }}
+              className="text-[34px] font-semibold text-white font-sf-pro"
+              style={{
+                fontFamily:
+                  "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+                letterSpacing: "-0.025em",
+              }}
             >
               SaintVisionAI™
             </span>
