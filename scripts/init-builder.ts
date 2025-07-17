@@ -56,6 +56,11 @@ export interface BuilderComponent {
 }
 `;
 
+// Create types directory if it doesn't exist
+if (!existsSync("client/types")) {
+  mkdirSync("client/types", { recursive: true });
+}
+
 writeFileSync("client/types/builder.ts", builderTypes);
 
 // Create builder context
@@ -82,9 +87,9 @@ export const BuilderProvider = ({ children }: { children: ReactNode }) => {
 };
 `;
 
-// Create types directory if it doesn't exist
-if (!existsSync("client/types")) {
-  mkdirSync("client/types", { recursive: true });
+// Create contexts directory if it doesn't exist
+if (!existsSync("client/contexts")) {
+  mkdirSync("client/contexts", { recursive: true });
 }
 
 writeFileSync("client/contexts/BuilderContext.tsx", builderContext);
