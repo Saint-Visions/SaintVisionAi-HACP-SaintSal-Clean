@@ -128,9 +128,13 @@ const FallbackHomepage = () => {
           {/* Logo */}
           <div className="mb-8">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F032bb6b4632e4a3ca4a41a4996df0d8f?format=webp&width=400"
+              src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F03153bd5b4c343c08a8337ee7aa5dbc0?format=webp&width=800"
               alt="SaintSal™"
-              className="w-20 h-20 mx-auto mb-6 animate-pulse filter drop-shadow-lg"
+              className="w-20 h-20 mx-auto mb-6 animate-pulse filter drop-shadow-2xl opacity-70 brightness-125"
+              style={{
+                filter:
+                  "drop-shadow(0 0 20px rgba(250, 204, 21, 0.3)) brightness(1.25)",
+              }}
             />
           </div>
 
