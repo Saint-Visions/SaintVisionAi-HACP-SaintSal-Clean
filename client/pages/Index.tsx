@@ -278,7 +278,7 @@ const FallbackHomepage = () => {
           <div className="text-center">
             <div className="inline-flex items-center gap-4 mb-8">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fb31ee17794d644cab9a0c38caea40039?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2180d28e80a741d68e8659ea962a9f05"
                 alt="Professional Business Platform"
                 className="h-12 w-auto"
               />
