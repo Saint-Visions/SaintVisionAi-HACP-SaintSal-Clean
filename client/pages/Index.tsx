@@ -115,7 +115,7 @@ const FallbackHomepage = () => {
 
       {/* Hero Section - Full Bleed Background */}
       <section
-        className="relative min-h-screen flex items-center justify-center"
+        className="relative h-[85vh] flex items-center justify-center"
         style={{
           backgroundImage:
             "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
