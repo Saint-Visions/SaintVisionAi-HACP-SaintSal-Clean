@@ -510,6 +510,233 @@
     backdrop-filter: blur(20px) saturate(1.2);
     background: rgba(24, 28, 32, 0.85);
   }
+
+  /* SaintSal™ Divine Brand Classes */
+  .saintsal-brain {
+    animation: brain-pulse 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.4));
+  }
+
+  .saintsal-glow {
+    animation: saintsal-glow 2s ease-in-out infinite;
+    border: 1px solid rgba(250, 204, 21, 0.3);
+  }
+
+  .wall-street-bg {
+    background-image: url("https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fc1070e56a12840fd8ba0e74c4429ae3e?format=webp&width=2000");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  .wall-street-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(16, 22, 28, 0.85) 0%,
+      rgba(16, 22, 28, 0.95) 100%
+    );
+    z-index: 1;
+  }
+
+  .divine-parallax {
+    background-attachment: fixed;
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .divine-parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(
+        circle at 30% 40%,
+        rgba(250, 204, 21, 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 70% 20%,
+        rgba(250, 204, 21, 0.06) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 20% 80%,
+        rgba(250, 204, 21, 0.04) 0%,
+        transparent 40%
+      );
+    z-index: 1;
+    pointer-events: none;
+    animation: parallaxGlow 8s ease-in-out infinite alternate;
+  }
+
+  .divine-parallax::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(2px 2px at 15% 25%, rgba(250, 204, 21, 0.4), transparent),
+      radial-gradient(1px 1px at 45% 15%, rgba(250, 204, 21, 0.3), transparent),
+      radial-gradient(3px 3px at 75% 35%, rgba(250, 204, 21, 0.5), transparent),
+      radial-gradient(1px 1px at 25% 65%, rgba(250, 204, 21, 0.2), transparent),
+      radial-gradient(2px 2px at 85% 75%, rgba(250, 204, 21, 0.35), transparent);
+    background-size:
+      400px 300px,
+      300px 200px,
+      500px 400px,
+      250px 180px,
+      350px 250px;
+    background-repeat: repeat;
+    z-index: 2;
+    pointer-events: none;
+    animation: parallaxDust 12s linear infinite;
+  }
+
+  .gotham-hero {
+    background-image: url("https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2Fe91452d306444f96956a86335fa422b6?format=webp&width=2000");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .gotham-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(16, 22, 28, 0.8) 0%,
+      rgba(16, 22, 28, 0.6) 50%,
+      rgba(16, 22, 28, 0.9) 100%
+    );
+    z-index: 1;
+  }
+
+  .executive-team {
+    background-image: url("https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F583a98fa439a4b509f9e3e0845b89ae2?format=webp&width=1600");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .trading-floor {
+    background-image: url("https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F813247c4ae614a9e8a6d0f1bb8aa4079?format=webp&width=1600");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .saintsal-logo {
+    filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.5));
+    transition: all 0.3s ease;
+  }
+
+  .saintsal-logo:hover {
+    filter: drop-shadow(0 0 20px rgba(250, 204, 21, 0.8));
+    transform: scale(1.05);
+  }
+
+  .divine-card {
+    background: rgba(16, 22, 28, 0.95);
+    backdrop-filter: blur(20px) saturate(1.2);
+    border: 1px solid rgba(250, 204, 21, 0.2);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(250, 204, 21, 0.1),
+      inset 0 1px 0 rgba(250, 204, 21, 0.15),
+      0 0 30px rgba(250, 204, 21, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .divine-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(
+        circle at 30% 20%,
+        rgba(250, 204, 21, 0.03) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 70% 80%,
+        rgba(250, 204, 21, 0.02) 0%,
+        transparent 50%
+      );
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .prestige-text {
+    background: linear-gradient(
+      135deg,
+      rgba(250, 204, 21, 1) 0%,
+      rgba(250, 204, 21, 0.8) 50%,
+      rgba(250, 204, 21, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    text-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+  }
+
+  .openai-premium {
+    background: linear-gradient(
+      135deg,
+      rgba(16, 22, 28, 0.98) 0%,
+      rgba(24, 28, 32, 0.95) 50%,
+      rgba(16, 22, 28, 0.98) 100%
+    );
+    backdrop-filter: blur(40px) saturate(1.5);
+    border: 1px solid rgba(250, 204, 21, 0.15);
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 rgba(250, 204, 21, 0.1),
+      0 0 40px rgba(250, 204, 21, 0.05);
+  }
+
+  .favicon-glow {
+    filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.6));
+    animation: subtle-float 3s ease-in-out infinite;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .divine-parallax,
+    .gotham-hero,
+    .wall-street-bg,
+    .executive-team,
+    .trading-floor {
+      background-attachment: scroll;
+      background-size: 150%;
+    }
+  }
 }
 
 @keyframes shimmer {
