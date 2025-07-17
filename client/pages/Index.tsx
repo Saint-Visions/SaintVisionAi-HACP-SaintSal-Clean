@@ -253,7 +253,7 @@ const FallbackHomepage = () => {
             </p>
 
             {/* What Separates Us */}
-            <div className="max-w-4xl mx-auto mb-12 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+            <div className="max-w-4xl mx-auto mb-12 p-6 rounded-2xl bg-white/2 backdrop-blur-sm border border-white/5">
               <p className="text-lg text-white/90 leading-relaxed">
                 Powered by{" "}
                 <span className="neon-blue font-semibold">
