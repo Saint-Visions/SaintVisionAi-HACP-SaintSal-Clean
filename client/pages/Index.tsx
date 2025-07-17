@@ -276,21 +276,13 @@ const FallbackHomepage = () => {
           </div>
 
           <div className="text-center">
-            <div className="inline-flex items-center gap-4 mb-8">
+            <Link to="/why" className="inline-block mb-8 group cursor-pointer">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2180d28e80a741d68e8659ea962a9f05"
-                alt="Professional Business Platform"
-                className="h-20 w-auto"
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F2ee3b57e082749f88b62d4dd261954b0?format=webp&width=800"
+                alt="Why SaintVisionAI - Elite Technology"
+                className="h-32 w-auto mx-auto transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="text-left">
-                <p className="text-[#FACC15] font-semibold text-sm">
-                  ENTERPRISE READY
-                </p>
-                <p className="text-white/80 text-xs">
-                  Trusted by 10,000+ professionals
-                </p>
-              </div>
-            </div>
+            </Link>
 
             <div className="flex justify-center gap-4">
               <Link to="/console">
