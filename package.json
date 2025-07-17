@@ -9,7 +9,10 @@
     "preview": "vite preview",
     "test": "vitest --run",
     "typecheck": "tsc --noEmit",
-    "deploy": "vercel --prod --yes"
+    "deploy": "vercel --prod --yes",
+    "builder:init": "npx tsx scripts/init-builder.ts",
+    "builder:sync": "npx @builder.io/cli sync --pull --overwrite --apiKey=065997bd13e4442e888a08652fcd61ba",
+    "builder:setup": "npm run builder:init && npm run builder:sync"
   },
   "dependencies": {
     "@builder.io/react": "^3.0.0",
