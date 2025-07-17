@@ -154,10 +154,25 @@ export default function Pricing() {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-background war-grid cinematic-fade">
-      {/* Header */}
-      <div className="border-b border-border/50 bg-card/50 backdrop-blur-sm">
+    return (
+    <div
+      className="min-h-screen relative"
+      style={{
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        backgroundImage:
+          "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F417fa80156424587b5052fdb53a44654)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/60 z-0" />
+
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="border-b border-yellow-400/20 bg-black/60 backdrop-blur-xl">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link
