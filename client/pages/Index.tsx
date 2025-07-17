@@ -324,7 +324,18 @@ const FallbackHomepage = () => {
       </section>
 
       {/* Footer - Clean & Professional */}
-      <footer className="bg-black py-16 px-6">
+      <footer
+        className="py-16 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage:
+            "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Dark Overlay - Same as Hero and Enterprise Intelligence */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
         <div className="max-w-7xl mx-auto">
           {/* Thank You Section */}
           <div className="text-center mb-12">
