@@ -31,10 +31,16 @@ import AdminLogs from "./pages/AdminLogs";
 import ReferralInvite from "./pages/ReferralInvite";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-const App = () => (
-  <AuthProvider>
-    <BrowserRouter>
-      <Routes>
+const App = () => {
+  // Force override any environment base URL hijacking
+  if (typeof window !== 'undefined') {
+    window.history.replaceState(null, '', window.location.pathname);
+  }
+
+  return (
+    <AuthProvider>
+      <BrowserRouter basename={undefined}>
+        <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Index />} />
         <Route path="/login" element={<Login />} />
