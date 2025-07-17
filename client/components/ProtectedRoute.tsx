@@ -1,27 +1,48 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth, SubscriptionTier } from "../contexts/AuthContext";
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
-  requireSubscription?: boolean;
+  requiredTier?: SubscriptionTier;
+  redirectTo?: string;
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children,
-  requireSubscription = false,
+  requiredTier = "free_trial",
+  redirectTo,
 }) => {
-  const { user, loading } = useAuth();
+  const { user, profile, loading, hasAccess } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!loading && !user) {
-      navigate("/login");
-    }
-  }, [user, loading, navigate]);
+    if (!loading) {
+      // Not authenticated - redirect to login
+      if (!user) {
+        navigate("/login");
+        return;
+      }
 
-  // Show loading while checking auth
-  if (loading) {
+      // Authenticated but profile not loaded yet
+      if (!profile) {
+        return;
+      }
+
+      // Check access level
+      if (!hasAccess(requiredTier)) {
+        // Determine where to redirect based on current tier
+        const redirectPath =
+          redirectTo ||
+          getRedirectPath(requiredTier, profile.subscription_tier);
+        navigate(redirectPath);
+        return;
+      }
+    }
+  }, [user, profile, loading, navigate, hasAccess, requiredTier, redirectTo]);
+
+  // Show loading while checking auth and profile
+  if (loading || (user && !profile)) {
     return (
       <div
         className="min-h-screen flex items-center justify-center"
@@ -42,12 +63,36 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
     );
   }
 
-  // Don't render if not authenticated
-  if (!user) {
+  // Don't render if not authenticated or insufficient access
+  if (!user || !profile || !hasAccess(requiredTier)) {
     return null;
   }
 
   return <>{children}</>;
+};
+
+// Helper function to determine redirect path based on access requirements
+const getRedirectPath = (
+  requiredTier: SubscriptionTier,
+  currentTier: SubscriptionTier,
+): string => {
+  // If they need partner tech access, send to upgrade
+  if (requiredTier === "partnertech") {
+    return "/upgrade";
+  }
+
+  // If they need core tools or higher, send to upgrade
+  if (requiredTier === "coretools" || requiredTier === "pro") {
+    return "/upgrade";
+  }
+
+  // If they need unlimited but only have free trial
+  if (requiredTier === "unlimited" && currentTier === "free_trial") {
+    return "/upgrade";
+  }
+
+  // Default to dashboard
+  return "/dashboard";
 };
 
 export default ProtectedRoute;
