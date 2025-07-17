@@ -51,7 +51,9 @@ export default function Signup() {
     }
 
     try {
-      const { error } = await supabase.auth.signUp({
+      console.log("Attempting signup with:", { email, fullName });
+
+      const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -61,11 +63,22 @@ export default function Signup() {
         },
       });
 
-      if (error) throw error;
+      console.log("Signup response:", { data, error });
 
-      setSuccess("Account created! Check your email to verify your account.");
+      if (error) {
+        console.error("Signup error:", error);
+        throw error;
+      }
+
+      if (data.user && !data.user.email_confirmed_at) {
+        setSuccess("Account created! Check your email to verify your account.");
+      } else {
+        setSuccess("Account created successfully! You can now sign in.");
+      }
     } catch (error: any) {
-      setError(error.message);
+      console.error("Full signup error:", error);
+      const errorMessage = error.message || "An error occurred during signup";
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
