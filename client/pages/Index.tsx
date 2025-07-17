@@ -644,9 +644,9 @@ const FallbackHomepage = () => {
         </div>
       </section>
 
-      {/* Footer - Clean & Professional */}
+      {/* Footer - Professional & Comprehensive */}
       <footer
-        className="py-16 px-6 relative overflow-hidden"
+        className="py-12 px-6 relative overflow-hidden"
         style={{
           backgroundImage:
             "url(https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F89f844d10b5e4243a2178ad3de7a9f4f)",
@@ -655,73 +655,117 @@ const FallbackHomepage = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        {/* Dark Overlay - Same as Hero and Enterprise Intelligence */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
-        <div className="max-w-7xl mx-auto">
-          {/* Thank You Section */}
-          <div className="text-center mb-12">
-            <h3
-              className="text-4xl text-[#FACC15] mb-4"
-              style={{ fontFamily: "DM Serif Display, serif" }}
-            >
-              Thank You!
-            </h3>
-            <p className="text-2xl text-white/80">SV.</p>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/75 to-black/85" />
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Header with Logo */}
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F065997bd13e4442e888a08652fcd61ba%2F4f08aaff66374bf3bd72e740c34ecf44"
+                alt="SaintVisionAI™"
+                className="w-8 h-8 opacity-80"
+              />
+              <span
+                className="text-[#FACC15] text-xl font-semibold"
+                style={{
+                  fontFamily:
+                    "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+                }}
+              >
+                SAINTVISIONAI™
+              </span>
+            </div>
+
+            {/* Navigation Links */}
+            <div className="flex justify-center gap-6 mb-8">
+              <Link
+                to="/console"
+                className="text-white/70 hover:text-[#FACC15] text-sm transition-colors"
+              >
+                Console
+              </Link>
+              <Link
+                to="/pricing"
+                className="text-white/70 hover:text-[#FACC15] text-sm transition-colors"
+              >
+                Pricing
+              </Link>
+              <Link
+                to="/help"
+                className="text-white/70 hover:text-[#FACC15] text-sm transition-colors"
+              >
+                Help
+              </Link>
+              <Link
+                to="/privacy"
+                className="text-white/70 hover:text-[#FACC15] text-sm transition-colors"
+              >
+                Privacy
+              </Link>
+            </div>
+
+            {/* Divider */}
+            <div className="w-full h-px bg-white/10 mb-8"></div>
           </div>
 
-          {/* Footer Content */}
-          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
-            {/* Company */}
+          {/* Patent & Technology Information */}
+          <div className="space-y-6 text-center">
+            {/* Patent Information */}
             <div>
-              <h4 className="text-white font-medium mb-4">SaintVisionAI</h4>
-              <p className="text-white/60 text-sm leading-relaxed">
-                Divine AI companion for business intelligence.
-                Professional-grade solutions with faith-aligned values.
+              <p className="text-white/80 text-sm">
+                <span className="text-[#FACC15] font-semibold">HACP™</span>{" "}
+                (Hierarchical Adaptive Cognitive Processing) protected under{" "}
+                <span className="font-semibold">U.S. Patent 10,290,222</span>{" "}
+                and additional patent-pending technologies.
               </p>
             </div>
 
-            {/* Legal */}
+            {/* Infrastructure */}
             <div>
-              <h4 className="text-white font-medium mb-4">Legal</h4>
-              <div className="space-y-2">
-                <Link
-                  to="/terms"
-                  className="block text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Terms of Service
-                </Link>
-                <Link
-                  to="/privacy"
-                  className="block text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-                <a
-                  href="mailto:support@saintvisionai.com"
-                  className="block text-white/60 hover:text-white text-sm transition-colors"
-                >
-                  Contact
-                </a>
-              </div>
+              <p className="text-white/70 text-sm">
+                Infrastructure powered by{" "}
+                <span className="neon-blue font-semibold">
+                  Azure Cognitive Services
+                </span>{" "}
+                • <span className="neon-blue font-semibold">OpenAI GPT-4o</span>{" "}
+                • <span className="text-white/80">Supabase</span> •{" "}
+                <span className="text-white/80">Vercel Edge</span>
+              </p>
             </div>
 
-            {/* Patent & Copyright */}
+            {/* Security */}
             <div>
-              <h4 className="text-white font-medium mb-4">Innovation</h4>
+              <p className="text-white/70 text-sm">
+                Built with enterprise-grade security:{" "}
+                <span className="neon-green font-semibold">
+                  AES-256 encryption
+                </span>{" "}
+                •{" "}
+                <span className="neon-green font-semibold">
+                  SOC 2 compliance
+                </span>{" "}
+                •{" "}
+                <span className="neon-green font-semibold">
+                  Zero-trust architecture
+                </span>
+              </p>
+            </div>
+
+            {/* Copyright */}
+            <div className="pt-6 border-t border-white/10">
               <p className="text-white/60 text-sm mb-2">
-                U.S. Patent 10.290.222
+                © 2025 Saint Vision Group LLC. All rights reserved. Delaware
+                Limited Partnership.
               </p>
-              <p className="text-white/60 text-sm">
-                © 2024 SaintVisionAI. All rights reserved.
+              <p className="text-white/50 text-xs">
+                <span className="neon-green">GDPR</span> •{" "}
+                <span className="neon-green">CCPA</span> •{" "}
+                <span className="neon-green">SOC 2 Compliant</span> •{" "}
+                <span className="text-[#FACC15]">Faith-Aligned Technology</span>
               </p>
             </div>
-          </div>
-
-          {/* Bottom Line */}
-          <div className="border-t border-white/10 mt-12 pt-8 text-center">
-            <p className="text-white/40 text-sm">
-              Built with divine precision. Powered by faith-aligned technology.
-            </p>
           </div>
         </div>
       </footer>
