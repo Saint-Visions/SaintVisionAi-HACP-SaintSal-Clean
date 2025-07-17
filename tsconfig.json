@@ -38,14 +38,20 @@
     },
     "allowJs": true,
     "incremental": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "client/**/*",
     "server/**/*",
     "shared/**/*",
+    "vite.config.server.ts",
     "vite.config.ts",
-    "vite.config.server.ts"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
