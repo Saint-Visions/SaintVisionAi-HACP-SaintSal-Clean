@@ -1,38 +1,25 @@
-import { defineType } from 'sanity'
-
-export default defineType({
+const hero = {
   name: 'hero',
-  title: 'Hero Section',
   type: 'document',
+  title: 'Hero',
   fields: [
     {
       name: 'heading',
-      title: 'Heading',
       type: 'string',
+      title: 'Heading',
     },
     {
       name: 'subheading',
+      type: 'string',
       title: 'Subheading',
-      type: 'string',
-    },
-    {
-      name: 'ctaText',
-      title: 'CTA Text',
-      type: 'string',
-    },
-    {
-      name: 'ctaUrl',
-      title: 'CTA URL',
-      type: 'url',
     },
     {
       name: 'backgroundImage',
-      title: 'Background Image',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
+      title: 'Background Image',
     },
   ],
-})
+}
+
+export default hero
 
